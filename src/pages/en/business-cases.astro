@@ -109,35 +109,51 @@ const studentWork = [
 <PageLayout title="Business Cases" description="Explore our simulation consulting projects, white papers, conference presentations, and awards.">
   <PageHero
     title="Business Cases"
-    subtitle="Projects delivered for governments, industries, startups, and research institutions worldwide."
+    subtitle="Solving complex operational and strategic problems with simulation, optimization, and AI."
   />
+
+  <!-- Credibility metrics -->
+  <div class="bg-bg-secondary border-t border-border-default">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-5">
+      <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-center">
+        <div><span class="text-2xl font-bold text-brand-teal">200+</span> <span class="text-sm text-text-secondary ml-1">Projects</span></div>
+        <div class="w-px h-8 bg-border-default hidden sm:block"></div>
+        <div><span class="text-2xl font-bold text-brand-teal">20+</span> <span class="text-sm text-text-secondary ml-1">Industries</span></div>
+        <div class="w-px h-8 bg-border-default hidden sm:block"></div>
+        <div class="text-sm text-text-secondary">Government, Industry & Research Clients</div>
+      </div>
+    </div>
+  </div>
+
   <section class="py-(--spacing-section)">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
-      <!-- Companies We've Worked With — Logo Carousel -->
-      <div class="mb-20">
+      <!-- Trusted By — Logo Carousel -->
+      <div class="mb-12">
         <ClientCarousel />
       </div>
 
-      <div class="section-divider mb-20"></div>
+      <div class="section-divider mb-14"></div>
 
       <!-- Developed Projects -->
-      <div class="mb-20">
-        <h2 class="text-2xl font-bold text-center mb-8">Some of The Developed Projects</h2>
+      <div class="mb-14">
+        <h2 class="text-2xl font-bold text-center mb-8">Developed Projects</h2>
 
-        <!-- Filter: Services (green) -->
+        <!-- Filter: Industries (green) -->
+        <p class="text-[10px] uppercase tracking-widest text-text-tertiary font-semibold text-center mb-2">Industries</p>
         <div class="flex flex-wrap gap-2 justify-center mb-3" id="service-filters">
-          <button data-filter="all" class="svc-filter-btn active px-3 py-1.5 rounded-full text-xs font-medium bg-brand-green text-white transition-colors cursor-pointer">All Industries</button>
+          <button data-filter="all" class="svc-filter-btn active px-3 py-1.5 rounded-full text-xs font-medium bg-brand-green text-white transition-colors cursor-pointer">All</button>
           {allServices.map((svc) => (
-            <button data-filter={svc} class="svc-filter-btn px-3 py-1.5 rounded-full text-xs font-medium border border-brand-green/30 text-brand-green hover:bg-brand-green/10 transition-colors cursor-pointer">{svc}</button>
+            <button data-filter={svc} class="svc-filter-btn px-3 py-1.5 rounded-full text-xs font-medium border border-border-default text-text-tertiary hover:border-brand-green/30 hover:bg-brand-green/5 transition-colors cursor-pointer">{svc}</button>
           ))}
         </div>
 
-        <!-- Filter: Methodology (teal) -->
+        <!-- Filter: Methods (teal) -->
+        <p class="text-[10px] uppercase tracking-widest text-text-tertiary font-semibold text-center mb-2 mt-4">Methods</p>
         <div class="flex flex-wrap gap-2 justify-center mb-10" id="method-filters">
-          <button data-filter="all" class="method-filter-btn active px-3 py-1.5 rounded-full text-xs font-medium bg-brand-teal text-white transition-colors cursor-pointer">All Methods</button>
+          <button data-filter="all" class="method-filter-btn active px-3 py-1.5 rounded-full text-xs font-medium bg-brand-teal text-white transition-colors cursor-pointer">All</button>
           {allMethodologies.map((cat) => (
-            <button data-filter={cat} class="method-filter-btn px-3 py-1.5 rounded-full text-xs font-medium border border-brand-teal/30 text-brand-teal hover:bg-brand-teal/10 transition-colors cursor-pointer">{cat}</button>
+            <button data-filter={cat} class="method-filter-btn px-3 py-1.5 rounded-full text-xs font-medium border border-border-default text-text-tertiary hover:border-brand-teal/30 hover:bg-brand-teal/5 transition-colors cursor-pointer">{cat}</button>
           ))}
         </div>
 
@@ -194,10 +210,10 @@ const studentWork = [
         </div>
       </div>
 
-      <div class="section-divider mb-20"></div>
+      <div class="section-divider mb-14"></div>
 
       <!-- White Papers -->
-      <div class="mb-20">
+      <div class="mb-14">
         <h2 class="text-2xl font-bold text-center mb-8">White Papers</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {whitePapers.map((paper) => (
@@ -211,10 +227,10 @@ const studentWork = [
         </div>
       </div>
 
-      <div class="section-divider mb-20"></div>
+      <div class="section-divider mb-14"></div>
 
       <!-- Conference Presentations -->
-      <div class="mb-20">
+      <div class="mb-14">
         <h2 class="text-2xl font-bold text-center mb-8">Conference Presentations</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           {conferencePresentations.map((pres) => {
@@ -240,10 +256,10 @@ const studentWork = [
         </div>
       </div>
 
-      <div class="section-divider mb-20"></div>
+      <div class="section-divider mb-14"></div>
 
       <!-- Related Papers and Articles -->
-      <div class="mb-20">
+      <div class="mb-14">
         <h2 class="text-2xl font-bold text-center mb-8">Related Papers and Articles</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           {articles.map((article) => (
@@ -257,10 +273,10 @@ const studentWork = [
         </div>
       </div>
 
-      <div class="section-divider mb-20"></div>
+      <div class="section-divider mb-14"></div>
 
       <!-- Public Model Examples -->
-      <div class="mb-20">
+      <div class="mb-14">
         <h2 class="text-2xl font-bold text-center mb-8">Public Model Examples</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
           {publicModels.map((model) => (
@@ -275,10 +291,10 @@ const studentWork = [
         </div>
       </div>
 
-      <div class="section-divider mb-20"></div>
+      <div class="section-divider mb-14"></div>
 
       <!-- Our Students' Work -->
-      <div class="mb-20">
+      <div class="mb-14">
         <h2 class="text-2xl font-bold text-center mb-8">Our Students' Work</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           {studentWork.map((work) => (
@@ -325,27 +341,27 @@ const studentWork = [
       });
     }
 
-    function setActive(btns, clicked, activeClass, borderClass) {
-      btns.forEach((b) => {
+    function setActive(btns, clicked, activeClass) {
+      btns.forEach(function(b) {
         b.classList.remove('active', activeClass, 'text-white');
-        b.classList.add('border', borderClass);
+        b.classList.add('border-border-default', 'text-text-tertiary');
       });
       clicked.classList.add('active', activeClass, 'text-white');
-      clicked.classList.remove('border', borderClass);
+      clicked.classList.remove('border-border-default', 'text-text-tertiary');
     }
 
-    svcBtns.forEach((btn) => {
-      btn.addEventListener('click', () => {
+    svcBtns.forEach(function(btn) {
+      btn.addEventListener('click', function() {
         activeSvc = btn.dataset.filter || 'all';
-        setActive(svcBtns, btn, 'bg-brand-green', 'border-brand-green/30');
+        setActive(svcBtns, btn, 'bg-brand-green');
         applyFilters();
       });
     });
 
-    methodBtns.forEach((btn) => {
-      btn.addEventListener('click', () => {
+    methodBtns.forEach(function(btn) {
+      btn.addEventListener('click', function() {
         activeMethod = btn.dataset.filter || 'all';
-        setActive(methodBtns, btn, 'bg-brand-teal', 'border-brand-teal/30');
+        setActive(methodBtns, btn, 'bg-brand-teal');
         applyFilters();
       });
     });
@@ -356,7 +372,7 @@ const studentWork = [
       const matchBtn = Array.from(svcBtns).find((b) => b.dataset.filter === urlService);
       if (matchBtn) {
         activeSvc = urlService;
-        setActive(svcBtns, matchBtn, 'bg-brand-green', 'border-brand-green/30');
+        setActive(svcBtns, matchBtn, 'bg-brand-green');
         applyFilters();
         var el = document.getElementById('service-filters');
         if (el) {

@@ -30,19 +30,25 @@ const currentFlag = flags[locale];
 
       <!-- Desktop Navigation -->
       <div class="hidden lg:flex items-center gap-6">
-        {links.map((link) => (
-          <a
-            href={link.href}
-            class:list={[
-              'text-sm font-medium transition-colors',
-              Astro.url.pathname.startsWith(link.href) && link.href !== `/${locale}/`
-                ? 'text-brand-teal font-semibold'
-                : 'text-text-secondary hover:text-text-primary',
-            ]}
-          >
-            {link.label}
-          </a>
-        ))}
+        {links.map((link) => {
+          const isContact = link.href.endsWith('/contact/');
+          const isActive = Astro.url.pathname.startsWith(link.href) && link.href !== `/${locale}/`;
+          return isContact ? (
+            <a href={link.href} class="btn-primary text-xs px-4 py-2">
+              {link.label}
+            </a>
+          ) : (
+            <a
+              href={link.href}
+              class:list={[
+                'text-sm font-medium transition-colors',
+                isActive ? 'text-brand-teal font-semibold' : 'text-text-secondary hover:text-text-primary',
+              ]}
+            >
+              {link.label}
+            </a>
+          );
+        })}
 
         <!-- Social icons -->
         <div class="flex items-center gap-3 ml-2 pl-4 border-l border-border-default">

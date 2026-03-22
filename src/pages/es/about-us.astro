@@ -88,25 +88,40 @@ const interviews = [
 ---
 
 <PageLayout title="Nosotros" description="Fundada en 2017, Noorjax Consulting ayuda a organizaciones a tomar mejores decisiones a través del poder de la simulación.">
-  <PageHero title="Sobre Noorjax Consulting" subtitle="¿Quieres saber con quién trabajarás? Aquí conocerás algunas de las cosas que nos definen." />
+  <PageHero title="Sobre Noorjax Consulting" subtitle="Descubre la experiencia, los valores y las personas detrás de Noorjax Consulting." />
 
   <section class="py-(--spacing-section)">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
       <!-- Company story -->
-      <div class="max-w-3xl mx-auto mb-16">
-        <p class="text-lg text-text-secondary leading-relaxed mb-6">
-          Noorjax Consulting comenzó sus actividades en abril de 2017 a través de varias plataformas de freelancing como UpWork, Guru y Fiverr, pero fue registrada oficialmente en Estonia y Chile en 2019. El nombre Noorjax proviene de un antiguo juego inventado por Felipe cuando tenía alrededor de 7 años. En este juego había cientos de equipos de fútbol con características particulares y jugadores estrella. Noorjax era el equipo que derrotaba al adversario a través de la perseverancia y la tenacidad, enfocándose en la estrategia y el trabajo en equipo por sobre las habilidades individuales. Estas características son las que deben ser representativas de cómo Noorjax Consulting aborda cualquier proyecto.
+      <div class="max-w-3xl mx-auto mb-10">
+        <p class="text-lg text-text-secondary leading-relaxed mb-4">
+          Noorjax Consulting fue fundada en 2017 y está registrada oficialmente en Estonia y Chile. Nos especializamos en simulación, optimización e IA — ayudando a gobiernos, industrias e instituciones de investigación a tomar mejores decisiones antes de comprometer recursos reales.
         </p>
-        <div class="flex flex-wrap gap-3">
-          <a href="/documents/spanish-profile.pdf" target="_blank" class="btn-primary text-sm">Descargar Perfil de Empresa</a>
+        <p class="text-lg text-text-secondary leading-relaxed mb-8">
+          Nuestro enfoque se basa en la perseverancia, la estrategia y el trabajo en equipo. Cada proyecto se aborda con la misma tenacidad — ya sea una optimización de almacén, una política de transporte nacional o un sistema de manufactura impulsado por IA.
+        </p>
+
+        <!-- Fact row -->
+        <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-center mb-8">
+          <div><span class="text-lg font-bold text-brand-teal">Fundada en 2017</span></div>
+          <div class="w-px h-6 bg-border-default hidden sm:block"></div>
+          <div><span class="text-lg font-bold text-brand-teal">Presencia Mundial</span></div>
+          <div class="w-px h-6 bg-border-default hidden sm:block"></div>
+          <div><span class="text-lg font-bold text-brand-teal">Simulación, Optimización e IA</span></div>
+        </div>
+
+        <!-- CTAs -->
+        <div class="flex flex-wrap gap-3 justify-center">
+          <a href="/es/business-cases/" class="btn-primary text-sm">Ver Casos de Negocio</a>
+          <a href="/documents/spanish-profile.pdf" target="_blank" class="btn-secondary text-sm">Descargar Perfil de Empresa</a>
         </div>
       </div>
 
-      <div class="section-divider mb-20"></div>
+      <div class="section-divider mb-14"></div>
 
       <!-- Team -->
-      <div class="mb-20">
+      <div class="mb-14">
         <h2 class="text-3xl font-bold text-center mb-12">Nuestro Equipo</h2>
         <div class="space-y-12">
           {team.map((member, i) => (
@@ -153,10 +168,10 @@ const interviews = [
         </div>
       </div>
 
-      <div class="section-divider mb-20"></div>
+      <div class="section-divider mb-14"></div>
 
       <!-- Awards -->
-      <div class="mb-20">
+      <div class="mb-14">
         <h2 class="text-3xl font-bold text-center mb-8">Premios</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <a href="https://www.wealthandfinance-news.com/winners/noorjax-consulting/" target="_blank" rel="noopener noreferrer" class="flex items-start gap-4 bg-bg-secondary rounded-2xl p-8 border border-border-default hover:border-brand-green/30 transition-all hover:shadow-md group">
@@ -176,16 +191,16 @@ const interviews = [
         </div>
       </div>
 
-      <div class="section-divider mb-20"></div>
+      <div class="section-divider mb-14"></div>
 
       <!-- Business Partners -->
-      <div class="mb-20">
+      <div class="mb-14">
         <h2 class="text-3xl font-bold text-center mb-12">Socios de Negocio</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           {partners.map((partner) => (
             <a href={partner.url} target="_blank" rel="noopener noreferrer" class="bg-bg-secondary rounded-2xl border border-border-default hover:border-brand-teal/30 transition-all hover:shadow-md overflow-hidden group block">
-              <div class="h-32 flex items-center justify-center p-6 bg-white">
-                <Image src={partnerImages[partner.image]} alt={partner.name} width={300} format="webp" class="max-h-full max-w-full object-contain" loading="lazy" decoding="async" />
+              <div class="h-40 flex items-center justify-center p-6 bg-white">
+                <Image src={partnerImages[partner.image]} alt={partner.name} width={400} quality={90} format="webp" class="max-h-full max-w-full object-contain" loading="lazy" decoding="async" />
               </div>
               <div class="p-6">
                 <h3 class="text-lg font-bold mb-2 group-hover:text-brand-teal transition-colors">{partner.name}</h3>
@@ -197,7 +212,7 @@ const interviews = [
         </div>
       </div>
 
-      <div class="section-divider mb-20"></div>
+      <div class="section-divider mb-14"></div>
 
       <!-- Media -->
       <div>

@@ -109,35 +109,49 @@ const studentWork = [
 <PageLayout title="Casos de Negocio" description="Explora nuestros proyectos de consultoría en simulación, documentos técnicos, presentaciones en conferencias y premios.">
   <PageHero
     title="Casos de Negocio"
-    subtitle="Proyectos realizados para gobiernos, industrias, startups e instituciones de investigación en todo el mundo."
+    subtitle="Resolviendo problemas operacionales y estratégicos complejos con simulación, optimización e IA."
   />
+  <!-- Credibility metrics -->
+  <div class="bg-bg-secondary border-t border-border-default">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-5">
+      <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-center">
+        <div><span class="text-2xl font-bold text-brand-teal">200+</span> <span class="text-sm text-text-secondary ml-1">Proyectos</span></div>
+        <div class="w-px h-8 bg-border-default hidden sm:block"></div>
+        <div><span class="text-2xl font-bold text-brand-teal">20+</span> <span class="text-sm text-text-secondary ml-1">Industrias</span></div>
+        <div class="w-px h-8 bg-border-default hidden sm:block"></div>
+        <div class="text-sm text-text-secondary">Clientes en Gobierno, Industria e Investigación</div>
+      </div>
+    </div>
+  </div>
   <section class="py-(--spacing-section)">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
       <!-- Companies We've Worked With — Logo Carousel -->
-      <div class="mb-20">
+      <div class="mb-12">
         <ClientCarousel />
       </div>
 
-      <div class="section-divider mb-20"></div>
+      <div class="section-divider mb-14"></div>
 
       <!-- Developed Projects -->
-      <div class="mb-20">
-        <h2 class="text-2xl font-bold text-center mb-8">Algunos de los Proyectos Desarrollados</h2>
+      <div class="mb-14">
+        <h2 class="text-2xl font-bold text-center mb-8">Proyectos Desarrollados</h2>
 
         <!-- Filter: Services (green) -->
+        <p class="text-[10px] uppercase tracking-widest text-text-tertiary font-semibold text-center mb-2">Industrias</p>
         <div class="flex flex-wrap gap-2 justify-center mb-3" id="service-filters">
-          <button data-filter="all" class="svc-filter-btn active px-3 py-1.5 rounded-full text-xs font-medium bg-brand-green text-white transition-colors cursor-pointer">Todas las Industrias</button>
+          <button data-filter="all" class="svc-filter-btn active px-3 py-1.5 rounded-full text-xs font-medium bg-brand-green text-white transition-colors cursor-pointer">Todas</button>
           {allServices.map((svc) => (
-            <button data-filter={svc} class="svc-filter-btn px-3 py-1.5 rounded-full text-xs font-medium border border-brand-green/30 text-brand-green hover:bg-brand-green/10 transition-colors cursor-pointer">{translateService(svc, 'es')}</button>
+            <button data-filter={svc} class="svc-filter-btn px-3 py-1.5 rounded-full text-xs font-medium border border-border-default text-text-tertiary hover:border-brand-green/30 hover:bg-brand-green/5 transition-colors cursor-pointer">{translateService(svc, 'es')}</button>
           ))}
         </div>
 
         <!-- Filter: Methodology (teal) -->
+        <p class="text-[10px] uppercase tracking-widest text-text-tertiary font-semibold text-center mb-2 mt-4">Métodos</p>
         <div class="flex flex-wrap gap-2 justify-center mb-10" id="method-filters">
-          <button data-filter="all" class="method-filter-btn active px-3 py-1.5 rounded-full text-xs font-medium bg-brand-teal text-white transition-colors cursor-pointer">Todos los Métodos</button>
+          <button data-filter="all" class="method-filter-btn active px-3 py-1.5 rounded-full text-xs font-medium bg-brand-teal text-white transition-colors cursor-pointer">Todos</button>
           {allMethodologies.map((cat) => (
-            <button data-filter={cat} class="method-filter-btn px-3 py-1.5 rounded-full text-xs font-medium border border-brand-teal/30 text-brand-teal hover:bg-brand-teal/10 transition-colors cursor-pointer">{translateCategory(cat, 'es')}</button>
+            <button data-filter={cat} class="method-filter-btn px-3 py-1.5 rounded-full text-xs font-medium border border-border-default text-text-tertiary hover:border-brand-teal/30 hover:bg-brand-teal/5 transition-colors cursor-pointer">{translateCategory(cat, 'es')}</button>
           ))}
         </div>
 
@@ -189,10 +203,10 @@ const studentWork = [
         </div>
       </div>
 
-      <div class="section-divider mb-20"></div>
+      <div class="section-divider mb-14"></div>
 
       <!-- White Papers -->
-      <div class="mb-20">
+      <div class="mb-14">
         <h2 class="text-2xl font-bold text-center mb-8">Documentos Técnicos</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {whitePapers.map((paper) => (
@@ -206,10 +220,10 @@ const studentWork = [
         </div>
       </div>
 
-      <div class="section-divider mb-20"></div>
+      <div class="section-divider mb-14"></div>
 
       <!-- Conference Presentations -->
-      <div class="mb-20">
+      <div class="mb-14">
         <h2 class="text-2xl font-bold text-center mb-8">Presentaciones en Conferencias</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           {conferencePresentations.map((pres) => {
@@ -235,10 +249,10 @@ const studentWork = [
         </div>
       </div>
 
-      <div class="section-divider mb-20"></div>
+      <div class="section-divider mb-14"></div>
 
       <!-- Related Papers and Articles -->
-      <div class="mb-20">
+      <div class="mb-14">
         <h2 class="text-2xl font-bold text-center mb-8">Artículos y Publicaciones Relacionadas</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           {articles.map((article) => (
@@ -252,10 +266,10 @@ const studentWork = [
         </div>
       </div>
 
-      <div class="section-divider mb-20"></div>
+      <div class="section-divider mb-14"></div>
 
       <!-- Public Model Examples -->
-      <div class="mb-20">
+      <div class="mb-14">
         <h2 class="text-2xl font-bold text-center mb-8">Modelos Públicos de Ejemplo</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
           {publicModels.map((model) => (
@@ -270,10 +284,10 @@ const studentWork = [
         </div>
       </div>
 
-      <div class="section-divider mb-20"></div>
+      <div class="section-divider mb-14"></div>
 
       <!-- Our Students' Work -->
-      <div class="mb-20">
+      <div class="mb-14">
         <h2 class="text-2xl font-bold text-center mb-8">Trabajos de Nuestros Estudiantes</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           {studentWork.map((work) => (
@@ -317,13 +331,13 @@ const studentWork = [
         card.style.display = matchSvc && matchMethod ? '' : 'none';
       });
     }
-    function setActive(btns, clicked, activeClass, borderClass) {
-      btns.forEach(function(b) { b.classList.remove('active', activeClass, 'text-white'); b.classList.add('border', borderClass); });
+    function setActive(btns, clicked, activeClass) {
+      btns.forEach(function(b) { b.classList.remove('active', activeClass, 'text-white'); b.classList.add('border-border-default', 'text-text-tertiary'); });
       clicked.classList.add('active', activeClass, 'text-white');
-      clicked.classList.remove('border', borderClass);
+      clicked.classList.remove('border-border-default', 'text-text-tertiary');
     }
-    svcBtns.forEach(function(btn) { btn.addEventListener('click', function() { activeSvc = btn.dataset.filter || 'all'; setActive(svcBtns, btn, 'bg-brand-green', 'border-brand-green/30'); applyFilters(); }); });
-    methodBtns.forEach(function(btn) { btn.addEventListener('click', function() { activeMethod = btn.dataset.filter || 'all'; setActive(methodBtns, btn, 'bg-brand-teal', 'border-brand-teal/30'); applyFilters(); }); });
+    svcBtns.forEach(function(btn) { btn.addEventListener('click', function() { activeSvc = btn.dataset.filter || 'all'; setActive(svcBtns, btn, 'bg-brand-green'); applyFilters(); }); });
+    methodBtns.forEach(function(btn) { btn.addEventListener('click', function() { activeMethod = btn.dataset.filter || 'all'; setActive(methodBtns, btn, 'bg-brand-teal'); applyFilters(); }); });
 
     // Auto-apply service filter from URL param
     var urlService = new URLSearchParams(window.location.search).get('service');
@@ -331,7 +345,7 @@ const studentWork = [
       var matchBtn = Array.from(svcBtns).find(function(b) { return b.dataset.filter === urlService; });
       if (matchBtn) {
         activeSvc = urlService;
-        setActive(svcBtns, matchBtn, 'bg-brand-green', 'border-brand-green/30');
+        setActive(svcBtns, matchBtn, 'bg-brand-green');
         applyFilters();
         var el = document.getElementById('service-filters');
         if (el) {
