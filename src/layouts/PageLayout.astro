@@ -13,9 +13,40 @@ const { title, description, image } = Astro.props;
 ---
 
 <BaseLayout title={title} description={description} image={image}>
+  <!-- Loading bar -->
+  <div id="loading-bar" class="fixed top-0 left-0 h-0.5 bg-brand-teal z-[100] transition-none" style="width: 0%; opacity: 0;"></div>
+
   <Header />
   <main class="flex-1 pt-18 lg:pt-20">
     <slot />
   </main>
   <Footer />
+
+  <script is:inline>
+    (function() {
+      var bar = document.getElementById('loading-bar');
+      if (!bar) return;
+
+      document.addEventListener('astro:before-preparation', function() {
+        bar.style.transition = 'none';
+        bar.style.width = '0%';
+        bar.style.opacity = '1';
+        requestAnimationFrame(function() {
+          bar.style.transition = 'width 8s cubic-bezier(0.1, 0.4, 0.2, 1)';
+          bar.style.width = '85%';
+        });
+      });
+
+      document.addEventListener('astro:after-swap', function() {
+        bar = document.getElementById('loading-bar');
+        if (!bar) return;
+        bar.style.transition = 'width 0.2s ease-out';
+        bar.style.width = '100%';
+        setTimeout(function() {
+          bar.style.transition = 'opacity 0.3s ease';
+          bar.style.opacity = '0';
+        }, 200);
+      });
+    })();
+  </script>
 </BaseLayout>
