@@ -1,0 +1,10 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/noorjaxcom/noorjax_website
+    - /bin/cp -R * $DEPLOYPATH/
+    - cd $DEPLOYPATH
+    - source /home/noorjaxcom/nodevenv/noorjax_website/20/bin/activate
+    - npm ci --production=false
+    - npm run build
+    - /bin/cp -R dist/* /home/noorjaxcom/public_html/
