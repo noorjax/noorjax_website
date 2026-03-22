@@ -1,0 +1,209 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+/* ===== NOORJAX CONSULTING — DESIGN TOKENS ===== */
+/* Light, professional design matching logo: teal (#0099b5) + green (#6aab25) */
+
+@theme {
+  /* Brand Colors — extracted from logo */
+  --color-brand-teal: #0099b5;           /* "Noorjax" text + N icon */
+  --color-brand-green: #6aab25;          /* "Consulting" text + leaf */
+  --color-brand-teal-dark: #007a91;      /* Darker teal for hover */
+  --color-brand-green-dark: #558a1e;     /* Darker green for hover */
+
+  /* Light Palette */
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #f8fafb;         /* Very light cool gray */
+  --color-bg-tertiary: #f0f4f5;          /* Cards, inputs */
+  --color-bg-elevated: #e8eef0;          /* Hover states */
+  --color-bg-dark: #1a2e35;              /* Dark sections (CTA, footer) */
+  --color-bg-dark-secondary: #243940;
+
+  /* Text */
+  --color-text-primary: #1a2e35;         /* Dark teal-ish */
+  --color-text-secondary: #4a6670;       /* Muted */
+  --color-text-tertiary: #7a9aa5;        /* Very muted */
+  --color-text-on-dark: #f0f4f5;         /* Text on dark backgrounds */
+  --color-text-on-dark-muted: #a0b8c0;
+
+  /* Borders */
+  --color-border-default: #dde6e9;
+  --color-border-hover: #b8ccd2;
+
+  /* Typography */
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  /* Spacing scale */
+  --spacing-section: 6rem;
+  --spacing-section-sm: 4rem;
+
+  /* Border radius */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ===== BASE STYLES ===== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Selection */
+::selection {
+  background-color: rgba(0, 153, 181, 0.2);
+  color: var(--color-text-primary);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg-secondary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border-hover);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brand-teal);
+}
+
+/* Links */
+a {
+  color: var(--color-brand-teal);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+a:hover {
+  color: var(--color-brand-teal-dark);
+}
+
+/* Code blocks in blog posts */
+pre {
+  background: var(--color-bg-tertiary) !important;
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  overflow-x: auto;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: var(--color-text-primary);
+}
+
+code {
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+}
+
+:not(pre) > code {
+  background: var(--color-bg-tertiary);
+  padding: 0.15em 0.4em;
+  border-radius: var(--radius-sm);
+  color: var(--color-brand-teal-dark);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+}
+
+/* Gradient text utility — teal to green like the logo */
+.text-gradient {
+  background: linear-gradient(135deg, var(--color-brand-teal), var(--color-brand-green));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glass morphism card (for mobile menu on light bg) */
+.glass {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--color-border-default);
+}
+
+/* Section divider gradient */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-border-default) 20%,
+    var(--color-brand-teal) 50%,
+    var(--color-border-default) 80%,
+    transparent
+  );
+}
+
+/* Primary button — green (like "Consulting" in logo) */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  border-radius: var(--radius-xl);
+  background-color: var(--color-brand-green);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: all var(--transition-fast);
+}
+.btn-primary:hover {
+  background-color: var(--color-brand-green-dark);
+  color: #ffffff;
+}
+
+/* Secondary button — outlined teal */
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  border-radius: var(--radius-xl);
+  border: 2px solid var(--color-brand-teal);
+  color: var(--color-brand-teal);
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: all var(--transition-fast);
+}
+.btn-secondary:hover {
+  background-color: var(--color-brand-teal);
+  color: #ffffff;
+}
+
+/* Dark section styling */
+.dark-section {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-on-dark);
+}
+.dark-section h2, .dark-section h3 {
+  color: var(--color-text-on-dark);
+}
+.dark-section p {
+  color: var(--color-text-on-dark-muted);
+}

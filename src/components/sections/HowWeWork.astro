@@ -1,0 +1,40 @@
+---
+import { getLocaleFromUrl, t } from '../../i18n';
+import { HOW_WE_WORK } from '../../lib/constants';
+
+const locale = getLocaleFromUrl(Astro.url);
+const i18n = t(locale);
+const steps = HOW_WE_WORK[locale] || HOW_WE_WORK['en'];
+---
+
+<section class="py-(--spacing-section) bg-bg-primary">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <!-- Section header -->
+    <div class="text-center mb-16">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-4">{i18n.howWeWork.title}</h2>
+      <p class="text-text-secondary max-w-2xl mx-auto">{i18n.howWeWork.subtitle}</p>
+    </div>
+
+    <!-- Steps -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {steps.map((step, i) => (
+        <div class="relative group">
+          {/* Connector line */}
+          {i < steps.length - 1 && (
+            <div class="hidden lg:block absolute top-8 left-[calc(50%+2rem)] w-[calc(100%-4rem)] h-px bg-border-default"></div>
+          )}
+
+          <div class="relative bg-bg-secondary rounded-2xl p-8 border border-border-default hover:border-brand-teal/30 transition-all duration-300 group-hover:-translate-y-1 hover:shadow-lg">
+            {/* Step number */}
+            <div class="w-14 h-14 rounded-xl bg-brand-teal/10 border border-brand-teal/20 flex items-center justify-center mb-6">
+              <span class="text-lg font-bold text-brand-teal">{String(step.step).padStart(2, '0')}</span>
+            </div>
+
+            <h3 class="text-xl font-bold mb-3 text-text-primary">{step.title}</h3>
+            <p class="text-sm text-text-secondary leading-relaxed">{step.description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

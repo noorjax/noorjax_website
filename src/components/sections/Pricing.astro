@@ -1,0 +1,68 @@
+---
+import { getLocaleFromUrl, t } from '../../i18n';
+import { PRICING } from '../../lib/constants';
+
+const locale = getLocaleFromUrl(Astro.url);
+const i18n = t(locale);
+const plans = PRICING[locale] || PRICING['en'];
+---
+
+<section class="py-(--spacing-section) bg-bg-primary">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <!-- Section header -->
+    <div class="text-center mb-16">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-4">{i18n.pricing.title}</h2>
+      <p class="text-text-secondary max-w-2xl mx-auto">{i18n.pricing.subtitle}</p>
+    </div>
+
+    <!-- Pricing cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+      {plans.map((plan) => (
+        <div
+          class:list={[
+            'relative rounded-2xl p-8 border transition-all duration-300 hover:-translate-y-1 flex flex-col',
+            plan.featured
+              ? 'bg-brand-teal/5 border-brand-teal/30 shadow-lg shadow-brand-teal/5'
+              : 'bg-bg-secondary border-border-default hover:border-brand-teal/20 hover:shadow-md',
+          ]}
+        >
+          {plan.featured && (
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-brand-green text-white text-xs font-bold">
+              {i18n.pricing.featured}
+            </div>
+          )}
+
+          <h3 class="text-lg font-semibold mb-2 text-text-primary">{plan.name}</h3>
+          <div class="mb-4">
+            <span class="text-3xl font-bold text-gradient">{plan.price}</span>
+            {plan.unit && <span class="text-text-tertiary text-sm">{plan.unit}</span>}
+          </div>
+          <p class="text-sm text-text-secondary mb-6 leading-relaxed">{plan.description}</p>
+
+          <ul class="space-y-3 mb-8 flex-1">
+            {plan.features.map((feature) => (
+              <li class="flex items-start gap-2 text-sm text-text-secondary">
+                <svg class="w-4 h-4 text-brand-green mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                {feature}
+              </li>
+            ))}
+          </ul>
+
+          <a
+            href={`/${locale}/contact/`}
+            class:list={[
+              'block text-center py-3 rounded-xl font-semibold text-sm transition-all',
+              plan.featured
+                ? 'btn-primary w-full justify-center'
+                : 'btn-secondary w-full justify-center',
+            ]}
+          >
+            {locale === 'en' ? 'Become a Client' : locale === 'es' ? 'Conviértete en Cliente' : 'كن عميلاً'}
+          </a>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,195 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import PageHero from '../../components/common/PageHero.astro';
+import { TEAM, PARTNERS } from '../../lib/constants';
+
+const locale = 'es';
+
+const team = [
+  {
+    name: TEAM[0].name,
+    role: TEAM[0].role[locale],
+    image: '/images/team/felipe.jpg',
+    linkedin: 'https://www.linkedin.com/in/felipeharo/',
+    bio: 'Felipe ha desarrollado modelos de simulación desde principios de los 2000, pero se convirtió en un evangelista de AnyLogic en 2013 trabajando para PwC. En 2017, después de dejar su trabajo en Amazon, fundó Noorjax Consulting y comenzó a trabajar como consultor independiente realizando modelos de simulación para estudiantes, startups, empresas, gobiernos y organizaciones en una amplia gama de aplicaciones.',
+    certifications: ['Bachelor in Engineering', 'Electronics Engineering', 'M.Phil. System Dynamics', 'M.Sc. Business Administration', 'Data Science Specialization', 'Lean Six Sigma Black Belt'],
+  },
+  {
+    name: TEAM[1].name,
+    role: TEAM[1].role[locale],
+    image: '/images/team/joaquin.jpg',
+    bio: 'Joaquín es Ingeniero Industrial de Chile. Trabajó como ayudante de cátedra en simulaciones y estadística aplicada en la Universidad Católica del Norte. Comenzó a trabajar en Noorjax Consulting en enero de 2022.',
+    certifications: [],
+  },
+  {
+    name: TEAM[2].name,
+    role: TEAM[2].role[locale],
+    image: '/images/team/soheila.jpg',
+    bio: "Soheila ha trabajado en la industria de la construcción desde 2009 como ingeniera estructural. En 2017, realizó sus estudios de maestría en gestión de construcción donde descubrió el mundo de las simulaciones y usó AnyLogic como parte fundamental de su tesis. Se graduó en 2019 y comenzó a trabajar en Noorjax Consulting en diciembre de 2021. Soheila también es instructora en Phoenicia University y Al Maaref University.",
+    certifications: [],
+  },
+];
+
+const partners = [
+  {
+    name: PARTNERS[0].name,
+    image: '/images/partners/simuland.avif',
+    url: 'https://simuland.ai',
+    description: PARTNERS[0].description[locale],
+    since: PARTNERS[0].since[locale],
+  },
+  {
+    name: PARTNERS[1].name,
+    image: '/images/partners/anylogic-iberia.jpeg',
+    url: 'https://www.anylogic.es/',
+    description: PARTNERS[1].description[locale],
+    since: PARTNERS[1].since[locale],
+  },
+  {
+    name: PARTNERS[2].name,
+    image: '/images/partners/tocsim.png',
+    url: 'https://www.theanylogicmodeler.com/',
+    description: PARTNERS[2].description[locale],
+    since: PARTNERS[2].since[locale],
+  },
+];
+
+const mediaLinks = [
+  { title: '¿Qué startups de consultoría de Harjumaa están revolucionando el panorama empresarial de Estonia?', url: 'https://eustartup.news/which-harjumaa-consulting-startups-are-revolutionizing-estonias-business-landscape/' },
+  { title: '¿Quiénes son las startups de consultoría de Tallinn que están transformando la industria de Estonia?', url: 'https://eustartup.news/who-are-tallinns-game-changing-consulting-startups-shaping-estonias-industry/' },
+];
+
+const interviews = [
+  { title: 'Entrevista con Ben Schumann (2018)', url: 'http://brokenjars.xyz/simtalk/2018/8/28/episode-7-interview-with-felipe-haro' },
+  { title: 'Entrevista con Jaco Ben Vosloo (2021)', url: 'https://www.theanylogicmodeler.com/post/interview-with-felipe-haro' },
+  { title: 'Entrevista de Business Connect India (2022)', url: 'https://businessconnectindia.in/noorjax-consulting/' },
+];
+---
+
+<PageLayout title="Nosotros" description="Fundada en 2017, Noorjax Consulting ayuda a organizaciones a tomar mejores decisiones a través del poder de la simulación.">
+  <PageHero title="Sobre Noorjax Consulting" subtitle="¿Quieres saber con quién trabajarás? Aquí conocerás algunas de las cosas que nos definen." />
+
+  <section class="py-(--spacing-section)">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+      <!-- Company story -->
+      <div class="max-w-3xl mx-auto mb-16">
+        <p class="text-lg text-text-secondary leading-relaxed mb-6">
+          Noorjax Consulting comenzó sus actividades en abril de 2017 a través de varias plataformas de freelancing como UpWork, Guru y Fiverr, pero fue registrada oficialmente en Estonia y Chile en 2019. El nombre Noorjax proviene de un antiguo juego inventado por Felipe cuando tenía alrededor de 7 años. En este juego había cientos de equipos de fútbol con características particulares y jugadores estrella. Noorjax era el equipo que derrotaba al adversario a través de la perseverancia y la tenacidad, enfocándose en la estrategia y el trabajo en equipo por sobre las habilidades individuales. Estas características son las que deben ser representativas de cómo Noorjax Consulting aborda cualquier proyecto.
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <a href="/documents/spanish-profile.pdf" target="_blank" class="btn-primary text-sm">Descargar Perfil de Empresa</a>
+        </div>
+      </div>
+
+      <div class="section-divider mb-20"></div>
+
+      <!-- Team -->
+      <div class="mb-20">
+        <h2 class="text-3xl font-bold text-center mb-12">Nuestro Equipo</h2>
+        <div class="space-y-12">
+          {team.map((member, i) => (
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+              <div class="lg:col-span-1">
+                <div class="rounded-2xl overflow-hidden border border-border-default aspect-square">
+                  <img src={member.image} alt={member.name} class="w-full h-full object-cover" loading="lazy" />
+                </div>
+              </div>
+              <div class="lg:col-span-2">
+                <h3 class="text-2xl font-bold mb-1">{member.name}</h3>
+                <p class="text-brand-teal font-medium mb-4">{member.role}</p>
+                <p class="text-text-secondary leading-relaxed mb-4">{member.bio}</p>
+                {member.certifications.length > 0 && (
+                  <div class="flex flex-wrap gap-2 mb-4">
+                    {member.certifications.map((cert) => (
+                      <span class="text-xs px-2.5 py-1 rounded-full bg-brand-teal/10 text-brand-teal font-medium">{cert}</span>
+                    ))}
+                  </div>
+                )}
+                {member.linkedin && (
+                  <a href={member.linkedin} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-text-tertiary hover:text-brand-teal transition-colors mb-4">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" /></svg>
+                    Perfil de LinkedIn
+                  </a>
+                )}
+                {/* Interviews — only for Felipe */}
+                {i === 0 && (
+                  <div class="mt-4">
+                    <h4 class="text-sm font-semibold text-text-primary mb-3">Entrevistas</h4>
+                    <div class="flex flex-col gap-2">
+                      {interviews.map((item) => (
+                        <a href={item.url} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-text-tertiary hover:text-brand-teal transition-colors">
+                          <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" /></svg>
+                          {item.title}
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div class="section-divider mb-20"></div>
+
+      <!-- Awards -->
+      <div class="mb-20">
+        <h2 class="text-3xl font-bold text-center mb-8">Premios</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <a href="https://www.wealthandfinance-news.com/winners/noorjax-consulting/" target="_blank" rel="noopener noreferrer" class="flex items-start gap-4 bg-bg-secondary rounded-2xl p-8 border border-border-default hover:border-brand-green/30 transition-all hover:shadow-md group">
+            <svg class="w-8 h-8 text-brand-green shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg>
+            <div>
+              <h3 class="text-lg font-bold text-text-primary group-hover:text-brand-green transition-colors">Mejor Proveedor Internacional de Consultoría en Simulación 2022</h3>
+              <p class="text-sm text-text-tertiary mt-1">Septiembre 2022</p>
+            </div>
+          </a>
+          <a href="https://cloud.anylogic.com/model/3437db48-cfb1-4fcd-8548-31ac5d15cfe2?mode=SETTINGS&tab=GENERAL" target="_blank" rel="noopener noreferrer" class="flex items-start gap-4 bg-bg-secondary rounded-2xl p-8 border border-border-default hover:border-brand-green/30 transition-all hover:shadow-md group">
+            <svg class="w-8 h-8 text-brand-green shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg>
+            <div>
+              <h3 class="text-lg font-bold text-text-primary group-hover:text-brand-green transition-colors">Modelo del Mes – Ruteo de Vehículos usando Algoritmos Genéticos</h3>
+              <p class="text-sm text-text-tertiary mt-1">Abril 2021</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="section-divider mb-20"></div>
+
+      <!-- Business Partners -->
+      <div class="mb-20">
+        <h2 class="text-3xl font-bold text-center mb-12">Socios de Negocio</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {partners.map((partner) => (
+            <a href={partner.url} target="_blank" rel="noopener noreferrer" class="bg-bg-secondary rounded-2xl border border-border-default hover:border-brand-teal/30 transition-all hover:shadow-md overflow-hidden group block">
+              <div class="h-32 flex items-center justify-center p-6 bg-white">
+                <img src={partner.image} alt={partner.name} class="max-h-full max-w-full object-contain" loading="lazy" />
+              </div>
+              <div class="p-6">
+                <h3 class="text-lg font-bold mb-2 group-hover:text-brand-teal transition-colors">{partner.name}</h3>
+                <p class="text-sm text-text-secondary leading-relaxed mb-3">{partner.description}</p>
+                <p class="text-xs text-text-tertiary">Socio desde {partner.since}</p>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <div class="section-divider mb-20"></div>
+
+      <!-- Media -->
+      <div>
+        <h2 class="text-3xl font-bold text-center mb-8">Noorjax en los Medios</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {mediaLinks.map((item) => (
+            <a href={item.url} target="_blank" rel="noopener noreferrer" class="flex items-start gap-3 bg-bg-secondary rounded-xl p-5 border border-border-default hover:border-brand-teal/30 transition-all hover:shadow-md group">
+              <svg class="w-5 h-5 text-brand-teal shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" /></svg>
+              <span class="text-sm font-medium text-text-primary group-hover:text-brand-teal transition-colors">{item.title}</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+</PageLayout>

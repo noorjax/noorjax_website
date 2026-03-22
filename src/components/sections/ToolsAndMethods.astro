@@ -1,0 +1,95 @@
+---
+import { getLocaleFromUrl } from '../../i18n';
+
+const locale = getLocaleFromUrl(Astro.url);
+
+const tools = [
+  { name: 'AnyLogic', logo: '/images/tools/anylogic.png' },
+  { name: 'Vensim', logo: '/images/tools/vensim.png' },
+  { name: 'Python', logo: '/images/tools/python.svg' },
+  { name: 'Power BI', logo: '/images/tools/powerbi.png' },
+];
+
+const methodologies = [
+  {
+    abbr: 'DES',
+    name: locale === 'en' ? 'Process-Centric (Discrete Events)' : locale === 'es' ? 'Simulación de Eventos Discretos' : 'محاكاة الأحداث المنفصلة',
+    description: locale === 'en'
+      ? 'Represents systems as sequences of events that flow through shared resources. Particularly effective for manufacturing processes, logistics networks, service operations, and any environment where entities compete for capacity under constraints.'
+      : locale === 'es'
+      ? 'Representa sistemas como secuencias de eventos que fluyen a través de recursos compartidos. Especialmente efectivo para procesos de manufactura, redes logísticas, operaciones de servicio y cualquier entorno donde las entidades compiten por capacidad bajo restricciones.'
+      : 'تمثّل الأنظمة كتسلسلات من الأحداث التي تتدفق عبر موارد مشتركة. فعّالة بشكل خاص لعمليات التصنيع وشبكات الخدمات اللوجستية وعمليات الخدمة وأي بيئة تتنافس فيها الكيانات على السعة تحت قيود.',
+    // Flowchart icon
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-8 h-8 text-brand-teal"><rect x="2" y="3" width="7" height="5" rx="1"/><rect x="15" y="3" width="7" height="5" rx="1"/><rect x="8.5" y="16" width="7" height="5" rx="1"/><path d="M5.5 8v3h13V8M12 11v5"/></svg>`,
+  },
+  {
+    abbr: 'ABM',
+    name: locale === 'en' ? 'Agent-Based Modeling' : locale === 'es' ? 'Modelado Basado en Agentes' : 'النمذجة القائمة على الوكلاء',
+    description: locale === 'en'
+      ? 'Models autonomous entities that interact with each other and their environment, producing emergent system behavior. Suited for crowd dynamics, market competition, epidemic spread, ecosystem analysis, and scenarios where individual-level decisions shape collective outcomes.'
+      : locale === 'es'
+      ? 'Modela entidades autónomas que interactúan entre sí y con su entorno, produciendo comportamiento emergente del sistema. Indicado para dinámicas de multitudes, competencia de mercado, propagación de epidemias, análisis de ecosistemas y escenarios donde decisiones individuales moldean resultados colectivos.'
+      : 'تنمذج كيانات مستقلة تتفاعل مع بعضها البعض ومع بيئتها، مما ينتج سلوكاً ناشئاً للنظام. مناسبة لديناميكيات الحشود والمنافسة السوقية وانتشار الأوبئة وتحليل النظم البيئية والسيناريوهات التي تشكّل فيها القرارات الفردية نتائج جماعية.',
+    // Network/nodes icon
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-8 h-8 text-brand-teal"><circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="19" r="2.5"/><circle cx="19" cy="19" r="2.5"/><circle cx="19" cy="11" r="2.5"/><circle cx="5" cy="11" r="2.5"/><line x1="12" y1="7.5" x2="5" y2="16.5"/><line x1="12" y1="7.5" x2="19" y2="16.5"/><line x1="7.5" y1="11" x2="16.5" y2="11"/><line x1="7" y1="17.5" x2="17" y2="17.5"/></svg>`,
+  },
+  {
+    abbr: 'SD',
+    name: locale === 'en' ? 'System Dynamics' : locale === 'es' ? 'Dinámica de Sistemas' : 'ديناميكيات النظم',
+    description: locale === 'en'
+      ? 'Captures feedback loops, accumulations, and flows that govern how systems evolve over time. Applied to strategic planning, policy evaluation, macroeconomic forecasting, and understanding the long-term consequences of decisions in complex environments.'
+      : locale === 'es'
+      ? 'Captura ciclos de retroalimentación, acumulaciones y flujos que gobiernan la evolución de sistemas en el tiempo. Aplicado a planificación estratégica, evaluación de políticas, pronósticos macroeconómicos y comprensión de las consecuencias a largo plazo de decisiones en entornos complejos.'
+      : 'تلتقط حلقات التغذية الراجعة والتراكمات والتدفقات التي تحكم تطور الأنظمة بمرور الوقت. تُطبّق في التخطيط الاستراتيجي وتقييم السياسات والتنبؤ الاقتصادي الكلي وفهم العواقب طويلة المدى للقرارات في البيئات المعقدة.',
+    // Feedback loop icon
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-8 h-8 text-brand-teal"><path d="M4 12a8 8 0 0 1 14.5-4.5"/><path d="M20 12a8 8 0 0 1-14.5 4.5"/><polyline points="18 4 19 8 15 8"/><polyline points="6 20 5 16 9 16"/></svg>`,
+  },
+];
+---
+
+<section class="py-(--spacing-section) bg-bg-secondary">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <!-- Section header -->
+    <div class="text-center mb-16">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-4">
+        {locale === 'en' ? 'Tools & Simulation Methods' : locale === 'es' ? 'Herramientas y Métodos de Simulación' : 'الأدوات ومنهجيات المحاكاة'}
+      </h2>
+      <p class="text-text-secondary max-w-2xl mx-auto">
+        {locale === 'en'
+          ? 'We leverage industry-standard platforms and integrate three complementary simulation paradigms to address the full spectrum of modeling challenges.'
+          : locale === 'es'
+          ? 'Utilizamos plataformas estándar de la industria e integramos tres paradigmas de simulación complementarios para abordar todo el espectro de desafíos de modelado.'
+          : 'نستخدم منصات معيارية في الصناعة وندمج ثلاثة نماذج محاكاة متكاملة لمعالجة كامل طيف تحديات النمذجة.'}
+      </p>
+    </div>
+
+    <!-- Tools logos -->
+    <div class="flex flex-wrap items-center justify-center gap-10 sm:gap-16 mb-16">
+      {tools.map((tool) => (
+        <div class="flex flex-col items-center gap-2">
+          <img
+            src={tool.logo}
+            alt={tool.name}
+            class="h-10 sm:h-12 w-auto object-contain"
+          />
+          <span class="text-xs text-text-tertiary font-medium">{tool.name}</span>
+        </div>
+      ))}
+    </div>
+
+    <div class="section-divider mb-16"></div>
+
+    <!-- Simulation methodologies -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {methodologies.map((method) => (
+        <div class="bg-bg-primary rounded-2xl p-8 border border-border-default hover:border-brand-teal/30 transition-all hover:shadow-md">
+          <div class="w-14 h-14 rounded-xl bg-brand-teal/10 border border-brand-teal/20 flex items-center justify-center mb-6">
+            <Fragment set:html={method.icon} />
+          </div>
+          <h3 class="text-lg font-bold mb-3 text-text-primary">{method.name}</h3>
+          <p class="text-sm text-text-secondary leading-relaxed">{method.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,75 @@
+---
+import PageLayout from '../../../layouts/PageLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({
+    params: { slug: post.data.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<PageLayout title={post.data.title} description={post.data.excerpt}>
+  <article class="py-(--spacing-section)">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+      <!-- Back link -->
+      <a href="/en/blog/" class="inline-flex items-center gap-2 text-sm text-text-tertiary hover:text-brand-accent mb-8 transition-colors">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18" />
+        </svg>
+        Back to Blog
+      </a>
+
+      <!-- Header -->
+      <header class="mb-10">
+        <div class="flex flex-wrap gap-2 mb-4">
+          {post.data.categories.map((cat) => (
+            <span class="text-xs font-medium px-2.5 py-1 rounded-full bg-brand-secondary/10 text-brand-secondary">
+              {cat}
+            </span>
+          ))}
+        </div>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-4">
+          {post.data.title}
+        </h1>
+        <time class="text-text-tertiary" datetime={post.data.date.toISOString()}>
+          {post.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+        </time>
+      </header>
+
+      <!-- Content -->
+      <div class="prose prose-lg max-w-none
+        prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-text-primary
+        prose-p:text-text-secondary
+        prose-a:text-brand-teal prose-a:no-underline hover:prose-a:underline
+        prose-img:rounded-xl prose-img:border prose-img:border-border-default prose-img:mx-auto
+        prose-code:text-brand-secondary prose-code:bg-bg-secondary prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm
+        prose-pre:bg-bg-secondary prose-pre:border prose-pre:border-border-default prose-pre:rounded-xl
+        prose-blockquote:border-brand-teal prose-blockquote:text-text-secondary prose-blockquote:not-italic
+        prose-strong:text-text-primary
+        prose-li:text-text-secondary
+        prose-hr:border-border-default
+      ">
+        <Content />
+      </div>
+
+      <!-- Tags -->
+      {post.data.tags.length > 0 && (
+        <div class="mt-12 pt-8 border-t border-border-default">
+          <div class="flex flex-wrap gap-2">
+            {post.data.tags.map((tag) => (
+              <span class="text-xs px-3 py-1 rounded-full border border-border-default text-text-tertiary">
+                #{tag}
+              </span>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  </article>
+</PageLayout>

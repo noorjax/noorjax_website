@@ -1,0 +1,101 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import PageHero from '../../components/common/PageHero.astro';
+---
+
+<PageLayout title="عرض نموذج محاكاة مواقف السيارات" description="شاهد ما يمكن توقعه في مشروع محاكاة — نموذج تفاعلي ولوحة بيانات وشرح فيديو.">
+  <PageHero
+    title="عرض نموذج محاكاة مواقف السيارات"
+    subtitle="ما يمكن توقعه في مشروع محاكاة: نموذج المحاكاة وتحليل البيانات والرؤى الاستراتيجية."
+  />
+  <section class="py-(--spacing-section)">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+
+        <!-- Video Walkthrough -->
+        <div class="mb-16">
+          <h3 class="text-2xl font-bold mb-6">شرح فيديو</h3>
+          <p class="text-text-secondary mb-6">
+            شاهد الفيديو أدناه لفهم النموذج قبل التفاعل مع المعايير.
+          </p>
+          <div class="aspect-video max-h-[70vh] rounded-2xl overflow-hidden border border-border-default shadow-lg">
+            <iframe
+              src="https://www.youtube.com/embed/tF1X5N9ffT8"
+              title="عرض نموذج محاكاة مواقف السيارات"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              class="w-full h-full"
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+
+        <!-- The Model -->
+        <div class="mb-16">
+          <h3 class="text-2xl font-bold mb-4">النموذج</h3>
+          <p class="text-text-secondary leading-relaxed mb-6">
+            يتكون هذا النموذج من مبنى مواقف سيارات بـ 7 طوابق ونوعين من الأرضيات، يضم مصاعد آلية ومنصات ناقلة تنقل السيارات من منطقة الانتظار إلى موقف وفقاً لتوفر المساحة. عند طلب خروج سيارة، يقوم النظام الآلي بإعادة توزيع السيارات المعيقة لاستخراجها. الهدف هو اختبار سيناريوهات متعددة لوصول السيارات والجدولة لفهم استخدام المبنى وأوقات الانتظار ومؤشرات الأداء الرئيسية الأخرى.
+          </p>
+          <div class="aspect-[4/3] max-h-[70vh] rounded-2xl overflow-hidden border border-border-default shadow-lg bg-bg-secondary">
+            <iframe
+              src="https://cloud.anylogic.com/assets/embed?modelId=daa6b43c-284d-4c79-8d6b-e02bf2295a77"
+              title="AnyLogic Car Parking Simulation"
+              class="w-full h-full"
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+
+        <!-- Analysis Dashboard -->
+        <div class="mb-16">
+          <h3 class="text-2xl font-bold mb-4">لوحة التحليل</h3>
+          <div class="bg-bg-secondary rounded-2xl p-6 sm:p-8 border border-border-default mb-6">
+            <p class="text-text-secondary mb-4">تعرض اللوحة مقاييس تساعد في:</p>
+            <ul class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              {['التحقق من النموذج', 'تنفيذ الاستراتيجية', 'مقارنة السيناريوهات'].map((item) => (
+                <li class="flex items-center gap-2 text-text-primary font-medium">
+                  <svg class="w-5 h-5 text-brand-green shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div class="aspect-[16/10] max-h-[70vh] rounded-2xl overflow-hidden border border-border-default shadow-lg bg-bg-secondary">
+            <iframe
+              src="https://app.powerbi.com/view?r=eyJrIjoiYjUxNWRkMTMtMzQ0ZS00MjAwLWE4MzAtODRmYzhjODQ3YzY2IiwidCI6IjRiNGI5ZWQ3LTMzNTUtNDIwNS05YjRiLTFhOTY5M2Q3ZDA3ZiJ9"
+              title="Power BI Dashboard"
+              class="w-full h-full"
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+
+        <!-- Omniverse Integration -->
+        <div class="mb-16">
+          <h3 class="text-2xl font-bold mb-6">تكامل Omniverse مع AnyLogic</h3>
+          <div class="aspect-video max-h-[70vh] rounded-2xl overflow-hidden border border-border-default shadow-lg">
+            <iframe
+              src="https://www.youtube.com/embed/u0ZJ2zPa9e4"
+              title="Omniverse AnyLogic Integration"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              class="w-full h-full"
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+
+        <!-- Bottom CTA -->
+        <div class="text-center">
+          <p class="text-text-secondary mb-6">هل تريد محاكاة مثل هذه لمشروعك؟</p>
+          <a href="/ar/contact/" class="btn-primary text-base px-8 py-4">
+            كن عميلاً
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+        </div>
+    </div>
+  </section>
+</PageLayout>

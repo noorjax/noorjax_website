@@ -1,0 +1,182 @@
+---
+import { getLocaleFromUrl } from '../../i18n';
+
+const locale = getLocaleFromUrl(Astro.url);
+
+const testimonials = {
+  en: [
+    { name: 'Nathan W.', position: 'Development and Delivery Success Manager', rating: 5, quote: 'Felipe was great to work with! He understood the requirement no problem and was able to produce a great simulation that met my needs :)' },
+    { name: 'Elram G.', position: 'CEO', rating: 5, quote: "Felipe - I wanted to say thanks. I'm very happy with the outcome." },
+    { name: 'Abdallah Y.', position: 'PhD Student', rating: 5, quote: "It's Great working with you and I am looking forward to working with you again" },
+    { name: 'Cara R.', position: 'Student', rating: 5, quote: 'Talented and extremely supportive' },
+    { name: 'Guy V.', position: 'CEO', rating: 5, quote: 'Amazing work, fast, on target, great communication and quality delivery.' },
+    { name: 'Simon H.', position: 'CEO', rating: 4, quote: 'A good result in a short time! Nice working with you!' },
+    { name: 'Kris A.', position: 'CEO', rating: 5, quote: 'Very high quality and also commitment to explain the model clearly to me. Would highly recommend felipe' },
+    { name: 'Boris G.', position: 'CEO', rating: 5, quote: 'Fast, smart, understood what was needed. 10/10' },
+    { name: 'Maher H.', position: 'Student', rating: 5, quote: 'Felipe did a great job. He is patient. communicate and understand me well. he answered all my questions clearly. the answer was professional.' },
+    { name: 'Johnny K.', position: '', rating: 5, quote: 'Felipe is an outstanding simulation developer who possesses an excellent combination of technical ability and interpersonal skills. I have had the privilege of working with Felipe on several occasions and he has always completed his work to a very high standard.' },
+    { name: 'Ahmed A.', position: 'PhD Student', rating: 5, quote: 'amazing, skillful and trustworthy guy. perfect work and perfect attitude' },
+    { name: 'Sebastian B.', position: 'CEO', rating: 4, quote: 'Felipe is very knowledgeable of the many intricacies of the Anylogic software. He also managed to interpret a very wide brief and successfully implement all the features that were needed plus the ones that became apparent as we progressed.' },
+    { name: 'Freya L.', position: '', rating: 5, quote: 'Wonderful experience! Excellent communication, Felipe was available all time and had an open ear for any issues regarding the project. Also some changes regarding the requirements were no problem for him. He was friendly, professional and reliable. He is the best you can get for your job :)' },
+    { name: 'Max R.', position: '', rating: 5, quote: 'Fantastic freelancer. Always available to contact, with the work being delivered long before the deadline and to a perfect standard!' },
+    { name: 'Jose Luis P.', position: 'CTO', rating: 5, quote: 'Extremely efficient and high quality work. Great freelancer' },
+    { name: 'Sahar W.', position: '', rating: 5, quote: 'Outstanding experience - Perfectionist approach.' },
+    { name: 'Rob W.', position: '', rating: 5, quote: 'Felipe provides good quality of work. He started immediately and got the job done faster then promised.' },
+    { name: 'Claudio A.', position: '', rating: 5, quote: 'excellent job, very fast and reliable. responsibility in the times of delivery.' },
+    { name: 'Hal K.', position: '', rating: 5, quote: 'Felipe provides amazing quality work. He is very detail oriented and goes above and beyond to make the result exactly what you need. I will definitely work with him again in the future.' },
+  ],
+  es: [
+    { name: 'Nathan W.', position: 'Gerente de Éxito en Desarrollo y Entrega', rating: 5, quote: '¡Fue genial trabajar con Felipe! Entendió los requisitos sin problema y pudo producir una gran simulación que cumplió con mis necesidades :)' },
+    { name: 'Elram G.', position: 'CEO', rating: 5, quote: 'Felipe, quería darte las gracias. Estoy muy contento con el resultado.' },
+    { name: 'Abdallah Y.', position: 'Estudiante de Doctorado', rating: 5, quote: 'Es genial trabajar contigo y espero volver a trabajar contigo de nuevo.' },
+    { name: 'Cara R.', position: 'Estudiante', rating: 5, quote: 'Talentoso y extremadamente solidario.' },
+    { name: 'Guy V.', position: 'CEO', rating: 5, quote: 'Trabajo increíble, rápido, preciso, excelente comunicación y entrega de calidad.' },
+    { name: 'Simon H.', position: 'CEO', rating: 4, quote: '¡Un buen resultado en poco tiempo! ¡Fue un placer trabajar contigo!' },
+    { name: 'Kris A.', position: 'CEO', rating: 5, quote: 'Muy alta calidad y también compromiso para explicarme el modelo de forma clara. Recomiendo mucho a Felipe.' },
+    { name: 'Boris G.', position: 'CEO', rating: 5, quote: 'Rápido, inteligente, entendió lo que se necesitaba. 10/10' },
+    { name: 'Maher H.', position: 'Estudiante', rating: 5, quote: 'Felipe hizo un excelente trabajo. Es paciente, se comunica y me entiende bien. Respondió todas mis preguntas con claridad. La respuesta fue profesional.' },
+    { name: 'Johnny K.', position: '', rating: 5, quote: 'Felipe es un desarrollador de simulación sobresaliente que posee una excelente combinación de habilidad técnica y habilidades interpersonales. He tenido el privilegio de trabajar con Felipe en varias ocasiones y siempre ha completado su trabajo con un estándar muy alto.' },
+    { name: 'Ahmed A.', position: 'Estudiante de Doctorado', rating: 5, quote: 'Increíble, hábil y un tipo confiable. Trabajo perfecto y actitud perfecta.' },
+    { name: 'Sebastian B.', position: 'CEO', rating: 4, quote: 'Felipe tiene un gran conocimiento de las muchas complejidades del software Anylogic. También logró interpretar un requerimiento muy amplio e implementar con éxito todas las funcionalidades necesarias, además de las que surgieron a medida que avanzábamos.' },
+    { name: 'Freya L.', position: '', rating: 5, quote: '¡Experiencia maravillosa! Excelente comunicación, Felipe estuvo disponible todo el tiempo y siempre abierto a escuchar cualquier problema del proyecto. Además, los cambios en los requisitos no fueron problema para él. Fue amable, profesional y confiable. Es lo mejor que puedes conseguir para tu trabajo :)' },
+    { name: 'Max R.', position: '', rating: 5, quote: 'Freelancer fantástico. Siempre disponible para contactar, con el trabajo entregado mucho antes de la fecha límite y con un estándar perfecto.' },
+    { name: 'Jose Luis P.', position: 'CTO', rating: 5, quote: 'Trabajo extremadamente eficiente y de alta calidad. Gran freelancer.' },
+    { name: 'Sahar W.', position: '', rating: 5, quote: 'Experiencia sobresaliente. Enfoque perfeccionista.' },
+    { name: 'Rob W.', position: '', rating: 5, quote: 'Felipe ofrece trabajo de buena calidad. Empezó de inmediato y terminó el trabajo más rápido de lo prometido.' },
+    { name: 'Claudio A.', position: '', rating: 5, quote: 'Excelente trabajo, muy rápido y confiable. Responsabilidad en los tiempos de entrega.' },
+    { name: 'Hal K.', position: '', rating: 5, quote: 'Felipe ofrece un trabajo de calidad increíble. Es muy detallista y va más allá para que el resultado sea exactamente lo que necesitas. Definitivamente trabajaré con él de nuevo en el futuro.' },
+  ],
+  ar: [
+    { name: 'Nathan W.', position: 'مدير نجاح التطوير والتسليم', rating: 5, quote: 'كان العمل مع فيليبي رائعًا! فهم المتطلبات بدون أي مشكلة وتمكن من إنتاج محاكاة ممتازة تلبي احتياجاتي :)' },
+    { name: 'Elram G.', position: 'CEO', rating: 5, quote: 'فيليبي، أردت أن أشكرك. أنا سعيد جدًا بالنتيجة.' },
+    { name: 'Abdallah Y.', position: 'طالب دكتوراه', rating: 5, quote: 'إنه لمن الرائع العمل معك وأتطلع للعمل معك مرة أخرى.' },
+    { name: 'Cara R.', position: 'طالب', rating: 5, quote: 'موهوب وداعم للغاية.' },
+    { name: 'Guy V.', position: 'CEO', rating: 5, quote: 'عمل مذهل، سريع، دقيق، تواصل ممتاز وتسليم بجودة عالية.' },
+    { name: 'Simon H.', position: 'CEO', rating: 4, quote: 'نتيجة جيدة في وقت قصير! كان من الرائع العمل معك!' },
+    { name: 'Kris A.', position: 'CEO', rating: 5, quote: 'جودة عالية جدًا والتزام بشرح النموذج لي بوضوح. أوصي بفيليبي بشدة.' },
+    { name: 'Boris G.', position: 'CEO', rating: 5, quote: 'سريع، ذكي، فهم ما هو مطلوب. 10/10' },
+    { name: 'Maher H.', position: 'طالب', rating: 5, quote: 'قام فيليبي بعمل رائع. إنه صبور، يتواصل ويفهمني جيدًا. أجاب على جميع أسئلتي بوضوح. كانت الإجابة احترافية.' },
+    { name: 'Johnny K.', position: '', rating: 5, quote: 'فيليبي مطور محاكاة متميز يمتلك مزيجًا ممتازًا من القدرة التقنية والمهارات الشخصية. لقد حظيت بشرف العمل مع فيليبي في عدة مناسبات وقد أنجز عمله دائمًا بمستوى عالٍ جدًا.' },
+    { name: 'Ahmed A.', position: 'طالب دكتوراه', rating: 5, quote: 'شخص مذهل، ماهر وجدير بالثقة. عمل مثالي وسلوك مثالي.' },
+    { name: 'Sebastian B.', position: 'CEO', rating: 4, quote: 'فيليبي على دراية كبيرة بتعقيدات برنامج Anylogic المتعددة. كما تمكن من تفسير موجز واسع جدًا وتنفيذ جميع الميزات المطلوبة بنجاح، بالإضافة إلى تلك التي ظهرت مع تقدمنا.' },
+    { name: 'Freya L.', position: '', rating: 5, quote: 'تجربة رائعة! تواصل ممتاز، كان فيليبي متاحًا طوال الوقت ومستعدًا للاستماع لأي مشاكل تتعلق بالمشروع. كما أن التغييرات في المتطلبات لم تكن مشكلة بالنسبة له. كان ودودًا ومحترفًا وموثوقًا. إنه أفضل من يمكنك الحصول عليه لعملك :)' },
+    { name: 'Max R.', position: '', rating: 5, quote: 'مستقل رائع. متاح دائمًا للتواصل، مع تسليم العمل قبل الموعد النهائي بوقت طويل وبمستوى مثالي!' },
+    { name: 'Jose Luis P.', position: 'CTO', rating: 5, quote: 'عمل فعّال للغاية وبجودة عالية. مستقل ممتاز.' },
+    { name: 'Sahar W.', position: '', rating: 5, quote: 'تجربة متميزة. نهج يسعى للكمال.' },
+    { name: 'Rob W.', position: '', rating: 5, quote: 'فيليبي يقدم عملًا بجودة عالية. بدأ فورًا وأنجز العمل أسرع مما وعد.' },
+    { name: 'Claudio A.', position: '', rating: 5, quote: 'عمل ممتاز، سريع جدًا وموثوق. التزام بمواعيد التسليم.' },
+    { name: 'Hal K.', position: '', rating: 5, quote: 'فيليبي يقدم عملًا بجودة مذهلة. إنه دقيق جدًا في التفاصيل ويبذل قصارى جهده ليكون الناتج بالضبط ما تحتاجه. سأعمل معه بالتأكيد مرة أخرى في المستقبل.' },
+  ],
+};
+
+const items = testimonials[locale as keyof typeof testimonials] || testimonials['en'];
+
+const stars = (count: number) => '★'.repeat(count) + '☆'.repeat(5 - count);
+---
+
+<section class="py-(--spacing-section) bg-bg-primary">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-4">
+        {locale === 'en' ? 'What People Say' : locale === 'es' ? 'Lo Que Dicen Nuestros Clientes' : 'ماذا يقول الناس'}
+      </h2>
+      <p class="text-text-secondary">
+        {locale === 'en' ? 'Testimonials from clients and collaborators worldwide.' : locale === 'es' ? 'Testimonios de clientes y colaboradores de todo el mundo.' : 'شهادات من عملاء ومتعاونين حول العالم.'}
+      </p>
+    </div>
+
+    <!-- Carousel container -->
+    <div class="relative" id="testimonial-carousel">
+      <div class="overflow-hidden">
+        <div class="flex transition-transform duration-500 ease-in-out" id="testimonial-track">
+          {items.map((t, i) => (
+            <div class="shrink-0 grow-0 px-3" style={`width: ${100 / items.length}%`} data-index={i}>
+              <div class="bg-bg-secondary rounded-2xl p-6 border border-border-default h-full flex flex-col">
+                <div class="text-brand-green text-lg mb-3">{stars(t.rating)}</div>
+                <blockquote class="text-sm text-text-secondary leading-relaxed flex-1 italic">
+                  "{t.quote}"
+                </blockquote>
+                <div class="mt-4 pt-4 border-t border-border-default">
+                  <p class="font-bold text-text-primary text-sm">{t.name}</p>
+                  {t.position && <p class="text-xs text-text-tertiary">{t.position}</p>}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Navigation buttons -->
+      <div class="flex items-center justify-center gap-4 mt-8">
+        <button
+          id="testimonial-prev"
+          class="w-10 h-10 rounded-full border border-border-default flex items-center justify-center text-text-secondary hover:text-brand-teal hover:border-brand-teal transition-colors"
+          aria-label="Previous"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+        <span class="text-sm text-text-tertiary" id="testimonial-counter">1 / {items.length}</span>
+        <button
+          id="testimonial-next"
+          class="w-10 h-10 rounded-full border border-border-default flex items-center justify-center text-text-secondary hover:text-brand-teal hover:border-brand-teal transition-colors"
+          aria-label="Next"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+  function initTestimonials() {
+    const track = document.getElementById('testimonial-track');
+    const prevBtn = document.getElementById('testimonial-prev');
+    const nextBtn = document.getElementById('testimonial-next');
+    const counter = document.getElementById('testimonial-counter');
+    if (!track || !prevBtn || !nextBtn || !counter) return;
+
+    const total = track.children.length;
+    let page = 0;
+
+    function getVisible() {
+      if (window.innerWidth >= 1024) return 3;
+      if (window.innerWidth >= 768) return 2;
+      return 1;
+    }
+
+    function update() {
+      const visible = getVisible();
+      const totalPages = Math.ceil(total / visible);
+      if (page >= totalPages) page = totalPages - 1;
+      if (page < 0) page = 0;
+
+      track.style.width = (total / visible) * 100 + '%';
+
+      let startIndex = page * visible;
+      if (startIndex + visible > total) startIndex = total - visible;
+      const offset = (startIndex / total) * 100;
+      track.style.transform = 'translateX(-' + offset + '%)';
+
+      counter.textContent = (page + 1) + ' / ' + totalPages;
+    }
+
+    // Clone buttons to remove old listeners
+    const newPrev = prevBtn.cloneNode(true);
+    const newNext = nextBtn.cloneNode(true);
+    prevBtn.parentNode.replaceChild(newPrev, prevBtn);
+    nextBtn.parentNode.replaceChild(newNext, nextBtn);
+
+    newPrev.addEventListener('click', function() { page--; update(); });
+    newNext.addEventListener('click', function() { page++; update(); });
+    window.addEventListener('resize', update);
+    update();
+  }
+
+  initTestimonials();
+  document.addEventListener('astro:after-swap', initTestimonials);
+</script>

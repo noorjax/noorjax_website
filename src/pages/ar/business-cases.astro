@@ -1,0 +1,303 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import PageHero from '../../components/common/PageHero.astro';
+import ClientCarousel from '../../components/sections/ClientCarousel.astro';
+import { portfolioItemsAr as portfolioItems } from '../../lib/portfolioItems.ar';
+import { translateCategory } from '../../lib/categoryLabels';
+import { getServicesForSlug, translateService } from '../../lib/portfolioServices';
+
+const allServices = [...new Set(portfolioItems.flatMap((p) => getServicesForSlug(p.slug)))].sort();
+const allMethodologies = [...new Set(portfolioItems.flatMap((p) => p.categories))].sort();
+
+const portfolioImages: Record<string, string> = {
+  'optimization-for-sensor-locations-to-detect-sewer-overflows': 'maxresdefault.jpg',
+  'network-optimization-and-simulation-of-drones-supporting-fire-missions': 'fire-drones.png',
+  'traffic-intersection': 'traffic-intersection.png',
+  'optimization-for-sensor-locations-to-detect-sewer-overflows-2-2': 'prison.jpg',
+  'people-in-an-office': 'office.jpg',
+  'propan-raya': 'propan.jpg',
+  'platoon': 'platoon.png',
+  'warehouse-with-bins': 'warehouse-bins.jpeg',
+  'a-supply-chain-and-distribution-network-b2c-b2b': 'supply-chain.png',
+  'school-traffic-analysis': 'school-traffic.jpg',
+  '1118': 'terrorism.jpg',
+  'pricing-segmentation-for-ride-sharing-platform': 'ride-sharing.png',
+  'coal-mining': 'coal-mining.png',
+  'bus-depot-diesel-vs-electric': 'bus-depot.png',
+  'management-investment': 'management.jpg',
+  'bridge-construction-field-preparation': 'bridge.jpg',
+  'speed-date': 'speed-date.jpg',
+  'cars-and-pipes-effect-of-water-problems-on-road-traffic': 'cars-pipes.jpeg',
+  'employees-entering-an-office': 'employees-office.png',
+  'newspaper-production': 'newspaper.png',
+  'warehouses-complex-for-canned-food-products': 'warehouses-canned.png',
+  'cash-iot': 'cash-iot.jpg',
+  'nunavik-ecosystem': 'nunavik.png',
+  'online-grocery-shopping': 'grocery.jpg',
+  'epidemics': 'epidemics.jpg',
+  'material_flow_safety': 'material-flow.jpeg',
+  'warehouse-inbound-logistics': 'warehouse-inbound.png',
+  'swarm-mining-robots': 'swarm-mining.png',
+  'biological-organisms-throughput': 'biological.webp',
+  'military-gym-layout-optimization': 'military-gym.webp',
+  'bulk-material-transport-rail-system': 'bulk-rail.webp',
+  'used-cooking-oil-recycling': 'cooking-oil.webp',
+  'production-facility-planning': 'production-facility.webp',
+  'delivery-optimization': 'delivery.webp',
+  'train-sequences-in-railyard': 'train-railyard.webp',
+  'multi-robot-navigation': 'multi-robot.png',
+};
+
+const whitePapers = [
+  { title: 'المحاكاة والتعلم المعزز لأنظمة التصنيع المرنة', url: '/documents/assembly-line-RL.pdf' },
+  { title: 'اكتشاف فرص تحسين العمليات في مختبر فحص PCR لكوفيد', url: '/documents/discovery-process-Covid-Lab.pdf' },
+  { title: 'حركة مرور الطريق السريع بين المستودعات شرق-غرب', url: '/documents/Warehouse-Management-Traffic-Analysis.pdf' },
+  { title: 'تحسين تعيين الطرود على نظام ناقلات الصواني المائلة', url: '/documents/production-line-Tilt-Tray-Conveyors.pdf' },
+  { title: 'جدولة المرضى المزمنين من خلال المحاكاة', url: '/documents/Chronic-Patient-Scheduling-Through-Simulations.pdf' },
+];
+
+const conferencePresentations = [
+  { title: 'تأثير الطاقة وانبعاثات CO2 على استدامة مواقف السيارات', venue: 'EuroSim 2023', url: 'https://link.springer.com/chapter/10.1007/978-3-031-68435-7_4' },
+  { title: 'المحاكاة والتعلم المعزز لأنظمة التصنيع المرنة', venue: 'AnyLogic Conference', url: 'https://www.youtube.com/watch?v=Oi7VzpWXaxM' },
+  { title: 'نمذجة السلوك الاجتماعي في استهلاك الطاقة', venue: 'AnyLogic Conference', url: 'https://www.youtube.com/watch?v=5PolsyfP6V0' },
+  { title: 'تحسين تعيين الطرود على نظام ناقلات الصواني المائلة', venue: 'AnyLogic Conference', url: 'https://www.youtube.com/watch?v=c8NeGQcdvTU' },
+  { title: 'ازدحام طريق المستودعات - AnyLogic مقابل Excel', venue: 'AnyLogic Conference', url: 'https://www.youtube.com/watch?v=rwwEtdCZHkU' },
+  { title: 'دراسة تأثير اعتماد الطائرات بدون طيار على سلامة البناء', venue: 'Academic', url: 'https://youtu.be/CEzHZmOaJ_g' },
+  { title: 'تجربة تحسين مخصصة بفواصل الثقة مقابل OptQuest', venue: 'IEEE', url: 'https://ieeexplore.ieee.org/document/11017060' },
+  { title: 'توسعة مختبر صيدلاني في ظل عدم اليقين في العمليات المستقبلية', venue: 'AnyLogic Conference', url: 'https://www.youtube.com/watch?v=dLyJhboJSUA' },
+];
+
+const articles = [
+  { title: 'مؤتمر ديناميكيات النظام من منظور مطور محاكاة متعدد المناهج', url: 'https://systemdynamics.org/the-system-dynamics-conference-from-the-perspective-of-a-multi-method-simulations-developer/' },
+  { title: 'هل نماذج محاكاة التصنيع الغنية والمفصلة مناسبة لتدريب Lean Six Sigma؟', url: 'https://www.linkedin.com/pulse/rich-detailed-manufacturing-simulation-models-suitable-felipe-haro-af78f/' },
+  { title: 'محاكاة فاشلة – وكيف كان يمكن للذكاء الاصطناعي إنقاذها', url: 'https://www.linkedin.com/pulse/failed-simulation-how-ai-could-have-saved-felipe-haro-ft0df/' },
+  { title: 'فن التبسيط', url: 'https://www.linkedin.com/pulse/art-simplifying-felipe-haro-zwzue/' },
+  { title: 'فهم متى يساعد الذكاء الاصطناعي مطوري المحاكاة... ومتى لا يفعل', url: 'https://www.linkedin.com/pulse/understanding-when-ai-helps-simulation-modelers-doesnt-felipe-haro-3qivf' },
+  { title: 'نموذج التوازن العام (GEM) مقابل ديناميكيات النظام (SD)', url: 'https://www.linkedin.com/pulse/general-equilibrium-model-gem-vs-system-dynamics-sd-felipe-haro-llgxf' },
+  { title: 'التوزيعات مقابل المتوسطات في المحاكاة المرتكزة على العمليات', url: 'https://www.linkedin.com/pulse/distributions-vs-averages-process-centric-simulations-felipe-haro-6cbof/' },
+];
+
+const publicModels = [
+  { title: 'نماذج عامة على AnyLogic Cloud', url: 'https://cloud.anylogic.com/models?public=true&customSearchType=USER&customSearchData=5d461b39-ed33-4b3e-99f0-086dc344e0ce' },
+  { title: 'نموذج تجريبي لمواقف السيارات', url: '/ar/simulation-services/' },
+  { title: 'تكامل Omniverse مع AnyLogic', url: 'https://youtu.be/48XJyzxU9aQ' },
+];
+
+const studentWork = [
+  { title: 'استخدام نموذج وبائي لقياس تأثير الحملات الإعلانية', url: 'https://www.linkedin.com/pulse/using-epidemiological-model-measure-advertising-impact-rodriguez/' },
+  { title: 'إدارة الأنظمة التكيفية المعقدة: منظور النمذجة النوعية للموارد/الوكلاء', url: 'https://strathprints.strath.ac.uk/73611/1/Kazakov_etal_EJOR_2020_Managing_complex_adaptive_systems.pdf' },
+  { title: 'نهج التعلم الآلي لاختيار أسطول نقل التربة', url: 'https://link.springer.com/chapter/10.1007/978-981-16-2377-6_75' },
+  { title: 'حالة التتبع بتقنية RFID في حركات النقد', url: 'https://www.mdpi.com/2674-1032/2/2/20' },
+  { title: 'مقارنة ثلاث منهجيات محاكاة لمشروع تصنيع Lean Six Sigma', url: 'https://www.emerald.com/ijlss/article-abstract/11/3/405/136263/' },
+  { title: 'دمج Six Sigma والمحاكاة في مصنع إنتاج حقيقي لتحسين الأداء', url: 'https://www.emerald.com/ijlss/article-abstract/14/2/451/135406/' },
+  { title: 'نموذج جدولة شاحنات في الوقت الحقيقي قائم على الوكلاء المتعددين لمشاكل التفريغ المتقاطع', url: 'https://www.sciencedirect.com/science/article/pii/S2949863523000274' },
+  { title: 'محاكاة قائمة على الوكلاء لاستراتيجية الوقاية الكيميائية الموسمية من الملاريا في جنوب تنزانيا', url: 'https://link.springer.com/article/10.1186/s12936-026-05821-3' },
+];
+
+---
+
+<PageLayout title="حالات الأعمال" description="استكشف مشاريعنا الاستشارية في المحاكاة والأوراق البيضاء وعروض المؤتمرات والجوائز.">
+  <PageHero
+    title="حالات الأعمال"
+    subtitle="مشاريع تم تنفيذها لحكومات وشركات Fortune 500 وشركات ناشئة ومؤسسات بحثية حول العالم."
+  />
+  <section class="py-(--spacing-section)">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+      <!-- Companies We've Worked With — Logo Carousel -->
+      <div class="mb-20">
+        <ClientCarousel />
+      </div>
+
+      <div class="section-divider mb-20"></div>
+
+      <!-- Developed Projects -->
+      <div class="mb-20">
+        <h2 class="text-2xl font-bold text-center mb-8">بعض المشاريع المنجزة</h2>
+
+        <!-- Filter: Services (green) -->
+        <div class="flex flex-wrap gap-2 justify-center mb-3" id="service-filters">
+          <button data-filter="all" class="svc-filter-btn active px-3 py-1.5 rounded-full text-xs font-medium bg-brand-green text-white transition-colors cursor-pointer">جميع الصناعات</button>
+          {allServices.map((svc) => (
+            <button data-filter={svc} class="svc-filter-btn px-3 py-1.5 rounded-full text-xs font-medium border border-brand-green/30 text-brand-green hover:bg-brand-green/10 transition-colors cursor-pointer">{translateService(svc, 'ar')}</button>
+          ))}
+        </div>
+
+        <!-- Filter: Methodology (teal) -->
+        <div class="flex flex-wrap gap-2 justify-center mb-10" id="method-filters">
+          <button data-filter="all" class="method-filter-btn active px-3 py-1.5 rounded-full text-xs font-medium bg-brand-teal text-white transition-colors cursor-pointer">جميع المناهج</button>
+          {allMethodologies.map((cat) => (
+            <button data-filter={cat} class="method-filter-btn px-3 py-1.5 rounded-full text-xs font-medium border border-brand-teal/30 text-brand-teal hover:bg-brand-teal/10 transition-colors cursor-pointer">{translateCategory(cat, 'ar')}</button>
+          ))}
+        </div>
+
+        <div id="portfolio-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {portfolioItems.map((project) => {
+            const img = portfolioImages[project.slug];
+            const projectServices = getServicesForSlug(project.slug);
+            return (
+              <a href={`/ar/portfolio/${project.slug}/`} class="portfolio-card bg-bg-secondary rounded-2xl border border-border-default hover:border-brand-teal/30 transition-all hover:shadow-lg group block overflow-hidden" data-services={JSON.stringify(projectServices)} data-methods={JSON.stringify(project.categories)}>
+                {img && (
+                  <div class="aspect-[16/10] overflow-hidden">
+                    <img
+                      src={`/images/portfolio/${img}`}
+                      alt={project.title}
+                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                    />
+                  </div>
+                )}
+                <div class="p-5">
+                  <h3 class="text-sm font-bold mb-2 text-text-primary leading-snug group-hover:text-brand-teal transition-colors">{project.title}</h3>
+                  <div class="flex flex-wrap gap-1">
+                    {getServicesForSlug(project.slug).map((svc) => (
+                      <span class="text-[10px] font-medium px-1.5 py-0.5 rounded-full bg-brand-green/10 text-brand-green">{translateService(svc, 'ar')}</span>
+                    ))}
+                    {project.categories.map((cat) => (
+                      <span class="text-[10px] font-medium px-1.5 py-0.5 rounded-full bg-brand-teal/10 text-brand-teal">{translateCategory(cat, 'ar')}</span>
+                    ))}
+                  </div>
+                </div>
+              </a>
+            );
+          })}
+        </div>
+      </div>
+
+      <div class="section-divider mb-20"></div>
+
+      <!-- White Papers -->
+      <div class="mb-20">
+        <h2 class="text-2xl font-bold text-center mb-8">الأوراق البيضاء</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {whitePapers.map((paper) => (
+            <a href={paper.url} target="_blank" rel="noopener noreferrer" class="flex items-start gap-3 bg-bg-secondary rounded-xl p-5 border border-border-default hover:border-brand-teal/30 transition-all hover:shadow-md group">
+              <svg class="w-6 h-6 text-brand-teal shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              <span class="text-sm font-medium text-text-primary group-hover:text-brand-teal transition-colors">{paper.title}</span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <div class="section-divider mb-20"></div>
+
+      <!-- Conference Presentations -->
+      <div class="mb-20">
+        <h2 class="text-2xl font-bold text-center mb-8">عروض المؤتمرات</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {conferencePresentations.map((pres) => {
+            const isYouTube = pres.url.includes('youtube.com') || pres.url.includes('youtu.be');
+            return (
+              <a href={pres.url} target="_blank" rel="noopener noreferrer" class="flex items-start gap-3 bg-bg-secondary rounded-xl p-5 border border-border-default hover:border-brand-teal/30 transition-all hover:shadow-md group">
+                {isYouTube ? (
+                  <svg class="w-6 h-6 text-red-500 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                  </svg>
+                ) : (
+                  <svg class="w-6 h-6 text-brand-teal shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  </svg>
+                )}
+                <div>
+                  <span class="text-sm font-medium text-text-primary group-hover:text-brand-teal transition-colors block">{pres.title}</span>
+                  <span class="text-xs text-text-tertiary mt-1 block">{pres.venue}</span>
+                </div>
+              </a>
+            );
+          })}
+        </div>
+      </div>
+
+      <div class="section-divider mb-20"></div>
+
+      <!-- Related Papers and Articles -->
+      <div class="mb-20">
+        <h2 class="text-2xl font-bold text-center mb-8">أوراق ومقالات ذات صلة</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {articles.map((article) => (
+            <a href={article.url} target="_blank" rel="noopener noreferrer" class="flex items-start gap-3 bg-bg-secondary rounded-xl p-5 border border-border-default hover:border-brand-teal/30 transition-all hover:shadow-md group">
+              <svg class="w-5 h-5 text-brand-teal shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+              </svg>
+              <span class="text-sm font-medium text-text-primary group-hover:text-brand-teal transition-colors">{article.title}</span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <div class="section-divider mb-20"></div>
+
+      <!-- Public Model Examples -->
+      <div class="mb-20">
+        <h2 class="text-2xl font-bold text-center mb-8">نماذج عامة</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {publicModels.map((model) => (
+            <a href={model.url} target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 bg-bg-secondary rounded-xl p-5 border border-border-default hover:border-brand-teal/30 transition-all hover:shadow-md group">
+              <svg class="w-5 h-5 text-brand-green shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span class="text-sm font-medium text-text-primary group-hover:text-brand-teal transition-colors">{model.title}</span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <div class="section-divider mb-20"></div>
+
+      <!-- Our Students' Work -->
+      <div class="mb-20">
+        <h2 class="text-2xl font-bold text-center mb-8">أعمال طلابنا</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {studentWork.map((work) => (
+            <a href={work.url} target="_blank" rel="noopener noreferrer" class="flex items-start gap-3 bg-bg-secondary rounded-xl p-5 border border-border-default hover:border-brand-teal/30 transition-all hover:shadow-md group">
+              <svg class="w-5 h-5 text-brand-teal shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
+              <span class="text-sm font-medium text-text-primary group-hover:text-brand-teal transition-colors">{work.title}</span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="text-center">
+        <p class="text-text-secondary mb-6">هل تريد أن ترى كيف يمكن للمحاكاة حل تحديك؟</p>
+        <a href="/ar/contact/" class="btn-primary text-base px-8 py-4">
+          كن عميلاً
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</PageLayout>
+
+<script>
+  document.addEventListener('astro:page-load', () => {
+    const svcBtns = document.querySelectorAll<HTMLButtonElement>('.svc-filter-btn');
+    const methodBtns = document.querySelectorAll<HTMLButtonElement>('.method-filter-btn');
+    const cards = document.querySelectorAll<HTMLElement>('.portfolio-card');
+    let activeSvc = 'all';
+    let activeMethod = 'all';
+    function applyFilters() {
+      cards.forEach((card) => {
+        const services: string[] = JSON.parse(card.dataset.services || '[]');
+        const methods: string[] = JSON.parse(card.dataset.methods || '[]');
+        const matchSvc = activeSvc === 'all' || services.includes(activeSvc);
+        const matchMethod = activeMethod === 'all' || methods.includes(activeMethod);
+        card.style.display = matchSvc && matchMethod ? '' : 'none';
+      });
+    }
+    function setActive(btns: NodeListOf<HTMLButtonElement>, clicked: HTMLButtonElement, activeClass: string, borderClass: string) {
+      btns.forEach((b) => { b.classList.remove('active', activeClass, 'text-white'); b.classList.add('border', borderClass); });
+      clicked.classList.add('active', activeClass, 'text-white');
+      clicked.classList.remove('border', borderClass);
+    }
+    svcBtns.forEach((btn) => { btn.addEventListener('click', () => { activeSvc = btn.dataset.filter || 'all'; setActive(svcBtns, btn, 'bg-brand-green', 'border-brand-green/30'); applyFilters(); }); });
+    methodBtns.forEach((btn) => { btn.addEventListener('click', () => { activeMethod = btn.dataset.filter || 'all'; setActive(methodBtns, btn, 'bg-brand-teal', 'border-brand-teal/30'); applyFilters(); }); });
+  });
+</script>

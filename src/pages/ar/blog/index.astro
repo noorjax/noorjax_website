@@ -1,0 +1,131 @@
+---
+import PageLayout from '../../../layouts/PageLayout.astro';
+import PageHero from '../../../components/common/PageHero.astro';
+import { getCollection } from 'astro:content';
+import { t } from '../../../i18n';
+import { translateCategory } from '../../../lib/categoryLabels';
+
+const i18n = t('ar');
+const posts = (await getCollection('blog-ar'))
+  .filter((post) => !post.data.draft)
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+
+// Get unique categories
+const allCategories = [...new Set(posts.flatMap((p) => p.data.categories))].sort();
+---
+
+<PageLayout title={i18n.blog.title} description={i18n.blog.subtitle}>
+  <PageHero title={i18n.blog.title} subtitle={i18n.blog.subtitle} />
+  <section class="py-(--spacing-section)">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+      <!-- YouTube shoutout -->
+      <div class="mb-12 rounded-2xl border border-border-default bg-bg-secondary p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
+        <div class="flex items-center justify-center w-12 h-12 rounded-full bg-[#FF0000]/10 shrink-0">
+          <svg class="w-6 h-6 text-[#FF0000]" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+          </svg>
+        </div>
+        <div class="flex-1">
+          <h3 class="text-lg font-bold mb-1">{i18n.blog.youtubeTitle}</h3>
+          <p class="text-sm text-text-secondary">{i18n.blog.youtubeDescription}</p>
+        </div>
+        <a
+          href="https://www.youtube.com/@noorjaxconsulting"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="shrink-0 inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-border-default text-text-primary font-semibold text-sm hover:border-brand-teal hover:text-brand-teal transition-colors"
+        >
+          {i18n.blog.youtubeCta}
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
+        </a>
+      </div>
+
+      <!-- Categories filter -->
+      <div class="flex flex-wrap gap-2 justify-center mb-12" id="blog-filters">
+        <button
+          data-filter="all"
+          class="blog-filter-btn active px-4 py-1.5 rounded-full text-sm font-medium border border-brand-teal bg-brand-teal text-white transition-colors cursor-pointer"
+        >
+          {i18n.blog.allPosts} ({posts.length})
+        </button>
+        {allCategories.map((cat) => (
+          <button
+            data-filter={cat}
+            class="blog-filter-btn px-4 py-1.5 rounded-full text-sm font-medium border border-border-default bg-transparent text-text-secondary hover:border-brand-teal/40 hover:text-text-primary transition-colors cursor-pointer"
+          >
+            {translateCategory(cat, 'ar')}
+          </button>
+        ))}
+      </div>
+
+      <!-- Blog grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="blog-grid">
+        {posts.map((post) => (
+          <a
+            href={`/ar/blog/${post.data.slug}/`}
+            data-categories={JSON.stringify(post.data.categories)}
+            class="blog-card group bg-bg-secondary rounded-2xl border border-border-default hover:border-brand-teal/40 transition-all duration-300 hover:-translate-y-1 overflow-hidden"
+          >
+            <div class="p-6">
+              {/* Categories */}
+              <div class="flex flex-wrap gap-2 mb-3">
+                {post.data.categories.map((cat) => (
+                  <span class="text-xs font-medium px-2 py-0.5 rounded-full bg-brand-teal/10 text-brand-teal">
+                    {translateCategory(cat, 'ar')}
+                  </span>
+                ))}
+              </div>
+
+              {/* Title */}
+              <h2 class="text-lg font-bold mb-2 group-hover:text-brand-accent transition-colors line-clamp-2">
+                {post.data.title}
+              </h2>
+
+              {/* Excerpt */}
+              <p class="text-sm text-text-secondary line-clamp-3 mb-4">
+                {post.data.excerpt}
+              </p>
+
+              {/* Date */}
+              <time class="text-xs text-text-tertiary" datetime={post.data.date.toISOString()}>
+                {post.data.date.toLocaleDateString('ar-SA', { year: 'numeric', month: 'long', day: 'numeric' })}
+              </time>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</PageLayout>
+
+<script>
+  document.addEventListener('astro:page-load', () => {
+    const filterBtns = document.querySelectorAll<HTMLButtonElement>('.blog-filter-btn');
+    const cards = document.querySelectorAll<HTMLElement>('.blog-card');
+
+    filterBtns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const filter = btn.dataset.filter;
+
+        // Update active button styles
+        filterBtns.forEach((b) => {
+          b.classList.remove('active', 'bg-brand-teal', 'text-white', 'border-brand-teal');
+          b.classList.add('bg-transparent', 'border-border-default', 'text-text-secondary');
+        });
+        btn.classList.add('active', 'bg-brand-teal', 'text-white', 'border-brand-teal');
+        btn.classList.remove('bg-transparent', 'border-border-default', 'text-text-secondary');
+
+        // Filter cards
+        cards.forEach((card) => {
+          if (filter === 'all') {
+            card.style.display = '';
+          } else {
+            const categories: string[] = JSON.parse(card.dataset.categories || '[]');
+            card.style.display = categories.includes(filter!) ? '' : 'none';
+          }
+        });
+      });
+    });
+  });
+</script>

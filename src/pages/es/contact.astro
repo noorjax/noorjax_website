@@ -1,0 +1,91 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import PageHero from '../../components/common/PageHero.astro';
+import { t } from '../../i18n';
+import { SITE } from '../../lib/constants';
+
+const i18n = t('es');
+---
+
+<PageLayout title={i18n.contact.title} description={i18n.contact.subtitle}>
+  <PageHero title={i18n.contact.title} subtitle={i18n.contact.subtitle} />
+  <section class="py-(--spacing-section)">
+    <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+      <!-- Contact cards grid (2x2) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+        <!-- Looking for free help? -->
+        <a href="/es/blog/how-to-get-free-help/" class="group bg-bg-secondary rounded-2xl p-8 border border-border-default hover:border-brand-secondary/40 hover:shadow-lg transition-all">
+          <div class="flex items-start gap-5">
+            <div class="w-14 h-14 rounded-full bg-brand-accent/10 flex items-center justify-center shrink-0">
+              <svg class="w-7 h-7 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-text-primary mb-2">{i18n.contact.freeHelpTitle}</h3>
+              <p class="text-sm text-text-tertiary">{i18n.contact.freeHelpDescription}</p>
+            </div>
+          </div>
+        </a>
+
+        <!-- Book a Meeting -->
+        <a href={SITE.calendly} target="_blank" rel="noopener noreferrer" class="group bg-bg-secondary rounded-2xl p-8 border border-border-default hover:border-brand-secondary/40 hover:shadow-lg transition-all">
+          <div class="flex items-start gap-5">
+            <div class="w-14 h-14 rounded-full bg-brand-accent/10 flex items-center justify-center shrink-0">
+              <svg class="w-7 h-7 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-text-primary mb-2">{i18n.contact.bookMeeting}</h3>
+              <p class="text-sm text-text-tertiary">{i18n.contact.calendlyDescription}</p>
+            </div>
+          </div>
+        </a>
+
+        <!-- LinkedIn -->
+        <a href={SITE.linkedin} target="_blank" rel="noopener noreferrer" class="group bg-bg-secondary rounded-2xl p-8 border border-border-default hover:border-brand-secondary/40 hover:shadow-lg transition-all">
+          <div class="flex items-start gap-5">
+            <div class="w-14 h-14 rounded-full bg-brand-accent/10 flex items-center justify-center shrink-0">
+              <svg class="w-7 h-7 text-brand-accent" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-text-primary mb-2">LinkedIn</h3>
+              <p class="text-sm text-text-tertiary">linkedin.com/in/noorjaxconsulting</p>
+            </div>
+          </div>
+        </a>
+
+        <!-- Email -->
+        <a href={`mailto:${SITE.email}`} class="group bg-bg-secondary rounded-2xl p-8 border border-border-default hover:border-brand-secondary/40 hover:shadow-lg transition-all">
+          <div class="flex items-start gap-5">
+            <div class="w-14 h-14 rounded-full bg-brand-accent/10 flex items-center justify-center shrink-0">
+              <svg class="w-7 h-7 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-text-primary mb-2">Email</h3>
+              <p class="text-sm text-text-tertiary">{SITE.email}</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- E-Residency section -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-bg-secondary rounded-2xl p-8 border border-border-default text-center">
+          <p class="font-semibold text-text-primary mb-4">{i18n.contact.eResidencyText}</p>
+          <img src="/images/contact/e-residency.png" alt="Republic of Estonia e-Residency" class="max-h-20 mx-auto" />
+        </div>
+        <div class="bg-bg-secondary rounded-2xl p-8 border border-border-default text-center">
+          <p class="font-semibold text-text-primary mb-1">{i18n.contact.erhubText}</p>
+          <p class="text-sm text-text-tertiary mb-4">{SITE.address}</p>
+          <img src="/images/contact/erhub-logo.png" alt="e-Residency Hub" class="max-h-12 mx-auto" />
+        </div>
+      </div>
+    </div>
+  </section>
+</PageLayout>

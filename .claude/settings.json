@@ -1,0 +1,34 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -sS -L -o python.svg \"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg\")",
+      "Bash(curl -sS -L -o powerbi.svg \"https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/powerbi.svg\")",
+      "Bash(curl -sS -L -o vensim.png \"https://vensim.com/wp-content/uploads/2023/06/Vensim-KsmVentanasm.png\" -A \"Mozilla/5.0\")",
+      "Bash(curl -sS -L -o ADS.jpg \"https://noorjax.com/wp-content/uploads/2019/04/ADS.jpg\" --max-time 15)",
+      "Bash(mkdir -p /c/Repositories/noorjax_website/public/documents)",
+      "Bash(curl -sS -L -o \"assembly-line-RL.pdf\" \"https://noorjax.com/wp-content/uploads/2023/07/assembly-line-RL.pdf\" --max-time 30)",
+      "Bash(curl -sS -L -o \"discovery-process-Covid-Lab.pdf\" \"https://noorjax.com/wp-content/uploads/2023/07/discovery-process-Covid-Lab.pdf\" --max-time 30)",
+      "Bash(curl -sS -L -o \"Warehouse-Management-Traffic-Analysis.pdf\" \"https://noorjax.com/wp-content/uploads/2023/07/Warehouse-Management-Traffic-Analysis.pdf\" --max-time 30)",
+      "Bash(curl -sS -L -o \"production-line-Tilt-Tray-Conveyors.pdf\" \"https://noorjax.com/wp-content/uploads/2023/07/production-line-Tilt-Tray-Conveyors.pdf\" --max-time 30)",
+      "Bash(file *.pdf)",
+      "Bash(file *)",
+      "Bash(mkdir -p /c/Repositories/noorjax_website/public/images/products)",
+      "Bash(curl -sS -L -o junit6.png \"https://noorjax.com/wp-content/uploads/2025/11/9b2f7e0c-1555-492e-b213-ee2661b927b4.png\" --max-time 20)",
+      "Bash(curl -sS -L -o optimization-ci.webp \"https://noorjax.com/wp-content/uploads/2024/09/7f45b1ac-98de-449a-8531-c7098b21451a-750x430-1.webp\" --max-time 20)",
+      "Bash(curl -sS -L -o monte-carlo.png \"https://noorjax.com/wp-content/uploads/2024/07/Monosnap-ChatGPT-Google-Chrome-2024-08-29-13.38..png\" --max-time 20)",
+      "Bash(curl -sS -L -o sorting-conveyors.webp \"https://noorjax.com/wp-content/uploads/2024/06/DALL·E-2024-08-21-18.32.52-A-highly-intricate-and-futuristic-sorting-conveyor-system-in-a-warehouse-depicted-in-a-simulation-like-style.-The-conveyor-system-is-complex-with-mul.webp\" --max-time 20)",
+      "Bash(curl -sS -L -o sorting-conveyors.webp \"https://noorjax.com/wp-content/uploads/2024/06/DALL%C2%B7E-2024-08-21-18.32.52-A-highly-intricate-and-futuristic-sorting-conveyor-system-in-a-warehouse-depicted-in-a-simulation-like-style.-The-conveyor-system-is-complex-with-mul.webp\" --max-time 20)",
+      "Bash(curl -sS -L -o stacker-crane.webp \"https://noorjax.com/wp-content/uploads/2024/08/DALL%C2%B7E-2024-08-21-16.07.22-A-highly-detailed-and-futuristic-stacker-crane-operating-in-a-warehouse-depicted-in-a-simulation-like-style.-The-crane-is-sleek-and-advanced-with-me.webp\" --max-time 20)",
+      "Bash(curl -sS -L -o elevator.webp \"https://noorjax.com/wp-content/uploads/2024/08/DALL%C2%B7E-2024-08-21-16.03.00-A-detailed-fancy-elevator-depicted-in-a-simulation-like-style.-The-elevator-has-a-sleek-futuristic-design-with-glass-walls-metallic-accents-and-di.webp\" --max-time 20)",
+      "Bash(grep -l \"noorjax.com/2024/09/10/getting-a-license\" /c/Repositories/noorjax_website/src/content/blog/*.md)",
+      "Bash(grep -E \"\\\\.\\(ts|js|astro\\)$\")",
+      "Bash(py --version)",
+      "Bash(curl -L -o /c/Repositories/noorjax_website/public/images/contact/e-residency.png \"https://noorjax.com/wp-content/uploads/2019/04/hIlGx40tpcDvZ2mMg6xaXw-e-res_help.png\")",
+      "Bash(curl -L -o /c/Repositories/noorjax_website/public/images/contact/erhub-logo.png \"https://noorjax.com/wp-content/uploads/2019/04/erhub-logo-3-1.png\")",
+      "Bash(node scripts/download-portfolio-images.mjs)"
+    ],
+    "additionalDirectories": [
+      "C:\\Repositories\\noorjax_website\\s|https:\\noorjax.com\\2022\\01\\25\\blog-camera-on-agent\\|\\en\\blog\\blog-camera-on-agent"
+    ]
+  }
+}

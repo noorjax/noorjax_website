@@ -1,0 +1,263 @@
+---
+import PageLayout from '../../../layouts/PageLayout.astro';
+import { portfolioItems } from '../../../lib/portfolioItems';
+import { getServicesForSlug } from '../../../lib/portfolioServices';
+
+export function getStaticPaths() {
+  return portfolioItems.map((item) => ({
+    params: { slug: item.slug },
+    props: { item },
+  }));
+}
+
+const { item } = Astro.props;
+
+// Portfolio hero images (same as business-cases page)
+const portfolioImages: Record<string, string> = {
+  'optimization-for-sensor-locations-to-detect-sewer-overflows': 'maxresdefault.jpg',
+  'network-optimization-and-simulation-of-drones-supporting-fire-missions': 'fire-drones.png',
+  'traffic-intersection': 'traffic-intersection.png',
+  'optimization-for-sensor-locations-to-detect-sewer-overflows-2-2': 'prison.jpg',
+  'people-in-an-office': 'office.jpg',
+  'propan-raya': 'propan.jpg',
+  'platoon': 'platoon.png',
+  'warehouse-with-bins': 'warehouse-bins.jpeg',
+  'a-supply-chain-and-distribution-network-b2c-b2b': 'supply-chain.png',
+  'school-traffic-analysis': 'school-traffic.jpg',
+  '1118': 'terrorism.jpg',
+  'pricing-segmentation-for-ride-sharing-platform': 'ride-sharing.png',
+  'coal-mining': 'coal-mining.png',
+  'bus-depot-diesel-vs-electric': 'bus-depot.png',
+  'management-investment': 'management.jpg',
+  'bridge-construction-field-preparation': 'bridge.jpg',
+  'speed-date': 'speed-date.jpg',
+  'cars-and-pipes-effect-of-water-problems-on-road-traffic': 'cars-pipes.jpeg',
+  'employees-entering-an-office': 'employees-office.png',
+  'newspaper-production': 'newspaper.png',
+  'warehouses-complex-for-canned-food-products': 'warehouses-canned.png',
+  'cash-iot': 'cash-iot.jpg',
+  'nunavik-ecosystem': 'nunavik.png',
+  'online-grocery-shopping': 'grocery.jpg',
+  'epidemics': 'epidemics.jpg',
+  'material_flow_safety': 'material-flow.jpeg',
+  'warehouse-inbound-logistics': 'warehouse-inbound.png',
+  'swarm-mining-robots': 'swarm-mining.png',
+  'biological-organisms-throughput': 'biological.webp',
+  'military-gym-layout-optimization': 'military-gym.webp',
+  'bulk-material-transport-rail-system': 'bulk-rail.webp',
+  'used-cooking-oil-recycling': 'cooking-oil.webp',
+  'production-facility-planning': 'production-facility.webp',
+  'delivery-optimization': 'delivery.webp',
+  'train-sequences-in-railyard': 'train-railyard.webp',
+  'multi-robot-navigation': 'multi-robot.png',
+};
+
+const heroImage = portfolioImages[item.slug];
+
+type ContentBlock =
+  | { type: 'h2'; text: string }
+  | { type: 'h3'; text: string }
+  | { type: 'paragraph'; text: string }
+  | { type: 'image'; alt: string; src: string }
+  | { type: 'bullets'; items: string[] }
+  | { type: 'numbered'; items: string[] };
+
+// Parse content into structured blocks
+const blocks: ContentBlock[] = [];
+const lines = item.content.split('\n');
+let bulletBuffer: string[] = [];
+let numberedBuffer: string[] = [];
+
+function flushBullets() {
+  if (bulletBuffer.length > 0) {
+    blocks.push({ type: 'bullets', items: [...bulletBuffer] });
+    bulletBuffer = [];
+  }
+}
+
+function flushNumbered() {
+  if (numberedBuffer.length > 0) {
+    blocks.push({ type: 'numbered', items: [...numberedBuffer] });
+    numberedBuffer = [];
+  }
+}
+
+for (const line of lines) {
+  const trimmed = line.trim();
+  if (!trimmed) {
+    flushBullets();
+    flushNumbered();
+    continue;
+  }
+  // ## Heading
+  const h2Match = trimmed.match(/^## (.+)$/);
+  if (h2Match) {
+    flushBullets();
+    flushNumbered();
+    blocks.push({ type: 'h2', text: h2Match[1] });
+    continue;
+  }
+  // ### Subheading
+  const h3Match = trimmed.match(/^### (.+)$/);
+  if (h3Match) {
+    flushBullets();
+    flushNumbered();
+    blocks.push({ type: 'h3', text: h3Match[1] });
+    continue;
+  }
+  // ![alt](src)
+  const imgMatch = trimmed.match(/^!\[([^\]]*)\]\(([^)]+)\)$/);
+  if (imgMatch) {
+    flushBullets();
+    flushNumbered();
+    blocks.push({ type: 'image', alt: imgMatch[1], src: imgMatch[2] });
+    continue;
+  }
+  // - bullet item
+  const bulletMatch = trimmed.match(/^- (.+)$/);
+  if (bulletMatch) {
+    flushNumbered();
+    bulletBuffer.push(bulletMatch[1]);
+    continue;
+  }
+  // 1. numbered item
+  const numberedMatch = trimmed.match(/^\d+\. (.+)$/);
+  if (numberedMatch) {
+    flushBullets();
+    numberedBuffer.push(numberedMatch[1]);
+    continue;
+  }
+  // Regular paragraph
+  flushBullets();
+  flushNumbered();
+  blocks.push({ type: 'paragraph', text: trimmed });
+}
+flushBullets();
+flushNumbered();
+
+// Helper to render inline markdown (bold, links)
+function renderInline(text: string): string {
+  // **bold** → <strong>
+  let html = text.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+  // [text](url) → <a>
+  html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="text-brand-teal hover:underline" target="_blank" rel="noopener noreferrer">$1</a>');
+  // -- → em dash
+  html = html.replace(/ -- /g, ' &mdash; ');
+  return html;
+}
+---
+
+<PageLayout title={item.title} description={`Simulation project: ${item.title}`}>
+  <section class="py-(--spacing-section)">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+      <!-- Back link -->
+      <a href="/en/business-cases/" class="inline-flex items-center gap-2 text-sm text-text-tertiary hover:text-brand-teal mb-8 transition-colors">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18" />
+        </svg>
+        Back to Business Cases
+      </a>
+
+      <!-- Header -->
+      <header class="mb-10">
+        <div class="flex flex-wrap gap-2 mb-4">
+          {getServicesForSlug(item.slug).map((svc) => (
+            <span class="text-xs font-medium px-2.5 py-1 rounded-full bg-brand-green/10 text-brand-green">
+              {svc}
+            </span>
+          ))}
+          {item.categories.map((cat) => (
+            <span class="text-xs font-medium px-2.5 py-1 rounded-full bg-brand-teal/10 text-brand-teal">
+              {cat}
+            </span>
+          ))}
+        </div>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
+          {item.title}
+        </h1>
+      </header>
+
+      <!-- Hero Image -->
+      {heroImage && (
+        <div class="mb-10 rounded-2xl overflow-hidden border border-border-default">
+          <img
+            src={`/images/portfolio/${heroImage}`}
+            alt={item.title}
+            class="w-full h-auto"
+          />
+        </div>
+      )}
+
+      <!-- Content -->
+      <div class="space-y-6">
+        {blocks.map((block) => {
+          if (block.type === 'h2') {
+            return (
+              <h2 class="text-2xl font-bold mt-10 mb-4 text-brand-teal">{block.text}</h2>
+            );
+          }
+          if (block.type === 'h3') {
+            return (
+              <h3 class="text-xl font-semibold mt-8 mb-3 text-text-primary">{block.text}</h3>
+            );
+          }
+          if (block.type === 'image') {
+            return (
+              <figure class="my-8">
+                <img
+                  src={block.src}
+                  alt={block.alt}
+                  class="w-full rounded-xl border border-border-default"
+                  loading="lazy"
+                />
+                {block.alt && (
+                  <figcaption class="mt-2 text-sm text-text-tertiary text-center italic">
+                    {block.alt}
+                  </figcaption>
+                )}
+              </figure>
+            );
+          }
+          if (block.type === 'bullets') {
+            return (
+              <ul class="space-y-2 ml-4">
+                {block.items.map((li) => (
+                  <li class="flex items-start gap-2 text-text-secondary leading-relaxed">
+                    <span class="text-brand-teal mt-1.5 shrink-0">
+                      <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 8 8"><circle cx="4" cy="4" r="3" /></svg>
+                    </span>
+                    <span set:html={renderInline(li)} />
+                  </li>
+                ))}
+              </ul>
+            );
+          }
+          if (block.type === 'numbered') {
+            return (
+              <ol class="space-y-2 ml-4 list-decimal list-inside">
+                {block.items.map((li) => (
+                  <li class="text-text-secondary leading-relaxed" set:html={renderInline(li)} />
+                ))}
+              </ol>
+            );
+          }
+          // paragraph
+          return (
+            <p class="text-text-secondary leading-relaxed" set:html={renderInline(block.text)} />
+          );
+        })}
+      </div>
+
+      <!-- CTA -->
+      <div class="mt-16 pt-10 border-t border-border-default text-center">
+        <p class="text-text-secondary mb-6">Need a similar simulation for your project?</p>
+        <a href="/en/contact/" class="btn-primary text-base px-8 py-4">
+          Become a Client
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</PageLayout>

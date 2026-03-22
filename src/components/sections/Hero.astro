@@ -1,0 +1,47 @@
+---
+import { getLocaleFromUrl } from '../../i18n';
+
+const locale = getLocaleFromUrl(Astro.url);
+---
+
+<section class="relative min-h-[85vh] flex items-center overflow-hidden bg-bg-secondary">
+  <!-- Subtle grid pattern -->
+  <div class="absolute inset-0 opacity-[0.03]" style="background-image: url(&quot;data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E&quot;);"></div>
+
+  <!-- Decorative circles -->
+  <div class="absolute top-1/4 right-0 w-96 h-96 bg-brand-teal/5 rounded-full blur-[100px]"></div>
+  <div class="absolute bottom-0 left-0 w-80 h-80 bg-brand-green/5 rounded-full blur-[80px]"></div>
+
+  <div class="relative mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-8 py-20">
+    <div class="max-w-4xl mx-auto text-center">
+      <!-- Headline -->
+      <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1] mb-6 text-text-primary">
+        {locale === 'en'
+          ? <>Simulate Before You <span class="text-gradient">Decide</span></>
+          : locale === 'es'
+          ? <>Simula Antes de <span class="text-gradient">Decidir</span></>
+          : <>حاكِ قبل أن <span class="text-gradient">تُقرر</span></>
+        }
+      </h1>
+
+      <!-- Description -->
+      <p class="text-lg sm:text-xl text-text-secondary max-w-3xl mx-auto mb-10 leading-relaxed">
+        {locale === 'en'
+          ? 'We develop simulation models for governments, industry leaders, and organizations — enabling them to evaluate policies, optimize operations, and validate strategies with confidence, before committing real-world resources.'
+          : locale === 'es'
+          ? 'Desarrollamos modelos de simulación para gobiernos, líderes de la industria y organizaciones — permitiéndoles evaluar políticas, optimizar operaciones y validar estrategias con confianza, antes de comprometer recursos del mundo real.'
+          : 'نبني نماذج محاكاة للحكومات والصناعة والمؤسسات لاختبار السياسات وتحسين العمليات واتخاذ قرارات واثقة — قبل استثمار الموارد الحقيقية.'}
+      </p>
+
+      <!-- CTA -->
+      <div class="flex justify-center">
+        <a href={`/${locale}/contact/`} class="btn-primary text-base px-8 py-4">
+          {locale === 'en' ? 'Become a Client' : locale === 'es' ? 'Conviértete en Cliente' : 'كن عميلاً'}
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

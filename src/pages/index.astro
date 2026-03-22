@@ -1,0 +1,23 @@
+---
+// Root page: redirect to English by default
+// Client-side script detects browser language for Spanish speakers
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="refresh" content="0;url=/en/" />
+    <script is:inline>
+      const lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+      if (lang.startsWith('es')) {
+        window.location.replace('/es/');
+      } else if (lang.startsWith('ar')) {
+        window.location.replace('/ar/');
+      } else {
+        window.location.replace('/en/');
+      }
+    </script>
+    <title>Redirecting...</title>
+  </head>
+  <body></body>
+</html>

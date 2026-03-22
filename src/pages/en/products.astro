@@ -1,0 +1,68 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import PageHero from '../../components/common/PageHero.astro';
+
+const products = [
+  { name: 'JUNIT6 for AnyLogic', description: 'A library to work with unit tests using JUNIT6 in your AnyLogic Models.', type: 'Library', image: 'junit6.png', url: 'https://github.com/noorjax/junit6-for-anylogic/' },
+  { name: 'Optimization with Confidence Intervals', description: 'Create an optimization experiment with confidence intervals in your AnyLogic Model. Works with the PLE and can be exported as an executable.', type: 'Library', image: 'optimization-ci.webp', url: '/en/blog/optimization-with-confidence-intervals/' },
+  { name: 'Monte Carlo Experiment', description: 'A library to work with confidence intervals in your AnyLogic Model. Works with the PLE.', type: 'Library', image: 'monte-carlo.png', url: '/en/blog/monte-carlo-with-confidence-intervals/' },
+  { name: 'Sorting Conveyors Library', description: 'A custom AnyLogic library for conveyor networks that sort agents and connect with external sources for priorities and routing. Built from an Excel file.', type: 'Library', image: 'sorting-conveyors.webp', url: '/en/blog/sorting-conveyors-library/' },
+  { name: 'Stacker Crane Library (ASRS)', description: 'A stacker crane library to create automated storage and retrieval systems (ASRS) for AnyLogic.', type: 'Library', image: 'stacker-crane.webp', url: '/en/blog/pallet-crane-library/' },
+  { name: 'Elevator Group Library', description: 'A custom AnyLogic library to use a group of elevators or lifts with the process modeling or pedestrian library.', type: 'Library', image: 'elevator.webp', url: '/en/blog/elevator-group-library/' },
+  { name: 'Robotic Arm Library', description: 'A free library to use a robotic arm in your AnyLogic models. Featured in the AnyLogic blog.', type: 'Library', image: 'robotic-arm.webp', url: '/en/blog/robotic-arm-library/' },
+  { name: 'ChatGPT Data Analyst Helper', description: 'A free library to use ChatGPT for data analysis in your AnyLogic models.', type: 'Library', image: 'chatgpt.webp', url: 'https://github.com/noorjax/Chat-GPT-Data-Analyst' },
+  { name: 'All-In-One Simulation Courses', description: 'A full range of courses to learn simulation modeling, from fundamentals to advanced topics.', type: 'Course', image: 'courses.png', url: 'https://noorjax.teachable.com' },
+];
+---
+
+<PageLayout title="Products" description="AnyLogic libraries, tools, and courses built by Noorjax Consulting.">
+  <PageHero
+    title="Products"
+    subtitle="AnyLogic libraries, tools, and courses built by our team to extend simulation capabilities."
+  />
+  <section class="py-(--spacing-section)">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+      <!-- Products grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {products.map((product) => (
+          <a href={product.url} {...(product.url.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})} class="bg-bg-secondary rounded-2xl border border-border-default hover:border-brand-teal/30 transition-all hover:shadow-lg group block overflow-hidden flex flex-col">
+            <div class="aspect-[16/10] overflow-hidden">
+              <img
+                src={`/images/products/${product.image}`}
+                alt={product.name}
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <div class="mb-3">
+                <span class:list={[
+                  'text-xs font-medium px-2.5 py-1 rounded-full',
+                  product.type === 'Library'
+                    ? 'bg-brand-teal/10 text-brand-teal'
+                    : 'bg-brand-green/10 text-brand-green',
+                ]}>
+                  {product.type}
+                </span>
+              </div>
+              <h3 class="text-lg font-bold mb-2 text-text-primary group-hover:text-brand-teal transition-colors">{product.name}</h3>
+              <p class="text-sm text-text-secondary leading-relaxed flex-1">{product.description}</p>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      <!-- CTA -->
+      <div class="text-center mt-16">
+        <p class="text-text-secondary mb-6">Interested in our products or need a custom library?</p>
+        <a href="/en/contact/" class="btn-primary text-base px-8 py-4">
+          Become a Client
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</PageLayout>

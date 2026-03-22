@@ -1,0 +1,34 @@
+---
+import { getLocaleFromUrl, t } from '../../i18n';
+import { SITE } from '../../lib/constants';
+
+const locale = getLocaleFromUrl(Astro.url);
+const i18n = t(locale);
+---
+
+<section class="py-(--spacing-section) bg-bg-secondary">
+  <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-text-primary">
+      {locale === 'en' ? 'Ready to Simulate?' : locale === 'es' ? '¿Listo para Simular?' : 'هل أنت مستعد للمحاكاة؟'}
+    </h2>
+    <p class="text-lg text-text-secondary max-w-2xl mx-auto mb-10">
+      {locale === 'en'
+        ? "Let's discuss your challenge. Get in touch and discover how simulation can transform your decision-making."
+        : locale === 'es'
+        ? 'Conversemos sobre tu desafío. Contáctanos y descubre cómo la simulación puede transformar tu toma de decisiones.'
+        : 'لنناقش تحدّيك. تواصل معنا واكتشف كيف يمكن للمحاكاة أن تحوّل عملية اتخاذ القرار لديك.'}
+    </p>
+
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href={`/${locale}/contact/`} class="btn-primary text-base px-8 py-4">
+        {locale === 'en' ? 'Become a Client' : locale === 'es' ? 'Conviértete en Cliente' : 'كن عميلاً'}
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
+      </a>
+      <a href={`mailto:${SITE.email}`} class="btn-secondary text-base px-8 py-4">
+        {SITE.email}
+      </a>
+    </div>
+  </div>
+</section>

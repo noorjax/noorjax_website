@@ -1,0 +1,92 @@
+---
+import { getLocaleFromUrl } from '../../i18n';
+
+const locale = getLocaleFromUrl(Astro.url);
+---
+
+<section class="dark-section py-(--spacing-section) relative overflow-hidden">
+  <!-- World map background -->
+  <div class="absolute inset-0 flex items-center justify-center opacity-15">
+    <svg viewBox="0 0 1200 600" class="w-full max-w-6xl" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Simplified world map outline -->
+      <g stroke="currentColor" stroke-width="1" fill="currentColor" fill-opacity="0.08" class="text-brand-teal">
+        <!-- North America -->
+        <path d="M150,120 L200,100 L250,90 L300,95 L330,110 L340,140 L320,170 L310,200 L280,230 L250,250 L220,260 L190,250 L170,230 L150,200 L140,170 Z" />
+        <!-- South America -->
+        <path d="M250,280 L280,270 L310,290 L320,330 L310,380 L290,420 L270,450 L250,470 L240,440 L230,400 L220,360 L230,320 Z" />
+        <!-- Europe -->
+        <path d="M500,100 L530,90 L560,95 L590,100 L610,120 L600,150 L580,170 L550,175 L520,165 L500,150 L490,130 Z" />
+        <!-- Africa -->
+        <path d="M500,190 L540,185 L570,200 L590,230 L600,270 L590,320 L570,370 L540,400 L510,410 L490,380 L480,340 L475,290 L480,240 Z" />
+        <!-- Asia -->
+        <path d="M620,80 L700,70 L780,75 L850,90 L900,110 L920,140 L910,170 L880,200 L830,220 L770,210 L720,190 L680,170 L650,150 L630,120 Z" />
+        <!-- Australia -->
+        <path d="M850,340 L900,330 L940,340 L960,370 L950,400 L920,420 L880,410 L860,390 L850,360 Z" />
+        <!-- Connection lines (dotted) -->
+        <line x1="280" y1="230" x2="520" y2="140" stroke-dasharray="4,4" stroke-opacity="0.3" />
+        <line x1="520" y1="140" x2="750" y2="130" stroke-dasharray="4,4" stroke-opacity="0.3" />
+        <line x1="520" y1="140" x2="520" y2="280" stroke-dasharray="4,4" stroke-opacity="0.3" />
+        <line x1="750" y1="130" x2="900" y2="360" stroke-dasharray="4,4" stroke-opacity="0.3" />
+        <line x1="280" y1="230" x2="270" y2="350" stroke-dasharray="4,4" stroke-opacity="0.3" />
+      </g>
+      <!-- Location pins -->
+      <g class="text-brand-green">
+        <!-- North America -->
+        <circle cx="240" cy="160" r="6" fill="currentColor" />
+        <circle cx="240" cy="160" r="12" fill="currentColor" fill-opacity="0.2" />
+        <!-- South America (Chile) -->
+        <circle cx="270" cy="400" r="6" fill="currentColor" />
+        <circle cx="270" cy="400" r="12" fill="currentColor" fill-opacity="0.2" />
+        <!-- Europe (Estonia) -->
+        <circle cx="560" cy="110" r="6" fill="currentColor" />
+        <circle cx="560" cy="110" r="12" fill="currentColor" fill-opacity="0.2" />
+        <!-- Middle East -->
+        <circle cx="620" cy="200" r="6" fill="currentColor" />
+        <circle cx="620" cy="200" r="12" fill="currentColor" fill-opacity="0.2" />
+        <!-- Asia -->
+        <circle cx="800" cy="150" r="6" fill="currentColor" />
+        <circle cx="800" cy="150" r="12" fill="currentColor" fill-opacity="0.2" />
+        <!-- Africa -->
+        <circle cx="540" cy="310" r="6" fill="currentColor" />
+        <circle cx="540" cy="310" r="12" fill="currentColor" fill-opacity="0.2" />
+        <!-- Australia -->
+        <circle cx="910" cy="370" r="6" fill="currentColor" />
+        <circle cx="910" cy="370" r="12" fill="currentColor" fill-opacity="0.2" />
+      </g>
+    </svg>
+  </div>
+
+  <!-- Blur overlay -->
+  <div class="absolute inset-0 bg-bg-dark/40 backdrop-blur-[1px]"></div>
+
+  <div class="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
+    <!-- Globe icon -->
+    <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-brand-teal/10 border border-brand-teal/20 mb-8">
+      <svg class="w-8 h-8 text-brand-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+      </svg>
+    </div>
+
+    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-white">
+      {locale === 'en'
+        ? 'Available Worldwide'
+        : locale === 'es'
+        ? 'Disponibles en Todo el Mundo'
+        : 'متاحون حول العالم'}
+    </h2>
+    <p class="text-lg text-text-on-dark-muted max-w-2xl mx-auto mb-10 leading-relaxed">
+      {locale === 'en'
+        ? 'We collaborate remotely with clients across every continent and are available for on-site engagements when your project requires it. Wherever your operations are, our expertise travels with you.'
+        : locale === 'es'
+        ? 'Colaboramos remotamente con clientes en todos los continentes y estamos disponibles para trabajo presencial cuando tu proyecto lo requiera. Donde sea que estén tus operaciones, nuestra experiencia viaja contigo.'
+        : 'نتعاون عن بُعد مع عملاء في جميع القارات ونحن متاحون للعمل الميداني عندما يتطلب مشروعك ذلك. أينما كانت عملياتك، خبرتنا تنتقل معك.'}
+    </p>
+
+    <a href={`/${locale}/contact/`} class="btn-primary text-base px-8 py-4">
+      {locale === 'en' ? 'Send a Message' : locale === 'es' ? 'Enviar un Mensaje' : 'أرسل رسالة'}
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+      </svg>
+    </a>
+  </div>
+</section>

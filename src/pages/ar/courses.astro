@@ -1,0 +1,192 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import PageHero from '../../components/common/PageHero.astro';
+
+const courseTopics = [
+  { name: 'النمذجة القائمة على الوكلاء', topics: ['عناصر الوكيل', 'مخططات الحالة', 'JAVA'], image: 'agent-based.png' },
+  { name: 'الأحداث المنفصلة', topics: ['مكتبة نمذجة العمليات', 'ترميز الفضاء و GIS', 'وكلاء العمليات'], image: 'discrete-events.png' },
+  { name: 'ديناميكيات النظام', topics: ['ديناميكيات النظام في Vensim', 'ديناميكيات النظام في AnyLogic', 'مخططات الحلقة السببية'], image: 'system-dynamics.png' },
+  { name: 'مكتبة حركة المرور', topics: ['نمذجة حركة المرور', 'إشارات المرور والمواقف', 'حيل خاصة'], image: 'road-traffic.png' },
+  { name: 'مكتبة المشاة', topics: ['نمذجة المشاة', 'فضاء المشاة', 'حيل خاصة'], image: 'pedestrians.png' },
+  { name: 'مكتبة السكك الحديدية', topics: ['نمذجة القطارات', 'السكك الحديدية', 'حيل خاصة'], image: 'railway.png' },
+  { name: 'مكتبة السوائل', topics: ['نمذجة ديناميكيات السوائل', 'نمذجة المواد السائبة', 'حيل خاصة'], image: 'fluid.png' },
+  { name: 'JAVA ومخططات الإجراءات', topics: ['JAVA لـ AnyLogic', 'الاتصال (قواعد البيانات و Excel)', 'تطبيقات مخططات الإجراءات'], image: 'java.png' },
+  { name: 'تطبيقات AnyLogic', topics: ['مشاكل واقعية', 'تمارين لتحسين مهاراتك', 'النمذجة متعددة الأساليب'], image: 'applications.png' },
+  { name: 'مكتبة مناولة المواد', topics: ['الناقلات', 'الرافعات', 'السيور الناقلة'], image: 'material-handling.png' },
+];
+---
+
+<PageLayout title="دورات المحاكاة" description="أتقن المحاكاة مع دوراتنا بقيادة خبراء AnyLogic — متاحة في الموقع أو عبر الإنترنت.">
+  <PageHero title="دورات المحاكاة" subtitle="أتقن المحاكاة مع دوراتنا — متاحة في الموقع أو عبر الإنترنت أو كتدريب خاص." />
+
+  <section class="py-(--spacing-section)">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+      <!-- AnyLogic Online Courses -->
+      <div class="mb-20">
+        <h2 class="text-3xl font-bold text-center mb-12">دورات AnyLogic عبر الإنترنت</h2>
+        <p class="text-center text-text-secondary mb-12 max-w-3xl mx-auto">تعلم AnyLogic من المنزل مع هذه الدورات 100% عبر الإنترنت</p>
+
+        <!-- Learn AnyLogic Online -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+          <div class="rounded-2xl overflow-hidden border border-border-default">
+            <img src="/images/courses/learn-anylogic.png" alt="Learn AnyLogic Online" class="w-full h-full object-cover" loading="lazy" />
+          </div>
+          <div class="flex flex-col justify-center">
+            <h3 class="text-2xl font-bold mb-4">تعلم AnyLogic عبر الإنترنت</h3>
+            <p class="text-text-secondary leading-relaxed mb-4">
+              احصل على دورة كاملة لتعلم Java لـ AnyLogic، محاكاة الأحداث المنفصلة، النمذجة القائمة على الوكلاء، ديناميكيات النظام والمزيد باستخدام AnyLogic. مجموعة دورات منظمة عبر الإنترنت بالوتيرة التي تناسبك.
+            </p>
+            <p class="text-text-secondary leading-relaxed mb-6">
+              تشمل الدورات JAVA، GIS، الرسوم المتحركة ثنائية وثلاثية الأبعاد، قواعد البيانات، مناولة المواد، السوائل، المشاة والمزيد. مدعومة من شركة AnyLogic.
+            </p>
+            <a href="https://noorjax.teachable.com/p/anylogic" target="_blank" rel="noopener noreferrer" class="btn-primary self-start">
+              الوصول إلى الدورات
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Other Courses -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div class="flex flex-col justify-center order-2 lg:order-1">
+            <h3 class="text-2xl font-bold mb-4">دورات أخرى</h3>
+            <p class="text-text-secondary leading-relaxed mb-4">
+              نطور دورات أخرى تتيح لك أن تصبح محترفاً أكثر كفاءة في المحاكاة من خلال إنشاء دورات ليس فقط في AnyLogic ولكن أيضاً في مجالات أخرى. ستجد دورات في:
+            </p>
+            <ul class="space-y-2 mb-6">
+              {['Autocad', 'FlexSim (إنجليزي وإسباني)', 'Simio (إنجليزي وإسباني)', 'Simudyne (إنجليزي وإسباني)'].map((item) => (
+                <li class="flex items-center gap-2 text-text-secondary">
+                  <svg class="w-4 h-4 text-brand-green shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <p class="text-sm text-text-tertiary italic mb-6">هذه الدورات مخصصة للمبتدئين الذين يريدون تعلم أي من أدوات المحاكاة هذه أو البدء مع Autocad.</p>
+            <a href="https://noorjax.teachable.com/" target="_blank" rel="noopener noreferrer" class="btn-secondary self-start">
+              تصفح جميع الدورات
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+          </div>
+          <div class="rounded-2xl overflow-hidden border border-border-default order-1 lg:order-2">
+            <img src="/images/courses/other-courses.jpg" alt="Other Courses" class="w-full h-full object-cover" loading="lazy" />
+          </div>
+        </div>
+      </div>
+
+      <div class="section-divider mb-20"></div>
+
+      <!-- Free Learning Resources -->
+      <div class="mb-20">
+        <h2 class="text-3xl font-bold text-center mb-8">موارد تعليمية مجانية</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <a href="https://www.anylogic.com/blog/reusable-anylogic-agents-scale-simulation-projects-with-modular-models/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 bg-bg-secondary rounded-xl p-5 border border-border-default hover:border-brand-teal/30 transition-all hover:shadow-md group">
+            <svg class="w-5 h-5 text-brand-teal shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" /></svg>
+            <span class="text-sm font-medium text-text-primary group-hover:text-brand-teal transition-colors">وكلاء AnyLogic القابلون لإعادة الاستخدام</span>
+          </a>
+          <a href="https://www.anylogic.com/blog/simulation-project-life-cycle-webinar-follow-up/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 bg-bg-secondary rounded-xl p-5 border border-border-default hover:border-brand-teal/30 transition-all hover:shadow-md group">
+            <svg class="w-5 h-5 text-brand-teal shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" /></svg>
+            <span class="text-sm font-medium text-text-primary group-hover:text-brand-teal transition-colors">دورة حياة مشروع المحاكاة</span>
+          </a>
+          <a href="https://www.youtube.com/channel/UC_cNzjQJG9W2VTjVE2-DvrA" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 bg-bg-secondary rounded-xl p-5 border border-border-default hover:border-brand-teal/30 transition-all hover:shadow-md group">
+            <svg class="w-5 h-5 text-red-500 shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" /></svg>
+            <span class="text-sm font-medium text-text-primary group-hover:text-brand-teal transition-colors">قناة نورجاكس على يوتيوب</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="section-divider mb-20"></div>
+
+      <!-- Partner Courses -->
+      <div class="mb-20">
+        <h2 class="text-3xl font-bold text-center mb-8">دورات الشركاء</h2>
+        <div class="max-w-md mx-auto">
+          <a href="https://benjamin-schumann.com/link/HPXtQK/NOORJAX?url=https%3A%2F%2Fbenjamin-schumann.com%2Fcourse%3Fcourseid%3Dgithub-for-anylogic" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 bg-bg-secondary rounded-xl p-5 border border-border-default hover:border-brand-teal/30 transition-all hover:shadow-md group">
+            <svg class="w-5 h-5 text-brand-teal shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+            <span class="text-sm font-medium text-text-primary group-hover:text-brand-teal transition-colors">GitHub لـ AnyLogic — بواسطة Benjamin Schumann</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="section-divider mb-20"></div>
+
+      <!-- AnyLogic Private Courses -->
+      <div class="mb-20">
+        <h2 class="text-3xl font-bold text-center mb-4">دورات AnyLogic الخاصة</h2>
+        <p class="text-center text-text-secondary italic mb-12 max-w-2xl mx-auto">سرّع منحنى التعلم الخاص بك</p>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+          <div>
+            <p class="text-text-secondary leading-relaxed mb-4">
+              سواء كنت مبتدئاً تريد تعلم الأساسيات، أو شخصاً يحتاج دعماً في مشروع صعب التنفيذ، يمكننا مساعدتك.
+            </p>
+            <p class="text-text-secondary leading-relaxed mb-4">
+              قدمنا دورات عبر Zoom لجلسات فردية مع واجبات ومهام، بالإضافة إلى تدريبات في الموقع لما يصل إلى 22 طالباً في نفس الوقت. لا توجد قيود هنا. إذا كان لديك اهتمام خاص، يمكننا العمل عليه.
+            </p>
+            <p class="text-text-secondary leading-relaxed mb-6">
+              لدينا جدول مرن للتدريبات بناءً على احتياجاتك والصناعة التي تعمل فيها.
+            </p>
+            <a href="/ar/contact/" class="btn-primary">
+              أرسل رسالة
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </a>
+          </div>
+          <div>
+            <div class="rounded-2xl overflow-hidden border border-border-default">
+              <img src="/images/courses/indonesia-training.png" alt="AnyLogic course in Tangerang, Indonesia" class="w-full object-cover" loading="lazy" />
+            </div>
+            <p class="text-xs text-text-tertiary italic text-center mt-2">دورة AnyLogic في تانجيرانج، إندونيسيا</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-divider mb-20"></div>
+
+      <!-- Training Topics -->
+      <div class="mb-20">
+        <h2 class="text-3xl font-bold text-center mb-12">مواضيع التدريب</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {courseTopics.map((course) => (
+            <div class="bg-bg-secondary rounded-2xl border border-border-default hover:border-brand-teal/30 transition-all hover:shadow-md overflow-hidden">
+              <div class="aspect-[16/10] overflow-hidden">
+                <img src={`/images/courses/${course.image}`} alt={course.name} class="w-full h-full object-cover" loading="lazy" />
+              </div>
+              <div class="p-6">
+                <h3 class="text-lg font-bold mb-3">{course.name}</h3>
+                <ul class="space-y-1.5">
+                  {course.topics.map((topic) => (
+                    <li class="flex items-center gap-2 text-sm text-text-secondary">
+                      <svg class="w-4 h-4 text-brand-green shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                      {topic}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="text-center">
+        <p class="text-lg text-text-secondary italic mb-6">هل أنت مستعد لبدء تعلم AnyLogic؟</p>
+        <a href="/ar/contact/" class="btn-primary text-base px-8 py-4">
+          أرسل رسالة
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</PageLayout>

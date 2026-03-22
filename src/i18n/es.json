@@ -1,0 +1,70 @@
+{
+  "site": {
+    "title": "Noorjax Consulting",
+    "description": "Expertos en consultoría de simulación especializados en AnyLogic, eventos discretos, modelado basado en agentes y dinámica de sistemas."
+  },
+  "nav": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "about": "Nosotros",
+    "courses": "Cursos",
+    "blog": "Blog",
+    "contact": "Contacto",
+    "getInTouch": "Contáctanos"
+  },
+  "hero": {
+    "tagline": "Consultoría en Simulación",
+    "headline": "Transforma Problemas Complejos en Decisiones Claras",
+    "description": "Construimos modelos de simulación que te ayudan a entender, predecir y optimizar sistemas complejos — desde cadenas de suministro hasta redes de tráfico y plantas de manufactura.",
+    "cta": "Agenda una Consulta",
+    "ctaSecondary": "Ver Nuestros Servicios"
+  },
+  "howWeWork": {
+    "title": "Cómo Trabajamos",
+    "subtitle": "Una metodología probada para entregar proyectos de simulación que generan valor real."
+  },
+  "services": {
+    "title": "Servicios de Simulación",
+    "subtitle": "Aplicamos simulación en más de 15 industrias y dominios, usando eventos discretos, modelado basado en agentes y dinámica de sistemas.",
+    "viewAll": "Ver Todos los Servicios"
+  },
+  "pricing": {
+    "title": "Precios",
+    "subtitle": "Modelos de precios transparentes para las necesidades de tu proyecto.",
+    "featured": "Más Popular"
+  },
+  "about": {
+    "title": "Nosotros",
+    "subtitle": "Fundada en 2017, Noorjax Consulting ayuda a organizaciones a tomar mejores decisiones a través del poder de la simulación.",
+    "teamTitle": "Nuestro Equipo",
+    "partnersTitle": "Socios de Negocio"
+  },
+  "contact": {
+    "title": "Contáctanos",
+    "subtitle": "¿Tienes un proyecto en mente? Conversemos sobre cómo la simulación puede ayudarte.",
+    "freeHelpTitle": "¿Buscas ayuda gratuita?",
+    "freeHelpDescription": "Lee nuestro artículo sobre cómo obtener ayuda gratuita con tus modelos de simulación.",
+    "bookMeeting": "Agenda una Reunión",
+    "calendlyDescription": "Si quieres desarrollar un proyecto, agenda una reunión directamente usando Calendly.",
+    "eResidencyText": "Noorjax Consulting es una empresa con sede en Tallinn, Estonia gracias al programa de E-Residency",
+    "erhubText": "e-Residency Hub es el socio para la dirección virtual en Estonia y servicios de contabilidad."
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Artículos, tutoriales y novedades del mundo de la simulación.",
+    "readMore": "Leer Más",
+    "allPosts": "Todos los Artículos",
+    "youtubeTitle": "Noorjax Consulting en YouTube",
+    "youtubeDescription": "Nuestro canal de YouTube incluye tutoriales de AnyLogic, recorridos de proyectos y consejos de simulación. Suscríbete para enterarte cuando publiquemos nuevo contenido.",
+    "youtubeCta": "Visitar el Canal de YouTube"
+  },
+  "courses": {
+    "title": "Cursos de Capacitación",
+    "subtitle": "Domina la simulación con nuestros cursos de AnyLogic — disponibles presencial u online.",
+    "bookCourse": "Reservar Este Curso"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados.",
+    "tagline": "Servicios de Simulación"
+  }
+}

@@ -1,0 +1,68 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import PageHero from '../../components/common/PageHero.astro';
+
+const products = [
+  { name: 'JUNIT6 para AnyLogic', description: 'Una librería para trabajar con pruebas unitarias usando JUNIT6 en tus modelos de AnyLogic.', type: 'Librería', image: 'junit6.png', url: 'https://github.com/noorjax/junit6-for-anylogic/' },
+  { name: 'Optimización con Intervalos de Confianza', description: 'Crea un experimento de optimización con intervalos de confianza en tu modelo de AnyLogic. Funciona con el PLE y puede exportarse como ejecutable.', type: 'Librería', image: 'optimization-ci.webp', url: '/es/blog/optimization-with-confidence-intervals/' },
+  { name: 'Experimento Monte Carlo', description: 'Una librería para trabajar con intervalos de confianza en tu modelo de AnyLogic. Funciona con el PLE.', type: 'Librería', image: 'monte-carlo.png', url: '/es/blog/monte-carlo-with-confidence-intervals/' },
+  { name: 'Librería de Transportadores de Clasificación', description: 'Una librería personalizada de AnyLogic para redes de transportadores que clasifican agentes y se conectan con fuentes externas para prioridades y enrutamiento. Construida desde un archivo Excel.', type: 'Librería', image: 'sorting-conveyors.webp', url: '/es/blog/sorting-conveyors-library/' },
+  { name: 'Librería de Grúas Apiladoras (ASRS)', description: 'Una librería de grúas apiladoras para crear sistemas automatizados de almacenamiento y recuperación (ASRS) en AnyLogic.', type: 'Librería', image: 'stacker-crane.webp', url: '/es/blog/pallet-crane-library/' },
+  { name: 'Librería de Grupo de Ascensores', description: 'Una librería personalizada de AnyLogic para usar un grupo de ascensores o elevadores con la librería de modelado de procesos o de peatones.', type: 'Librería', image: 'elevator.webp', url: '/es/blog/elevator-group-library/' },
+  { name: 'Librería de Brazo Robótico', description: 'Una librería gratuita para usar un brazo robótico en tus modelos de AnyLogic. Destacada en el blog de AnyLogic.', type: 'Librería', image: 'robotic-arm.webp', url: '/es/blog/robotic-arm-library/' },
+  { name: 'Asistente de Análisis de Datos con ChatGPT', description: 'Una librería gratuita para usar ChatGPT para análisis de datos en tus modelos de AnyLogic.', type: 'Librería', image: 'chatgpt.webp', url: 'https://github.com/noorjax/Chat-GPT-Data-Analyst' },
+  { name: 'Cursos de Simulación Todo-en-Uno', description: 'Una gama completa de cursos para aprender modelado de simulación, desde fundamentos hasta temas avanzados.', type: 'Curso', image: 'courses.png', url: 'https://noorjax.teachable.com' },
+];
+---
+
+<PageLayout title="Productos" description="Librerías, herramientas y cursos de AnyLogic creados por Noorjax Consulting.">
+  <PageHero
+    title="Productos"
+    subtitle="Librerías, herramientas y cursos de AnyLogic creados por nuestro equipo para ampliar las capacidades de simulación."
+  />
+  <section class="py-(--spacing-section)">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+      <!-- Products grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {products.map((product) => (
+          <a href={product.url} {...(product.url.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})} class="bg-bg-secondary rounded-2xl border border-border-default hover:border-brand-teal/30 transition-all hover:shadow-lg group block overflow-hidden flex flex-col">
+            <div class="aspect-[16/10] overflow-hidden">
+              <img
+                src={`/images/products/${product.image}`}
+                alt={product.name}
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <div class="mb-3">
+                <span class:list={[
+                  'text-xs font-medium px-2.5 py-1 rounded-full',
+                  product.type === 'Librería'
+                    ? 'bg-brand-teal/10 text-brand-teal'
+                    : 'bg-brand-green/10 text-brand-green',
+                ]}>
+                  {product.type}
+                </span>
+              </div>
+              <h3 class="text-lg font-bold mb-2 text-text-primary group-hover:text-brand-teal transition-colors">{product.name}</h3>
+              <p class="text-sm text-text-secondary leading-relaxed flex-1">{product.description}</p>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      <!-- CTA -->
+      <div class="text-center mt-16">
+        <p class="text-text-secondary mb-6">¿Interesado en nuestros productos o necesitas una librería personalizada?</p>
+        <a href="/es/contact/" class="btn-primary text-base px-8 py-4">
+          Agenda una Consulta
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</PageLayout>
