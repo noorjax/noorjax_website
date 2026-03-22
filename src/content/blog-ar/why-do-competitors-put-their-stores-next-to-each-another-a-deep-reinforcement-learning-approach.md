@@ -15,7 +15,7 @@ excerpt: "هل تساءلت يومًا لماذا تضع المتاجر الما
 
 لكن بعد أن يتصافحا ويختارا موقع متجريهما، يمكن لكل منهما بشكل فردي أن يقرر إما التعاون، أو الخيانة. يمكن تمثيل ذلك بجدول يوضح مكافآت كل صاحب متجر بناءً على القرار الذي يتخذانه، إلى جانب المكافأة للعملاء.
 
-[![](/images/blog/why-do-competitors-put-their-stores-next-to-each-another-a-deep-reinforcement-learning-approach/Picture1.png)](/images/blog/why-do-competitors-put-their-stores-next-to-each-another-a-deep-reinforcement-learning-approach/Picture1.png)
+![](/images/blog/why-do-competitors-put-their-stores-next-to-each-another-a-deep-reinforcement-learning-approach/Picture1.png)
 
 إذا تعاونا كلاهما، يحصل كل منهما على 50% من العملاء، ويحصل العملاء على أقصى مكافأة.
 
@@ -43,7 +43,7 @@ excerpt: "هل تساءلت يومًا لماذا تضع المتاجر الما
 
 المدينة مبسطة لتكون منطقة مستطيلة مع شركات ومنازل موضوعة عشوائيًا في مكان ما في تلك المنطقة. كل منزل لديه عدد عشوائي من العملاء بداخله. عندما يحتاج عميل إلى منتج (يُحدد ذلك بمعدل بسيط 1 لكل وحدة زمنية اعتباطية)، سينتقل إلى أقرب شركة وسيعود دائمًا إلى المنزل مع المنتج في يديه.
 
-[![](/images/blog/why-do-competitors-put-their-stores-next-to-each-another-a-deep-reinforcement-learning-approach/Screen-Shot-2021-01-30-at-23.59.46-min-1-1030x438.png)](/images/blog/why-do-competitors-put-their-stores-next-to-each-another-a-deep-reinforcement-learning-approach/Screen-Shot-2021-01-30-at-23.59.46-min-1.png)
+![](/images/blog/why-do-competitors-put-their-stores-next-to-each-another-a-deep-reinforcement-learning-approach/Screen-Shot-2021-01-30-at-23.59.46-min-1.png)
 
 إذن، مع إنشاء النموذج العام، الآن نحتاج لجعله جاهزًا للتعلم المعزز، وإذا كنت على دراية بالتعلم المعزز، تعلم أننا نحتاج إلى إنشاء فضاء مرصود وفضاء إجراءات ومكافأة. لنرَ كلاً منها على حدة.
 
@@ -53,13 +53,13 @@ excerpt: "هل تساءلت يومًا لماذا تضع المتاجر الما
 
 إذن، هذه هي المرصودات:
 
-- موضع جميع المنازل في المدينة بإحداثي طبيعي يتراوح من 0 إلى 1[![](/images/blog/why-do-competitors-put-their-stores-next-to-each-another-a-deep-reinforcement-learning-approach/Picture2.png)](/images/blog/why-do-competitors-put-their-stores-next-to-each-another-a-deep-reinforcement-learning-approach/Picture2.png)
+- موضع جميع المنازل في المدينة بإحداثي طبيعي يتراوح من 0 إلى 1![](/images/blog/why-do-competitors-put-their-stores-next-to-each-another-a-deep-reinforcement-learning-approach/Picture2.png)
 
-- العدد الطبيعي للأشخاص في كل منزل. 0 إذا كان هناك شخص واحد فقط، و 1 إذا كان هناك[![](/images/blog/why-do-competitors-put-their-stores-next-to-each-another-a-deep-reinforcement-learning-approach/Picture3.png)](/images/blog/why-do-competitors-put-their-stores-next-to-each-another-a-deep-reinforcement-learning-approach/Picture3.png)
+- العدد الطبيعي للأشخاص في كل منزل. 0 إذا كان هناك شخص واحد فقط، و 1 إذا كان هناك![](/images/blog/why-do-competitors-put-their-stores-next-to-each-another-a-deep-reinforcement-learning-approach/Picture3.png)
 
-- الإحداثيات الطبيعية للشركات الأخرى.[![](/images/blog/why-do-competitors-put-their-stores-next-to-each-another-a-deep-reinforcement-learning-approach/Picture4.png)](/images/blog/why-do-competitors-put-their-stores-next-to-each-another-a-deep-reinforcement-learning-approach/Picture4.png)
+- الإحداثيات الطبيعية للشركات الأخرى.![](/images/blog/why-do-competitors-put-their-stores-next-to-each-another-a-deep-reinforcement-learning-approach/Picture4.png)
 
-- الإحداثيات الطبيعية للشركة التي تتخذ الإجراء.[![](/images/blog/why-do-competitors-put-their-stores-next-to-each-another-a-deep-reinforcement-learning-approach/Picture5.png)](/images/blog/why-do-competitors-put-their-stores-next-to-each-another-a-deep-reinforcement-learning-approach/Picture5.png)
+- الإحداثيات الطبيعية للشركة التي تتخذ الإجراء.![](/images/blog/why-do-competitors-put-their-stores-next-to-each-another-a-deep-reinforcement-learning-approach/Picture5.png)
 
 ## المكافأة
 
@@ -75,7 +75,7 @@ excerpt: "هل تساءلت يومًا لماذا تضع المتاجر الما
 
 حتى وقت كتابة هذا المقال، لا تمتلك Pathmind ميزة تسمح بالتدريب المستقل لعدة وكلاء يتنافسون مع بعضهم بأنظمة مكافآت مختلفة ومستقلة، لذلك ما نحتاج فعله، كما شُرح سابقًا، هو تدريب شركة فردية واحدة مع إبقاء الأخرى في موضع ثابت (أو تتحرك عشوائيًا). وإذا أردنا استخدام إعداد منافسة مع n منافسين، نحتاج إلى تدريب النموذج، مع تهيئة أولية تحدد أي شركة ستتخذ القرارات. نقوم بذلك بمتغير عشوائي كما يلي (يمثل معلمة performingAgent التي تحدثنا عنها سابقًا):
 
-[![](/images/blog/why-do-competitors-put-their-stores-next-to-each-another-a-deep-reinforcement-learning-approach/Picture6.png)](/images/blog/why-do-competitors-put-their-stores-next-to-each-another-a-deep-reinforcement-learning-approach/Picture6.png)
+![](/images/blog/why-do-competitors-put-their-stores-next-to-each-another-a-deep-reinforcement-learning-approach/Picture6.png)
 
 هذا مهم لكي يعمل التدريب، لأنك تحتاج أن يكون لدى الوكيل إحساس بالذات، بناءً على معرفه. لذلك، النموذج الذي ستجده على السحابة (انظر المراجع في النهاية للرابط) هو بيئة الاختبار، وليس بيئة التدريب لأننا نريد تدريب الوكلاء بشكل فردي بسلوك أناني وليس كمجموعة، مما يعني أنه لأغراض التدريب، عدد الوكلاء المُتحكَّم بهم هو 1 فقط، لكن لأغراض الاختبار، يمكن أن يكون عدد الوكلاء المُتحكَّم بهم أعلى.
 

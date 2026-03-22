@@ -1,6 +1,17 @@
 ---
 import PageLayout from '../../layouts/PageLayout.astro';
 import PageHero from '../../components/common/PageHero.astro';
+import { Image } from 'astro:assets';
+
+const productImages = import.meta.glob<{ default: ImageMetadata }>(
+  '../../assets/images/products/*',
+  { eager: true }
+);
+
+function getProductImage(file: string) {
+  const key = `../../assets/images/products/${file}`;
+  return productImages[key]?.default;
+}
 
 const products = [
   { name: 'JUNIT6 for AnyLogic', description: 'A library to work with unit tests using JUNIT6 in your AnyLogic Models.', type: 'Library', image: 'junit6.png', url: 'https://github.com/noorjax/junit6-for-anylogic/' },
@@ -28,12 +39,27 @@ const products = [
         {products.map((product) => (
           <a href={product.url} {...(product.url.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})} class="bg-bg-secondary rounded-2xl border border-border-default hover:border-brand-teal/30 transition-all hover:shadow-lg group block overflow-hidden flex flex-col">
             <div class="aspect-[16/10] overflow-hidden">
-              <img
-                src={`/images/products/${product.image}`}
-                alt={product.name}
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                loading="lazy"
-              />
+              {(() => {
+                const img = getProductImage(product.image);
+                return img ? (
+                  <Image
+                    src={img}
+                    alt={product.name}
+                    width={640}
+                    format="webp"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                ) : (
+                  <img
+                    src={`/images/products/${product.image}`}
+                    alt={product.name}
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                );
+              })()}
             </div>
             <div class="p-6 flex flex-col flex-1">
               <div class="mb-3">

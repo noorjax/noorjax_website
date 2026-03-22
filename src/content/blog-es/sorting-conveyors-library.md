@@ -112,7 +112,7 @@ Usa esta sintaxis: {{x0,y0,z0},{x1,y1,z1},{x2,y2,z2},...,{xn,yn,zn}}
 
 - **K: Color:** color del transportador. Ayuda con la verificacion y validacion del modelo.
 
-### [![](/images/blog/sorting-conveyors-library/Slide2-1030x579.png)](/images/blog/sorting-conveyors-library/Slide2.png)Spurs config
+### ![](/images/blog/sorting-conveyors-library/Slide2.png)Spurs config
 
 Esta hoja define la conexion que existe entre diferentes transportadores usando ramales.
 
@@ -126,7 +126,7 @@ Esta hoja define la conexion que existe entre diferentes transportadores usando 
 
 - **E. Color:** el color del ramal, ayuda en la verificacion y validacion del modelo.
 
-[![](/images/blog/sorting-conveyors-library/Slide3-1030x579.png)](/images/blog/sorting-conveyors-library/Slide3.png)
+![](/images/blog/sorting-conveyors-library/Slide3.png)
 
 ### TransferTables config
 
@@ -144,7 +144,7 @@ Esta hoja define la conexion que existe entre diferentes transportadores usando 
 
 - **G. line width pt**: ancho de linea del cuadrado (esto esta en pixeles).
 
-[![](/images/blog/sorting-conveyors-library/Picture1-1.png)](/images/blog/sorting-conveyors-library/Picture1-1.png) [![](/images/blog/sorting-conveyors-library/kkk.png)](/images/blog/sorting-conveyors-library/kkk.png)
+![](/images/blog/sorting-conveyors-library/Picture1-1.png) ![](/images/blog/sorting-conveyors-library/kkk.png)
 
 ### Sensors Config
 
@@ -170,7 +170,7 @@ El objetivo de esta hoja es definir posiciones en transportadores que se usaran 
 
 - **iii. none**: si el tipo de posicion es "enter", entonces esta es la unica opcion viable.
 
-[![](/images/blog/sorting-conveyors-library/Slide9-1030x579.png)](/images/blog/sorting-conveyors-library/Slide9.png)
+![](/images/blog/sorting-conveyors-library/Slide9.png)
 
 ### Routes
 
@@ -186,7 +186,7 @@ Nota: Para todos los ids descritos anteriormente que necesitan indicarse en la h
 
 Para usar todas las funciones de esta biblioteca, necesitaras crear tu propio agente que se movera a traves de los transportadores, pero tu agente tendra que ser una extension del SpecialConveyorItem de esta biblioteca, que es un tipo Material Item. Para esto necesitas ir a la seccion avanzada de las propiedades de tu tipo de agente y hacerlo alli como se muestra en la siguiente imagen:
 
-[![](/images/blog/sorting-conveyors-library/Picture3-1.png)](/images/blog/sorting-conveyors-library/Picture3-1.png)
+![](/images/blog/sorting-conveyors-library/Picture3-1.png)
 
 Al extender de este tipo de agente especial, el agente tiene acceso a lo siguiente:
 
@@ -326,7 +326,7 @@ Hay algunas reglas para crear un transportador circular o cerrado:
 
 - Para los casos cuando tienes un transportador circular con 2 transportadores rectos ramificandose de el tales que estos 2 transportadores rectos tienen direcciones opuestas, es necesario que el vertice del transportador circular (el punto de inicio y final) se elija a lo largo de la parte del transportador circular que esta entre los 2 transportadores rectos ramificados. Ejemplo: el circulo rojo de conveyorLoop: begin & end.
 
-[![](/images/blog/sorting-conveyors-library/Slide10-1030x579.png)](/images/blog/sorting-conveyors-library/Slide10.png)
+![](/images/blog/sorting-conveyors-library/Slide10.png)
 
 De esta forma puedes simplemente definir una secuencia como esta: {conveyor1,conveyor2} y el agente ira a traves del conveyor1, luego hara medio circuito en el transportador circular (conveyorLoop) y tomara el ramal azul para terminar la secuencia en el conveyor2. Esto es posible solo porque el punto de inicio y final del transportador de circuito no esta en la ruta del agente, de lo contrario, si el punto esta en la ruta, necesitaras definir el circuito como parte de la secuencia.
 Si quieres que el agente haga un circuito completo en el circuito, solo necesitas definir la secuencia asi: {conveyor1,conveyorLoop,conveyor2}. El resultado seria conveyor1, luego un circuito completo mas medio circuito y luego conveyor2.
@@ -337,7 +337,7 @@ Nota: si el ultimo transportador de una secuencia en una ruta es un transportado
 Si dos o mas transportadores se fusionan en un solo transportador, sera necesario el uso de las prioridades de los agentes para definir el orden o secuencia de los agentes. Para eso, el uso de la hoja Sensors config sera obligatorio.
 Las posiciones en el transportador son los sensores que ayudaran a definir la secuencia de los agentes. Aqui hay un ejemplo rapido de como configurar un punto convergente de transportadores:
 
-[![](/images/blog/sorting-conveyors-library/Picture4-1.png)](/images/blog/sorting-conveyors-library/Picture4-1.png)[![](/images/blog/sorting-conveyors-library/Slide11-1030x579.png)](/images/blog/sorting-conveyors-library/Slide11.png)
+![](/images/blog/sorting-conveyors-library/Picture4-1.png)![](/images/blog/sorting-conveyors-library/Slide11.png)
 
 - En la hoja Sensors config, se definen los sensores de los transportadores, hay dos transportadores fusionandose en uno. El intersection id es para definir que sensores estan relacionados.
 
@@ -357,7 +357,7 @@ Ten en cuenta que los offsets de los sensores deben ser consistentes con el dise
 
 - Un sensor de entrada no puede estar en la misma linea del ramal que proporciona agentes desde el transportador ramal. El sensor debe estar despues de la forma del ramal (ver la siguiente imagen)
 
-[![](/images/blog/sorting-conveyors-library/Picture5-1.png)](/images/blog/sorting-conveyors-library/Picture5-1.png)
+![](/images/blog/sorting-conveyors-library/Picture5-1.png)
 
 - El offset de los sensores no puede ser mayor que la longitud total del transportador.
 
@@ -367,7 +367,7 @@ Ten en cuenta que los offsets de los sensores deben ser consistentes con el dise
 
 - Dentro de Anylogic, agrega la biblioteca Sorting Conveyors a tu paleta usando el boton + en la pestana de paleta, y encuentra el archivo sortingConveyors.jar que descargaste... Siempre manten ese archivo .jar en la misma ubicacion, o tendras problemas.
 
-[![](/images/blog/sorting-conveyors-library/Monosnap-Instructions-Word-2023-11-16-08.43.08.png)](/images/blog/sorting-conveyors-library/Monosnap-Instructions-Word-2023-11-16-08.43.08.png)
+![](/images/blog/sorting-conveyors-library/Monosnap-Instructions-Word-2023-11-16-08.43.08.png)
 
 Ahora cuando crees un modelo o si quieres usar un modelo existente con esta biblioteca:
 
@@ -379,10 +379,10 @@ Ahora cuando crees un modelo o si quieres usar un modelo existente con esta bibl
 
 - Arrastra y suelta el ConveyorNetworkAnimation en tu modelo. Selecciona el agente conveyorNetworkSettings.
 
-[![](/images/blog/sorting-conveyors-library/Picture3.png)](/images/blog/sorting-conveyors-library/Picture3.png)
+![](/images/blog/sorting-conveyors-library/Picture3.png)
 
 Arrastra y suelta el ConveyorNetworkLogic en tu modelo y conectalo a otros bloques logicos. Pueden haber multiples bloques de este tipo en el modelo.
-[![](/images/blog/sorting-conveyors-library/Picture4.png)](/images/blog/sorting-conveyors-library/Picture4.png)
+![](/images/blog/sorting-conveyors-library/Picture4.png)
 - Configura los parametros del agente conveyorNetworkLogic, seleccionando la animacion de red de transportadores.
 
 Recuerda dos cosas importantes:
@@ -400,11 +400,11 @@ Esto es para inicializar los parametros esenciales del agente para ser enrutado 
 
 - Para uniones, como ramales o mesas de transferencia, es necesario dejar espacio entre los transportadores involucrados. Esto es para proporcionar el espacio fisico necesario para crear las lineas que representan los ramales y mesas de transferencia. En la siguiente imagen tres transportadores estan conectados a una mesa de transferencia, y los puntos de conexion no estan posicionados en las mismas coordenadas ya que el espacio entre ellos es necesario, ya que de esta forma se puede crear la forma del transportador.
 
-[![](/images/blog/sorting-conveyors-library/Picture7-1.png)](/images/blog/sorting-conveyors-library/Picture7-1.png)
+![](/images/blog/sorting-conveyors-library/Picture7-1.png)
 
 - Adicionalmente, para los ramales, el punto de conexion del transportador ramal debe tener suficiente espacio con respecto al transportador principal, considerando el ancho del transportador principal para esto. Recomendamos posicionar el punto de conexion del transportador ramal al menos a la mitad del ancho del transportador principal de distancia del transportador principal. Revisa la siguiente imagen.
 
-[![](/images/blog/sorting-conveyors-library/Picture8-1.png)](/images/blog/sorting-conveyors-library/Picture8-1.png)
+![](/images/blog/sorting-conveyors-library/Picture8-1.png)
 
 - Para los ramales, el punto de conexion del transportador ramal debe apuntar a cualquier segmento del transportador principal que este entre el primer y ultimo punto del transportador principal pero no puede apuntar directamente al primer o ultimo punto ya que el ramal necesita espacio fisico para crear la forma, por lo tanto no esta permitido posicionar un ramal al inicio o final de un transportador principal.
 
@@ -414,9 +414,9 @@ Esto es para inicializar los parametros esenciales del agente para ser enrutado 
 
 A veces puede suceder, en un tipo de union gap donde se usan los sensores, que un agente ha pasado al siguiente transportador pero no puede avanzar mas debido a una gran cola de agentes en este transportador, y el agente que esta detras va al final del primer transportador. Con eso sucediendo, parece que ambos agentes estan uno encima del otro. Esto es solo algo visual que casi no tiene implicacion operativa. Mejoraremos esto en el futuro.
 
-[![](/images/blog/sorting-conveyors-library/Picture1-2.png)](/images/blog/sorting-conveyors-library/Picture1-2.png)
+![](/images/blog/sorting-conveyors-library/Picture1-2.png)
 
 ## Mi modelo exportado no funciona
 
 Cuando exportas un modelo, no requiere licencia, siempre y cuando lo hayas exportado con una licencia (tanto para la nube como para exportacion java). Para poder exportarlo, deberias haber ejecutado el modelo de simulacion al menos una vez en AnyLogic con internet encendido, lo que generara un archivo licenseKey.txt valido (si compraste una licencia). Este archivo debe integrarse en cualquier version exportada, y para hacer eso necesitas ir a las propiedades de resources/data/licenseKey.txt y activar "Resource is referrenced from user code". Esto permitira que el modelo exporte el archivo licenseKey.txt, como ves en la siguiente imagen:
-[![](/images/blog/sorting-conveyors-library/usercodereference-1030x260.png)](/images/blog/sorting-conveyors-library/usercodereference.png)
+![](/images/blog/sorting-conveyors-library/usercodereference.png)

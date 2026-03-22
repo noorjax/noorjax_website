@@ -67,7 +67,7 @@ The library makes use of the levels feature of AnyLogic, so it's important that 
 
 In order to use the objects provided by this library, an agent has to extend from this type. For this you need to go to the advanced section of your agent type properties and do it there as shown in the following image:
 
-[![](/images/blog/elevator-group-library/Monosnap-AnyLogic-Professional-2024-06-23-13.42.21.png)](/images/blog/elevator-group-library/Monosnap-AnyLogic-Professional-2024-06-23-13.42.21.png)
+![](/images/blog/elevator-group-library/Monosnap-AnyLogic-Professional-2024-06-23-13.42.21.png)
 
 By extending from this special agent type, the agent has access to some functions that are necessary.
 
@@ -105,13 +105,13 @@ When an agent that will take the elevator is created, you can define the followi
 
 The object you see in the AnyLogic Canvas is the following, in which the center of the first elevator corresponds to the center of the left elevator, and everything is placed towards the right depending on dimensions and separation between elevators:
 
-[![](/images/blog/elevator-group-library/Monosnap-AnyLogic-Professional-2024-06-23-14.38.17.png)](/images/blog/elevator-group-library/Monosnap-AnyLogic-Professional-2024-06-23-14.38.17.png)
+![](/images/blog/elevator-group-library/Monosnap-AnyLogic-Professional-2024-06-23-14.38.17.png)
 
 **Space Between Elevators:** here you define the space between elevators
 
 **Width, Depth and Height**: These dimensions are defined as shown in the image
 
-[![](/images/blog/elevator-group-library/Monosnap-Elevator0.0.1-_-Simulation-AnyLogic-Pro.png)](/images/blog/elevator-group-library/Monosnap-Elevator0.0.1-_-Simulation-AnyLogic-Pro.png)
+![](/images/blog/elevator-group-library/Monosnap-Elevator0.0.1-_-Simulation-AnyLogic-Pro.png)
 
 **Color:** this will be color of the elevator and the doors of the elevator. We suggest using transparency to see the agents inside.
 
@@ -135,7 +135,7 @@ The object you see in the AnyLogic Canvas is the following, in which the center 
 
 **Levels**: Here you can choose what levels each elevator of the group can go to. Make sure to add on this list as many as there are are elevators (unless you are using same levels for all elevators). In the following image, we see a case in which there are 4 elevators. The first elevator, which has index 0 and is position to the left of the group, will be able to go to level and level1, the second elevator to level, level1 and level2, and so on. There are 4 lists, so this means that the "number of elevators" parameter MUST be 4. Note that it doesn't matter in which order you add the levels. In this case there are also 3 possible levels: level, level1 and level2, which means you MUST have 3 waiting nodes.
 
-[![](/images/blog/elevator-group-library/Monosnap-AnyLogic-Professional-2024-06-23-14.27.22.png)](/images/blog/elevator-group-library/Monosnap-AnyLogic-Professional-2024-06-23-14.27.22.png)
+![](/images/blog/elevator-group-library/Monosnap-AnyLogic-Professional-2024-06-23-14.27.22.png)
 
 ## Take Elevator
 
@@ -213,4 +213,4 @@ The elevator waiting node, when using the process modeling library must be place
 
 When you export a model, it doesn't require a license, as long as you exported it with a license (both for the cloud and java export). In order to export it, you should have run the simulation model at least one time in AnyLogic with internet on, which will generate a valid licenseKey.txt file (if you purchased a license). This file must be integrated in any exported version, and to do that you need to go to resources/data/licenseKey.txt properties and turn on "Resource is referrenced from user code". This will allow the model to export the licenseKey.txt file, as you see in the following image:
 
-[![](/images/blog/elevator-group-library/usercodereference-1030x260.png)](/images/blog/elevator-group-library/usercodereference.png)
+![](/images/blog/elevator-group-library/usercodereference.png)

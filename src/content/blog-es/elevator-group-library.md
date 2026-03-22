@@ -73,7 +73,7 @@ La biblioteca hace uso de la funcionalidad de niveles de AnyLogic, por lo que es
 
 Para usar los objetos proporcionados por esta biblioteca, un agente debe heredar de este tipo. Para esto necesitas ir a la sección avanzada de las propiedades de tu tipo de agente y hacerlo allí como se muestra en la siguiente imagen:
 
-[![](/images/blog/elevator-group-library/Monosnap-AnyLogic-Professional-2024-06-23-13.42.21.png)](/images/blog/elevator-group-library/Monosnap-AnyLogic-Professional-2024-06-23-13.42.21.png)
+![](/images/blog/elevator-group-library/Monosnap-AnyLogic-Professional-2024-06-23-13.42.21.png)
 
 Al heredar de este tipo de agente especial, el agente tiene acceso a algunas funciones necesarias.
 
@@ -111,13 +111,13 @@ Cuando se crea un agente que tomará el ascensor, puedes definir los siguientes 
 
 El objeto que ves en el Canvas de AnyLogic es el siguiente, en el cual el centro del primer ascensor corresponde al centro del ascensor izquierdo, y todo se coloca hacia la derecha dependiendo de las dimensiones y la separación entre ascensores:
 
-[![](/images/blog/elevator-group-library/Monosnap-AnyLogic-Professional-2024-06-23-14.38.17.png)](/images/blog/elevator-group-library/Monosnap-AnyLogic-Professional-2024-06-23-14.38.17.png)
+![](/images/blog/elevator-group-library/Monosnap-AnyLogic-Professional-2024-06-23-14.38.17.png)
 
 **Space Between Elevators:** aquí defines el espacio entre ascensores
 
 **Width, Depth and Height**: Estas dimensiones se definen como se muestra en la imagen
 
-[![](/images/blog/elevator-group-library/Monosnap-Elevator0.0.1-_-Simulation-AnyLogic-Pro.png)](/images/blog/elevator-group-library/Monosnap-Elevator0.0.1-_-Simulation-AnyLogic-Pro.png)
+![](/images/blog/elevator-group-library/Monosnap-Elevator0.0.1-_-Simulation-AnyLogic-Pro.png)
 
 **Color:** este será el color del ascensor y las puertas del ascensor. Sugerimos usar transparencia para ver los agentes dentro.
 
@@ -141,7 +141,7 @@ El objeto que ves en el Canvas de AnyLogic es el siguiente, en el cual el centro
 
 **Levels**: Aquí puedes elegir a qué niveles puede ir cada ascensor del grupo. Asegúrate de agregar en esta lista tantos como ascensores haya (a menos que estés usando los mismos niveles para todos los ascensores). En la siguiente imagen, vemos un caso en el que hay 4 ascensores. El primer ascensor, que tiene índice 0 y está posicionado a la izquierda del grupo, podrá ir a level y level1, el segundo ascensor a level, level1 y level2, y así sucesivamente. Hay 4 listas, lo que significa que el parámetro "number of elevators" DEBE ser 4. Ten en cuenta que no importa en qué orden agregues los niveles. En este caso también hay 3 niveles posibles: level, level1 y level2, lo que significa que DEBES tener 3 nodos de espera.
 
-[![](/images/blog/elevator-group-library/Monosnap-AnyLogic-Professional-2024-06-23-14.27.22.png)](/images/blog/elevator-group-library/Monosnap-AnyLogic-Professional-2024-06-23-14.27.22.png)
+![](/images/blog/elevator-group-library/Monosnap-AnyLogic-Professional-2024-06-23-14.27.22.png)
 
 ## Take Elevator
 
@@ -221,4 +221,4 @@ El nodo de espera del ascensor, cuando se usa la biblioteca de modelado de proce
 
 Cuando exportas un modelo, no requiere una licencia, siempre y cuando lo hayas exportado con una licencia (tanto para la nube como para la exportación Java). Para poder exportarlo, deberías haber ejecutado el modelo de simulación al menos una vez en AnyLogic con internet activado, lo que generará un archivo licenseKey.txt válido (si compraste una licencia). Este archivo debe integrarse en cualquier versión exportada, y para hacer eso necesitas ir a las propiedades de resources/data/licenseKey.txt y activar "Resource is referrenced from user code". Esto permitirá que el modelo exporte el archivo licenseKey.txt, como puedes ver en la siguiente imagen:
 
-[![](/images/blog/elevator-group-library/usercodereference-1030x260.png)](/images/blog/elevator-group-library/usercodereference.png)
+![](/images/blog/elevator-group-library/usercodereference.png)

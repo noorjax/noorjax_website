@@ -19,10 +19,10 @@ Hay dos tipos de protocolos. Push y Pull. En el mundo predeterminado de AnyLogic
 
 **Protocolo Push**: el bloque sera empujado al bloque receptor sin ninguna solicitud. Esto produce errores. Y estos son los errores que descubrimos primero cuando empezamos a usar AnyLogic, por ejemplo cuando no hay espacio disponible en una queue que existe despues de un bloque source. Si, porque el bloque source usa protocolo push como predeterminado.
 
-[![](/images/blog/push-vs-pull/Edit-Post-%E2%80%B9-Noorjax-Consulting-%E2%80%94-WordPress-2019-02-27-13-45-37-1030x231.png)](/images/blog/push-vs-pull/Edit-Post-%E2%80%B9-Noorjax-Consulting-%E2%80%94-WordPress-2019-02-27-13-45-37.png)
+![](/images/blog/push-vs-pull/Edit-Post-%E2%80%B9-Noorjax-Consulting-%E2%80%94-WordPress-2019-02-27-13-45-37.png)
 
 Pero no todos los bloques son capaces de usar el protocolo Push. Para descubrir cuales pueden y cuales no, encontraras una opcion "Forced Push" en la seccion avanzada de las propiedades del bloque.
 
-[![](/images/blog/push-vs-pull/AnyLogic-Personal-Learning-Edition-PERSONAL-LEARNING-USE-ONLY-2019-02-27-12-53-30.png)](/images/blog/push-vs-pull/AnyLogic-Personal-Learning-Edition-PERSONAL-LEARNING-USE-ONLY-2019-02-27-12-53-30.png)
+![](/images/blog/push-vs-pull/AnyLogic-Personal-Learning-Edition-PERSONAL-LEARNING-USE-ONLY-2019-02-27-12-53-30.png)
 
 Entonces la pregunta ahora es... cuando usar pull o push? Y no hay una respuesta estricta para eso. Ya que el protocolo push da un error, puedes usarlo para hacer evidente cuando hay un cuello de botella en algun lugar de tu proceso. O tal vez quieres usar un protocolo pull en el bloque source para destruir agentes que no pueden ser recibidos en una queue. En general no necesitaras cambiar los valores predeterminados, pero siempre es bueno saber por que las cosas estan sucediendo, verdad?

@@ -19,9 +19,9 @@ excerpt: "أنت تطور نموذج الأحداث المنفصلة الخاص 
 
 **بروتوكول الدفع**: سيتم دفع الكتلة إلى الكتلة المستقبلة دون أي طلب. هذا ينتج أخطاء. وهذه هي الأخطاء التي نكتشفها لأول مرة عندما نبدأ باستخدام AnyLogic، على سبيل المثال عندما لا تكون هناك مساحة متاحة في طابور موجود بعد كتلة source. نعم، لأن كتلة source تستخدم بروتوكول الدفع كإعداد افتراضي.
 
-[![](/images/blog/push-vs-pull/Edit-Post-%E2%80%B9-Noorjax-Consulting-%E2%80%94-WordPress-2019-02-27-13-45-37-1030x231.png)](/images/blog/push-vs-pull/Edit-Post-%E2%80%B9-Noorjax-Consulting-%E2%80%94-WordPress-2019-02-27-13-45-37.png)
+![](/images/blog/push-vs-pull/Edit-Post-%E2%80%B9-Noorjax-Consulting-%E2%80%94-WordPress-2019-02-27-13-45-37.png)
 
 لكن ليست كل الكتل قادرة على استخدام بروتوكول الدفع. لمعرفة أيها يمكن وأيها لا يمكن، ستجد خيار "Forced Push" في القسم المتقدم من خصائص الكتلة.
-[![](/images/blog/push-vs-pull/AnyLogic-Personal-Learning-Edition-PERSONAL-LEARNING-USE-ONLY-2019-02-27-12-53-30.png)](/images/blog/push-vs-pull/AnyLogic-Personal-Learning-Edition-PERSONAL-LEARNING-USE-ONLY-2019-02-27-12-53-30.png)
+![](/images/blog/push-vs-pull/AnyLogic-Personal-Learning-Edition-PERSONAL-LEARNING-USE-ONLY-2019-02-27-12-53-30.png)
 
 إذن السؤال الآن هو... متى تستخدم السحب أو الدفع؟ ولا توجد إجابة صارمة لذلك. بما أن بروتوكول الدفع يعطي خطأ، يمكنك استخدامه لجعل وجود اختناق في مكان ما في عمليتك واضحًا. أو ربما تريد استخدام بروتوكول السحب في كتلة source لتدمير الوكلاء الذين لا يمكن استقبالهم في طابور. بشكل عام لن تحتاج إلى تغيير الإعدادات الافتراضية، لكن من الجيد دائمًا معرفة لماذا تحدث الأشياء، أليس كذلك؟

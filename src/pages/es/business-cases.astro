@@ -5,6 +5,16 @@ import ClientCarousel from '../../components/sections/ClientCarousel.astro';
 import { portfolioItemsEs as portfolioItems } from '../../lib/portfolioItems.es';
 import { translateCategory } from '../../lib/categoryLabels';
 import { getServicesForSlug, translateService } from '../../lib/portfolioServices';
+import { Image } from 'astro:assets';
+
+const portfolioImageFiles = import.meta.glob<{ default: ImageMetadata }>(
+  '../../assets/images/portfolio/*',
+  { eager: true }
+);
+function getPortfolioImage(file: string) {
+  const key = `../../assets/images/portfolio/${file}`;
+  return portfolioImageFiles[key]?.default;
+}
 
 const allServices = [...new Set(portfolioItems.flatMap((p) => getServicesForSlug(p.slug)))].sort();
 const allMethodologies = [...new Set(portfolioItems.flatMap((p) => p.categories))].sort();
@@ -99,7 +109,7 @@ const studentWork = [
 <PageLayout title="Casos de Negocio" description="Explora nuestros proyectos de consultoría en simulación, documentos técnicos, presentaciones en conferencias y premios.">
   <PageHero
     title="Casos de Negocio"
-    subtitle="Proyectos realizados para gobiernos, empresas Fortune 500, startups e instituciones de investigación en todo el mundo."
+    subtitle="Proyectos realizados para gobiernos, industrias, startups e instituciones de investigación en todo el mundo."
   />
   <section class="py-(--spacing-section)">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -139,12 +149,27 @@ const studentWork = [
               <a href={`/es/portfolio/${project.slug}/`} class="portfolio-card bg-bg-secondary rounded-2xl border border-border-default hover:border-brand-teal/30 transition-all hover:shadow-lg group block overflow-hidden" data-services={JSON.stringify(projectServices)} data-methods={JSON.stringify(project.categories)}>
                 {img && (
                   <div class="aspect-[16/10] overflow-hidden">
-                    <img
-                      src={`/images/portfolio/${img}`}
-                      alt={project.title}
-                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      loading="lazy"
-                    />
+                    {(() => {
+                      const optimized = getPortfolioImage(img);
+                      return optimized ? (
+                        <Image
+                          src={optimized}
+                          alt={project.title}
+                          width={480}
+                          format="webp"
+                          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      ) : (
+                        <img
+                          src={`/images/portfolio/${img}`}
+                          alt={project.title}
+                          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                          loading="lazy"
+                        />
+                      );
+                    })()}
                   </div>
                 )}
                 <div class="p-5">
@@ -276,28 +301,44 @@ const studentWork = [
   </section>
 </PageLayout>
 
-<script>
+<script is:inline>
   document.addEventListener('astro:page-load', () => {
-    const svcBtns = document.querySelectorAll<HTMLButtonElement>('.svc-filter-btn');
-    const methodBtns = document.querySelectorAll<HTMLButtonElement>('.method-filter-btn');
-    const cards = document.querySelectorAll<HTMLElement>('.portfolio-card');
+    const svcBtns = document.querySelectorAll('.svc-filter-btn');
+    const methodBtns = document.querySelectorAll('.method-filter-btn');
+    const cards = document.querySelectorAll('.portfolio-card');
     let activeSvc = 'all';
     let activeMethod = 'all';
     function applyFilters() {
-      cards.forEach((card) => {
-        const services: string[] = JSON.parse(card.dataset.services || '[]');
-        const methods: string[] = JSON.parse(card.dataset.methods || '[]');
-        const matchSvc = activeSvc === 'all' || services.includes(activeSvc);
-        const matchMethod = activeMethod === 'all' || methods.includes(activeMethod);
+      cards.forEach(function(card) {
+        var services = JSON.parse(card.dataset.services || '[]');
+        var methods = JSON.parse(card.dataset.methods || '[]');
+        var matchSvc = activeSvc === 'all' || services.includes(activeSvc);
+        var matchMethod = activeMethod === 'all' || methods.includes(activeMethod);
         card.style.display = matchSvc && matchMethod ? '' : 'none';
       });
     }
-    function setActive(btns: NodeListOf<HTMLButtonElement>, clicked: HTMLButtonElement, activeClass: string, borderClass: string) {
-      btns.forEach((b) => { b.classList.remove('active', activeClass, 'text-white'); b.classList.add('border', borderClass); });
+    function setActive(btns, clicked, activeClass, borderClass) {
+      btns.forEach(function(b) { b.classList.remove('active', activeClass, 'text-white'); b.classList.add('border', borderClass); });
       clicked.classList.add('active', activeClass, 'text-white');
       clicked.classList.remove('border', borderClass);
     }
-    svcBtns.forEach((btn) => { btn.addEventListener('click', () => { activeSvc = btn.dataset.filter || 'all'; setActive(svcBtns, btn, 'bg-brand-green', 'border-brand-green/30'); applyFilters(); }); });
-    methodBtns.forEach((btn) => { btn.addEventListener('click', () => { activeMethod = btn.dataset.filter || 'all'; setActive(methodBtns, btn, 'bg-brand-teal', 'border-brand-teal/30'); applyFilters(); }); });
+    svcBtns.forEach(function(btn) { btn.addEventListener('click', function() { activeSvc = btn.dataset.filter || 'all'; setActive(svcBtns, btn, 'bg-brand-green', 'border-brand-green/30'); applyFilters(); }); });
+    methodBtns.forEach(function(btn) { btn.addEventListener('click', function() { activeMethod = btn.dataset.filter || 'all'; setActive(methodBtns, btn, 'bg-brand-teal', 'border-brand-teal/30'); applyFilters(); }); });
+
+    // Auto-apply service filter from URL param
+    var urlService = new URLSearchParams(window.location.search).get('service');
+    if (urlService) {
+      var matchBtn = Array.from(svcBtns).find(function(b) { return b.dataset.filter === urlService; });
+      if (matchBtn) {
+        activeSvc = urlService;
+        setActive(svcBtns, matchBtn, 'bg-brand-green', 'border-brand-green/30');
+        applyFilters();
+        var el = document.getElementById('service-filters');
+        if (el) {
+          var top = el.getBoundingClientRect().top + window.scrollY - 100;
+          window.scrollTo({ top: top, behavior: 'smooth' });
+        }
+      }
+    }
   });
 </script>

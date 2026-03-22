@@ -18,7 +18,7 @@ excerpt: "انتهت المسابقة والفائزون هم [Guilherme Heinen]
 العملية التفصيلية هي كالتالي، حيث لديك رف منصات واحد يحتوي على 5 خلايا وموضع عمق واحد و8 مستويات. لكن من الأفضل أن يكون مرناً بما يكفي لتغيير الخلايا والمستويات.
 
 يبدأ رف المنصات ببضع منصات في مواضع عشوائية كما هو موضح في الشكل 1:
-[![](/images/blog/anylogic-contest-3-automated-pallet-rack-system/competition-3-Word-2023-02-01-15.12.18-1030x580.png)](/images/blog/anylogic-contest-3-automated-pallet-rack-system/competition-3-Word-2023-02-01-15.12.18.png)الشكل 1: رف المنصات
+![](/images/blog/anylogic-contest-3-automated-pallet-rack-system/competition-3-Word-2023-02-01-15.12.18.png)الشكل 1: رف المنصات
 
 الفكرة بسيطة، ويمكنك بناء هذا النظام بأي طريقة تريدها طالما يتم اتباع الخطوات بشكل صحيح:
 
@@ -46,7 +46,7 @@ excerpt: "انتهت المسابقة والفائزون هم [Guilherme Heinen]
 
 - من الأفضل أن يكون من الممكن تدوير رف المنصات بأي زاوية. يوضح الشكل 2 (أ و ب) مثالين على كيفية ظهور العرض ثنائي الأبعاد من الأعلى.
 
-أ) [![](/images/blog/anylogic-contest-3-automated-pallet-rack-system/Picture2.png)](/images/blog/anylogic-contest-3-automated-pallet-rack-system/Picture2.png) ب) [![](/images/blog/anylogic-contest-3-automated-pallet-rack-system/Picture3.png)](/images/blog/anylogic-contest-3-automated-pallet-rack-system/Picture3.png)
+أ) ![](/images/blog/anylogic-contest-3-automated-pallet-rack-system/Picture2.png) ب) ![](/images/blog/anylogic-contest-3-automated-pallet-rack-system/Picture3.png)
 
 الشكل 2: يمكن تدوير رف المنصات ويجب أن يستمر نموذج المحاكاة في العمل.
 

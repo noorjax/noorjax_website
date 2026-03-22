@@ -15,7 +15,7 @@ Let's imagine two competitors soon to open a new store in a community in which c
 
 But after they give each other a handshake and chose the location of their respective stores, each one individually can decide to either cooperate, or betray. This can be represented by a table that shows the rewards of each store owner based on the decision they both make, alongside with the reward for the customers.
 
-[![](/images/blog/why-do-competitors-put-their-stores-next-to-each-another-a-deep-reinforcement-learning-approach/Picture1.png)](/images/blog/why-do-competitors-put-their-stores-next-to-each-another-a-deep-reinforcement-learning-approach/Picture1.png)
+![](/images/blog/why-do-competitors-put-their-stores-next-to-each-another-a-deep-reinforcement-learning-approach/Picture1.png)
 
 If they both cooperate, each gets 50% of the customers, and the customers get maximum reward.
 
@@ -39,7 +39,7 @@ Ok, now that we covered the context, let's try to find a way to make this happen
 
 The city is simplified to be a rectangular area with businesses and houses randomly placed somewhere in that area. Each house has a random number of customers inside it. When a customer needs a product (which is decided by a simple rate of 1 every arbitrary time unit), they will move to the closest business and will always go back home with the product in their hands.
 
-[![](/images/blog/why-do-competitors-put-their-stores-next-to-each-another-a-deep-reinforcement-learning-approach/Screen-Shot-2021-01-30-at-23.59.46-min-1-1030x438.png)](/images/blog/why-do-competitors-put-their-stores-next-to-each-another-a-deep-reinforcement-learning-approach/Screen-Shot-2021-01-30-at-23.59.46-min-1.png)
+![](/images/blog/why-do-competitors-put-their-stores-next-to-each-another-a-deep-reinforcement-learning-approach/Screen-Shot-2021-01-30-at-23.59.46-min-1.png)
 
 So, with the general model created, now we need to make it RL-ready, and if you are familiar with RL, you know that we need to create an observed space, an action space and a reward. Let's see each one of them separately.
 
@@ -51,19 +51,19 @@ So, these are the observations:
 
 - The position of all the homes in the city with a normalized coordinate ranging from 0 to 1
 
-[![](/images/blog/why-do-competitors-put-their-stores-next-to-each-another-a-deep-reinforcement-learning-approach/Picture2.png)](/images/blog/why-do-competitors-put-their-stores-next-to-each-another-a-deep-reinforcement-learning-approach/Picture2.png)
+![](/images/blog/why-do-competitors-put-their-stores-next-to-each-another-a-deep-reinforcement-learning-approach/Picture2.png)
 
 - The normalized number of people in each home. 0 if there's only 1 person, and 1 if there
 
-[![](/images/blog/why-do-competitors-put-their-stores-next-to-each-another-a-deep-reinforcement-learning-approach/Picture3.png)](/images/blog/why-do-competitors-put-their-stores-next-to-each-another-a-deep-reinforcement-learning-approach/Picture3.png)
+![](/images/blog/why-do-competitors-put-their-stores-next-to-each-another-a-deep-reinforcement-learning-approach/Picture3.png)
 
 - The normalized coordinates of the other businesses.
 
-[![](/images/blog/why-do-competitors-put-their-stores-next-to-each-another-a-deep-reinforcement-learning-approach/Picture4.png)](/images/blog/why-do-competitors-put-their-stores-next-to-each-another-a-deep-reinforcement-learning-approach/Picture4.png)
+![](/images/blog/why-do-competitors-put-their-stores-next-to-each-another-a-deep-reinforcement-learning-approach/Picture4.png)
 
 - The normalized coordinates of the business that is making an action.
 
-[![](/images/blog/why-do-competitors-put-their-stores-next-to-each-another-a-deep-reinforcement-learning-approach/Picture5.png)](/images/blog/why-do-competitors-put-their-stores-next-to-each-another-a-deep-reinforcement-learning-approach/Picture5.png)
+![](/images/blog/why-do-competitors-put-their-stores-next-to-each-another-a-deep-reinforcement-learning-approach/Picture5.png)
 
 ## Reward
 
@@ -77,7 +77,7 @@ Nine actions are defined: four of them are related to movements parallel to x an
 
 As of the writing of this article, Pathmind doesn't have a feature that allows independent trainings for multiple agents that are competing with each other with different and independent reward systems, so what we need to do, as previously explained, is to train one individual business while maintaining the others in a fixed position (or moving randomly). And if we want to use a competition setup with n competitors, we need to train the model, with an initial configuration that defines which business is going to make the decisions. We do this with a random variable as follows (representing the performingAgent parameter we talked about before):
 
-[![](/images/blog/why-do-competitors-put-their-stores-next-to-each-another-a-deep-reinforcement-learning-approach/Picture6.png)](/images/blog/why-do-competitors-put-their-stores-next-to-each-another-a-deep-reinforcement-learning-approach/Picture6.png)
+![](/images/blog/why-do-competitors-put-their-stores-next-to-each-another-a-deep-reinforcement-learning-approach/Picture6.png)
 
 This is important for the training to work, because you need the agent to have a sense of self, based on its id. So, the model you will find in the cloud (see references at the end for the link) is the test environment, and not the training environment because we want to train agents individually with selfish behavior and not as a group, meaning that for training purposes, the number of controlled agents is only 1, but for testing purposes, the number of controlled agents can be higher.
 

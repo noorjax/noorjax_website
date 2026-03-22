@@ -1,6 +1,19 @@
 ---
+import { Image } from 'astro:assets';
 import PageLayout from '../../layouts/PageLayout.astro';
 import PageHero from '../../components/common/PageHero.astro';
+import learnAnylogicImg from '../../assets/images/courses/learn-anylogic.png';
+import otherCoursesImg from '../../assets/images/courses/other-courses.jpg';
+import indonesiaImg from '../../assets/images/courses/indonesia-training.png';
+
+const courseImages = import.meta.glob<{ default: ImageMetadata }>(
+  '../../assets/images/courses/*',
+  { eager: true }
+);
+function getCourseImage(file: string) {
+  const key = `../../assets/images/courses/${file}`;
+  return courseImages[key]?.default;
+}
 
 const courseTopics = [
   { name: 'Modelado Basado en Agentes', topics: ['Elementos de agentes', 'Diagramas de estado', 'JAVA'], image: 'agent-based.png' },
@@ -30,7 +43,7 @@ const courseTopics = [
         <!-- Learn AnyLogic Online -->
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
           <div class="rounded-2xl overflow-hidden border border-border-default">
-            <img src="/images/courses/learn-anylogic.png" alt="Learn AnyLogic Online" class="w-full h-full object-cover" loading="lazy" />
+            <Image src={learnAnylogicImg} alt="Learn AnyLogic Online" width={640} format="webp" class="w-full h-full object-cover" loading="lazy" decoding="async" />
           </div>
           <div class="flex flex-col justify-center">
             <h3 class="text-2xl font-bold mb-4">Aprende AnyLogic Online</h3>
@@ -75,7 +88,7 @@ const courseTopics = [
             </a>
           </div>
           <div class="rounded-2xl overflow-hidden border border-border-default order-1 lg:order-2">
-            <img src="/images/courses/other-courses.jpg" alt="Other Courses" class="w-full h-full object-cover" loading="lazy" />
+            <Image src={otherCoursesImg} alt="Other Courses" width={640} format="webp" class="w-full h-full object-cover" loading="lazy" decoding="async" />
           </div>
         </div>
       </div>
@@ -141,7 +154,7 @@ const courseTopics = [
           </div>
           <div>
             <div class="rounded-2xl overflow-hidden border border-border-default">
-              <img src="/images/courses/indonesia-training.png" alt="AnyLogic course in Tangerang, Indonesia" class="w-full object-cover" loading="lazy" />
+              <Image src={indonesiaImg} alt="AnyLogic course in Tangerang, Indonesia" width={640} format="webp" class="w-full object-cover" loading="lazy" decoding="async" />
             </div>
             <p class="text-xs text-text-tertiary italic text-center mt-2">AnyLogic course in Tangerang, Indonesia</p>
           </div>
@@ -157,7 +170,12 @@ const courseTopics = [
           {courseTopics.map((course) => (
             <div class="bg-bg-secondary rounded-2xl border border-border-default hover:border-brand-teal/30 transition-all hover:shadow-md overflow-hidden">
               <div class="aspect-[16/10] overflow-hidden">
-                <img src={`/images/courses/${course.image}`} alt={course.name} class="w-full h-full object-cover" loading="lazy" />
+                {(() => {
+                  const img = getCourseImage(course.image);
+                  return img ? (
+                    <Image src={img} alt={course.name} width={480} format="webp" class="w-full h-full object-cover" loading="lazy" decoding="async" />
+                  ) : null;
+                })()}
               </div>
               <div class="p-6">
                 <h3 class="text-lg font-bold mb-3">{course.name}</h3>

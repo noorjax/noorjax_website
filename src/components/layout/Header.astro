@@ -1,6 +1,8 @@
 ---
 import { getLocaleFromUrl, getAlternateUrl, getOtherLocales, localeNames, t, type Locale } from '../../i18n';
 import { SITE, NAV_LINKS } from '../../lib/constants';
+import { Image } from 'astro:assets';
+import logoImg from '../../assets/images/logo/Noorjax-01.png';
 
 const locale = getLocaleFromUrl(Astro.url);
 const i18n = t(locale);
@@ -23,7 +25,7 @@ const currentFlag = flags[locale];
     <nav class="flex items-center justify-between h-16 lg:h-18" aria-label="Main navigation">
       <!-- Logo -->
       <a href={`/${locale}/`} class="flex items-center shrink-0" aria-label={SITE.name}>
-        <img src="/images/logo/Noorjax-01.png" alt="Noorjax Consulting" class="h-10 lg:h-12 w-auto" />
+        <Image src={logoImg} alt="Noorjax Consulting" class="h-10 lg:h-12 w-auto" width={384} quality={90} format="webp" loading="eager" decoding="async" fetchpriority="high" />
       </a>
 
       <!-- Desktop Navigation -->

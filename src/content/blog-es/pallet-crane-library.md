@@ -50,11 +50,11 @@ Primero descarga la biblioteca en [https://github.com/noorjax/stacker-crane](htt
 
 Dentro de Anylogic, agrega la biblioteca a tu paleta usando el boton + en la pestana de paleta, y encuentra el archivo .jar que descargaste... Siempre manten ese archivo .jar en la misma ubicacion, o tendras problemas.
 
-[![](/images/blog/pallet-crane-library/Monosnap-Instructions-Word-2023-11-16-08.43.08.png)](/images/blog/pallet-crane-library/Monosnap-Instructions-Word-2023-11-16-08.43.08.png)
+![](/images/blog/pallet-crane-library/Monosnap-Instructions-Word-2023-11-16-08.43.08.png)
 
 Puedes arrastrar y soltar cualquiera de los objetos disponibles para desarrollar tu modelo, excepto el Fork que no se usa.
 
-[![](/images/blog/pallet-crane-library/Monosnap-AnyLogic-Professional-2024-08-18-07.07.09.png)](/images/blog/pallet-crane-library/Monosnap-AnyLogic-Professional-2024-08-18-07.07.09.png)
+![](/images/blog/pallet-crane-library/Monosnap-AnyLogic-Professional-2024-08-18-07.07.09.png)
 
 La biblioteca hace uso del objeto Storage de AnyLogic MHL, por lo que es importante que estes familiarizado con eso antes de usar esta biblioteca.
 
@@ -66,13 +66,13 @@ En la version actual, existen algunas limitaciones para los racks de pallets que
 
 - El tipo de colocacion del rack debe ser Stand-alone.
 
-[![](/images/blog/pallet-crane-library/Picture1racl.png)](/images/blog/pallet-crane-library/Picture1racl.png)
+![](/images/blog/pallet-crane-library/Picture1racl.png)
 
 ## Grua Apiladora
 
 El agente Stacker Crane es el objeto 3D que sera visible realizando todas las acciones, como recoger agentes, mover, almacenar y recuperarlos. La grua apiladora esta compuesta por un deslizador lineal z, que es la columna en la que la horquilla esta adjunta, y la horquilla que es la parte que recoge los objetos.
 
-[![](/images/blog/pallet-crane-library/pallet-rack.png)](/images/blog/pallet-crane-library/pallet-rack.png)
+![](/images/blog/pallet-crane-library/pallet-rack.png)
 
 Sigue los pasos para configurar el agente:
 
@@ -80,17 +80,17 @@ Sigue los pasos para configurar el agente:
 
 - Asegurate de que la presentacion de la grua apiladora se muestre en el origen del agente de entorno. Si no, haz clic en Show presentation en las propiedades avanzadas de la grua apiladora.
 
-[![](/images/blog/pallet-crane-library/Picture3jjj.png)](/images/blog/pallet-crane-library/Picture3jjj.png)
+![](/images/blog/pallet-crane-library/Picture3jjj.png)
 
 - Arrastra y posiciona la presentacion de la grua apiladora donde quieras definir su ubicacion inicial. Ya que este objeto funciona solo con el objeto Storage de MHL, se recomienda posicionar la presentacion de la grua apiladora frente al Storage.
 
-[![](/images/blog/pallet-crane-library/Picture4ss.png)](/images/blog/pallet-crane-library/Picture4ss.png)
+![](/images/blog/pallet-crane-library/Picture4ss.png)
 
 - No es necesario rotar la presentacion de la grua apiladora, ya que la rotacion se define automaticamente segun la rotacion del almacenamiento.
 
 - La distancia entre la ubicacion inicial de la grua apiladora y el almacenamiento se considerara como la "distancia segura" entre estos dos objetos, por lo que los movimientos de la grua apiladora consideraran esta distancia durante toda la ejecucion de la simulacion.
 
-[![](/images/blog/pallet-crane-library/Picture5m.png)](/images/blog/pallet-crane-library/Picture5m.png)
+![](/images/blog/pallet-crane-library/Picture5m.png)
 
 Ahora estas listo para configurar todos los parametros de la grua apiladora.
 
@@ -112,7 +112,7 @@ Manten lo que esta dentro del parentesis y solo cambia el nombreDeLaPoblacion co
 
 - **Enter cell distance**: distancia segura entre la grua apiladora y la celda de almacenamiento al entrar a una celda.
 
-[![](/images/blog/pallet-crane-library/Picture7.png)](/images/blog/pallet-crane-library/Picture7.png)
+![](/images/blog/pallet-crane-library/Picture7.png)
 
 - **Loading time:** tiempo de carga al recoger un agente.
 
@@ -161,15 +161,15 @@ Manten lo que esta dentro del parentesis y solo cambia el nombreDeLaPoblacion co
 
 - Z linear slide color: color del deslizador lineal z.
 
-[![](/images/blog/pallet-crane-library/Picture8.png)](/images/blog/pallet-crane-library/Picture8.png)
+![](/images/blog/pallet-crane-library/Picture8.png)
 
-[![](/images/blog/pallet-crane-library/Picture9.png)](/images/blog/pallet-crane-library/Picture9.png)
+![](/images/blog/pallet-crane-library/Picture9.png)
 
 ### Special Agent SC
 
 Este es el tipo de agente que sera almacenado en los storages con la grua apiladora. Para poder usar la biblioteca, es necesario usar la opcion "Extends other agent" en la configuracion avanzada de tu agente de material item que usaras en tu modelo. Por ejemplo, si quieres almacenar un pallet en el storage, tendras un tipo de agente Pallet que debe ser una extension de SpecialAgent de esta biblioteca.
 
-[![](/images/blog/pallet-crane-library/Monosnap-AnyLogic-Professional-2024-08-18-07.43.52.png)](/images/blog/pallet-crane-library/Monosnap-AnyLogic-Professional-2024-08-18-07.43.52.png)
+![](/images/blog/pallet-crane-library/Monosnap-AnyLogic-Professional-2024-08-18-07.43.52.png)
 
 ### MoveByStackerCrane
 
@@ -251,4 +251,4 @@ El controlador PID solo puede usarse con unidades de tiempo del modelo en segund
 ## Mi modelo exportado no funciona
 
 Cuando exportas un modelo, no requiere licencia, siempre y cuando lo hayas exportado con una licencia (tanto para la nube como para exportacion java). Para poder exportarlo, deberias haber ejecutado el modelo de simulacion al menos una vez en AnyLogic con internet encendido, lo que generara un archivo licenseKey.txt valido (si compraste una licencia). Este archivo debe integrarse en cualquier version exportada, y para hacer eso necesitas ir a las propiedades de resources/data/licenseKey.txt y activar "Resource is referrenced from user code". Esto permitira que el modelo exporte el archivo licenseKey.txt, como ves en la siguiente imagen:
-[![](/images/blog/pallet-crane-library/usercodereference-1030x260.png)](/images/blog/pallet-crane-library/usercodereference.png)
+![](/images/blog/pallet-crane-library/usercodereference.png)

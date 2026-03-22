@@ -51,11 +51,11 @@ First download the library at [https://github.com/noorjax/stacker-crane](https:/
 
 Inside Anylogic, add the library to your palette using the + button on the palette tab, and find the .jar file you downloaded… Always keep that .jar file in the same location, or you will run into issues.
 
-[![](/images/blog/pallet-crane-library/Monosnap-Instructions-Word-2023-11-16-08.43.08.png)](/images/blog/pallet-crane-library/Monosnap-Instructions-Word-2023-11-16-08.43.08.png)
+![](/images/blog/pallet-crane-library/Monosnap-Instructions-Word-2023-11-16-08.43.08.png)
 
 You can drag and drop any of the available objects to develop your model, except the Fork that is not used.
 
-[![](/images/blog/pallet-crane-library/Monosnap-AnyLogic-Professional-2024-08-18-07.07.09.png)](/images/blog/pallet-crane-library/Monosnap-AnyLogic-Professional-2024-08-18-07.07.09.png)
+![](/images/blog/pallet-crane-library/Monosnap-AnyLogic-Professional-2024-08-18-07.07.09.png)
 
 The library makes use of the Storage object of AnyLogic MHL, so it's important that you are familiar with that before engaging with this library.
 
@@ -67,13 +67,13 @@ As of current version, there are some limitations for the pallet racks that can 
 
 - Rack placement type must be Stand-alone.
 
-[![](/images/blog/pallet-crane-library/Picture1racl.png)](/images/blog/pallet-crane-library/Picture1racl.png)
+![](/images/blog/pallet-crane-library/Picture1racl.png)
 
 ## Stacker Crane
 
 The Stacker Crane agent is the 3D object that will be visible doing all the actions, as picking up agents, moving, storing and retrieving them. The stacker crane is made up of a z linear slide, which is the column on which the fork is attached, and the fork which is the part that collects the objects.
 
-[![](/images/blog/pallet-crane-library/pallet-rack.png)](/images/blog/pallet-crane-library/pallet-rack.png)
+![](/images/blog/pallet-crane-library/pallet-rack.png)
 
 Follow the steps to configure the agent:
 
@@ -81,17 +81,17 @@ Follow the steps to configure the agent:
 
 - Make sure the presentation of the stacker crane is shown in the origin of the environment agent. If not, click Show presentation in Advanced properties of the stacker crane.
 
-[![](/images/blog/pallet-crane-library/Picture3jjj.png)](/images/blog/pallet-crane-library/Picture3jjj.png)
+![](/images/blog/pallet-crane-library/Picture3jjj.png)
 
 - Drag and position the presentation of the stacker crane to where you want to define its initial location. Since this object works only with Storage object of MHL, it is recommended to position the presentation of the stacker crane in front of the Storage.
 
-[![](/images/blog/pallet-crane-library/Picture4ss.png)](/images/blog/pallet-crane-library/Picture4ss.png)
+![](/images/blog/pallet-crane-library/Picture4ss.png)
 
 - It is not necessary to rotate the presentation of the stacker crane, since the rotation is automatically defined according to the storage rotation.
 
 - The distance between the initial location of the stacker crane and the storage will be consider as the "safe distance" between these two objects, so the movements of the stacker crane will consider this distance during all the simulation run.
 
-[![](/images/blog/pallet-crane-library/Picture5m.png)](/images/blog/pallet-crane-library/Picture5m.png)
+![](/images/blog/pallet-crane-library/Picture5m.png)
 
 Now you are ready to configure all the stacker crane parameters.
 
@@ -114,7 +114,7 @@ Maintain what's inside the parenthesis and just change the nameOfThePopulation w
 
 - **Enter cell distance**: safe distance between the stacker crane and the storage cell when entering a cell.
 
-[![](/images/blog/pallet-crane-library/Picture7.png)](/images/blog/pallet-crane-library/Picture7.png)
+![](/images/blog/pallet-crane-library/Picture7.png)
 
 - **Loading time:** loading time when picking up an agent.
 
@@ -164,15 +164,15 @@ Maintain what's inside the parenthesis and just change the nameOfThePopulation w
 
 - Z linear slide color: color of the z linear slide.
 
-[![](/images/blog/pallet-crane-library/Picture8.png)](/images/blog/pallet-crane-library/Picture8.png)
+![](/images/blog/pallet-crane-library/Picture8.png)
 
-[![](/images/blog/pallet-crane-library/Picture9.png)](/images/blog/pallet-crane-library/Picture9.png)
+![](/images/blog/pallet-crane-library/Picture9.png)
 
 ### Special Agent SC
 
 This is the agent type that will be stored in the storages with the stacker crane. To be able to use the library, it is necessary to use the option "Extends other agent" in advance settings of your material item agent that you will be using in your model. For example, if you would like to store a pallet in the storage, you will have a Pallet agent type that must be an extension of SpecialAgent of this library.
 
-[![](/images/blog/pallet-crane-library/Monosnap-AnyLogic-Professional-2024-08-18-07.43.52.png)](/images/blog/pallet-crane-library/Monosnap-AnyLogic-Professional-2024-08-18-07.43.52.png)
+![](/images/blog/pallet-crane-library/Monosnap-AnyLogic-Professional-2024-08-18-07.43.52.png)
 
 ### MoveByStackerCrane
 
@@ -254,4 +254,4 @@ PID controller can only be used with model time units in seconds. If your model 
 
 When you export a model, it doesn't require a license, as long as you exported it with a license (both for the cloud and java export). In order to export it, you should have run the simulation model at least one time in AnyLogic with internet on, which will generate a valid licenseKey.txt file (if you purchased a license). This file must be integrated in any exported version, and to do that you need to go to resources/data/licenseKey.txt properties and turn on "Resource is referrenced from user code". This will allow the model to export the licenseKey.txt file, as you see in the following image:
 
-[![](/images/blog/pallet-crane-library/usercodereference-1030x260.png)](/images/blog/pallet-crane-library/usercodereference.png)
+![](/images/blog/pallet-crane-library/usercodereference.png)

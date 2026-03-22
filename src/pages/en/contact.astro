@@ -3,6 +3,9 @@ import PageLayout from '../../layouts/PageLayout.astro';
 import PageHero from '../../components/common/PageHero.astro';
 import { t } from '../../i18n';
 import { SITE } from '../../lib/constants';
+import { Image } from 'astro:assets';
+import eResidencyImg from '../../assets/images/contact/e-residency.png';
+import erhubImg from '../../assets/images/contact/erhub-logo.png';
 
 const i18n = t('en');
 ---
@@ -78,12 +81,12 @@ const i18n = t('en');
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div class="bg-bg-secondary rounded-2xl p-8 border border-border-default text-center">
           <p class="font-semibold text-text-primary mb-4">{i18n.contact.eResidencyText}</p>
-          <img src="/images/contact/e-residency.png" alt="Republic of Estonia e-Residency" class="max-h-20 mx-auto" />
+          <Image src={eResidencyImg} alt="Republic of Estonia e-Residency" height={80} format="webp" class="max-h-20 mx-auto" loading="lazy" decoding="async" />
         </div>
         <div class="bg-bg-secondary rounded-2xl p-8 border border-border-default text-center">
           <p class="font-semibold text-text-primary mb-1">{i18n.contact.erhubText}</p>
           <p class="text-sm text-text-tertiary mb-4">{SITE.address}</p>
-          <img src="/images/contact/erhub-logo.png" alt="e-Residency Hub" class="max-h-12 mx-auto" />
+          <Image src={erhubImg} alt="e-Residency Hub" height={48} format="webp" class="max-h-12 mx-auto" loading="lazy" decoding="async" />
         </div>
       </div>
     </div>

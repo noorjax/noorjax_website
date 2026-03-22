@@ -1,6 +1,8 @@
 ---
 import { getLocaleFromUrl, t } from '../../i18n';
 import { SITE, NAV_LINKS } from '../../lib/constants';
+import { Image } from 'astro:assets';
+import logoImg from '../../assets/images/logo/Noorjax-01.png';
 
 const locale = getLocaleFromUrl(Astro.url);
 const i18n = t(locale);
@@ -13,7 +15,7 @@ const year = new Date().getFullYear();
     <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
       <!-- Brand -->
       <div>
-        <img src="/images/logo/Noorjax-01.png" alt="Noorjax Consulting" class="h-10 w-auto brightness-0 invert mb-3" />
+        <Image src={logoImg} alt="Noorjax Consulting" width={160} format="webp" class="h-10 w-auto brightness-0 invert mb-3" loading="lazy" decoding="async" />
         <p class="mt-3 text-sm text-text-on-dark-muted max-w-xs">
           {i18n.footer.tagline}
         </p>

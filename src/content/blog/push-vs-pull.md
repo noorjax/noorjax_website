@@ -19,10 +19,10 @@ There are two types of protocols. Push and Pull. In the default AnyLogic world, 
 
 **Push Protocol**: the block will be pushed to the receiving block without any request. This produces errors. And these are the errors that we first discover when we start using AnyLogic for instance when there's no available space in a queue that exists after a source block. Yeah, because the source block uses push protocol as a default.
 
-[![](/images/blog/push-vs-pull/Edit-Post-%E2%80%B9-Noorjax-Consulting-%E2%80%94-WordPress-2019-02-27-13-45-37-1030x231.png)](/images/blog/push-vs-pull/Edit-Post-%E2%80%B9-Noorjax-Consulting-%E2%80%94-WordPress-2019-02-27-13-45-37.png)
+![](/images/blog/push-vs-pull/Edit-Post-%E2%80%B9-Noorjax-Consulting-%E2%80%94-WordPress-2019-02-27-13-45-37.png)
 
 But not all the blocks are able to use the Push protocol. To find out which ones can and which ones can't, you will find a "Forced Push" option in the advanced section of the block properties.
 
-[![](/images/blog/push-vs-pull/AnyLogic-Personal-Learning-Edition-PERSONAL-LEARNING-USE-ONLY-2019-02-27-12-53-30.png)](/images/blog/push-vs-pull/AnyLogic-Personal-Learning-Edition-PERSONAL-LEARNING-USE-ONLY-2019-02-27-12-53-30.png)
+![](/images/blog/push-vs-pull/AnyLogic-Personal-Learning-Edition-PERSONAL-LEARNING-USE-ONLY-2019-02-27-12-53-30.png)
 
 So the question now is... when to use pull or push? And there's no strict answer for that. Since the push protocol gives an error, you may use it to make it evident when there's a bottleneck somewhere in your process. Or maybe you want to use a pull protocol in the source block to destroy agents that cannot be received in a queue. In general you will not need to change the defaults, but it's always good to know why things are happening, right?

@@ -115,7 +115,7 @@ Use this syntaxis: `{{x0,y0,z0},{x1,y1,z1},{x2,y2,z2},…,{xn,yn,zn}}`
 
 - **K: Color:** color of the conveyor. Helps with the verification and validation of the model.
 
-[![](/images/blog/sorting-conveyors-library/Slide2-1030x579.png)](/images/blog/sorting-conveyors-library/Slide2.png)
+![](/images/blog/sorting-conveyors-library/Slide2.png)
 
 ### Spurs config
 
@@ -131,7 +131,7 @@ This sheet defines the connection that exist between different conveyors using s
 
 - **E. Color:** the color of the spur, helps in the verification and validation of the model.
 
-[![](/images/blog/sorting-conveyors-library/Slide3-1030x579.png)](/images/blog/sorting-conveyors-library/Slide3.png)
+![](/images/blog/sorting-conveyors-library/Slide3.png)
 
 ### TransferTables config
 
@@ -149,7 +149,7 @@ This sheet defines the connection that exist between different conveyors using s
 
 - **G. line width pt**: line width of the square (this is in pixels).
 
-[![](/images/blog/sorting-conveyors-library/Picture1-1.png)](/images/blog/sorting-conveyors-library/Picture1-1.png) [![](/images/blog/sorting-conveyors-library/kkk.png)](/images/blog/sorting-conveyors-library/kkk.png)
+![](/images/blog/sorting-conveyors-library/Picture1-1.png) ![](/images/blog/sorting-conveyors-library/kkk.png)
 
 ### Sensors Config
 
@@ -175,7 +175,7 @@ The aim of this sheet is to define positions on conveyors that will be used as s
 
   - **iii. none**: if the type of position is "enter", then this is the only viable option.
 
-[![](/images/blog/sorting-conveyors-library/Slide9-1030x579.png)](/images/blog/sorting-conveyors-library/Slide9.png)
+![](/images/blog/sorting-conveyors-library/Slide9.png)
 
 ### Routes
 
@@ -191,7 +191,7 @@ Note: For all the ids described above that need to be indicated in the excel she
 
 In order to use all the features of this library, you will need to create your own agent that will move through the conveyors, but your agent will have to be an extension from the SpecialConveyorItem of this library, which is a Material Item type. For this you need to go to the advanced section of your agent type properties and do it there as is shown in the following image:
 
-[![](/images/blog/sorting-conveyors-library/Picture3-1.png)](/images/blog/sorting-conveyors-library/Picture3-1.png)
+![](/images/blog/sorting-conveyors-library/Picture3-1.png)
 
 By extending from this special agent type, the agent has access to the following:
 
@@ -344,7 +344,7 @@ There are some rules in order to create a circular or a closed conveyor:
 
 - For the cases when you have a circular conveyor with 2 straight conveyors branching from it such that these 2 straight conveyors have opposite directions, it is necessary that the vertex of the circular conveyor (the starting and ending point) is chosen along the part of the circular conveyor that is between the 2 straight branching conveyors. Example: the red circle of conveyorLoop: begin & end.
 
-[![](/images/blog/sorting-conveyors-library/Slide10-1030x579.png)](/images/blog/sorting-conveyors-library/Slide10.png)
+![](/images/blog/sorting-conveyors-library/Slide10.png)
 
 This way you can just define a sequence like this: `{conveyor1,conveyor2}` and the agent will go through the conveyor1, then will do half a loop on the circular conveyor (conveyorLoop) and will take the blue spur to end the sequence in the conveyor2. This is possible only because the starting and ending point of the loop conveyor is not in the route of the agent, otherwise, if the point is in the route, you will need to define the loop as part of the sequence.
 If you want the agent to go one full loop in the loop, you just need to define the sequence like this: `{conveyor1,conveyorLoop,conveyor2}`. The result would be conveyor1, then a full loop plus half a loop and then conveyor2.
@@ -355,9 +355,9 @@ Note: if the last conveyor of a sequence in a route is a loop conveyor, then the
 If two or more conveyors are merging in one single conveyor, the use of the priorities of the agents will be necessary to define the order or sequence of the agents. For that, the use of Sensors config sheet will be a must.
 The positions on conveyor are the sensors that will help to define the sequence of the agents. Here is a quick example of how to configure a convergent point of conveyors:
 
-[![](/images/blog/sorting-conveyors-library/Picture4-1.png)](/images/blog/sorting-conveyors-library/Picture4-1.png)
+![](/images/blog/sorting-conveyors-library/Picture4-1.png)
 
-[![](/images/blog/sorting-conveyors-library/Slide11-1030x579.png)](/images/blog/sorting-conveyors-library/Slide11.png)
+![](/images/blog/sorting-conveyors-library/Slide11.png)
 
 - In the Sensors config sheet, the sensors of the conveyors are defined, there are two conveyors merging in one. The intersection id is to define which sensors are related.
 
@@ -377,7 +377,7 @@ Note that the offsets of the sensors must be consistent with the layout, here ar
 
 - An enter sensor cannot be in the same line of the spur which provides agents from the branch conveyor. The sensor must be after the shape of the spur (see the following image)
 
-[![](/images/blog/sorting-conveyors-library/Picture5-1.png)](/images/blog/sorting-conveyors-library/Picture5-1.png)
+![](/images/blog/sorting-conveyors-library/Picture5-1.png)
 
 - The offset of the sensors cannot be greater than the total length of the conveyor.
 
@@ -387,7 +387,7 @@ Note that the offsets of the sensors must be consistent with the layout, here ar
 
 - Inside Anylogic, add the Sorting Conveyors library to your palette using the + button on the palette tab, and find the sortingConveyors.jar file you downloaded… Always keep that .jar file in the same location, or you will run into issues.
 
-[![](/images/blog/sorting-conveyors-library/Monosnap-Instructions-Word-2023-11-16-08.43.08.png)](/images/blog/sorting-conveyors-library/Monosnap-Instructions-Word-2023-11-16-08.43.08.png)
+![](/images/blog/sorting-conveyors-library/Monosnap-Instructions-Word-2023-11-16-08.43.08.png)
 
 Now when you create a model or if you want to use an existing model with this library:
 
@@ -399,11 +399,11 @@ Now when you create a model or if you want to use an existing model with this li
 
 - Drag and drop the ConveyorNetworkAnimation in your model. Select the conveyorNetworkSettings agent.
 
-[![](/images/blog/sorting-conveyors-library/Picture3.png)](/images/blog/sorting-conveyors-library/Picture3.png)
+![](/images/blog/sorting-conveyors-library/Picture3.png)
 
 - Drag and drop the ConveyorNetworkLogic in your model and connect it to others logic blocks. Can be multiple blocks of this type in the model.
 
-[![](/images/blog/sorting-conveyors-library/Picture4.png)](/images/blog/sorting-conveyors-library/Picture4.png)
+![](/images/blog/sorting-conveyors-library/Picture4.png)
 
 - Configure the parameters of the conveyorNetworkLogic agent, selecting the conveyor network animation.
 
@@ -427,11 +427,11 @@ This is to initialize the essential parameters of the agent to be routed in the 
 
 - For unions, such as spurs or transfer tables, it is necessary to leave space between the involved conveyors. This is to provide the physical space needed to create the lines representing the spurs and transfer tables. In the following image three conveyors are connected to a transfer table, and the connecting points are not positioned in the same coordinates since the space between them is needed, since in this way the shape of the conveyor can be created.
 
-[![](/images/blog/sorting-conveyors-library/Picture7-1.png)](/images/blog/sorting-conveyors-library/Picture7-1.png)
+![](/images/blog/sorting-conveyors-library/Picture7-1.png)
 
 - Additionally, for the spurs, the connection point of the branch conveyor must have enough space with respect to the main conveyor, considering the width of the main conveyor for this. We recommend positioning the connecting point of the branch conveyor at least half the width of the main conveyor away from the main conveyor. Check the following image.
 
-[![](/images/blog/sorting-conveyors-library/Picture8-1.png)](/images/blog/sorting-conveyors-library/Picture8-1.png)
+![](/images/blog/sorting-conveyors-library/Picture8-1.png)
 
 - For the spurs, the connecting point of the branch conveyor must be pointing to any segment of the main conveyor that is between the first and last point of the main conveyor but cannot point right to the first or last point since the spur needs physical space to create the shape, therefore it is not allowed to position a spur at the start or end of a main conveyor.
 
@@ -441,10 +441,10 @@ This is to initialize the essential parameters of the agent to be routed in the 
 
 Sometimes can happen, in a gap union type where the sensors are used, that one agent has passed to the next conveyor but cannot go further because of a large queue of agents in this conveyor, and the agent that is behind goes to the end of the first conveyor. With that happening, it looks like both agents are one above the other. This is just a visual thing that has almost no operational implication. We will improve this in the future.
 
-[![](/images/blog/sorting-conveyors-library/Picture1-2.png)](/images/blog/sorting-conveyors-library/Picture1-2.png)
+![](/images/blog/sorting-conveyors-library/Picture1-2.png)
 
 ## My exported model doesn't work
 
 When you export a model, it doesn't require a license, as long as you exported it with a license (both for the cloud and java export). In order to export it, you should have run the simulation model at least one time in AnyLogic with internet on, which will generate a valid licenseKey.txt file (if you purchased a license). This file must be integrated in any exported version, and to do that you need to go to resources/data/licenseKey.txt properties and turn on "Resource is referrenced from user code". This will allow the model to export the licenseKey.txt file, as you see in the following image:
 
-[![](/images/blog/sorting-conveyors-library/usercodereference-1030x260.png)](/images/blog/sorting-conveyors-library/usercodereference.png)
+![](/images/blog/sorting-conveyors-library/usercodereference.png)

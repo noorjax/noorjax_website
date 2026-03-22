@@ -50,11 +50,11 @@ excerpt: "عمليات التخزين الآلية باستخدام رافعات
 
 داخل AnyLogic، أضف المكتبة إلى لوحة الأدوات الخاصة بك باستخدام زر + في تبويب اللوحة، وابحث عن ملف .jar الذي قمت بتحميله... احتفظ دائمًا بملف .jar هذا في نفس الموقع، وإلا ستواجه مشاكل.
 
-[![](/images/blog/pallet-crane-library/Monosnap-Instructions-Word-2023-11-16-08.43.08.png)](/images/blog/pallet-crane-library/Monosnap-Instructions-Word-2023-11-16-08.43.08.png)
+![](/images/blog/pallet-crane-library/Monosnap-Instructions-Word-2023-11-16-08.43.08.png)
 
 يمكنك سحب وإسقاط أي من الكائنات المتاحة لتطوير نموذجك، باستثناء Fork التي لا تُستخدم.
 
-[![](/images/blog/pallet-crane-library/Monosnap-AnyLogic-Professional-2024-08-18-07.07.09.png)](/images/blog/pallet-crane-library/Monosnap-AnyLogic-Professional-2024-08-18-07.07.09.png)
+![](/images/blog/pallet-crane-library/Monosnap-AnyLogic-Professional-2024-08-18-07.07.09.png)
 
 تستخدم المكتبة كائن Storage من AnyLogic MHL، لذا من المهم أن تكون على دراية بذلك قبل التعامل مع هذه المكتبة.
 
@@ -66,13 +66,13 @@ excerpt: "عمليات التخزين الآلية باستخدام رافعات
 
 - يجب أن يكون نوع وضع الرف Stand-alone.
 
-[![](/images/blog/pallet-crane-library/Picture1racl.png)](/images/blog/pallet-crane-library/Picture1racl.png)
+![](/images/blog/pallet-crane-library/Picture1racl.png)
 
 ## رافعة التكديس
 
 وكيل رافعة التكديس هو الكائن ثلاثي الأبعاد الذي سيكون مرئيًا وهو يقوم بجميع الإجراءات، مثل التقاط الوكلاء والتحرك والتخزين والاسترجاع. تتكون رافعة التكديس من شريحة خطية z، وهي العمود المربوط به الشوكة، والشوكة وهي الجزء الذي يجمع الكائنات.
 
-[![](/images/blog/pallet-crane-library/pallet-rack.png)](/images/blog/pallet-crane-library/pallet-rack.png)
+![](/images/blog/pallet-crane-library/pallet-rack.png)
 
 اتبع الخطوات لتهيئة الوكيل:
 
@@ -80,17 +80,17 @@ excerpt: "عمليات التخزين الآلية باستخدام رافعات
 
 - تأكد من أن عرض رافعة التكديس يظهر في نقطة الأصل لوكيل البيئة. إن لم يكن كذلك، انقر على Show presentation في الخصائص المتقدمة لرافعة التكديس.
 
-[![](/images/blog/pallet-crane-library/Picture3jjj.png)](/images/blog/pallet-crane-library/Picture3jjj.png)
+![](/images/blog/pallet-crane-library/Picture3jjj.png)
 
 - اسحب وضع عرض رافعة التكديس إلى المكان الذي تريد تحديد موقعها الأولي فيه. بما أن هذا الكائن يعمل فقط مع كائن Storage من MHL، يُوصى بوضع عرض رافعة التكديس أمام التخزين.
 
-[![](/images/blog/pallet-crane-library/Picture4ss.png)](/images/blog/pallet-crane-library/Picture4ss.png)
+![](/images/blog/pallet-crane-library/Picture4ss.png)
 
 - ليس من الضروري تدوير عرض رافعة التكديس، حيث يتم تحديد الدوران تلقائيًا وفقًا لدوران التخزين.
 
 - المسافة بين الموقع الأولي لرافعة التكديس والتخزين ستُعتبر "المسافة الآمنة" بين هذين الكائنين، لذلك ستراعي حركات رافعة التكديس هذه المسافة خلال كامل عملية تشغيل المحاكاة.
 
-[![](/images/blog/pallet-crane-library/Picture5m.png)](/images/blog/pallet-crane-library/Picture5m.png)
+![](/images/blog/pallet-crane-library/Picture5m.png)
 
 الآن أنت جاهز لتهيئة جميع معلمات رافعة التكديس.
 
@@ -112,7 +112,7 @@ excerpt: "عمليات التخزين الآلية باستخدام رافعات
 
 - **مسافة دخول الخلية**: المسافة الآمنة بين رافعة التكديس وخلية التخزين عند الدخول إلى خلية.
 
-[![](/images/blog/pallet-crane-library/Picture7.png)](/images/blog/pallet-crane-library/Picture7.png)
+![](/images/blog/pallet-crane-library/Picture7.png)
 
 - **وقت التحميل:** وقت التحميل عند التقاط وكيل.
 
@@ -161,15 +161,15 @@ excerpt: "عمليات التخزين الآلية باستخدام رافعات
 
 - لون الشريحة الخطية Z: لون الشريحة الخطية z.
 
-[![](/images/blog/pallet-crane-library/Picture8.png)](/images/blog/pallet-crane-library/Picture8.png)
+![](/images/blog/pallet-crane-library/Picture8.png)
 
-[![](/images/blog/pallet-crane-library/Picture9.png)](/images/blog/pallet-crane-library/Picture9.png)
+![](/images/blog/pallet-crane-library/Picture9.png)
 
 ### Special Agent SC
 
 هذا هو نوع الوكيل الذي سيتم تخزينه في المخازن باستخدام رافعة التكديس. لتتمكن من استخدام المكتبة، من الضروري استخدام خيار "Extends other agent" في الإعدادات المتقدمة لنوع وكيل العنصر المادي الذي ستستخدمه في نموذجك. على سبيل المثال، إذا كنت تريد تخزين بالت في التخزين، سيكون لديك نوع وكيل Pallet الذي يجب أن يكون امتدادًا لـ SpecialAgent في هذه المكتبة.
 
-[![](/images/blog/pallet-crane-library/Monosnap-AnyLogic-Professional-2024-08-18-07.43.52.png)](/images/blog/pallet-crane-library/Monosnap-AnyLogic-Professional-2024-08-18-07.43.52.png)
+![](/images/blog/pallet-crane-library/Monosnap-AnyLogic-Professional-2024-08-18-07.43.52.png)
 
 ### MoveByStackerCrane
 
@@ -251,4 +251,4 @@ excerpt: "عمليات التخزين الآلية باستخدام رافعات
 ## النموذج المُصدّر لا يعمل
 
 عند تصدير نموذج، لا يتطلب ترخيصًا، طالما قمت بتصديره مع ترخيص (سواء للسحابة أو تصدير JAVA). لتصديره، يجب أن تكون قد شغلت نموذج المحاكاة مرة واحدة على الأقل في AnyLogic مع تشغيل الإنترنت، مما سيولد ملف licenseKey.txt صالح (إذا اشتريت ترخيصًا). يجب دمج هذا الملف في أي إصدار مُصدّر، وللقيام بذلك تحتاج إلى الذهاب إلى خصائص resources/data/licenseKey.txt وتشغيل "Resource is referrenced from user code". سيسمح هذا للنموذج بتصدير ملف licenseKey.txt، كما ترى في الصورة التالية:
-[![](/images/blog/pallet-crane-library/usercodereference-1030x260.png)](/images/blog/pallet-crane-library/usercodereference.png)
+![](/images/blog/pallet-crane-library/usercodereference.png)

@@ -19,7 +19,7 @@ El proceso detallado es el siguiente, en el cual tienes una estantería para pal
 
 La estantería para pallets comienza con algunos pallets en posiciones arbitrarias como se muestra en la figura 1:
 
-[![](/images/blog/anylogic-contest-3-automated-pallet-rack-system/competition-3-Word-2023-02-01-15.12.18-1030x580.png)](/images/blog/anylogic-contest-3-automated-pallet-rack-system/competition-3-Word-2023-02-01-15.12.18.png)
+![](/images/blog/anylogic-contest-3-automated-pallet-rack-system/competition-3-Word-2023-02-01-15.12.18.png)
 
 Figura 1: Estantería para Pallets
 
@@ -49,7 +49,7 @@ Notas Adicionales:
 
 - Idealmente, debería ser posible que la estantería para pallets sea rotada en cualquier ángulo. La Figura 2 (a y b) muestra 2 ejemplos de cómo podría verse la vista superior en 2D.
 
-a) [![](/images/blog/anylogic-contest-3-automated-pallet-rack-system/Picture2.png)](/images/blog/anylogic-contest-3-automated-pallet-rack-system/Picture2.png) b) [![](/images/blog/anylogic-contest-3-automated-pallet-rack-system/Picture3.png)](/images/blog/anylogic-contest-3-automated-pallet-rack-system/Picture3.png)
+a) ![](/images/blog/anylogic-contest-3-automated-pallet-rack-system/Picture2.png) b) ![](/images/blog/anylogic-contest-3-automated-pallet-rack-system/Picture3.png)
 
 Figura 2: La estantería para pallets puede ser rotada y tu modelo de simulación debería seguir funcionando.
 

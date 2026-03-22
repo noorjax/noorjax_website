@@ -73,7 +73,7 @@ excerpt: "يحتوي AnyLogic على كائن مصعد أصلي يعمل مع ا
 
 من أجل استخدام الكائنات المقدمة من هذه المكتبة، يجب أن يمتد الوكيل من هذا النوع. لهذا تحتاج إلى الذهاب إلى القسم المتقدم من خصائص نوع الوكيل الخاص بك والقيام بذلك هناك كما هو موضح في الصورة التالية:
 
-[![](/images/blog/elevator-group-library/Monosnap-AnyLogic-Professional-2024-06-23-13.42.21.png)](/images/blog/elevator-group-library/Monosnap-AnyLogic-Professional-2024-06-23-13.42.21.png)
+![](/images/blog/elevator-group-library/Monosnap-AnyLogic-Professional-2024-06-23-13.42.21.png)
 
 من خلال الامتداد من نوع الوكيل الخاص هذا، يحصل الوكيل على بعض الوظائف الضرورية.
 
@@ -110,13 +110,13 @@ excerpt: "يحتوي AnyLogic على كائن مصعد أصلي يعمل مع ا
 ## الأبعاد والحركة
 
 الكائن الذي تراه في لوحة AnyLogic هو التالي، حيث يتوافق مركز المصعد الأول مع مركز المصعد الأيسر، ويتم وضع كل شيء نحو اليمين اعتماداً على الأبعاد والمسافة بين المصاعد:
-[![](/images/blog/elevator-group-library/Monosnap-AnyLogic-Professional-2024-06-23-14.38.17.png)](/images/blog/elevator-group-library/Monosnap-AnyLogic-Professional-2024-06-23-14.38.17.png)
+![](/images/blog/elevator-group-library/Monosnap-AnyLogic-Professional-2024-06-23-14.38.17.png)
 
 **Space Between Elevators:** هنا تحدد المسافة بين المصاعد
 
 **Width, Depth and Height**: يتم تحديد هذه الأبعاد كما هو موضح في الصورة
 
-[![](/images/blog/elevator-group-library/Monosnap-Elevator0.0.1-_-Simulation-AnyLogic-Pro.png)](/images/blog/elevator-group-library/Monosnap-Elevator0.0.1-_-Simulation-AnyLogic-Pro.png)
+![](/images/blog/elevator-group-library/Monosnap-Elevator0.0.1-_-Simulation-AnyLogic-Pro.png)
 
 **Color:** هذا سيكون لون المصعد وأبواب المصعد. نقترح استخدام الشفافية لرؤية الوكلاء بالداخل.
 
@@ -140,7 +140,7 @@ excerpt: "يحتوي AnyLogic على كائن مصعد أصلي يعمل مع ا
 
 **Levels**: هنا يمكنك اختيار المستويات التي يمكن لكل مصعد في المجموعة الذهاب إليها. تأكد من إضافة عدد من القوائم يتوافق مع عدد المصاعد (ما لم تكن تستخدم نفس المستويات لجميع المصاعد). في الصورة التالية، نرى حالة يوجد فيها 4 مصاعد. المصعد الأول، الذي له فهرس 0 ويقع على يسار المجموعة، سيتمكن من الذهاب إلى level وlevel1، والمصعد الثاني إلى level وlevel1 وlevel2، وهكذا. هناك 4 قوائم، مما يعني أن معلمة "عدد المصاعد" يجب أن تكون 4. لاحظ أنه لا يهم بأي ترتيب تضيف المستويات. في هذه الحالة يوجد أيضاً 3 مستويات ممكنة: level وlevel1 وlevel2، مما يعني أنه يجب أن يكون لديك 3 عقد انتظار.
 
-[![](/images/blog/elevator-group-library/Monosnap-AnyLogic-Professional-2024-06-23-14.27.22.png)](/images/blog/elevator-group-library/Monosnap-AnyLogic-Professional-2024-06-23-14.27.22.png)
+![](/images/blog/elevator-group-library/Monosnap-AnyLogic-Professional-2024-06-23-14.27.22.png)
 
 ## أخذ المصعد
 
@@ -219,4 +219,4 @@ excerpt: "يحتوي AnyLogic على كائن مصعد أصلي يعمل مع ا
 ## نموذجي المُصدَّر لا يعمل
 
 عندما تصدر نموذجاً، لا يتطلب ترخيصاً، طالما أنك صدرته مع ترخيص (لكل من السحابة وتصدير JAVA). من أجل تصديره، يجب أن تكون قد شغلت نموذج المحاكاة مرة واحدة على الأقل في AnyLogic مع تشغيل الإنترنت، مما سيولد ملف licenseKey.txt صالح (إذا كنت قد اشتريت ترخيصاً). يجب دمج هذا الملف في أي نسخة مُصدَّرة، وللقيام بذلك تحتاج إلى الذهاب إلى خصائص resources/data/licenseKey.txt وتفعيل "Resource is referrenced from user code". سيسمح هذا للنموذج بتصدير ملف licenseKey.txt، كما ترى في الصورة التالية:
-[![](/images/blog/elevator-group-library/usercodereference-1030x260.png)](/images/blog/elevator-group-library/usercodereference.png)
+![](/images/blog/elevator-group-library/usercodereference.png)

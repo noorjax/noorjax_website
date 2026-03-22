@@ -19,7 +19,7 @@ The detailed process is as follows, in which you have one pallet rack that conta
 
 The pallet rack starts with a few pallets in arbitrary positions as shown in figure 1:
 
-[![](/images/blog/anylogic-contest-3-automated-pallet-rack-system/competition-3-Word-2023-02-01-15.12.18-1030x580.png)](/images/blog/anylogic-contest-3-automated-pallet-rack-system/competition-3-Word-2023-02-01-15.12.18.png)
+![](/images/blog/anylogic-contest-3-automated-pallet-rack-system/competition-3-Word-2023-02-01-15.12.18.png)
 
 *Figure 1: Pallet Rack*
 
@@ -40,7 +40,7 @@ Additional Notes:
 
 - Ideally, it should be possible for the pallet rack to be rotated in any angle. Figure 2 (a and b) shows 2 examples on how the top 2D view could look like.
 
-a) [![](/images/blog/anylogic-contest-3-automated-pallet-rack-system/Picture2.png)](/images/blog/anylogic-contest-3-automated-pallet-rack-system/Picture2.png) b) [![](/images/blog/anylogic-contest-3-automated-pallet-rack-system/Picture3.png)](/images/blog/anylogic-contest-3-automated-pallet-rack-system/Picture3.png)
+a) ![](/images/blog/anylogic-contest-3-automated-pallet-rack-system/Picture2.png) b) ![](/images/blog/anylogic-contest-3-automated-pallet-rack-system/Picture3.png)
 
 *Figure 2: The pallet rack can be rotated and your simulation model should still work.*
 

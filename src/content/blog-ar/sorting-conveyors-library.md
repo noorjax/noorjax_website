@@ -112,7 +112,7 @@ https://youtu.be/fQwLOUNW2s4
 
 - **K: اللون:** لون الناقل. يساعد في التحقق والتصديق على النموذج.
 
-### [![](/images/blog/sorting-conveyors-library/Slide2-1030x579.png)](/images/blog/sorting-conveyors-library/Slide2.png)تهيئة الفروع
+### ![](/images/blog/sorting-conveyors-library/Slide2.png)تهيئة الفروع
 
 تحدد هذه الصفحة الاتصال الموجود بين الناقلات المختلفة باستخدام الفروع.
 
@@ -126,7 +126,7 @@ https://youtu.be/fQwLOUNW2s4
 
 - **E. اللون:** لون الفرع، يساعد في التحقق والتصديق على النموذج.
 
-[![](/images/blog/sorting-conveyors-library/Slide3-1030x579.png)](/images/blog/sorting-conveyors-library/Slide3.png)
+![](/images/blog/sorting-conveyors-library/Slide3.png)
 
 ### تهيئة طاولات النقل
 
@@ -144,7 +144,7 @@ https://youtu.be/fQwLOUNW2s4
 
 - **G. عرض الخط بالنقاط**: عرض خط المربع (بالبكسل).
 
-[![](/images/blog/sorting-conveyors-library/Picture1-1.png)](/images/blog/sorting-conveyors-library/Picture1-1.png) [![](/images/blog/sorting-conveyors-library/kkk.png)](/images/blog/sorting-conveyors-library/kkk.png)
+![](/images/blog/sorting-conveyors-library/Picture1-1.png) ![](/images/blog/sorting-conveyors-library/kkk.png)
 
 ### تهيئة أجهزة الاستشعار
 
@@ -170,7 +170,7 @@ https://youtu.be/fQwLOUNW2s4
 
 - **iii. بلا**: إذا كان نوع الموضع "دخول"، فهذا هو الخيار الوحيد الممكن.
 
-[![](/images/blog/sorting-conveyors-library/Slide9-1030x579.png)](/images/blog/sorting-conveyors-library/Slide9.png)
+![](/images/blog/sorting-conveyors-library/Slide9.png)
 
 ### المسارات
 
@@ -186,7 +186,7 @@ https://youtu.be/fQwLOUNW2s4
 
 لاستخدام جميع ميزات هذه المكتبة، ستحتاج إلى إنشاء وكيلك الخاص الذي سيتحرك عبر الناقلات، لكن وكيلك يجب أن يكون امتدادًا من SpecialConveyorItem الخاص بهذه المكتبة، وهو نوع Material Item. لهذا تحتاج إلى الذهاب إلى القسم المتقدم من خصائص نوع وكيلك وفعل ذلك هناك كما هو موضح في الصورة التالية:
 
-[![](/images/blog/sorting-conveyors-library/Picture3-1.png)](/images/blog/sorting-conveyors-library/Picture3-1.png)
+![](/images/blog/sorting-conveyors-library/Picture3-1.png)
 
 من خلال الامتداد من نوع الوكيل الخاص هذا، يحصل الوكيل على الوصول إلى ما يلي:
 
@@ -326,7 +326,7 @@ return jsonify(response), 201
 
 - في الحالات التي يكون لديك فيها ناقل دائري مع ناقلين مستقيمين يتفرعان منه بحيث يكون لهذين الناقلين المستقيمين اتجاهات متعاكسة، من الضروري أن يتم اختيار رأس الناقل الدائري (نقطة البداية والنهاية) على طول الجزء من الناقل الدائري الذي يقع بين الناقلين المستقيمين المتفرعين. مثال: الدائرة الحمراء لـ conveyorLoop: begin & end.
 
-[![](/images/blog/sorting-conveyors-library/Slide10-1030x579.png)](/images/blog/sorting-conveyors-library/Slide10.png)
+![](/images/blog/sorting-conveyors-library/Slide10.png)
 
 بهذه الطريقة يمكنك ببساطة تعريف تسلسل مثل: {conveyor1,conveyor2} وسيمر الوكيل عبر conveyor1، ثم يقوم بنصف لفة على الناقل الدائري (conveyorLoop) وسيأخذ الفرع الأزرق لإنهاء التسلسل في conveyor2. هذا ممكن فقط لأن نقطة بداية ونهاية الناقل الحلقي ليست في مسار الوكيل، وإلا إذا كانت النقطة في المسار، ستحتاج إلى تعريف الحلقة كجزء من التسلسل.
 إذا أردت أن يقوم الوكيل بلفة كاملة في الحلقة، تحتاج فقط إلى تعريف التسلسل هكذا: {conveyor1,conveyorLoop,conveyor2}. ستكون النتيجة conveyor1، ثم لفة كاملة زائد نصف لفة ثم conveyor2.
@@ -337,7 +337,7 @@ return jsonify(response), 201
 إذا كان ناقلان أو أكثر يندمجان في ناقل واحد، سيكون من الضروري استخدام أولويات الوكلاء لتحديد ترتيب أو تسلسل الوكلاء. لذلك سيكون استخدام صفحة تهيئة أجهزة الاستشعار ضروريًا.
 المواضع على الناقل هي أجهزة الاستشعار التي ستساعد في تحديد تسلسل الوكلاء. إليك مثالاً سريعًا لكيفية تهيئة نقطة تقارب الناقلات:
 
-[![](/images/blog/sorting-conveyors-library/Picture4-1.png)](/images/blog/sorting-conveyors-library/Picture4-1.png)[![](/images/blog/sorting-conveyors-library/Slide11-1030x579.png)](/images/blog/sorting-conveyors-library/Slide11.png)
+![](/images/blog/sorting-conveyors-library/Picture4-1.png)![](/images/blog/sorting-conveyors-library/Slide11.png)
 
 - في صفحة تهيئة أجهزة الاستشعار، يتم تعريف أجهزة استشعار الناقلات، هناك ناقلان يندمجان في واحد. معرف التقاطع لتحديد أي أجهزة استشعار مرتبطة.
 
@@ -357,7 +357,7 @@ return jsonify(response), 201
 
 - لا يمكن أن يكون مستشعر الدخول في نفس خط الفرع الذي يوفر وكلاء من ناقل الفرع. يجب أن يكون المستشعر بعد شكل الفرع (انظر الصورة التالية)
 
-[![](/images/blog/sorting-conveyors-library/Picture5-1.png)](/images/blog/sorting-conveyors-library/Picture5-1.png)
+![](/images/blog/sorting-conveyors-library/Picture5-1.png)
 
 - لا يمكن أن تكون إزاحة أجهزة الاستشعار أكبر من الطول الإجمالي للناقل.
 
@@ -367,7 +367,7 @@ return jsonify(response), 201
 
 - داخل AnyLogic، أضف مكتبة ناقلات الفرز إلى لوحة الأدوات الخاصة بك باستخدام زر + في تبويب اللوحة، وابحث عن ملف sortingConveyors.jar الذي قمت بتحميله... احتفظ دائمًا بملف .jar هذا في نفس الموقع، وإلا ستواجه مشاكل.
 
-[![](/images/blog/sorting-conveyors-library/Monosnap-Instructions-Word-2023-11-16-08.43.08.png)](/images/blog/sorting-conveyors-library/Monosnap-Instructions-Word-2023-11-16-08.43.08.png)
+![](/images/blog/sorting-conveyors-library/Monosnap-Instructions-Word-2023-11-16-08.43.08.png)
 
 الآن عند إنشاء نموذج أو إذا أردت استخدام نموذج موجود مع هذه المكتبة:
 
@@ -379,10 +379,10 @@ return jsonify(response), 201
 
 - اسحب وأسقط ConveyorNetworkAnimation في نموذجك. اختر وكيل conveyorNetworkSettings.
 
-[![](/images/blog/sorting-conveyors-library/Picture3.png)](/images/blog/sorting-conveyors-library/Picture3.png)
+![](/images/blog/sorting-conveyors-library/Picture3.png)
 
 اسحب وأسقط ConveyorNetworkLogic في نموذجك واربطه بكتل منطق أخرى. يمكن أن يكون هناك عدة كتل من هذا النوع في النموذج.
-[![](/images/blog/sorting-conveyors-library/Picture4.png)](/images/blog/sorting-conveyors-library/Picture4.png)
+![](/images/blog/sorting-conveyors-library/Picture4.png)
 - قم بتهيئة معلمات وكيل conveyorNetworkLogic، باختيار الرسوم المتحركة لشبكة الناقلات.
 
 تذكر شيئين مهمين:
@@ -400,11 +400,11 @@ return jsonify(response), 201
 
 - للاتحادات، مثل الفروع أو طاولات النقل، من الضروري ترك مساحة بين الناقلات المعنية. هذا لتوفير المساحة الفعلية اللازمة لإنشاء الخطوط التي تمثل الفروع وطاولات النقل. في الصورة التالية ثلاثة ناقلات متصلة بطاولة نقل، ونقاط الاتصال ليست في نفس الإحداثيات لأن المساحة بينها مطلوبة، لأنه بهذه الطريقة يمكن إنشاء شكل الناقل.
 
-[![](/images/blog/sorting-conveyors-library/Picture7-1.png)](/images/blog/sorting-conveyors-library/Picture7-1.png)
+![](/images/blog/sorting-conveyors-library/Picture7-1.png)
 
 - بالإضافة إلى ذلك، للفروع، يجب أن يكون لنقطة اتصال ناقل الفرع مساحة كافية بالنسبة للناقل الرئيسي، مع مراعاة عرض الناقل الرئيسي لذلك. ننصح بوضع نقطة اتصال ناقل الفرع على مسافة لا تقل عن نصف عرض الناقل الرئيسي بعيدًا عن الناقل الرئيسي. تحقق من الصورة التالية.
 
-[![](/images/blog/sorting-conveyors-library/Picture8-1.png)](/images/blog/sorting-conveyors-library/Picture8-1.png)
+![](/images/blog/sorting-conveyors-library/Picture8-1.png)
 
 - للفروع، يجب أن تشير نقطة اتصال ناقل الفرع إلى أي جزء من الناقل الرئيسي بين النقطة الأولى والأخيرة للناقل الرئيسي ولكن لا يمكن أن تشير مباشرة إلى النقطة الأولى أو الأخيرة لأن الفرع يحتاج إلى مساحة فعلية لإنشاء الشكل، لذلك لا يُسمح بوضع فرع في بداية أو نهاية ناقل رئيسي.
 
@@ -414,9 +414,9 @@ return jsonify(response), 201
 
 أحيانًا يمكن أن يحدث، في نوع اتحاد الفجوة حيث تُستخدم أجهزة الاستشعار، أن وكيلاً واحدًا قد انتقل إلى الناقل التالي لكن لا يمكنه المضي قدمًا بسبب طابور كبير من الوكلاء في هذا الناقل، والوكيل الذي خلفه يذهب إلى نهاية الناقل الأول. مع حدوث ذلك، يبدو وكأن كلا الوكيلين أحدهما فوق الآخر. هذا مجرد شيء بصري ليس له تقريبًا أي تأثير تشغيلي. سنحسن هذا في المستقبل.
 
-[![](/images/blog/sorting-conveyors-library/Picture1-2.png)](/images/blog/sorting-conveyors-library/Picture1-2.png)
+![](/images/blog/sorting-conveyors-library/Picture1-2.png)
 
 ## النموذج المُصدّر لا يعمل
 
 عند تصدير نموذج، لا يتطلب ترخيصًا، طالما قمت بتصديره مع ترخيص (سواء للسحابة أو تصدير JAVA). لتصديره، يجب أن تكون قد شغلت نموذج المحاكاة مرة واحدة على الأقل في AnyLogic مع تشغيل الإنترنت، مما سيولد ملف licenseKey.txt صالح (إذا اشتريت ترخيصًا). يجب دمج هذا الملف في أي إصدار مُصدّر، وللقيام بذلك تحتاج إلى الذهاب إلى خصائص resources/data/licenseKey.txt وتشغيل "Resource is referrenced from user code". سيسمح هذا للنموذج بتصدير ملف licenseKey.txt، كما ترى في الصورة التالية:
-[![](/images/blog/sorting-conveyors-library/usercodereference-1030x260.png)](/images/blog/sorting-conveyors-library/usercodereference.png)
+![](/images/blog/sorting-conveyors-library/usercodereference.png)

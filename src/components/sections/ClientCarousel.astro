@@ -1,4 +1,14 @@
 ---
+import { Image } from 'astro:assets';
+import { getLocaleFromUrl } from '../../i18n';
+
+const locale = getLocaleFromUrl(Astro.url);
+
+const clientImages = import.meta.glob<{ default: ImageMetadata }>(
+  '../../assets/images/clients/*',
+  { eager: true }
+);
+
 const clients = [
   { name: 'Amazon', file: 'amazon-logo.jpg' },
   { name: 'McKinsey', file: 'MCKINSEY-CO-LOGO.jpg' },
@@ -33,34 +43,49 @@ const clients = [
   { name: 'Lean', file: 'Lean-Logo.png' },
   { name: 'Common Sense', file: 'common-sense.png' },
 ];
-import { getLocaleFromUrl } from '../../i18n';
-const locale = getLocaleFromUrl(Astro.url);
+
+function getClientImage(file: string) {
+  const key = `../../assets/images/clients/${file}`;
+  return clientImages[key]?.default;
+}
 ---
 
 <div class="overflow-hidden py-8">
   <h2 class="text-2xl font-bold text-center mb-10">{locale === 'en' ? 'Some of The Companies We Worked With' : locale === 'es' ? 'Algunas de las Empresas con las que Trabajamos' : 'بعض الشركات التي عملنا معها'}</h2>
 
   <div class="carousel-track flex items-center gap-16">
-    {clients.map((client) => (
-      <div class="shrink-0">
-        <img
-          src={`/images/clients/${client.file}`}
-          alt={client.name}
-          class="h-8 sm:h-10 w-auto max-w-[120px] object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
-          loading="lazy"
-        />
-      </div>
-    ))}
-    {clients.map((client) => (
-      <div class="shrink-0" aria-hidden="true">
-        <img
-          src={`/images/clients/${client.file}`}
-          alt=""
-          class="h-8 sm:h-10 w-auto max-w-[120px] object-contain grayscale opacity-50"
-          loading="lazy"
-        />
-      </div>
-    ))}
+    {clients.map((client) => {
+      const img = getClientImage(client.file);
+      return img ? (
+        <div class="shrink-0">
+          <Image
+            src={img}
+            alt={client.name}
+            height={40}
+            format="webp"
+            class="h-8 sm:h-10 w-auto max-w-[120px] object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+      ) : null;
+    })}
+    {clients.map((client) => {
+      const img = getClientImage(client.file);
+      return img ? (
+        <div class="shrink-0" aria-hidden="true">
+          <Image
+            src={img}
+            alt=""
+            height={40}
+            format="webp"
+            class="h-8 sm:h-10 w-auto max-w-[120px] object-contain grayscale opacity-50"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+      ) : null;
+    })}
   </div>
 </div>
 

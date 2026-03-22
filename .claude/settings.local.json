@@ -36,7 +36,18 @@
       "Bash(du -sh /c/Repositories/noorjax_website/public/*)",
       "Bash(grep -r \"fetch\\\\|api\\\\|axios\" /c/Repositories/noorjax_website/src --include=*.ts --include=*.tsx --include=*.astro)",
       "Bash(find /c/Repositories/noorjax_website/src -name *.astro)",
-      "Read(//c/Repositories/noorjax_website/**)"
+      "Read(//c/Repositories/noorjax_website/**)",
+      "Bash(find /c/Repositories/noorjax_website/public/images -name *.png -o -name *.jpg -o -name *.jpeg -o -name *.gif -o -name *.webp -o -name *.svg)",
+      "Bash(wc -l /c/Repositories/noorjax_website/src/styles/*)",
+      "Bash(grep -r src= /c/Repositories/noorjax_website/src --include=*.astro --include=*.tsx --include=*.jsx)",
+      "Bash(grep -c \"client:load\\\\|client:idle\\\\|client:visible\\\\|client:only\" /c/Repositories/noorjax_website/src/pages/**/*.astro /c/Repositories/noorjax_website/src/layouts/**/*.astro)",
+      "Bash(grep -r \"script\\\\|analytics\\\\|gtag\\\\|chat\\\\|widget\\\\|segment\\\\|hotjar\" /c/Repositories/noorjax_website/src --include=*.astro --include=*.tsx)",
+      "Bash(find /c/Repositories/noorjax_website/src -name \"*.astro\" -type f -exec grep -l \"script is:inline\" {})",
+      "Bash(ls -la /c/Repositories/noorjax_website/*.json /c/Repositories/noorjax_website/*.mjs)",
+      "Bash(grep -r \"gsap\\\\|animation\\\\|keyframes\" /c/Repositories/noorjax_website/src --include=*.astro)",
+      "Bash(find /c/Repositories/noorjax_website/public/images/portfolio -type f ! -name *.webp)",
+      "Bash(du -sh C:/Repositories/noorjax_website/public/images/blog/*/)",
+      "Bash(curl -sL \"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap&subset=latin,latin-ext\" -H \"User-Agent: Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36\")"
     ]
   }
 }

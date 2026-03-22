@@ -3,6 +3,16 @@ import PageLayout from '../../../layouts/PageLayout.astro';
 import { portfolioItemsEs as portfolioItems } from '../../../lib/portfolioItems.es';
 import { translateCategory } from '../../../lib/categoryLabels';
 import { getServicesForSlug, translateService } from '../../../lib/portfolioServices';
+import { Image } from 'astro:assets';
+
+const portfolioImageFiles = import.meta.glob<{ default: ImageMetadata }>(
+  '../../../assets/images/portfolio/*',
+  { eager: true }
+);
+function getPortfolioImage(file: string) {
+  const key = `../../../assets/images/portfolio/${file}`;
+  return portfolioImageFiles[key]?.default;
+}
 
 export function getStaticPaths() {
   return portfolioItems.map((item) => ({
@@ -181,11 +191,26 @@ function renderInline(text: string): string {
       <!-- Hero Image -->
       {heroImage && (
         <div class="mb-10 rounded-2xl overflow-hidden border border-border-default">
-          <img
-            src={`/images/portfolio/${heroImage}`}
-            alt={item.title}
-            class="w-full h-auto"
-          />
+          {(() => {
+            const optimized = getPortfolioImage(heroImage);
+            return optimized ? (
+              <Image
+                src={optimized}
+                alt={item.title}
+                width={896}
+                format="webp"
+                class="w-full h-auto"
+                loading="eager"
+                decoding="async"
+              />
+            ) : (
+              <img
+                src={`/images/portfolio/${heroImage}`}
+                alt={item.title}
+                class="w-full h-auto"
+              />
+            );
+          })()}
         </div>
       )}
 
@@ -210,6 +235,7 @@ function renderInline(text: string): string {
                   alt={block.alt}
                   class="w-full rounded-xl border border-border-default"
                   loading="lazy"
+                  decoding="async"
                 />
                 {block.alt && (
                   <figcaption class="mt-2 text-sm text-text-tertiary text-center italic">
