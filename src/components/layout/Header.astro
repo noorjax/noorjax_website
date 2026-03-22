@@ -9,12 +9,13 @@ const i18n = t(locale);
 const links = NAV_LINKS[locale];
 const otherLocales = getOtherLocales(locale);
 
-const flags: Record<string, { flag: string; label: string }> = {
-  en: { flag: '🇬🇧', label: 'English' },
-  es: { flag: '🇪🇸', label: 'Español' },
-  ar: { flag: '🇸🇦', label: 'العربية' },
+const flagSvgs: Record<string, string> = {
+  en: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="24" height="12"><clipPath id="s"><path d="M0,0 v30 h60 v-30 z"/></clipPath><clipPath id="t"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath><g clip-path="url(#s)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg>`,
+  es: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 500" width="24" height="16"><rect width="750" height="500" fill="#c60b1e"/><rect width="750" height="250" y="125" fill="#ffc400"/></svg>`,
+  ar: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 16" width="24" height="16"><rect fill="#006C35" width="24" height="16"/><path d="M6 10.5h12M8 8h2v3H8zM11 6h2v5h-2zM14 8h2v3h-2z" stroke="#fff" stroke-width="0.8" fill="none"/></svg>`,
 };
-const currentFlag = flags[locale];
+const currentFlag = flagSvgs[locale];
+const labels: Record<string, string> = { en: 'English', es: 'Español', ar: 'العربية' };
 ---
 
 <header
@@ -68,18 +69,16 @@ const currentFlag = flags[locale];
             aria-expanded="false"
             aria-haspopup="true"
           >
-            <span class="text-base leading-none">{currentFlag.flag}</span>
-            <span class="font-medium">{currentFlag.label}</span>
+            <span class="leading-none rounded-sm overflow-hidden" set:html={currentFlag} />
             <svg class="w-3.5 h-3.5 transition-transform" id="lang-chevron-desktop" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
           </button>
-          <div class="absolute right-0 top-full mt-1.5 w-44 bg-bg-primary border border-border-default rounded-xl shadow-lg overflow-hidden hidden z-50" id="lang-menu-desktop">
+          <div class="absolute right-0 top-full mt-1.5 w-auto bg-bg-primary border border-border-default rounded-xl shadow-lg overflow-hidden hidden z-50" id="lang-menu-desktop">
             {otherLocales.map((lang) => (
               <a
                 href={getAlternateUrl(Astro.url, lang)}
                 class="flex items-center gap-3 px-4 py-2.5 text-sm text-text-secondary hover:bg-brand-teal/5 hover:text-brand-teal transition-colors"
               >
-                <span class="text-base leading-none">{flags[lang].flag}</span>
-                <span>{flags[lang].label}</span>
+                <span class="leading-none rounded-sm overflow-hidden" set:html={flagSvgs[lang]} />
               </a>
             ))}
           </div>
@@ -126,8 +125,7 @@ const currentFlag = flags[locale];
               href={getAlternateUrl(Astro.url, lang)}
               class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-text-secondary hover:bg-brand-teal/5 hover:text-brand-teal transition-colors"
             >
-              <span class="text-base leading-none">{flags[lang].flag}</span>
-              <span>{flags[lang].label}</span>
+              <span class="leading-none rounded-sm overflow-hidden" set:html={flagSvgs[lang]} />
             </a>
           ))}
         </div>
