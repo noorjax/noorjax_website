@@ -16,6 +16,15 @@ const { Content } = await render(post);
 ---
 
 <PageLayout title={post.data.title} description={post.data.excerpt}>
+  <script type="application/ld+json" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.data.title,
+    datePublished: post.data.date.toISOString(),
+    author: { '@type': 'Person', name: 'Felipe Haro' },
+    publisher: { '@type': 'Organization', name: 'Noorjax Consulting', url: 'https://noorjax.com' },
+    description: post.data.excerpt,
+  })} />
   <article class="py-(--spacing-section)">
     <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
       <!-- Back link -->
