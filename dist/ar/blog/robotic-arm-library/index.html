@@ -1,0 +1,280 @@
+<!DOCTYPE html><html lang="ar"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Astro v6.0.8"><!-- SEO --><title>مكتبة الذراع الروبوتية | Noorjax Consulting</title><meta name="description" content="هذه المكتبة تعمل فقط مع AnyLogic 8.9.4 وما فوق. يمكنك تحميل المكتبة هنا: [تحميل](https://github.com/noorjax/robotic-arm) إذا كانت هذه المكتبة مفيدة لك، فكر في التبرع حتى نتمكن"><link rel="canonical" href="https://noorjax.com/ar/blog/robotic-arm-library/"><!-- i18n alternates (ar hidden for now) --><link rel="alternate" hreflang="en" href="https://noorjax.com/en/blog/robotic-arm-library/"><link rel="alternate" hreflang="es" href="https://noorjax.com/es/blog/robotic-arm-library/"><link rel="alternate" hreflang="x-default" href="https://noorjax.com/en/blog/robotic-arm-library/"><!-- Open Graph --><meta property="og:type" content="website"><meta property="og:title" content="مكتبة الذراع الروبوتية | Noorjax Consulting"><meta property="og:description" content="هذه المكتبة تعمل فقط مع AnyLogic 8.9.4 وما فوق. يمكنك تحميل المكتبة هنا: [تحميل](https://github.com/noorjax/robotic-arm) إذا كانت هذه المكتبة مفيدة لك، فكر في التبرع حتى نتمكن"><meta property="og:image" content="https://noorjax.com/images/og-default.jpg"><meta property="og:url" content="https://noorjax.com/ar/blog/robotic-arm-library/"><meta property="og:site_name" content="Noorjax Consulting"><meta property="og:locale" content="ar_SA"><!-- Twitter --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="مكتبة الذراع الروبوتية | Noorjax Consulting"><meta name="twitter:description" content="هذه المكتبة تعمل فقط مع AnyLogic 8.9.4 وما فوق. يمكنك تحميل المكتبة هنا: [تحميل](https://github.com/noorjax/robotic-arm) إذا كانت هذه المكتبة مفيدة لك، فكر في التبرع حتى نتمكن"><meta name="twitter:image" content="https://noorjax.com/images/og-default.jpg"><!-- Favicon --><link rel="icon" type="image/png" href="/images/logo/Noorjax-icon-png1.png"><!-- Fonts: Self-hosted Inter --><link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/inter-latin.woff2"><!-- Client-side routing (View Transitions) --><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.DmQZLfuR.js"></script><!-- JSON-LD Structured Data --><script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Noorjax Consulting","description":"هذه المكتبة تعمل فقط مع AnyLogic 8.9.4 وما فوق. يمكنك تحميل المكتبة هنا: [تحميل](https://github.com/noorjax/robotic-arm) إذا كانت هذه المكتبة مفيدة لك، فكر في التبرع حتى نتمكن","url":"https://noorjax.com","email":"info@noorjax.com","address":{"@type":"PostalAddress","streetAddress":"Ahtri 12-512","addressLocality":"Tallinn","postalCode":"10151","addressCountry":"EE"},"areaServed":"Worldwide","serviceType":["Simulation Consulting","AnyLogic Simulation","Manufacturing Simulation","System Dynamics Consulting","Vensim Consulting","Agent-Based Modeling","Discrete Event Simulation","Policy Advisory","Supply Chain Simulation","AnyLogic Training"],"knowsAbout":["AnyLogic","Vensim","System Dynamics","Discrete Event Simulation","Agent-Based Modeling","Monte Carlo Simulation","Optimization","Artificial Intelligence"],"sameAs":["https://www.linkedin.com/company/noorjax/","https://www.youtube.com/@noorjaxconsulting"],"founder":{"@type":"Person","name":"Felipe Haro"},"foundingDate":"2017"}</script><link rel="stylesheet" href="/_astro/BaseLayout.Dhci6ilB.css"></head> <body class="min-h-screen flex flex-col">  <header class="fixed top-0 left-0 right-0 z-50 bg-bg-primary border-b border-border-default shadow-sm" id="site-header"> <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"> <nav class="flex items-center justify-between h-16 lg:h-18" aria-label="Main navigation"> <!-- Logo --> <a href="/ar/" class="flex items-center shrink-0" aria-label="Noorjax Consulting"> <img src="/_astro/Noorjax-01.Dky3hJly_1s27Mm.webp" alt="Noorjax Consulting" loading="eager" decoding="async" fetchpriority="high" width="384" height="64" class="h-10 lg:h-12 w-auto"> </a> <!-- Desktop Navigation --> <div class="hidden lg:flex items-center gap-6"> <a href="/ar/" class="text-sm font-medium transition-colors text-text-secondary hover:text-text-primary"> الرئيسية </a><a href="/ar/simulation-services/" class="text-sm font-medium transition-colors text-text-secondary hover:text-text-primary"> ديمو </a><a href="/ar/business-cases/" class="text-sm font-medium transition-colors text-text-secondary hover:text-text-primary"> المشاريع </a><a href="/ar/products/" class="text-sm font-medium transition-colors text-text-secondary hover:text-text-primary"> المنتجات </a><a href="/ar/courses/" class="text-sm font-medium transition-colors text-text-secondary hover:text-text-primary"> الدورات </a><a href="/ar/about-us/" class="text-sm font-medium transition-colors text-text-secondary hover:text-text-primary"> من نحن </a><a href="/ar/blog/" class="text-sm font-medium transition-colors text-brand-teal font-semibold"> المدونة </a><a href="/ar/contact/" class="btn-primary text-xs px-4 py-2"> اتصل بنا </a> <!-- Social icons --> <div class="flex items-center gap-3 ml-2 pl-4 border-l border-border-default"> <a href="https://www.linkedin.com/company/noorjax/" target="_blank" rel="noopener noreferrer" class="text-text-tertiary hover:text-brand-teal transition-colors" aria-label="LinkedIn"> <svg class="w-4.5 h-4.5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg> </a> <a href="https://www.youtube.com/@noorjaxconsulting" target="_blank" rel="noopener noreferrer" class="text-text-tertiary hover:text-red-600 transition-colors" aria-label="YouTube"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg> </a> </div> <!-- Language Dropdown --> <div class="relative" id="lang-dropdown-desktop"> <button class="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-border-default text-sm text-text-secondary hover:text-text-primary hover:border-border-hover transition-all cursor-pointer" id="lang-btn-desktop" aria-expanded="false" aria-haspopup="true"> <span class="leading-none rounded-sm overflow-hidden"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 16" width="24" height="16"><rect fill="#006C35" width="24" height="16"/><path d="M6 10.5h12M8 8h2v3H8zM11 6h2v5h-2zM14 8h2v3h-2z" stroke="#fff" stroke-width="0.8" fill="none"/></svg></span> <svg class="w-3.5 h-3.5 transition-transform" id="lang-chevron-desktop" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg> </button> <div class="absolute right-0 top-full mt-1.5 w-auto bg-bg-primary border border-border-default rounded-xl shadow-lg overflow-hidden hidden z-50" id="lang-menu-desktop"> <a href="/en/blog/robotic-arm-library/" class="flex items-center gap-3 px-4 py-2.5 text-sm text-text-secondary hover:bg-brand-teal/5 hover:text-brand-teal transition-colors"> <span class="leading-none rounded-sm overflow-hidden"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="24" height="12"><clipPath id="s"><path d="M0,0 v30 h60 v-30 z"/></clipPath><clipPath id="t"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath><g clip-path="url(#s)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg></span> </a><a href="/es/blog/robotic-arm-library/" class="flex items-center gap-3 px-4 py-2.5 text-sm text-text-secondary hover:bg-brand-teal/5 hover:text-brand-teal transition-colors"> <span class="leading-none rounded-sm overflow-hidden"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 500" width="24" height="16"><rect width="750" height="500" fill="#c60b1e"/><rect width="750" height="250" y="125" fill="#ffc400"/></svg></span> </a> </div> </div> </div> <!-- Mobile Menu Toggle --> <button class="lg:hidden p-2 text-text-secondary hover:text-text-primary" id="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false"> <svg class="w-6 h-6" id="menu-icon-open" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg> <svg class="w-6 h-6 hidden" id="menu-icon-close" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg> </button> </nav> </div> <!-- Mobile Menu --> <div class="lg:hidden hidden" id="mobile-menu"> <div class="glass mx-4 mt-2 rounded-xl p-6 space-y-4 shadow-lg"> <a href="/ar/" class="block text-base font-medium py-2 transition-colors text-text-secondary hover:text-text-primary"> الرئيسية </a><a href="/ar/simulation-services/" class="block text-base font-medium py-2 transition-colors text-text-secondary hover:text-text-primary"> ديمو </a><a href="/ar/business-cases/" class="block text-base font-medium py-2 transition-colors text-text-secondary hover:text-text-primary"> المشاريع </a><a href="/ar/products/" class="block text-base font-medium py-2 transition-colors text-text-secondary hover:text-text-primary"> المنتجات </a><a href="/ar/courses/" class="block text-base font-medium py-2 transition-colors text-text-secondary hover:text-text-primary"> الدورات </a><a href="/ar/about-us/" class="block text-base font-medium py-2 transition-colors text-text-secondary hover:text-text-primary"> من نحن </a><a href="/ar/blog/" class="block text-base font-medium py-2 transition-colors text-brand-teal"> المدونة </a><a href="/ar/contact/" class="block text-base font-medium py-2 transition-colors text-text-secondary hover:text-text-primary"> اتصل بنا </a> <div class="pt-4 border-t border-border-default"> <div class="flex items-center gap-4 mb-4"> <a href="https://www.linkedin.com/company/noorjax/" target="_blank" rel="noopener noreferrer" class="text-text-tertiary hover:text-brand-teal" aria-label="LinkedIn"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg> </a> <a href="https://www.youtube.com/@noorjaxconsulting" target="_blank" rel="noopener noreferrer" class="text-text-tertiary hover:text-red-600" aria-label="YouTube"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg> </a> </div> <!-- Mobile Language Options --> <div class="flex flex-col gap-1"> <a href="/en/blog/robotic-arm-library/" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-text-secondary hover:bg-brand-teal/5 hover:text-brand-teal transition-colors"> <span class="leading-none rounded-sm overflow-hidden"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="24" height="12"><clipPath id="s"><path d="M0,0 v30 h60 v-30 z"/></clipPath><clipPath id="t"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath><g clip-path="url(#s)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg></span> </a><a href="/es/blog/robotic-arm-library/" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-text-secondary hover:bg-brand-teal/5 hover:text-brand-teal transition-colors"> <span class="leading-none rounded-sm overflow-hidden"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 500" width="24" height="16"><rect width="750" height="500" fill="#c60b1e"/><rect width="750" height="250" y="125" fill="#ffc400"/></svg></span> </a> </div> </div> </div> </div> </header> <script>
+  function initHeader() {
+    // Mobile menu
+    var toggle = document.getElementById('mobile-menu-toggle');
+    var menu = document.getElementById('mobile-menu');
+    if (toggle && menu) {
+      toggle.onclick = function() {
+        var isOpen = !menu.classList.contains('hidden');
+        menu.classList.toggle('hidden');
+        document.getElementById('menu-icon-open').classList.toggle('hidden');
+        document.getElementById('menu-icon-close').classList.toggle('hidden');
+        toggle.setAttribute('aria-expanded', String(!isOpen));
+      };
+      menu.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+          menu.classList.add('hidden');
+          document.getElementById('menu-icon-open').classList.remove('hidden');
+          document.getElementById('menu-icon-close').classList.add('hidden');
+        });
+      });
+    }
+
+    // Language dropdown
+    var btn = document.getElementById('lang-btn-desktop');
+    var langMenu = document.getElementById('lang-menu-desktop');
+    if (btn && langMenu) {
+      btn.onclick = function(e) {
+        e.stopPropagation();
+        var isOpen = !langMenu.classList.contains('hidden');
+        langMenu.classList.toggle('hidden');
+        var chev = document.getElementById('lang-chevron-desktop');
+        if (chev) chev.classList.toggle('rotate-180');
+        btn.setAttribute('aria-expanded', String(!isOpen));
+      };
+      document.addEventListener('click', function() {
+        langMenu.classList.add('hidden');
+        var chev = document.getElementById('lang-chevron-desktop');
+        if (chev) chev.classList.remove('rotate-180');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    }
+  }
+
+  initHeader();
+  document.addEventListener('astro:after-swap', initHeader);
+</script> <main class="flex-1 pt-18 lg:pt-20">  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"مكتبة الذراع الروبوتية","datePublished":"2023-11-21T00:00:00.000Z","author":{"@type":"Person","name":"Felipe Haro"},"publisher":{"@type":"Organization","name":"Noorjax Consulting","url":"https://noorjax.com"},"description":"هذه المكتبة تعمل فقط مع AnyLogic 8.9.4 وما فوق. يمكنك تحميل المكتبة هنا: [تحميل](https://github.com/noorjax/robotic-arm) إذا كانت هذه المكتبة مفيدة لك، فكر في التبرع حتى نتمكن"}</script> <article class="py-(--spacing-section)"> <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8"> <!-- Back link --> <a href="/ar/blog/" class="inline-flex items-center gap-2 text-sm text-text-tertiary hover:text-brand-accent mb-8 transition-colors"> <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18"></path> </svg>
+العودة إلى المدونة
+</a> <!-- Header --> <header class="mb-10"> <div class="flex flex-wrap gap-2 mb-4"> <span class="text-xs font-medium px-2.5 py-1 rounded-full bg-brand-secondary/10 text-brand-secondary"> مكتبات Noorjax </span> </div> <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-4"> مكتبة الذراع الروبوتية </h1> <time class="text-text-tertiary" datetime="2023-11-21T00:00:00.000Z"> ٢١ نوفمبر ٢٠٢٣ </time> </header> <!-- Content --> <div class="prose prose-lg max-w-none
+        prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-text-primary
+        prose-p:text-text-secondary
+        prose-a:text-brand-teal prose-a:no-underline hover:prose-a:underline
+        prose-img:rounded-xl prose-img:border prose-img:border-border-default prose-img:mx-auto
+        prose-code:text-brand-secondary prose-code:bg-bg-secondary prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm
+        prose-pre:bg-bg-secondary prose-pre:border prose-pre:border-border-default prose-pre:rounded-xl
+        prose-blockquote:border-brand-teal prose-blockquote:text-text-secondary prose-blockquote:not-italic
+        prose-strong:text-text-primary
+        prose-li:text-text-secondary
+        prose-hr:border-border-default
+      "> <p>هذه المكتبة تعمل فقط مع AnyLogic 8.9.4 وما فوق.</p>
+<p>يمكنك تحميل المكتبة هنا:</p>
+<p><a href="https://github.com/noorjax/robotic-arm">تحميل</a></p>
+<p>إذا كانت هذه المكتبة مفيدة لك، فكر في التبرع حتى نتمكن من الاستمرار في تطوير هذا والمزيد في المستقبل، انقر على الرابط التالي للتبرع.</p>
+<p><a href="https://www.paypal.com/donate/?hosted_button_id=GW77FD5WVVAR8">https://www.paypal.com/donate/?hosted_button_id=GW77FD5WVVAR8</a></p>
+<h2 id="توثيق-مساعدة-الذراع-الروبوتية">توثيق مساعدة الذراع الروبوتية</h2>
+<p>يمكنك إيجاد نسخة فيديو من هذا التوثيق، للإصدار 1.0.0 في الفيديو التالي:</p>
+<h2 id="إخلاء-مسؤولية-مهم">إخلاء مسؤولية مهم</h2>
+<p><strong>يمكن استخدام هذه الذراع الروبوتية بحرية من قبل أي شخص طالما أنها مفيدة لحالته. ومع ذلك نحن لا نقدم دعمًا مجانيًا لتصحيح الأخطاء أو تنفيذ ميزات جديدة. تم تطوير هذه الذراع الروبوتية لأغراضنا الخاصة وإذا نجحت لك فهذا رائع، وإلا فنحن لا نصبح فجأة مسؤولين عن مشروعك. كما أننا لا نقدم دعمًا مجانيًا للعملاء حول كيفية استخدامها، ولكن إذا كان لديك سؤال غير موضح في هذا المستند، سنضيفه في أقرب وقت ممكن.</strong></p>
+<p><strong>إذا كنت تريد ميزات جديدة، يمكننا تطويرها بتكلفة. تواصل معنا لهذا الأمر.</strong></p>
+<p><strong>إذا كنت تريد تدريبًا شخصيًا على AnyLogic ومساعدة مخصصة لتنفيذ هذا لتطبيقك، سيكون لهذا أيضًا تكلفة. تواصل معنا لهذا الأمر، لكن هذا التوثيق يجب أن يكون كافيًا.</strong></p>
+<h2 id="الوصف-العام">الوصف العام</h2>
+<p>تقدم مكتبة الذراع الروبوتية أدوات لنمذجة ومحاكاة ديناميكيات ووظائف الأذرع الروبوتية المستخدمة في صناعة التصنيع.</p>
+<p>تتكون من وكيلين، بالإضافة إلى وكيل مساعد، وهو مجرد زر سينقلك إلى هذه الصفحة:</p>
+<p><strong>Robot</strong>: يمثل الرسوم المتحركة ثلاثية الأبعاد للروبوت. تتكون الذراع الروبوتية من</p>
+<ul>
+<li>
+<p>قاعدة تدور حول المحور Z</p>
+</li>
+<li>
+<p>ذراع علوية تدور بالنسبة للقاعدة</p>
+</li>
+<li>
+<p>ساعد يدور بالنسبة للذراع العلوية.</p>
+</li>
+<li>
+<p>قابس يدور الوكيل الملتقط لوضعه بشكل صحيح على الوجهة.</p>
+</li>
+</ul>
+<p><img src="/ar/wp-content/uploads/2023/11/Monosnap-Robotic-Arm-v1.0-_-Simulation-AnyLogic-.png" alt=""></p>
+<ul>
+<li><strong>Move By Robot</strong>: هي كتلة المخطط الانسيابي التي تُستخدم بالتزامن مع وكيل Robot. تسمح بتعريف الحركات المنطقية والمهام التي سيقوم بها الروبوت للوكيل المعالج.</li>
+</ul>
+<p>الكائنات الأخرى التي ستراها في المكتبة يجب ألا تُستخدم.<a href="/ar/wp-content/uploads/2023/11/Monosnap-AnyLogic-Professional-2023-11-16-08.54.35.png"><img src="/ar/wp-content/uploads/2023/11/Monosnap-AnyLogic-Professional-2023-11-16-08.54.35.png" alt=""></a></p>
+<h2 id="كيفية-تثبيت-المكتبة">كيفية تثبيت المكتبة</h2>
+<p>أولاً قم بتحميل المكتبة (انظر بداية هذا التوثيق) واحفظها في مكان آمن:</p>
+<p>داخل AnyLogic، أضف المكتبة إلى لوحة الأدوات الخاصة بك باستخدام زر + في تبويب اللوحة، وابحث عن ملف .jar الذي قمت بتحميله… احتفظ دائمًا بملف .jar هذا في نفس الموقع، وإلا ستواجه مشاكل.</p>
+<p><img src="/ar/wp-content/uploads/2023/11/Monosnap-Instructions-Word-2023-11-16-08.43.08.png" alt=""></p>
+<h2 id="كيفية-استخدام-المكتبة-بعد-التثبيت">كيفية استخدام المكتبة بعد التثبيت</h2>
+<ul>
+<li>
+<p>لاستخدام كائن Robot، اسحب وأسقط كائن “Robot” إلى مساحة العمل الخاصة بك (main أو أي وكيل آخر ستعيش فيه ذراعك الروبوتية).</p>
+</li>
+<li>
+<p>لاستخدام كائن “Move By Robot”، يمكنك أيضًا سحبه وإسقاطه، وربط هذه الكتلة بمنطق العملية الخاص بك.</p>
+</li>
+</ul>
+<h2 id="كائن-robot">كائن Robot</h2>
+<p>نعرّف أيقونة الروبوت، كالوكيل الذي يمثل الروبوت الفعلي:</p>
+<p><a href="/ar/wp-content/uploads/2023/11/Monosnap-AnyLogic-Professional-2023-11-16-09.17.46.png"><img src="/ar/wp-content/uploads/2023/11/Monosnap-AnyLogic-Professional-2023-11-16-09.17.46.png" alt=""></a></p>
+<p>نعرّف عرض الروبوت، كالعرض الفعلي للروبوت</p>
+<p><a href="/ar/wp-content/uploads/2023/11/Monosnap-AnyLogic-Professional-2023-11-16-09.18.33.png"><img src="/ar/wp-content/uploads/2023/11/Monosnap-AnyLogic-Professional-2023-11-16-09.18.33.png" alt=""></a></p>
+<p>يتم حساب حجم عرض الروبوت افتراضيًا تلقائيًا بناءً على مقياس الوكيل الذي يوجد فيه عرض الروبوت. فيما يلي القياسات الأصلية، لكن يمكن تغييرها كما هو موضح لاحقًا.</p>
+<ul>
+<li>
+<p>طول القاعدة: 3.3 متر، تتوافق مع المسافة من الأرض إلى نقطة دوران الذراع العلوية.</p>
+</li>
+<li>
+<p>طول الذراع العلوية: 3.9 متر، تتوافق مع المسافة بين نقطتي الدوران</p>
+</li>
+<li>
+<p>طول الساعد: 3.8 متر، تتوافق مع المسافة بين نقطة الدوران والقابس.</p>
+</li>
+</ul>
+<h2 id="أيقونة-robot">أيقونة Robot</h2>
+<p>لتعريف خصائص الروبوت، انقر على أيقونة “Robot” في مساحة العمل الخاصة بك وقم بتهيئة المعلمات وفقًا للتصور المطلوب للروبوت (تأكد من أن عرض الروبوت ظاهر، إن لم يكن كذلك، انقر على “show the presentation” في القسم المتقدم من خصائص أيقونة الروبوت). كما يجب استخدام هذا الوكيل دائمًا كوكيل فردي وليس كمجموعة وكلاء (AnyLogic لا يسمح لنا بإزالة هذا الخيار).</p>
+<h3 id="الزوايا-الأولية">الزوايا الأولية</h3>
+<ul>
+<li>
+<p>زاوية القاعدة الأولية (بالدرجات). هي الزاوية الأولية للقاعدة على المحور Z</p>
+</li>
+<li>
+<p>زاوية الذراع العلوية الأولية (بالدرجات). الزاوية الأولية للذراع العلوية. الصفر يعني عدم ثني المفصل.</p>
+</li>
+<li>
+<p>زاوية الساعد الأولية (بالدرجات). هذا الدوران نسبي للذراع العلوية. صفر درجة تعني عدم ثني المفصل.</p>
+</li>
+</ul>
+<p>نطاقات الزوايا الأولية الموصى بها للمفاصل (تأكد من العمل ضمن هذه الحدود لتجنب تحرك الذراع الروبوتية بشكل غير طبيعي مثل التحرك داخل نفسها… ليس لدينا كشف التصادم):</p>
+<ul>
+<li>
+<p>زاوية القاعدة: أي زاوية بين -180 و 180 درجة.</p>
+</li>
+<li>
+<p>الذراع العلوية: أي زاوية بين 0 و 90 درجة.</p>
+</li>
+<li>
+<p>الساعد: أي زاوية بين 0 و 90 درجة.</p>
+</li>
+</ul>
+<h3 id="الإحصائيات">الإحصائيات</h3>
+<ul>
+<li>خطوة الوقت (بالثواني): تحدد كم مرة يتم تحديث مواضع الرسوم المتحركة. خطوة وقت عالية تجعل المحاكاة تعمل بشكل أسرع، على حساب جعل الرسوم المتحركة تبدو غريبة.</li>
+</ul>
+<h3 id="السرعة">السرعة</h3>
+<ul>
+<li>
+<p>سرعة دوران القاعدة (درجة/ثانية): سرعة دوران القاعدة حول المحور z.</p>
+</li>
+<li>
+<p>سرعة دوران الساعد (درجة/ثانية): سرعة دوران الساعد بالنسبة للذراع العلوية</p>
+</li>
+<li>
+<p>سرعة دوران الذراع العلوية (درجة/ثانية): لا تحتاج لشرح</p>
+</li>
+</ul>
+<h3 id="المقياس">المقياس</h3>
+<p>المقياس الإضافي: يمكن استخدام هذا إذا كنت تريد تغيير أبعاد الروبوت. للأسف، AnyLogic يجعل هذا صعبًا بعض الشيء في الحساب، لكن إليك الشرح. الحجم الأصلي للساعد هو 3.8 متر، لنسمّه “FOS”. ماذا لو أردت أن يكون طول الساعد 1.5 متر فقط؟</p>
+<ul>
+<li>
+<p>أولاً تحقق من مقياس الوكيل الذي توجد فيه أيقونة الروبوت. نريد معرفة كم بكسل يعادل متر واحد. لنسمّ هذا الرقم “P”.</p>
+</li>
+<li>
+<p>ثانيًا حدد الطول الذي تريده للساعد بالأمتار، لنسمّه “FNS”</p>
+</li>
+<li>
+<p>لحساب المقياس الإضافي “AS”، تحتاج لاستخدام المعادلة التالية: AS=FNS<em>3.8</em>10/P. الـ 3.8 يتوافق مع طول الساعد، و 10 يتوافق مع مقياس الروبوت (وهو غير مرئي لك، استخدم 10 دائمًا).</p>
+</li>
+<li>
+<p>لذلك إذا أردت أن يكون طول ساعدك 1.5 متر ومقياس الوكيل الذي يوجد فيه الروبوت هو 1 متر = 20 بكسل، فإن AS=1.5*38/20 = 2.85.</p>
+</li>
+</ul>
+<p>ستحتاج لتغيير المعادلة الافتراضية</p>
+<p><a href="/ar/wp-content/uploads/2023/11/default.png"><img src="/ar/wp-content/uploads/2023/11/default.png" alt=""></a> بالرقم الخاص بالمقياس الإضافي</p>
+<p><a href="/ar/wp-content/uploads/2023/11/new.png"><img src="/ar/wp-content/uploads/2023/11/new.png" alt=""></a></p>
+<p>تحتاج أيضًا لتغيير القيم في عرض الروبوت. لهذا، انقر على عرض الروبوت، اختر “scale is defined explicitly” في قسم “position and size” من الخصائص واستخدم نفس المقياس الذي استخدمته في قيمة المقياس الإضافي لأيقونة الروبوت لجميع المقاييس الثلاثة: scale X و scale Y و scale Z.
+<a href="/ar/wp-content/uploads/2023/11/rototscale.png"><img src="/ar/wp-content/uploads/2023/11/rototscale.png" alt=""></a></p>
+<h2 id="كتلة-عملية-move-by-robot">كتلة عملية Move By Robot</h2>
+<p>هذه هي الكتلة التي تستخدمها لجعل الذراع الروبوتية تعمل. يمكنك ربطها بأي تدفق عملية لنقل الوكلاء العاديين أو العناصر المادية إذا كنت تستخدم مكتبة مناولة المواد.</p>
+<h3 id="ارتفاع-الوكيل">ارتفاع الوكيل</h3>
+<p>هنا يمكنك تحديد ارتفاع الوكيل حتى يضع قابس الذراع الروبوتية نفسه بالضبط فوق الوكيل. بالطبع يجب أن يكون ارتفاع وكيلك مساويًا لارتفاع الرسوم المتحركة الخاصة بك، وإلا لن يظهر رسم متحرك ثلاثي الأبعاد صحيح. يمكن أن تكون هذه القيمة ثابتة لجميع الوكلاء، أو يمكن أن تكون ديناميكية باستخدام معلمات ارتفاع وكيلك إذا أنشأت واحدة.</p>
+<p>إذا كان لديك مثلاً وكيل من نوع Box له معلمة أو متغير يُسمى height، ستحتاج إلى القيام بما يلي:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="java"><code><span class="line"><span style="color:#E1E4E8">((Box)agent).height</span></span></code></pre>
+<p>من منظور كتلة move by robot، جميع الوكلاء من نوع “Agent” لذلك تحتاج إلى إجراء التحويل من agent إلى box لتتمكن من استخدام خصائص الوكيل.</p>
+<h3 id="سعة-الطابور">سعة الطابور</h3>
+<p>تحتوي هذه الكتلة على طابور مدمج. يعمل تمامًا مثل أي كتلة أخرى مثل seize أو service، إلخ. يُستخدم هذا الطابور لتحديد الوكلاء الذين يمكن التقاطهم وأخذهم في الاعتبار للأولويات.</p>
+<h3 id="هل-يوجد-وقت-تحميلتفريغ">هل يوجد وقت تحميل/تفريغ</h3>
+<p>يمكنك تحديد ما إذا كنت تريد أن تقضي الذراع الروبوتية بعض الوقت في تحميل وتفريغ كائن. يرتبط هذا ببعض الإجراءات مثل “on loading started” و “on loading finished” التي تظهر إذا أردت استخدام وقت التحميل.</p>
+<h3 id="وكيل-robot">وكيل Robot</h3>
+<p>هنا تحدد كائن الروبوت الذي سيُستخدم كمورد لنقل الوكلاء مع كتلة العملية هذه. يمكنك اختيار روبوت واحد فقط.</p>
+<h3 id="أولوية-المهمة">أولوية المهمة</h3>
+<p>يحدد هذا من منظور الروبوت، أولوية كتلة العملية بالنسبة للأخرى. إذا كان لديك روبوت واحد و 3 كتل move by robot، سيختار الروبوت نقل الكائنات أولاً من كتلة move by robot ذات الأولوية الأعلى. إذا كانت جميع الأولويات متساوية، سيستخدم FIFO. لاحظ أنه لا يمكنك اختيار أولوية الوكلاء، الأولويات مرتبطة فقط بكتل العملية.</p>
+<h3 id="الوجهة">الوجهة</h3>
+<p>يجب تحديد الوجهة بإحداثيات x و y و z (بالبكسل)، وهذه هي الطريقة الوحيدة لتحديد وجهة لأي كائن.</p>
+<h3 id="الإجراءات---عند-الدخول">الإجراءات - عند الدخول</h3>
+<p>يمكنك استخدام هذا كأي كتلة عملية أخرى، مع الفرق أنه يجب تحديد نوع وكيلك، مثلاً إذا كان لديك وكيل box يتحرك عبر هذه الكتلة، بدلاً من <code>agent.counter++;</code> ستفعل:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="java"><code><span class="line"><span style="color:#E1E4E8">((Box)agent).counter</span><span style="color:#F97583">++</span><span style="color:#E1E4E8">;</span></span></code></pre>
+<h3 id="التحرير">التحرير</h3>
+<p>في هذا القسم يمكنك تحديد ما إذا كان الروبوت يبقى في مكانه، أو يعود إلى الزوايا الأولية.</p>
+<h2 id="الأسئلة-الشائعة">الأسئلة الشائعة</h2>
+<h2 id="لا-أفهم-زوايا-الدوران-الأولية">لا أفهم زوايا الدوران الأولية؟</h2>
+<p>لجميع زوايا الدوران الأولية، الصفر يعني عدم ثني المفصل. لذلك، إذا تم ضبط جميع المفاصل على صفر، ستكون الذراع الروبوتية مشيرة إلى السماء. جربها واكتشف بنفسك كيف يعمل هذا.</p>
+<h2 id="أحصل-على-حركات-غريبة-مع-الروبوت">أحصل على حركات غريبة مع الروبوت</h2>
+<p>تأكد من أنك تستخدم نطاقات الزوايا الأولية الموصى بها (انظر أعلاه). فكر أيضًا في تغيير خطوة الوقت عند زيادة سرعة دوران المفاصل للحصول على الدقة المطلوبة.</p>
+<h2 id="أحتاج-مساعدة-لا-أستطيع-معرفة-كيفية-استخدام-هذا">أحتاج مساعدة، لا أستطيع معرفة كيفية استخدام هذا.</h2>
+<p>اقرأ التوثيق بعناية. إذا أردت مساعدة، سنحاسبك بالسعر بالساعة الذي يمكنك رؤيته في <a href="/ar/">/ar/</a> عند التمرير للأسفل، بحد أدنى ساعة واحدة مدفوعة مقدمًا. أرسل لنا رسالة إذا أردت مساعدة، لكن لا تطلب مساعدة مجانية.</p>
+<h2 id="هل-يمكنني-استخدام-هذا-تجاريًا">هل يمكنني استخدام هذا تجاريًا؟</h2>
+<p>نعم. إذا ربحت الملايين باستخدام هذه الذراع الروبوتية، وشعرت بالسوء حيال ذلك، أرسل لنا رسالة ويمكنك أن تدفع ما تراه مناسبًا أو استخدم هذا الرابط <a href="https://www.paypal.com/donate/?hosted_button_id=GW77FD5WVVAR8">https://www.paypal.com/donate/?hosted_button_id=GW77FD5WVVAR8.</a> تواصل معنا قبل الدفع إذا كنت تحتاج فاتورة. إذا لم ترد الدفع، فلا تدفع. لكن تأكد من مساعدة أشخاص آخرين محتاجين في المستقبل.</p>
+<h2 id="هل-يمكنني-استخدام-هذا-أكاديميًا">هل يمكنني استخدام هذا أكاديميًا؟</h2>
+<p>تأكد من وضع شيء في دراستك بأنك حصلت على مساعدتنا (الشكر والتقدير أمر لطيف). أرسل لنا بحثك النهائي وسننشره في مكان ما. إذا أردت، يمكنك التبرع عبر PayPal باستخدام هذا الرابط: <a href="https://www.paypal.com/donate/?hosted_button_id=GW77FD5WVVAR8">https://www.paypal.com/donate/?hosted_button_id=GW77FD5WVVAR8</a>.</p>
+<h2 id="الروبوت-يتصادم-مع-الكائنات-من-حوله-كيف-يمكنني-حل-هذا">الروبوت يتصادم مع الكائنات من حوله. كيف يمكنني حل هذا؟</h2>
+<p>الروبوت ليس لديه كشف التصادم لذلك لا يمكنك ذلك.</p>
+<h2 id="أحتاج-ميزة-جديدة">أحتاج ميزة جديدة</h2>
+<p>تواصل معنا للحصول على عرض سعر.</p>
+<h2 id="أريد-إزالة-شعار-noorjax-من-الذراع-الروبوتية">أريد إزالة شعار Noorjax من الذراع الروبوتية</h2>
+<p>لا يمكن فعل ذلك مجانًا. تواصل معنا للحصول على عرض سعر.</p>
+<h2 id="جودة-العرض-ثلاثي-الأبعاد-يمكن-أن-تكون-أفضل">جودة العرض ثلاثي الأبعاد يمكن أن تكون أفضل</h2>
+<p>يمكننا في الواقع إعطاؤك إصدارًا بجودة رسومات عالية جدًا، لكن هذا يأتي بتكلفة. يستغرق AnyLogic وقتًا لعرض الكائن ثلاثي الأبعاد، لذلك النسخة العامة بجودة أقل قليلاً لتجنب شكوى الناس من ذلك. نعتقد أنه من غير المرجح أن يشتكي الناس من جودة غير مثالية مقابل وقت العرض.</p>
+<h2 id="عندما-أسحب-وأسقط-كائن-الروبوت-لا-تظهر-صور-الروبوت-بدلاً-من-ذلك-أرى-أشكالاً-غريبة">عندما أسحب وأسقط كائن الروبوت، لا تظهر صور الروبوت، بدلاً من ذلك أرى أشكالاً غريبة</h2>
+<p>يجب استخدام AnyLogic 8.9.4 أو الإصدارات الأحدث لكي تعمل هذه المكتبة. إذا حدث هذا، فهذا يعني أنك تستخدم إصدارًا أقدم من AnyLogic.</p>
+<h2 id="لا-تعجبني-ذراعكم-الروبوتية">لا تعجبني ذراعكم الروبوتية</h2>
+<p>اصنع واحدة بنفسك إذن… ليس الأمر بتلك الصعوبة :)</p> </div> <!-- Tags --> <div class="mt-12 pt-8 border-t border-border-default"> <div class="flex flex-wrap gap-2"> <span class="text-xs px-3 py-1 rounded-full border border-border-default text-text-tertiary">
+#Simulations </span> </div> </div> </div> </article>  </main> <footer class="dark-section border-t border-bg-dark-secondary mt-auto"> <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16"> <div class="grid grid-cols-1 md:grid-cols-3 gap-12"> <!-- Brand --> <div> <img src="/_astro/Noorjax-01.Dky3hJly_1hWLOT.webp" alt="Noorjax Consulting" loading="lazy" decoding="async" width="160" height="27" class="h-10 w-auto brightness-0 invert mb-3"> <p class="mt-3 text-sm text-text-on-dark-muted max-w-xs"> استشارات المحاكاة </p> <div class="mt-5 flex gap-4"> <a href="https://www.linkedin.com/company/noorjax/" target="_blank" rel="noopener noreferrer" class="text-text-on-dark-muted hover:text-brand-teal transition-colors" aria-label="LinkedIn"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"> <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path> </svg> </a> <a href="https://www.youtube.com/@noorjaxconsulting" target="_blank" rel="noopener noreferrer" class="text-text-on-dark-muted hover:text-red-500 transition-colors" aria-label="YouTube"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"> <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path> </svg> </a> <a href="#" class="text-text-on-dark-muted hover:text-brand-teal transition-colors footer-email-icon" aria-label="Email"> <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path> </svg> </a> </div> </div> <!-- Navigation --> <div> <h4 class="text-sm font-semibold text-text-on-dark uppercase tracking-wider mb-4"> التنقل </h4> <ul class="space-y-2.5"> <li> <a href="/ar/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> الرئيسية </a> </li><li> <a href="/ar/simulation-services/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> ديمو </a> </li><li> <a href="/ar/business-cases/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> المشاريع </a> </li><li> <a href="/ar/products/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> المنتجات </a> </li><li> <a href="/ar/courses/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> الدورات </a> </li><li> <a href="/ar/about-us/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> من نحن </a> </li><li> <a href="/ar/blog/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> المدونة </a> </li><li> <a href="/ar/contact/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> اتصل بنا </a> </li> </ul> </div> <!-- Contact --> <div> <h4 class="text-sm font-semibold text-text-on-dark uppercase tracking-wider mb-4"> اتصل بنا </h4> <ul class="space-y-2.5 text-sm text-text-on-dark-muted"> <li> <a href="#" class="hover:text-white transition-colors footer-email-link"></a> </li> <li> <a href="https://calendly.com/noorjax" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors"> احجز اجتماعاً </a> </li> <li class="text-text-on-dark-muted">Ahtri 12-512, 10151 Tallinn, Estonia</li> </ul> </div> </div> <!-- Bottom bar --> <div class="mt-12 pt-8 border-t border-bg-dark-secondary flex flex-col sm:flex-row items-center justify-between gap-4"> <p class="text-xs text-text-on-dark-muted">
+&copy; 2026 Noorjax Consulting. جميع الحقوق محفوظة. </p> <p class="text-xs text-text-on-dark-muted"> Ahtri 12-512, 10151 Tallinn, Estonia </p> </div> </div> </footer> <script>
+  (function(){
+    var u='info',d='noorjax.com',e=u+'@'+d,m='mailto:'+e;
+    var icon=document.querySelector('.footer-email-icon');
+    if(icon) icon.href=m;
+    var link=document.querySelector('.footer-email-link');
+    if(link){link.href=m;link.textContent=e;}
+  })();
+</script> <style>
+    #nav-loader{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#0099b5,#6aab25);z-index:9999;width:0;opacity:0;pointer-events:none;transition:none;}
+    #nav-loader.loading{opacity:1;width:80%;transition:width 5s cubic-bezier(0.1,0.3,0.2,1);}
+    #nav-loader.done{width:100%;transition:width 0.15s ease-out;}
+    #nav-loader.fade{opacity:0;transition:opacity 0.3s ease;}
+  </style> <div id="nav-loader"></div> <script>
+    (function(){
+      function startLoader(){
+        var bar = document.getElementById('nav-loader');
+        if(!bar) return;
+        bar.className = '';
+        void bar.offsetWidth;
+        bar.classList.add('loading');
+      }
+      function endLoader(){
+        var bar = document.getElementById('nav-loader');
+        if(!bar) return;
+        bar.classList.remove('loading');
+        bar.classList.add('done');
+        setTimeout(function(){ bar.classList.add('fade'); }, 150);
+        setTimeout(function(){ bar.className = ''; }, 500);
+      }
+
+      // Listen for internal link clicks
+      document.addEventListener('click', function(e){
+        var link = e.target.closest('a');
+        if(!link) return;
+        var href = link.getAttribute('href');
+        if(!href) return;
+        if(link.target === '_blank') return;
+        if(href.startsWith('http') && href.indexOf(location.hostname) === -1) return;
+        if(href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:')) return;
+        startLoader();
+      });
+
+      // End loader when page finishes loading
+      document.addEventListener('astro:after-swap', endLoader);
+      window.addEventListener('load', endLoader);
+      document.addEventListener('astro:page-load', endLoader);
+    })();
+  </script>  </body></html>

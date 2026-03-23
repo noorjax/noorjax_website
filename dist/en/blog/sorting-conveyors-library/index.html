@@ -1,0 +1,588 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Astro v6.0.8"><!-- SEO --><title>Sorting Conveyors Library | Noorjax Consulting</title><meta name="description" content="This tool allows the AnyLogic user to construct a set of sorting conveyor networks automatically by using datapoints defined in an Excel configuration file. This approach offers flexibility, allowing "><link rel="canonical" href="https://noorjax.com/en/blog/sorting-conveyors-library/"><!-- i18n alternates (ar hidden for now) --><link rel="alternate" hreflang="en" href="https://noorjax.com/en/blog/sorting-conveyors-library/"><link rel="alternate" hreflang="es" href="https://noorjax.com/es/blog/sorting-conveyors-library/"><link rel="alternate" hreflang="x-default" href="https://noorjax.com/en/blog/sorting-conveyors-library/"><!-- Open Graph --><meta property="og:type" content="website"><meta property="og:title" content="Sorting Conveyors Library | Noorjax Consulting"><meta property="og:description" content="This tool allows the AnyLogic user to construct a set of sorting conveyor networks automatically by using datapoints defined in an Excel configuration file. This approach offers flexibility, allowing "><meta property="og:image" content="https://noorjax.com/images/og-default.jpg"><meta property="og:url" content="https://noorjax.com/en/blog/sorting-conveyors-library/"><meta property="og:site_name" content="Noorjax Consulting"><meta property="og:locale" content="en_US"><!-- Twitter --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Sorting Conveyors Library | Noorjax Consulting"><meta name="twitter:description" content="This tool allows the AnyLogic user to construct a set of sorting conveyor networks automatically by using datapoints defined in an Excel configuration file. This approach offers flexibility, allowing "><meta name="twitter:image" content="https://noorjax.com/images/og-default.jpg"><!-- Favicon --><link rel="icon" type="image/png" href="/images/logo/Noorjax-icon-png1.png"><!-- Fonts: Self-hosted Inter --><link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/inter-latin.woff2"><!-- Client-side routing (View Transitions) --><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.DmQZLfuR.js"></script><!-- JSON-LD Structured Data --><script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Noorjax Consulting","description":"This tool allows the AnyLogic user to construct a set of sorting conveyor networks automatically by using datapoints defined in an Excel configuration file. This approach offers flexibility, allowing ","url":"https://noorjax.com","email":"info@noorjax.com","address":{"@type":"PostalAddress","streetAddress":"Ahtri 12-512","addressLocality":"Tallinn","postalCode":"10151","addressCountry":"EE"},"areaServed":"Worldwide","serviceType":["Simulation Consulting","AnyLogic Simulation","Manufacturing Simulation","System Dynamics Consulting","Vensim Consulting","Agent-Based Modeling","Discrete Event Simulation","Policy Advisory","Supply Chain Simulation","AnyLogic Training"],"knowsAbout":["AnyLogic","Vensim","System Dynamics","Discrete Event Simulation","Agent-Based Modeling","Monte Carlo Simulation","Optimization","Artificial Intelligence"],"sameAs":["https://www.linkedin.com/company/noorjax/","https://www.youtube.com/@noorjaxconsulting"],"founder":{"@type":"Person","name":"Felipe Haro"},"foundingDate":"2017"}</script><link rel="stylesheet" href="/_astro/BaseLayout.Dhci6ilB.css"></head> <body class="min-h-screen flex flex-col">  <header class="fixed top-0 left-0 right-0 z-50 bg-bg-primary border-b border-border-default shadow-sm" id="site-header"> <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"> <nav class="flex items-center justify-between h-16 lg:h-18" aria-label="Main navigation"> <!-- Logo --> <a href="/en/" class="flex items-center shrink-0" aria-label="Noorjax Consulting"> <img src="/_astro/Noorjax-01.Dky3hJly_1s27Mm.webp" alt="Noorjax Consulting" loading="eager" decoding="async" fetchpriority="high" width="384" height="64" class="h-10 lg:h-12 w-auto"> </a> <!-- Desktop Navigation --> <div class="hidden lg:flex items-center gap-6"> <a href="/en/" class="text-sm font-medium transition-colors text-text-secondary hover:text-text-primary"> Home </a><a href="/en/simulation-services/" class="text-sm font-medium transition-colors text-text-secondary hover:text-text-primary"> Demo </a><a href="/en/business-cases/" class="text-sm font-medium transition-colors text-text-secondary hover:text-text-primary"> Business Cases </a><a href="/en/products/" class="text-sm font-medium transition-colors text-text-secondary hover:text-text-primary"> Products </a><a href="/en/courses/" class="text-sm font-medium transition-colors text-text-secondary hover:text-text-primary"> Courses </a><a href="/en/about-us/" class="text-sm font-medium transition-colors text-text-secondary hover:text-text-primary"> About </a><a href="/en/blog/" class="text-sm font-medium transition-colors text-brand-teal font-semibold"> Blog </a><a href="/en/contact/" class="btn-primary text-xs px-4 py-2"> Contact </a> <!-- Social icons --> <div class="flex items-center gap-3 ml-2 pl-4 border-l border-border-default"> <a href="https://www.linkedin.com/company/noorjax/" target="_blank" rel="noopener noreferrer" class="text-text-tertiary hover:text-brand-teal transition-colors" aria-label="LinkedIn"> <svg class="w-4.5 h-4.5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg> </a> <a href="https://www.youtube.com/@noorjaxconsulting" target="_blank" rel="noopener noreferrer" class="text-text-tertiary hover:text-red-600 transition-colors" aria-label="YouTube"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg> </a> </div> <!-- Language Dropdown --> <div class="relative" id="lang-dropdown-desktop"> <button class="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-border-default text-sm text-text-secondary hover:text-text-primary hover:border-border-hover transition-all cursor-pointer" id="lang-btn-desktop" aria-expanded="false" aria-haspopup="true"> <span class="leading-none rounded-sm overflow-hidden"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="24" height="12"><clipPath id="s"><path d="M0,0 v30 h60 v-30 z"/></clipPath><clipPath id="t"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath><g clip-path="url(#s)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg></span> <svg class="w-3.5 h-3.5 transition-transform" id="lang-chevron-desktop" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg> </button> <div class="absolute right-0 top-full mt-1.5 w-auto bg-bg-primary border border-border-default rounded-xl shadow-lg overflow-hidden hidden z-50" id="lang-menu-desktop"> <a href="/es/blog/sorting-conveyors-library/" class="flex items-center gap-3 px-4 py-2.5 text-sm text-text-secondary hover:bg-brand-teal/5 hover:text-brand-teal transition-colors"> <span class="leading-none rounded-sm overflow-hidden"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 500" width="24" height="16"><rect width="750" height="500" fill="#c60b1e"/><rect width="750" height="250" y="125" fill="#ffc400"/></svg></span> </a> </div> </div> </div> <!-- Mobile Menu Toggle --> <button class="lg:hidden p-2 text-text-secondary hover:text-text-primary" id="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false"> <svg class="w-6 h-6" id="menu-icon-open" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg> <svg class="w-6 h-6 hidden" id="menu-icon-close" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg> </button> </nav> </div> <!-- Mobile Menu --> <div class="lg:hidden hidden" id="mobile-menu"> <div class="glass mx-4 mt-2 rounded-xl p-6 space-y-4 shadow-lg"> <a href="/en/" class="block text-base font-medium py-2 transition-colors text-text-secondary hover:text-text-primary"> Home </a><a href="/en/simulation-services/" class="block text-base font-medium py-2 transition-colors text-text-secondary hover:text-text-primary"> Demo </a><a href="/en/business-cases/" class="block text-base font-medium py-2 transition-colors text-text-secondary hover:text-text-primary"> Business Cases </a><a href="/en/products/" class="block text-base font-medium py-2 transition-colors text-text-secondary hover:text-text-primary"> Products </a><a href="/en/courses/" class="block text-base font-medium py-2 transition-colors text-text-secondary hover:text-text-primary"> Courses </a><a href="/en/about-us/" class="block text-base font-medium py-2 transition-colors text-text-secondary hover:text-text-primary"> About </a><a href="/en/blog/" class="block text-base font-medium py-2 transition-colors text-brand-teal"> Blog </a><a href="/en/contact/" class="block text-base font-medium py-2 transition-colors text-text-secondary hover:text-text-primary"> Contact </a> <div class="pt-4 border-t border-border-default"> <div class="flex items-center gap-4 mb-4"> <a href="https://www.linkedin.com/company/noorjax/" target="_blank" rel="noopener noreferrer" class="text-text-tertiary hover:text-brand-teal" aria-label="LinkedIn"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg> </a> <a href="https://www.youtube.com/@noorjaxconsulting" target="_blank" rel="noopener noreferrer" class="text-text-tertiary hover:text-red-600" aria-label="YouTube"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg> </a> </div> <!-- Mobile Language Options --> <div class="flex flex-col gap-1"> <a href="/es/blog/sorting-conveyors-library/" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-text-secondary hover:bg-brand-teal/5 hover:text-brand-teal transition-colors"> <span class="leading-none rounded-sm overflow-hidden"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 500" width="24" height="16"><rect width="750" height="500" fill="#c60b1e"/><rect width="750" height="250" y="125" fill="#ffc400"/></svg></span> </a> </div> </div> </div> </div> </header> <script>
+  function initHeader() {
+    // Mobile menu
+    var toggle = document.getElementById('mobile-menu-toggle');
+    var menu = document.getElementById('mobile-menu');
+    if (toggle && menu) {
+      toggle.onclick = function() {
+        var isOpen = !menu.classList.contains('hidden');
+        menu.classList.toggle('hidden');
+        document.getElementById('menu-icon-open').classList.toggle('hidden');
+        document.getElementById('menu-icon-close').classList.toggle('hidden');
+        toggle.setAttribute('aria-expanded', String(!isOpen));
+      };
+      menu.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+          menu.classList.add('hidden');
+          document.getElementById('menu-icon-open').classList.remove('hidden');
+          document.getElementById('menu-icon-close').classList.add('hidden');
+        });
+      });
+    }
+
+    // Language dropdown
+    var btn = document.getElementById('lang-btn-desktop');
+    var langMenu = document.getElementById('lang-menu-desktop');
+    if (btn && langMenu) {
+      btn.onclick = function(e) {
+        e.stopPropagation();
+        var isOpen = !langMenu.classList.contains('hidden');
+        langMenu.classList.toggle('hidden');
+        var chev = document.getElementById('lang-chevron-desktop');
+        if (chev) chev.classList.toggle('rotate-180');
+        btn.setAttribute('aria-expanded', String(!isOpen));
+      };
+      document.addEventListener('click', function() {
+        langMenu.classList.add('hidden');
+        var chev = document.getElementById('lang-chevron-desktop');
+        if (chev) chev.classList.remove('rotate-180');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    }
+  }
+
+  initHeader();
+  document.addEventListener('astro:after-swap', initHeader);
+</script> <main class="flex-1 pt-18 lg:pt-20">  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Sorting Conveyors Library","datePublished":"2024-06-28T00:00:00.000Z","author":{"@type":"Person","name":"Felipe Haro"},"publisher":{"@type":"Organization","name":"Noorjax Consulting","url":"https://noorjax.com"},"description":"This tool allows the AnyLogic user to construct a set of sorting conveyor networks automatically by using datapoints defined in an Excel configuration file. This approach offers flexibility, allowing "}</script> <article class="py-(--spacing-section)"> <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8"> <!-- Back link --> <a href="/en/blog/" class="inline-flex items-center gap-2 text-sm text-text-tertiary hover:text-brand-accent mb-8 transition-colors"> <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18"></path> </svg>
+Back to Blog
+</a> <!-- Header --> <header class="mb-10"> <div class="flex flex-wrap gap-2 mb-4"> <span class="text-xs font-medium px-2.5 py-1 rounded-full bg-brand-secondary/10 text-brand-secondary"> Noorjax Libraries </span> </div> <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-4"> Sorting Conveyors Library </h1> <time class="text-text-tertiary" datetime="2024-06-28T00:00:00.000Z"> June 28, 2024 </time> </header> <!-- Content --> <div class="prose prose-lg max-w-none
+        prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-text-primary
+        prose-p:text-text-secondary
+        prose-a:text-brand-teal prose-a:no-underline hover:prose-a:underline
+        prose-img:rounded-xl prose-img:border prose-img:border-border-default prose-img:mx-auto
+        prose-code:text-brand-secondary prose-code:bg-bg-secondary prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm
+        prose-pre:bg-bg-secondary prose-pre:border prose-pre:border-border-default prose-pre:rounded-xl
+        prose-blockquote:border-brand-teal prose-blockquote:text-text-secondary prose-blockquote:not-italic
+        prose-strong:text-text-primary
+        prose-li:text-text-secondary
+        prose-hr:border-border-default
+      "> <p>This tool allows the AnyLogic user to construct a set of sorting conveyor networks automatically by using datapoints defined in an Excel configuration file. This approach offers flexibility, allowing for effortless modifications and additions of various components such and loop conveyors, transfer tables, spurs, and more. Additionally, this tool allows you to connect through a TCP/IP protocol with any external tool to read the data associated to the current position of the agents in the conveyor network, and send information back to this tool for re-routing and re-defining priorities.</p>
+<p>Check this library in action in the following link: <a href="https://cloud.anylogic.com/model/34810d29-661b-4d2c-95dd-46ecd95c221b">View on AnyLogic Cloud</a></p>
+<p>You can also check the video demo here:
+<a href="https://youtu.be/fQwLOUNW2s4">Watch video demo on YouTube</a></p>
+<h1 id="how-to-download">How to Download</h1>
+<p>You can get the free version with limitations here, along with all the important files you will need:</p>
+<p><a href="https://github.com/noorjax/sorting_conveyors">https://github.com/noorjax/sorting_conveyors</a></p>
+<p>You will need a license to get full functionality. The free version is limited to a maximum of 1 hour of simulation time.</p>
+<h1 id="how-to-get-a-license">How to get a license</h1>
+<p>To get a license, follow the instructions in the following link:</p>
+<p><a href="/en/blog/getting-a-license-for-a-library/">/en/blog/getting-a-license-for-a-library/</a></p>
+<p>The price for this library:</p>
+<ul>
+<li>
+<p>Commercial use - 1 year: €3,000</p>
+</li>
+<li>
+<p>Support for implementation: €1,000</p>
+</li>
+</ul>
+<p>Our prices can change at any time without notice</p>
+<h1 id="documentation">Documentation</h1>
+<p>This library has been tested with AnyLogic 8.9.1. Previous versions will not work.</p>
+<p>First thing you want to do with this library, is to build your conveyor networks and to do that, you will define the physical location of conveyors, spurs and transfer tables in Excel.</p>
+<h2 id="excel-configuration-file">Excel Configuration File</h2>
+<p>The Excel configuration file contains many tabs. We will discuss what each one of these tabs do.</p>
+<h3 id="license">License</h3>
+<p>On this tab you will write down the token that you will receive when you get the paid version of this tool. If you don’t have a token, don’t worry you can still use the library in its limited version.</p>
+<h3 id="general">General</h3>
+<ul>
+<li>
+<p><strong>length unit</strong>: can be in Meter or Feet. This will be the unit of length for all parameters that have “in length units” suffix. This will rule all distances, speeds and accelerations.</p>
+</li>
+<li>
+<p><strong>python path (optional)</strong>: Here you will add your python program location path on your computer, which will be used to show a preview of the conveyor network. If you have this enabled correctly, you will be able to click the “show 3D plot” button on the Conveyors config tab to see a preview of the network you are building in Excel before you use it in AnyLogic. If you are new with python, we would recommend you download Anaconda Navigator (you can find online) and use the python path from anaconda.</p>
+</li>
+</ul>
+<h4 id="pre-visualization-python-file-for-the-conveyor-network-show-3d-button">Pre-visualization python file for the conveyor network (Show 3D Button)</h4>
+<p>To know how the conveyor network is looking before running it in AnyLogic, you can press the button “show 3D plot” in the Conveyors config sheet in the configuration excel file. But before pressing the button you must configure some things:</p>
+<ul>
+<li>
+<p>The preVisualizationScript.py is in the same folder as the configuration excel file.</p>
+</li>
+<li>
+<p>To successfully run the “preVisualizationScript.py”, it is crucial to install the necessary Python libraries. These libraries enable various functionalities such as data manipulation, plotting, 3D visualization, regular expressions, numerical operations, and Excel integration. Below is a list of required libraries:</p>
+</li>
+<li>
+<p>Pandas</p>
+</li>
+<li>
+<p>Matplotlib</p>
+</li>
+<li>
+<p>mplot3d</p>
+</li>
+<li>
+<p>re (Regular Expressions)</p>
+</li>
+<li>
+<p>numpy</p>
+</li>
+<li>
+<p>xlwings</p>
+</li>
+</ul>
+<p>To install all the required libraries, you can use the following pip commands:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>pip install pandas matplotlib numpy xlwings</span></span></code></pre>
+<p>The re module is part of the Python standard library, so no additional installation is required for it.</p>
+<h3 id="conveyors-config">Conveyors config:</h3>
+<p>On this sheet the parameters of the conveyor object are defined. Additionally you have a button called “show 3D plot” that uses python if you have it correctly configured to show you a preview on how the conveyor networks look so far as you progress with adding them.</p>
+<ul>
+<li>
+<p><strong>A: id</strong>: unique identifier of the conveyor.</p>
+</li>
+<li>
+<p><strong>B: Network id:</strong> is the unique identifier of the network to which this conveyor belongs.</p>
+</li>
+<li>
+<p><strong>C: Points in length units (see image below)</strong>: all the points of the conveyor, where the first one is the origin, and the last one is the end of the conveyor. The coordinates can be either in meter or feet, as defined in General sheet.
+Use this syntaxis: <code>{{x0,y0,z0},{x1,y1,z1},{x2,y2,z2},…,{xn,yn,zn}}</code></p>
+</li>
+<li>
+<p>Note that the order in which the points are written will define the movement direction of the conveyor and that this direction cannot be modified during run time.</p>
+</li>
+<li>
+<p>If the points define a loop conveyor, make sure to use the same start and end points.</p>
+</li>
+<li>
+<p><strong>D: Type</strong>: three possible options: Cell, Belt &#x26; Roller.</p>
+</li>
+<li>
+<p><strong>E: Gap in length units (see image below)</strong>: size of the cell where the agent will be if type “Cell” is chosen. Length Units are defined in the General sheet.</p>
+</li>
+<li>
+<p><strong>F: Cell size in length units (see image below):</strong> size of the cell where the agent will be if type “Cell” is chosen. Length Units are defined in the General sheet. If you are using a loop with cells, make sure the loop and the size of the cells and cell gaps (columns E and F) make sense, meaning that they fit with the length of the conveyor. If they don’t, our algorithm will calculate the gap size rounding to the nearest value of column E in which the sizes fit correctly. When you run the model, you will get a notification in the console with the gap size used.</p>
+</li>
+<li>
+<p><strong>G: Width in length units (see image below)</strong>: width of the conveyor. Length Units are defined in the General sheet.</p>
+</li>
+<li>
+<p><strong>H: initial speed in length units per sec</strong>: initial speed of the conveyor in meters/second or feet/second.</p>
+</li>
+<li>
+<p><strong>I: max speed in length units per sec</strong>: maximum speed of the conveyor in meters/second or feet per second.</p>
+</li>
+<li>
+<p><strong>J: acceleration in length units per sec2</strong>: acceleration of the conveyor in meters/second^2 or feet/second^2.</p>
+</li>
+<li>
+<p><strong>K: Color:</strong> color of the conveyor. Helps with the verification and validation of the model.</p>
+</li>
+</ul>
+<p><img src="/images/blog/sorting-conveyors-library/Slide2.png" alt=""></p>
+<h3 id="spurs-config">Spurs config</h3>
+<p>This sheet defines the connection that exist between different conveyors using spurs.</p>
+<ul>
+<li>
+<p><strong>A: Id</strong>: unique identifier of the spur.</p>
+</li>
+<li>
+<p><strong>B. Network id</strong>: is the unique identifier of the network to which this spur belongs.</p>
+</li>
+<li>
+<p><strong>C. branch conveyor (see image below)</strong>: the id of the conveyor that is directly connected to this spur. The id of the conveyor is the one present in column A of the conveyors config sheet.</p>
+</li>
+<li>
+<p><strong>D. main conveyor (see image below)</strong>: the id of conveyor where the spur is attached. The id of the conveyor is the one present in column A of the conveyors config sheet.</p>
+</li>
+<li>
+<p><strong>E. Color:</strong> the color of the spur, helps in the verification and validation of the model.</p>
+</li>
+</ul>
+<p><img src="/images/blog/sorting-conveyors-library/Slide3.png" alt=""></p>
+<h3 id="transfertables-config">TransferTables config</h3>
+<ul>
+<li>
+<p><strong>A. Id:</strong> transfer table unique identifier.</p>
+</li>
+<li>
+<p><strong>B. Network id</strong>: is the unique identifier of the network to which this transfer table belongs.</p>
+</li>
+<li>
+<p><strong>C. Paths</strong>: a map where the connection of the conveyors is defined. At least two conveyors are needed and a maximum of four can be defined. The keys of the map are the id of the conveyors, and the value is the point type where these conveyors are connected to the transfer table. Example: <code>{conveyor1:end,conveyor2:end,conveyor3:begin}</code>, this example defines a transfer table that has 3 connected conveyors, that starts at the end of the conveyor1 and conveyor2, and is connected to the begin of the conveyor3 (see image below)”</p>
+</li>
+<li>
+<p><strong>D. switching delay sec:</strong> The time required to switch to another conveyor (in seconds).</p>
+</li>
+<li>
+<p><strong>E. fill color:</strong> fill color of the shape.</p>
+</li>
+<li>
+<p><strong>F. line color:</strong> line color of the shape.</p>
+</li>
+<li>
+<p><strong>G. line width pt</strong>: line width of the square (this is in pixels).</p>
+</li>
+</ul>
+<p><img src="/images/blog/sorting-conveyors-library/Picture1-1.png" alt=""> <img src="/images/blog/sorting-conveyors-library/kkk.png" alt=""></p>
+<h3 id="sensors-config">Sensors Config</h3>
+<p>The aim of this sheet is to define positions on conveyors that will be used as sensors in intersections, in order to create the release sequence of the agents based on their priority. Sensors are used in sorters in order to reroute and prioritize items and this is the place in which the sensors are defined. (For more details about sensors and how they are used in the simulation model, refer to the paragraph “Convergent Conveyors”)</p>
+<ul>
+<li>
+<p><strong>a. Id</strong>: unique identifier of the sensor.</p>
+</li>
+<li>
+<p><strong>b. Network id</strong>: is the unique identifier of the network to which this sensor belongs</p>
+</li>
+<li>
+<p><strong>c. Conveyor</strong>: the conveyor where the position will be located.</p>
+</li>
+<li>
+<p><strong>d. offset in length units</strong>: This distance is from the first point of the conveyor.</p>
+</li>
+<li>
+<p><strong>e. Type of position</strong>: only two possible options: enter and exit. This defines whether the sensor is used at the exit of a conveyor or at the entrance. Only one entrance and several exits can be used for an intersection.</p>
+</li>
+<li>
+<p><strong>f. Intersection id</strong>: unique identifier of the intersection.</p>
+</li>
+<li>
+<p><strong>g. Type of union:</strong> three options possible here:</p>
+<ul>
+<li>
+<p><strong>i. gap</strong>: if the type of position is exit, then this means that there is a space between the conveyor of this sensor and the enter conveyor.</p>
+</li>
+<li>
+<p><strong>ii. spur</strong>: if the type of position is exit, then this means that the conveyor of this sensor is connected to the enter conveyor with a spur. Therefore, a spur must be created in Spurs config sheet.</p>
+</li>
+<li>
+<p><strong>iii. none</strong>: if the type of position is “enter”, then this is the only viable option.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="/images/blog/sorting-conveyors-library/Slide9.png" alt=""></p>
+<h3 id="routes">Routes</h3>
+<p>The routes are all the expected sequence of conveyors that the materials (agents) may follow</p>
+<ul>
+<li>
+<p><strong>a. Id</strong>: unique identifier of the sequence.</p>
+</li>
+<li>
+<p><strong>b. Sequence:</strong> list of conveyors that the agent can go through. Use this syntax: <code>{c1,c3,c5}</code> specifying the conveyors ids and make sure to not add any spaces between the ids of the conveyors or next to the paratheses since this will cause an error.</p>
+</li>
+</ul>
+<p>Note: For all the ids described above that need to be indicated in the excel sheet, the names cannot contain any special character other than underscore ”_”. This is the only acceptable character that can be used as part of the id names.</p>
+<h2 id="specialconveyoritem">SpecialConveyorItem</h2>
+<p>In order to use all the features of this library, you will need to create your own agent that will move through the conveyors, but your agent will have to be an extension from the SpecialConveyorItem of this library, which is a Material Item type. For this you need to go to the advanced section of your agent type properties and do it there as is shown in the following image:</p>
+<p><img src="/images/blog/sorting-conveyors-library/Picture3-1.png" alt=""></p>
+<p>By extending from this special agent type, the agent has access to the following:</p>
+<ul>
+<li>
+<p><strong>set_id(String id)</strong>: defines the unique identifier of the agent in the case that you want to use HTTP features (next section).</p>
+</li>
+<li>
+<p><strong>priority</strong>: it is a double variable which represents the current priority of the agent, the higher the number the higher the priority.</p>
+</li>
+<li>
+<p><strong>setLength(double lengthInUnits, LengthUnits units)</strong>: by default the agent is 1 meter long, when you create the agent you can set a new length for the agent.</p>
+</li>
+<li>
+<p><strong>setWidth(double lengthInUnits, LengthUnits units)</strong>: by default the agent is 1 meter wide, when you create the agent you can set a new width for the agent.</p>
+</li>
+<li>
+<p><strong>setHeight(double lengthInUnits, LengthUnits units)</strong>: by default the agent is 1 meter high, when you create the agent you can set a new height for the agent.</p>
+</li>
+</ul>
+<p>Of course you have to create you own agent animation, otherwise you will see nothing when running the simulation.</p>
+<h2 id="conveyornetworksettings">ConveyorNetworkSettings</h2>
+<p>This agent stores information about the settings of the conveyor networks. It helps with connecting the model with servers in case of the need to use HTTP connections (next section).</p>
+<p>The parameters of this agent are the following:</p>
+<ul>
+<li>
+<p><strong>Use http connection:</strong> defines if the http connection will be used or not.</p>
+</li>
+<li>
+<p><strong>Host:</strong> This is the domain name or IP address of the server where the resource resides. It identifies the specific server that will handle the HTTP request. For example, in the URL <a href="http://www.example.com:8080/index.html">http://www.example.com:8080/index.html</a>, <a href="http://www.example.com">www.example.com</a> is the host.</p>
+</li>
+<li>
+<p><strong>Port</strong>: This is the number that specifies the communication endpoint on the host. The port determines how the data is transmitted to the server. For example, in the URL <a href="http://www.example.com:8080/index.html">http://www.example.com:8080/index.html</a>, 8080 is the port.</p>
+</li>
+<li>
+<p><strong>Print connection status</strong>: check as true if you want to see the status of the connection in the console.</p>
+</li>
+</ul>
+<h2 id="http-connection--json">HTTP connection &#x26; JSON</h2>
+<p>There are three functions that work as clients in a client-server relation: httpRequestAll, httpRequestCurrentSeq, httpRequestPriorities &#x26; httpRequestInject. These functions send a JSON file with the agents’ positions stored in materialPositions Collection and then the expected return depends on each specific function.</p>
+<p><strong>httpRequestCurrentSeq()</strong>:</p>
+<p>Returns information with the new sequence of the agents and changes the current target conveyor. For example: <code>{"Id": "0", "RouteId": "5", "Priority": 10}</code>, where Id means the agent unique identifier, RouteId is the next route for the agent and Priority is the new priority of the agent.</p>
+<p><strong>httpRequestPriorities()</strong>:</p>
+<p>Returns the new priorities for the selected agents. Therefore, the function changes the priority of the agents dynamically. For example: <code>{"Id": "100", "Priority": 25}</code>, sets the new priority of 25 for the agent with id “100”.</p>
+<p><strong>httpRequestInject(ConveyorNetworkLogic cnLogic, Object classInstance, String addPopulationMethodString, Object… agentArgs):</strong></p>
+<ul>
+<li>
+<p>Returns information related to the creation or injection of new agents in the conveyor network logic defined. For example, a JSON message from the server <code>{"Id": 2, "RouteId": "2", "Priority": 20}</code>, where Id is the unique identifier of the new agent to add to the conveyor network, RouteId is the route that this new agent will follow, and priority is the initial priority of the agent.</p>
+</li>
+<li>
+<p>The agents will be created based on the argument addPopulationMethodString which is the method that creates new agents in a population. For example, if you have a population called “pallets” due to an agent type Pallet, then the string method will be “add_pallets”. Consider that the agent Pallet must be an extension of the SpecialConveyorItem agent.</p>
+</li>
+<li>
+<p>If the addPopulationMethodString requires some initial arguments, you can define it on agentArgs argument with all the required parameters of the agent that you are initializing with the addPopulationMethodString. Consider that if no arguments are required, then the arguments related to agentArgs of the function can be omitted. Following the last example, if the agent Pallet has 2 parameters; SKU and Material, then you should add this values for those parameters delimited by commas (must be in the same order as if you were using the add_pallets() function).</p>
+</li>
+<li>
+<p>classInstance is the agent where the add population method exist, or in other words, where the population of the agents is. For example, if your pallets population is in main, and you are executing the http function directly from main, you should put <strong>this</strong> as classInstance.</p>
+</li>
+</ul>
+<p>For example and using the last examples, if the Conveyor Network Logic where the agents will be injected is named conveyorNetworkLogic, the function would look something like this:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="java"><code><span class="line"><span style="color:#B392F0">httpRequestInject</span><span style="color:#E1E4E8">(conveyorNetworkLogic, </span><span style="color:#79B8FF">this</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"add_pallets"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">123</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"wood"</span><span style="color:#E1E4E8">);</span></span></code></pre>
+<p>If the agent has no parameters or the new agent must be initialized with the default parameter values, then would look like this:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="java"><code><span class="line"><span style="color:#B392F0">httpRequestInject</span><span style="color:#E1E4E8">(conveyorNetworkLogic, </span><span style="color:#79B8FF">this</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"add_pallets"</span><span style="color:#E1E4E8">);</span></span></code></pre>
+<ul>
+<li>If addPopulationMethodString or classInstance is null, then the injected agent will be of type SpecialConveyorItem.</li>
+</ul>
+<p><strong>conveyorNetworkAnimation.httpRequestAll(ConveyorNetworkLogic cnLogic, Object classInstance, String addPopulationMethodString, Object… agentArgs):</strong></p>
+<p>Returns information from the three functions mentioned above. Therefore, the server’s response will be a map with the new sequences of certain agents, new priorities and the injection of others into the system. The response is a list that contains three lists of maps: newSeq, priority, and inject. The argument cnLogic, classInstance, addPopulationMethodString and agentArgs is used if a new injection is required (read the httpRequestInject function to understand this).</p>
+<h3 id="steps-to-make-this-work">Steps to make this work</h3>
+<p>To make this work, these are the necessary steps:</p>
+<ul>
+<li>
+<p>Be sure that the variable “id” of the agents is initialized. If not, initialize the agents id’s using id=String id on the agent. This is necessary in order to send the agent’s ids to the server.</p>
+</li>
+<li>
+<p>Run one of the functions depending on what you want to do:</p>
+<ul>
+<li>
+<p><code>conveyorNetworkAnimation.httpRequestCurrentSeq</code></p>
+</li>
+<li>
+<p><code>conveyorNetworkAnimation.httpRequestInject</code></p>
+</li>
+<li>
+<p><code>conveyorNetworkAnimation.httpRequestPriorities</code></p>
+</li>
+<li>
+<p><code>conveyorNetworkAnimation.httpRequestAll</code></p>
+</li>
+</ul>
+</li>
+</ul>
+<p>Notes:</p>
+<p>When using httpRequestCurrentSeq, make sure that the new sequence provided is feasible to be done considering the current conveyor where the agent currently is. If it is not, then you will have an error like this:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>lang.RuntimeException: root.conveyorNetworkAgent.convey:</span></span>
+<span class="line"><span>Path not found</span></span></code></pre>
+<h2 id="http-server">Http server</h2>
+<p>To use the http functions that are incorporated in the library, you will need to set up a server using http protocol. The library has the client integrated, so it is the labor of the user to create its own server.</p>
+<p>When using the http functions of this library, you will be sending data to the server, and it is the responsibility of the server to decide what to do with that data and return a JSON file to AnyLogic (client).</p>
+<p>Check the example python file included in the library that works as a server. (python file main v4.py in the helper folder)</p>
+<p>The following points will describe the second function of the server, which is related to the httpRequestCurrentSeq function in AnyLogic:</p>
+<p><code>@app.route("/update-current-conveyor", methods=["POST"])</code></p>
+<p>This line defines a route in a Flask application. Let’s break it down:</p>
+<ul>
+<li>
+<p><code>@app.route(...)</code>: This is a Flask decorator used to associate a specific URL with a Python function. In this case, the URL is “/update-current-conveyor”.</p>
+</li>
+<li>
+<p><code>methods=["POST"]</code>: This specifies that this route will only accept HTTP POST requests. POST requests are generally used to send data to the server.</p>
+</li>
+<li>
+<p><code>def update_currentConveyor()</code>: This line defines a function named update_currentConveyor. This function will be executed when a POST request is made to the “/update-current-conveyor” route.</p>
+</li>
+</ul>
+<p><code>data = request.get_json()</code></p>
+<ul>
+<li>
+<p><code>request</code>: This is a Flask object that contains all the data from the HTTP request made to the server.</p>
+</li>
+<li>
+<p><code>get_json()</code>: This method is used to get the JSON data sent in the POST request. In this context, data will hold the data that the client has sent to the server in JSON format.</p>
+</li>
+</ul>
+<p>Comments in the code:</p>
+<ul>
+<li><code># create a random route</code>: comment indicating that a route id should be defined here in order to return it later. It suggests that this part of the functionality is yet to be implemented by the user.</li>
+</ul>
+<p><code>response = [ ... ]</code></p>
+<p>Here, a list of dictionaries is defined, representing the response that will be sent back to the client. Each dictionary in the list contains:</p>
+<ul>
+<li>
+<p>“Id”: A string representing the unique identifier of the agent.</p>
+</li>
+<li>
+<p>“RouteId”: A string representing the identifier of a route.</p>
+</li>
+<li>
+<p>“Priority”: An integer indicating the priority of the route.</p>
+</li>
+</ul>
+<p><code>return jsonify(response), 201</code></p>
+<ul>
+<li>
+<p><code>jsonify(response)</code>: jsonify is a Flask function that converts the response list into an HTTP response in JSON format.</p>
+</li>
+<li>
+<p><code>201</code>: This is the HTTP status code indicating that the resource was successfully created. The 201-status code is commonly used for responses to POST requests that result in the creation of a resource.</p>
+</li>
+</ul>
+<p>Understanding this, the only part that must have the same format as it is described is the “response”. Since this is the JSON that AnyLogic will decode to do the requested changes.</p>
+<p>Note that the server can be coded in any programming language, but the response must be sent as a JSON.</p>
+<h2 id="circular-conveyor">Circular Conveyor</h2>
+<p>There are some rules in order to create a circular or a closed conveyor:</p>
+<ul>
+<li>
+<p>It is important that the first and final point of the conveyor are the same. Example: <code>{{10, 10, 1}, {10, 15, 1}, {46, 15, 1}, {46, 10, 1}, {10, 10, 1}}</code>.</p>
+</li>
+<li>
+<p>For the cases when you have a circular conveyor with 2 straight conveyors branching from it such that these 2 straight conveyors have opposite directions, it is necessary that the vertex of the circular conveyor (the starting and ending point) is chosen along the part of the circular conveyor that is between the 2 straight branching conveyors. Example: the red circle of conveyorLoop: begin &#x26; end.</p>
+</li>
+</ul>
+<p><img src="/images/blog/sorting-conveyors-library/Slide10.png" alt=""></p>
+<p>This way you can just define a sequence like this: <code>{conveyor1,conveyor2}</code> and the agent will go through the conveyor1, then will do half a loop on the circular conveyor (conveyorLoop) and will take the blue spur to end the sequence in the conveyor2. This is possible only because the starting and ending point of the loop conveyor is not in the route of the agent, otherwise, if the point is in the route, you will need to define the loop as part of the sequence.
+If you want the agent to go one full loop in the loop, you just need to define the sequence like this: <code>{conveyor1,conveyorLoop,conveyor2}</code>. The result would be conveyor1, then a full loop plus half a loop and then conveyor2.
+Note: if the last conveyor of a sequence in a route is a loop conveyor, then the agent will be in the loop forever, unless the httpRequestCurrentConv function is executed, changing the sequence of the agent.</p>
+<h2 id="convergent-conveyor">Convergent Conveyor</h2>
+<p>If two or more conveyors are merging in one single conveyor, the use of the priorities of the agents will be necessary to define the order or sequence of the agents. For that, the use of Sensors config sheet will be a must.
+The positions on conveyor are the sensors that will help to define the sequence of the agents. Here is a quick example of how to configure a convergent point of conveyors:</p>
+<p><img src="/images/blog/sorting-conveyors-library/Picture4-1.png" alt=""></p>
+<p><img src="/images/blog/sorting-conveyors-library/Slide11.png" alt=""></p>
+<ul>
+<li>
+<p>In the Sensors config sheet, the sensors of the conveyors are defined, there are two conveyors merging in one. The intersection id is to define which sensors are related.</p>
+</li>
+<li>
+<p>The two conveyors that join at the point are conveyor1 and conveyor2, that is why both have exit as type of position.</p>
+</li>
+<li>
+<p>To use the priorities it is necessary to split the main conveyor (in this case conveyor 2 and conveyor3) in two parts, since this is the way to use the sensors.</p>
+</li>
+<li>
+<p>conveyor2 has a gap as type of union since there is a space between conveyor2 and conveyor3. In reality, this gap or space doesn’t exist, in fact this is just a single straight conveyor. However, in the configuration and accordingly the model, it is necessary to divide the conveyor into 2 parts at the intersection so that we can add the sensors accordingly. When dividing the straight conveyor in to 2 conveyors, the coordinates of the end of the first conveyor should be the same as the coordinates of the beginning of the second conveyor. This way the 2 conveyors will function as if they are one.</p>
+</li>
+<li>
+<p>In contrast, conveyor1 has a direct connection to the conveyor3 with a (blue) spur.</p>
+</li>
+<li>
+<p>In the example image, now that the purple agent with priority 6 went through the “conveyor1 exit” sensor of the conveyor1, the two red agents on conveyor2 must wait at the end of the conveyor, since the first agent of this conveyor has lower priority (5). After the first agent with priority 6 goes though the “conveyor3 enter” sensor in conveyor3, a signal will be sent to allow the agents on the conveyor2 to start moving, but note that the red agents will only move forward if the second purple agent with priority 6 hasn’t reached the “conveyor1 exit” sensor in conveyor1 yet.</p>
+</li>
+</ul>
+<p>Note that the offsets of the sensors must be consistent with the layout, here are a few things to consider:</p>
+<ul>
+<li>
+<p>An enter sensor cannot have an offset equal to zero, since there will be no space to detect the new incoming agents, and the priorities in the intersection will not work.</p>
+</li>
+<li>
+<p>An enter sensor cannot be in the same line of the spur which provides agents from the branch conveyor. The sensor must be after the shape of the spur (see the following image)</p>
+</li>
+</ul>
+<p><img src="/images/blog/sorting-conveyors-library/Picture5-1.png" alt=""></p>
+<ul>
+<li>The offset of the sensors cannot be greater than the total length of the conveyor.</li>
+</ul>
+<h1 id="how-to-use-the-model">How to use the model</h1>
+<ul>
+<li>
+<p>First download the library (see the top of this documentation) along with the lib folder and save it somewhere safe.</p>
+</li>
+<li>
+<p>Inside Anylogic, add the Sorting Conveyors library to your palette using the + button on the palette tab, and find the sortingConveyors.jar file you downloaded… Always keep that .jar file in the same location, or you will run into issues.</p>
+</li>
+</ul>
+<p><img src="/images/blog/sorting-conveyors-library/Monosnap-Instructions-Word-2023-11-16-08.43.08.png" alt=""></p>
+<p>Now when you create a model or if you want to use an existing model with this library:</p>
+<ul>
+<li>
+<p>From the helper folder, place configMacroV excel file in your model folder (DO NOT change the name since this is the name used in the library. Also do not change the structure of the excel, or the tabs or the name of the tabs)</p>
+</li>
+<li>
+<p>If you have python installed, add preVisualizationScript.py from the helper folder to your model folder. This will be used by the Excel File as a macro to show a 3D plot of the conveyor system.</p>
+</li>
+<li>
+<p>Drag and drop the ConveyorNetworkSettings in your model. Configure the parameters as you need.</p>
+</li>
+<li>
+<p>Drag and drop the ConveyorNetworkAnimation in your model. Select the conveyorNetworkSettings agent.</p>
+</li>
+</ul>
+<p><img src="/images/blog/sorting-conveyors-library/Picture3.png" alt=""></p>
+<ul>
+<li>Drag and drop the ConveyorNetworkLogic in your model and connect it to others logic blocks. Can be multiple blocks of this type in the model.</li>
+</ul>
+<p><img src="/images/blog/sorting-conveyors-library/Picture4.png" alt=""></p>
+<ul>
+<li>Configure the parameters of the conveyorNetworkLogic agent, selecting the conveyor network animation.</li>
+</ul>
+<p>Remember two important things:</p>
+<ul>
+<li>
+<p>The agent that uses the conveyor network logic MUST extend from SpecialConveyorItem as explained previously.</p>
+</li>
+<li>
+<p>Before the agent enters the block, this function must be used:</p>
+</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="java"><code><span class="line"><span style="color:#E1E4E8">conveyorNetworkAnimation.</span><span style="color:#B392F0">updateCurrentSequence</span><span style="color:#E1E4E8">(SpecialConveyorItem agent, String sequenceId, </span><span style="color:#F97583">double</span><span style="color:#E1E4E8"> priority);</span></span></code></pre>
+<p>This is to initialize the essential parameters of the agent to be routed in the conveyor network. For instance if a source is connected to the conveyor network logic block, you can execute that code on the “on at exit” action.</p>
+<ul>
+<li>Run the model and enjoy.</li>
+</ul>
+<h3 id="notesrecommendations">Notes/recommendations</h3>
+<ul>
+<li>
+<p>Remember to use points for decimal numbers, commas are not allowed for these numbers.</p>
+</li>
+<li>
+<p>For unions, such as spurs or transfer tables, it is necessary to leave space between the involved conveyors. This is to provide the physical space needed to create the lines representing the spurs and transfer tables. In the following image three conveyors are connected to a transfer table, and the connecting points are not positioned in the same coordinates since the space between them is needed, since in this way the shape of the conveyor can be created.</p>
+</li>
+</ul>
+<p><img src="/images/blog/sorting-conveyors-library/Picture7-1.png" alt=""></p>
+<ul>
+<li>Additionally, for the spurs, the connection point of the branch conveyor must have enough space with respect to the main conveyor, considering the width of the main conveyor for this. We recommend positioning the connecting point of the branch conveyor at least half the width of the main conveyor away from the main conveyor. Check the following image.</li>
+</ul>
+<p><img src="/images/blog/sorting-conveyors-library/Picture8-1.png" alt=""></p>
+<ul>
+<li>For the spurs, the connecting point of the branch conveyor must be pointing to any segment of the main conveyor that is between the first and last point of the main conveyor but cannot point right to the first or last point since the spur needs physical space to create the shape, therefore it is not allowed to position a spur at the start or end of a main conveyor.</li>
+</ul>
+<h1 id="faq">F.A.Q.</h1>
+<h2 id="i-see-the-boxes-overlapping-in-places-where-i-have-sensors">I see the boxes overlapping in places where i have sensors</h2>
+<p>Sometimes can happen, in a gap union type where the sensors are used, that one agent has passed to the next conveyor but cannot go further because of a large queue of agents in this conveyor, and the agent that is behind goes to the end of the first conveyor. With that happening, it looks like both agents are one above the other. This is just a visual thing that has almost no operational implication. We will improve this in the future.</p>
+<p><img src="/images/blog/sorting-conveyors-library/Picture1-2.png" alt=""></p>
+<h2 id="my-exported-model-doesnt-work">My exported model doesn’t work</h2>
+<p>When you export a model, it doesn’t require a license, as long as you exported it with a license (both for the cloud and java export). In order to export it, you should have run the simulation model at least one time in AnyLogic with internet on, which will generate a valid licenseKey.txt file (if you purchased a license). This file must be integrated in any exported version, and to do that you need to go to resources/data/licenseKey.txt properties and turn on “Resource is referrenced from user code”. This will allow the model to export the licenseKey.txt file, as you see in the following image:</p>
+<p><img src="/images/blog/sorting-conveyors-library/usercodereference.png" alt=""></p> </div> <!-- Tags -->  </div> </article>  </main> <footer class="dark-section border-t border-bg-dark-secondary mt-auto"> <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16"> <div class="grid grid-cols-1 md:grid-cols-3 gap-12"> <!-- Brand --> <div> <img src="/_astro/Noorjax-01.Dky3hJly_1hWLOT.webp" alt="Noorjax Consulting" loading="lazy" decoding="async" width="160" height="27" class="h-10 w-auto brightness-0 invert mb-3"> <p class="mt-3 text-sm text-text-on-dark-muted max-w-xs"> Simulation Consulting </p> <div class="mt-5 flex gap-4"> <a href="https://www.linkedin.com/company/noorjax/" target="_blank" rel="noopener noreferrer" class="text-text-on-dark-muted hover:text-brand-teal transition-colors" aria-label="LinkedIn"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"> <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path> </svg> </a> <a href="https://www.youtube.com/@noorjaxconsulting" target="_blank" rel="noopener noreferrer" class="text-text-on-dark-muted hover:text-red-500 transition-colors" aria-label="YouTube"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"> <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path> </svg> </a> <a href="#" class="text-text-on-dark-muted hover:text-brand-teal transition-colors footer-email-icon" aria-label="Email"> <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path> </svg> </a> </div> </div> <!-- Navigation --> <div> <h4 class="text-sm font-semibold text-text-on-dark uppercase tracking-wider mb-4"> Navigation </h4> <ul class="space-y-2.5"> <li> <a href="/en/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> Home </a> </li><li> <a href="/en/simulation-services/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> Demo </a> </li><li> <a href="/en/business-cases/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> Business Cases </a> </li><li> <a href="/en/products/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> Products </a> </li><li> <a href="/en/courses/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> Courses </a> </li><li> <a href="/en/about-us/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> About </a> </li><li> <a href="/en/blog/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> Blog </a> </li><li> <a href="/en/contact/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> Contact </a> </li> </ul> </div> <!-- Contact --> <div> <h4 class="text-sm font-semibold text-text-on-dark uppercase tracking-wider mb-4"> Contact </h4> <ul class="space-y-2.5 text-sm text-text-on-dark-muted"> <li> <a href="#" class="hover:text-white transition-colors footer-email-link"></a> </li> <li> <a href="https://calendly.com/noorjax" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors"> Book a meeting </a> </li> <li class="text-text-on-dark-muted">Ahtri 12-512, 10151 Tallinn, Estonia</li> </ul> </div> </div> <!-- Bottom bar --> <div class="mt-12 pt-8 border-t border-bg-dark-secondary flex flex-col sm:flex-row items-center justify-between gap-4"> <p class="text-xs text-text-on-dark-muted">
+&copy; 2026 Noorjax Consulting. All rights reserved. </p> <p class="text-xs text-text-on-dark-muted"> Ahtri 12-512, 10151 Tallinn, Estonia </p> </div> </div> </footer> <script>
+  (function(){
+    var u='info',d='noorjax.com',e=u+'@'+d,m='mailto:'+e;
+    var icon=document.querySelector('.footer-email-icon');
+    if(icon) icon.href=m;
+    var link=document.querySelector('.footer-email-link');
+    if(link){link.href=m;link.textContent=e;}
+  })();
+</script> <style>
+    #nav-loader{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#0099b5,#6aab25);z-index:9999;width:0;opacity:0;pointer-events:none;transition:none;}
+    #nav-loader.loading{opacity:1;width:80%;transition:width 5s cubic-bezier(0.1,0.3,0.2,1);}
+    #nav-loader.done{width:100%;transition:width 0.15s ease-out;}
+    #nav-loader.fade{opacity:0;transition:opacity 0.3s ease;}
+  </style> <div id="nav-loader"></div> <script>
+    (function(){
+      function startLoader(){
+        var bar = document.getElementById('nav-loader');
+        if(!bar) return;
+        bar.className = '';
+        void bar.offsetWidth;
+        bar.classList.add('loading');
+      }
+      function endLoader(){
+        var bar = document.getElementById('nav-loader');
+        if(!bar) return;
+        bar.classList.remove('loading');
+        bar.classList.add('done');
+        setTimeout(function(){ bar.classList.add('fade'); }, 150);
+        setTimeout(function(){ bar.className = ''; }, 500);
+      }
+
+      // Listen for internal link clicks
+      document.addEventListener('click', function(e){
+        var link = e.target.closest('a');
+        if(!link) return;
+        var href = link.getAttribute('href');
+        if(!href) return;
+        if(link.target === '_blank') return;
+        if(href.startsWith('http') && href.indexOf(location.hostname) === -1) return;
+        if(href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:')) return;
+        startLoader();
+      });
+
+      // End loader when page finishes loading
+      document.addEventListener('astro:after-swap', endLoader);
+      window.addEventListener('load', endLoader);
+      document.addEventListener('astro:page-load', endLoader);
+    })();
+  </script>  </body></html>

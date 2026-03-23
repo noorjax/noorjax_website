@@ -1,0 +1,208 @@
+<!DOCTYPE html><html lang="es"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Astro v6.0.8"><!-- SEO --><title>Basado en Agentes, Eventos Discretos y Dinamica de Sistemas | Noorjax Consulting</title><meta name="description" content="Antes de empezar, no esperes que explique todas estas metodologias en detalle ya que existe mucho material en la web que puede ayudarte. Wikipedia es un buen punto de partida con los siguientes "><link rel="canonical" href="https://noorjax.com/es/blog/simulationparadigms/"><!-- i18n alternates (ar hidden for now) --><link rel="alternate" hreflang="en" href="https://noorjax.com/en/blog/simulationparadigms/"><link rel="alternate" hreflang="es" href="https://noorjax.com/es/blog/simulationparadigms/"><link rel="alternate" hreflang="x-default" href="https://noorjax.com/en/blog/simulationparadigms/"><!-- Open Graph --><meta property="og:type" content="website"><meta property="og:title" content="Basado en Agentes, Eventos Discretos y Dinamica de Sistemas | Noorjax Consulting"><meta property="og:description" content="Antes de empezar, no esperes que explique todas estas metodologias en detalle ya que existe mucho material en la web que puede ayudarte. Wikipedia es un buen punto de partida con los siguientes "><meta property="og:image" content="https://noorjax.com/images/og-default.jpg"><meta property="og:url" content="https://noorjax.com/es/blog/simulationparadigms/"><meta property="og:site_name" content="Noorjax Consulting"><meta property="og:locale" content="es_CL"><!-- Twitter --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Basado en Agentes, Eventos Discretos y Dinamica de Sistemas | Noorjax Consulting"><meta name="twitter:description" content="Antes de empezar, no esperes que explique todas estas metodologias en detalle ya que existe mucho material en la web que puede ayudarte. Wikipedia es un buen punto de partida con los siguientes "><meta name="twitter:image" content="https://noorjax.com/images/og-default.jpg"><!-- Favicon --><link rel="icon" type="image/png" href="/images/logo/Noorjax-icon-png1.png"><!-- Fonts: Self-hosted Inter --><link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/inter-latin.woff2"><!-- Client-side routing (View Transitions) --><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.DmQZLfuR.js"></script><!-- JSON-LD Structured Data --><script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Noorjax Consulting","description":"Antes de empezar, no esperes que explique todas estas metodologias en detalle ya que existe mucho material en la web que puede ayudarte. Wikipedia es un buen punto de partida con los siguientes ","url":"https://noorjax.com","email":"info@noorjax.com","address":{"@type":"PostalAddress","streetAddress":"Ahtri 12-512","addressLocality":"Tallinn","postalCode":"10151","addressCountry":"EE"},"areaServed":"Worldwide","serviceType":["Simulation Consulting","AnyLogic Simulation","Manufacturing Simulation","System Dynamics Consulting","Vensim Consulting","Agent-Based Modeling","Discrete Event Simulation","Policy Advisory","Supply Chain Simulation","AnyLogic Training"],"knowsAbout":["AnyLogic","Vensim","System Dynamics","Discrete Event Simulation","Agent-Based Modeling","Monte Carlo Simulation","Optimization","Artificial Intelligence"],"sameAs":["https://www.linkedin.com/company/noorjax/","https://www.youtube.com/@noorjaxconsulting"],"founder":{"@type":"Person","name":"Felipe Haro"},"foundingDate":"2017"}</script><link rel="stylesheet" href="/_astro/BaseLayout.Dhci6ilB.css"></head> <body class="min-h-screen flex flex-col">  <header class="fixed top-0 left-0 right-0 z-50 bg-bg-primary border-b border-border-default shadow-sm" id="site-header"> <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"> <nav class="flex items-center justify-between h-16 lg:h-18" aria-label="Main navigation"> <!-- Logo --> <a href="/es/" class="flex items-center shrink-0" aria-label="Noorjax Consulting"> <img src="/_astro/Noorjax-01.Dky3hJly_1s27Mm.webp" alt="Noorjax Consulting" loading="eager" decoding="async" fetchpriority="high" width="384" height="64" class="h-10 lg:h-12 w-auto"> </a> <!-- Desktop Navigation --> <div class="hidden lg:flex items-center gap-6"> <a href="/es/" class="text-sm font-medium transition-colors text-text-secondary hover:text-text-primary"> Inicio </a><a href="/es/simulation-services/" class="text-sm font-medium transition-colors text-text-secondary hover:text-text-primary"> Demo </a><a href="/es/business-cases/" class="text-sm font-medium transition-colors text-text-secondary hover:text-text-primary"> Casos </a><a href="/es/products/" class="text-sm font-medium transition-colors text-text-secondary hover:text-text-primary"> Productos </a><a href="/es/courses/" class="text-sm font-medium transition-colors text-text-secondary hover:text-text-primary"> Cursos </a><a href="/es/about-us/" class="text-sm font-medium transition-colors text-text-secondary hover:text-text-primary"> Nosotros </a><a href="/es/blog/" class="text-sm font-medium transition-colors text-brand-teal font-semibold"> Blog </a><a href="/es/contact/" class="btn-primary text-xs px-4 py-2"> Contacto </a> <!-- Social icons --> <div class="flex items-center gap-3 ml-2 pl-4 border-l border-border-default"> <a href="https://www.linkedin.com/company/noorjax/" target="_blank" rel="noopener noreferrer" class="text-text-tertiary hover:text-brand-teal transition-colors" aria-label="LinkedIn"> <svg class="w-4.5 h-4.5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg> </a> <a href="https://www.youtube.com/@noorjaxconsulting" target="_blank" rel="noopener noreferrer" class="text-text-tertiary hover:text-red-600 transition-colors" aria-label="YouTube"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg> </a> </div> <!-- Language Dropdown --> <div class="relative" id="lang-dropdown-desktop"> <button class="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-border-default text-sm text-text-secondary hover:text-text-primary hover:border-border-hover transition-all cursor-pointer" id="lang-btn-desktop" aria-expanded="false" aria-haspopup="true"> <span class="leading-none rounded-sm overflow-hidden"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 500" width="24" height="16"><rect width="750" height="500" fill="#c60b1e"/><rect width="750" height="250" y="125" fill="#ffc400"/></svg></span> <svg class="w-3.5 h-3.5 transition-transform" id="lang-chevron-desktop" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg> </button> <div class="absolute right-0 top-full mt-1.5 w-auto bg-bg-primary border border-border-default rounded-xl shadow-lg overflow-hidden hidden z-50" id="lang-menu-desktop"> <a href="/en/blog/simulationparadigms/" class="flex items-center gap-3 px-4 py-2.5 text-sm text-text-secondary hover:bg-brand-teal/5 hover:text-brand-teal transition-colors"> <span class="leading-none rounded-sm overflow-hidden"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="24" height="12"><clipPath id="s"><path d="M0,0 v30 h60 v-30 z"/></clipPath><clipPath id="t"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath><g clip-path="url(#s)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg></span> </a> </div> </div> </div> <!-- Mobile Menu Toggle --> <button class="lg:hidden p-2 text-text-secondary hover:text-text-primary" id="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false"> <svg class="w-6 h-6" id="menu-icon-open" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg> <svg class="w-6 h-6 hidden" id="menu-icon-close" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg> </button> </nav> </div> <!-- Mobile Menu --> <div class="lg:hidden hidden" id="mobile-menu"> <div class="glass mx-4 mt-2 rounded-xl p-6 space-y-4 shadow-lg"> <a href="/es/" class="block text-base font-medium py-2 transition-colors text-text-secondary hover:text-text-primary"> Inicio </a><a href="/es/simulation-services/" class="block text-base font-medium py-2 transition-colors text-text-secondary hover:text-text-primary"> Demo </a><a href="/es/business-cases/" class="block text-base font-medium py-2 transition-colors text-text-secondary hover:text-text-primary"> Casos </a><a href="/es/products/" class="block text-base font-medium py-2 transition-colors text-text-secondary hover:text-text-primary"> Productos </a><a href="/es/courses/" class="block text-base font-medium py-2 transition-colors text-text-secondary hover:text-text-primary"> Cursos </a><a href="/es/about-us/" class="block text-base font-medium py-2 transition-colors text-text-secondary hover:text-text-primary"> Nosotros </a><a href="/es/blog/" class="block text-base font-medium py-2 transition-colors text-brand-teal"> Blog </a><a href="/es/contact/" class="block text-base font-medium py-2 transition-colors text-text-secondary hover:text-text-primary"> Contacto </a> <div class="pt-4 border-t border-border-default"> <div class="flex items-center gap-4 mb-4"> <a href="https://www.linkedin.com/company/noorjax/" target="_blank" rel="noopener noreferrer" class="text-text-tertiary hover:text-brand-teal" aria-label="LinkedIn"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg> </a> <a href="https://www.youtube.com/@noorjaxconsulting" target="_blank" rel="noopener noreferrer" class="text-text-tertiary hover:text-red-600" aria-label="YouTube"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg> </a> </div> <!-- Mobile Language Options --> <div class="flex flex-col gap-1"> <a href="/en/blog/simulationparadigms/" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-text-secondary hover:bg-brand-teal/5 hover:text-brand-teal transition-colors"> <span class="leading-none rounded-sm overflow-hidden"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="24" height="12"><clipPath id="s"><path d="M0,0 v30 h60 v-30 z"/></clipPath><clipPath id="t"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath><g clip-path="url(#s)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg></span> </a> </div> </div> </div> </div> </header> <script>
+  function initHeader() {
+    // Mobile menu
+    var toggle = document.getElementById('mobile-menu-toggle');
+    var menu = document.getElementById('mobile-menu');
+    if (toggle && menu) {
+      toggle.onclick = function() {
+        var isOpen = !menu.classList.contains('hidden');
+        menu.classList.toggle('hidden');
+        document.getElementById('menu-icon-open').classList.toggle('hidden');
+        document.getElementById('menu-icon-close').classList.toggle('hidden');
+        toggle.setAttribute('aria-expanded', String(!isOpen));
+      };
+      menu.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+          menu.classList.add('hidden');
+          document.getElementById('menu-icon-open').classList.remove('hidden');
+          document.getElementById('menu-icon-close').classList.add('hidden');
+        });
+      });
+    }
+
+    // Language dropdown
+    var btn = document.getElementById('lang-btn-desktop');
+    var langMenu = document.getElementById('lang-menu-desktop');
+    if (btn && langMenu) {
+      btn.onclick = function(e) {
+        e.stopPropagation();
+        var isOpen = !langMenu.classList.contains('hidden');
+        langMenu.classList.toggle('hidden');
+        var chev = document.getElementById('lang-chevron-desktop');
+        if (chev) chev.classList.toggle('rotate-180');
+        btn.setAttribute('aria-expanded', String(!isOpen));
+      };
+      document.addEventListener('click', function() {
+        langMenu.classList.add('hidden');
+        var chev = document.getElementById('lang-chevron-desktop');
+        if (chev) chev.classList.remove('rotate-180');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    }
+  }
+
+  initHeader();
+  document.addEventListener('astro:after-swap', initHeader);
+</script> <main class="flex-1 pt-18 lg:pt-20">  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Basado en Agentes, Eventos Discretos y Dinamica de Sistemas","datePublished":"2018-09-20T00:00:00.000Z","author":{"@type":"Person","name":"Felipe Haro"},"publisher":{"@type":"Organization","name":"Noorjax Consulting","url":"https://noorjax.com"},"description":"Antes de empezar, no esperes que explique todas estas metodologias en detalle ya que existe mucho material en la web que puede ayudarte. Wikipedia es un buen punto de partida con los siguientes "}</script> <article class="py-(--spacing-section)"> <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8"> <!-- Back link --> <a href="/es/blog/" class="inline-flex items-center gap-2 text-sm text-text-tertiary hover:text-brand-accent mb-8 transition-colors"> <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18"></path> </svg>
+Volver al Blog
+</a> <!-- Header --> <header class="mb-10"> <div class="flex flex-wrap gap-2 mb-4"> <span class="text-xs font-medium px-2.5 py-1 rounded-full bg-brand-secondary/10 text-brand-secondary"> Conceptos de Simulación </span> </div> <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-4"> Basado en Agentes, Eventos Discretos y Dinamica de Sistemas </h1> <time class="text-text-tertiary" datetime="2018-09-20T00:00:00.000Z"> 20 de septiembre de 2018 </time> </header> <!-- Content --> <div class="prose prose-lg max-w-none
+        prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-text-primary
+        prose-p:text-text-secondary
+        prose-a:text-brand-teal prose-a:no-underline hover:prose-a:underline
+        prose-img:rounded-xl prose-img:border prose-img:border-border-default prose-img:mx-auto
+        prose-code:text-brand-secondary prose-code:bg-bg-secondary prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm
+        prose-pre:bg-bg-secondary prose-pre:border prose-pre:border-border-default prose-pre:rounded-xl
+        prose-blockquote:border-brand-teal prose-blockquote:text-text-secondary prose-blockquote:not-italic
+        prose-strong:text-text-primary
+        prose-li:text-text-secondary
+        prose-hr:border-border-default
+      "> <p>Antes de empezar, no esperes que explique todas estas metodologias en detalle ya que existe mucho material en la web que puede ayudarte. Wikipedia es un buen punto de partida con los siguientes enlaces si te interesan los detalles tecnicos:</p>
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/System_dynamics">System Dynamics</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Discrete_event_simulation">Discrete Events</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Agent-based_model">Agent-Based</a></p>
+</li>
+</ul>
+<p>En entornos de negocios, industriales y socioeconomicos, Dinamica de Sistemas, Eventos Discretos y Basado en Agentes son los tres paradigmas de simulacion mas comunmente utilizados. Y todavia hay personas que estudian estos metodos por separado y desarrollan sus modelos usando solo uno de ellos sin importar el problema en cuestion. Y esto es relativamente posible. De hecho puedes construir cualquier modelo matematico que represente la realidad con cualquiera de estas tecnicas, y si haces la eleccion incorrecta, la consecuencia es un modelo que carece de detalles, toma demasiado tiempo de desarrollo, se ejecuta demasiado lento, o es simplemente demasiado detallado y dificil de analizar. Entonces cuales son mis pensamientos sobre esto?</p>
+<h2 id="simulaciones">Simulaciones</h2>
+<p>Cuando hablo de simulaciones, que quiero decir realmente? La pregunta que me hacen el 99% de las veces es: “que tipo de simulaciones?”, que es una pregunta muy obvia de hacer considerando la ambiguedad de la palabra misma, pero desafortunadamente muy dificil de responder. Hablemos entonces de simulaciones que no estan cubiertas por estas tres metodologias, o en otras palabras, no cubiertas por AnyLogic, que es el Software que uso.</p>
+<ul>
+<li>
+<p><strong>Electronica</strong>: nadie construye una nueva placa electronica sin simular las interacciones entre los diferentes componentes electronicos. Para esto necesitas un Software especifico de la industria como <a href="http://www.spectrum-soft.com/index.shtm">Micro-Cap</a>.</p>
+</li>
+<li>
+<p><strong>Ingenieria</strong>: que hay de simular un nuevo producto y someterlo a diferentes escenarios de estres, o una estructura de edificio para simular un terremoto, o analizar la interaccion entre particulas cuanticas. Si estas haciendo un proyecto de ingenieria, probablemente querrias usar <a href="https://www.ansys.com/">Ansys</a>.</p>
+</li>
+<li>
+<p><strong>Simulaciones Digitales Realistas</strong>: Por ejemplo, simular computacionalmente el agua fluyendo de manera realista en una cascada. En este caso podrias necesitar <a href="http://www.nextlimit.com/realflow/">Real Flow. </a></p>
+</li>
+<li>
+<p><strong>Videojuegos</strong>: la industria de videojuegos no es mas que simulaciones con inteligencia artificial. Pero si quieres desarrollar un juego sofisticado, podrias probar <a href="https://unity3d.com/">Unity</a>.</p>
+</li>
+<li>
+<p><strong>Simulaciones tecnicas</strong>: antes de implementar un algoritmo complejo en robots o maquinas industriales podrias querer usar <a href="https://www.mathworks.com/products/matlab.html">Matlab</a> para probar su rendimiento.</p>
+</li>
+<li>
+<p><strong>Simulaciones de Capacitacion</strong>: Usando Software como <a href="https://www.trivantis.com/">Lectora</a>, puedes simular escenarios simplistas que describen una cierta historia o proceso que quieres que un estudiante siga para aprender un tema particular.</p>
+</li>
+<li>
+<p>Otros tipos de simulaciones que probablemente ni siquiera se que existen o simplemente olvide.</p>
+</li>
+</ul>
+<p>Entonces que quiero decir con simulaciones?
+No hay una respuesta directa a esta pregunta ya que he estado involucrado en proyectos que estan al limite de lo relevante. Pero algunos ejemplos que pueden resonar contigo son:</p>
+<ul>
+<li>
+<p>Logistica (Aeropuertos, Centros de Distribucion, Almacenes, etc.)</p>
+</li>
+<li>
+<p>Cadena de Suministro (redes de distribucion, entregas, optimizacion de rutas, etc.)</p>
+</li>
+<li>
+<p>Manufactura</p>
+</li>
+<li>
+<p>Procesos de Negocio (si un proceso existe, una simulacion de ese proceso puede ser creada)</p>
+</li>
+<li>
+<p>Entidades interactuando entre si (personas, animales, maquinas, etc.)</p>
+</li>
+<li>
+<p>Transporte (autos, trenes, barcos, aviones etc.)</p>
+</li>
+<li>
+<p>Mineria</p>
+</li>
+<li>
+<p>Dinamica de fluidos (agua, otros fluidos o material a granel)</p>
+</li>
+<li>
+<p>Desarrollo estrategico de un negocio (marketing, satisfaccion del cliente, valor agregado, felicidad)</p>
+</li>
+<li>
+<p>Dinamicas de mercado (comportamiento del mercado, venta, compra)</p>
+</li>
+<li>
+<p>Simulaciones Monte-Carlo (Analisis de Riesgo, Analisis de Varianza)</p>
+</li>
+<li>
+<p>Socioeconomia (Impacto de politicas de pais, efectividad de estrategias sociales locales)</p>
+</li>
+<li>
+<p>Optimizacion</p>
+</li>
+<li>
+<p>Y muchas otras cosas…</p>
+</li>
+</ul>
+<p>Entonces como puedes saber si deberias usar simulaciones o no para tu aplicacion? Bueno… Si no estas en ninguna de estas listas, solo tienes que preguntarle a un consultor. A veces requiere algo de tiempo evaluar la herramienta correcta a usar para un problema particular, y a veces las simulaciones no son la mejor forma de proceder.</p>
+<p>Si quieres un Freelancer o una empresa de consultoria para desarrollar tu proyecto, puedes dejar de leer aqui. En los siguientes parrafos quiero hablar un poco sobre como aprendi este oficio, como manejo conceptualmente mis modelos y que necesitas para convertirte en un gran modelador de simulaciones.</p>
+<h2 id="un-poco-sobre-dinamica-de-sistemas">Un poco sobre Dinamica de Sistemas</h2>
+<p>Aunque ya estaba haciendo simulaciones en el mundo de los videojuegos, electronica y tecnologia desde principios de los 2000, descubri la Dinamica de Sistemas usando Software como <a href="https://www.iseesystems.com/">IThink</a> y <a href="http://vensim.com/">Vensim</a> durante mi Maestria en 2011. Y se sentia como que podias hacer cualquier cosa con ella usando solo stocks, flujos y variables. Un metodo tan simple y elegante parecia ser suficiente para resolver los problemas estrategicos mas complejos del mundo, y era impresionante pero tambien dificil de aceptar como concepto independiente. Pase un ano y medio sin hacer mas que modelos de Dinamica de Sistemas, y aunque los conceptos de Basado en Agentes y Eventos Discretos fueron tocados en un grado muy pequeno, en esta comunidad habia un gran sesgo hacia desarrollar todo con nada mas que Dinamica de Sistemas. En la industria actual, la Dinamica de Sistemas rara vez se usa fuera del mundo academico, aunque es un metodo bastante poderoso. Durante un proyecto con PwC en 2013, tuve la oportunidad de usar AnyLogic y fui expuesto por primera vez a la magia de los Eventos Discretos y Basado en Agentes. Me enamore de AnyLogic en ese momento y nunca deje de usarlo hasta hoy.</p>
+<h2 id="un-poco-sobre-simulaciones-de-eventos-discretos">Un poco sobre Simulaciones de Eventos Discretos</h2>
+<p>Despues de casi dos anos desarrollando exclusivamente modelos de Dinamica de Sistemas, comence a trabajar como consultor de cadena de suministro y desarrolle modelos exclusivamente usando eventos discretos. Este fue un gran cambio conceptual, pero tambien descubri que hacer simulaciones de eventos discretos era mucho mas facil conceptualmente y mucho mas comodo para la mayoria de las aplicaciones industriales, en particular en la industria de cadena de suministro. Este es el momento en que comence a aprender cada pequeno detalle de la Process Modeling Library (PML) de AnyLogic, leyendo la documentacion de ayuda completamente, y escribiendo lo que llamo el arbol del conocimiento que constituye el orden en el que tienes que aprender todo para poder desarrollar exitosamente un entendimiento de la metodologia: por ejemplo un prerrequisito para incluso empezar a desarrollar simulaciones usando la PML, es entender las distribuciones poisson y exponencial. Actualmente uso este arbol del conocimiento para ensenar a otros.</p>
+<h2 id="un-poco-de-modelado-basado-en-agentes">Un poco de Modelado Basado en Agentes</h2>
+<p>Solia tener miedo de usar simulaciones basadas en agentes. Siempre decia que sabia como hacerlas, pero nunca realmente lo practique, asi que decidi que sin importar que proyecto de eventos discretos hiciera, siempre iba a hacer el mismo modelo usando basado en agentes, aprendiendo por mi cuenta. Y eso es lo que hice. Cada proyecto me tomaba el doble de tiempo, pero estaba aprendiendo toneladas, tenia 2 versiones de cada modelo, y esto me ayudaba a validarlos facilmente. Y un dia, ya no estaba sesgado hacia elegir ningun metodo. El Modelado Basado en Agentes es bastante diferente y requiere toneladas de programacion, y buenas habilidades de depuracion. Es un metodo que requiere un cuidado profundo de los detalles.</p>
+<h2 id="modelado-multi-metodo">Modelado Multi-Metodo</h2>
+<p>Entonces que hacer cuando estas familiarizado y eres competente con estos tres metodos? Entonces es momento de olvidarse de ellos y empezar a construir todo basado en las necesidades particulares del proyecto sin estar sesgado hacia la metodologia misma. De cierta forma, AnyLogic proporciona varias herramientas que puedes usar libremente, y dejas de pensar en usar uno de estos tres metodos, y en su lugar usas las herramientas disponibles. No podemos olvidar que el numero de formas en las que puedes construir un modelo es practicamente infinito, y no dos modeladores de simulacion crearan exactamente el mismo modelo para un problema particular, pero no importa, los resultados son los mismos si todo se hace con buenas practicas.</p>
+<h2 id="es-esto-todo">Es esto todo?</h2>
+<p>No. Estos tres metodos son solo una base general para desarrollar simulaciones multi-metodo. Pero necesitas muchas otras habilidades que solo vienen con anos de practica: disenar experimentos efectivos, estadistica, recoleccion de datos, limpieza de datos, bases de datos, las diferentes herramientas asociadas con fluidos, peatones, trenes, autos y manejo de materiales, presentacion e interfaz de usuario, modelado 2D y 3D, Autocad, arte, influir en otros, comunicacion, transformar un concepto abstracto de negocio en un documento tecnico, hacer las preguntas correctas y mucho mas. Los requisitos para ser un buen modelador de simulaciones son a veces abrumadores y es mi trabajo hacer todo esto lo mejor que pueda, pedir ayuda si algo esta fuera de mi dominio, y ensenar a otros como hacerlo tambien.</p> </div> <!-- Tags --> <div class="mt-12 pt-8 border-t border-border-default"> <div class="flex flex-wrap gap-2"> <span class="text-xs px-3 py-1 rounded-full border border-border-default text-text-tertiary">
+#Agent-Based </span><span class="text-xs px-3 py-1 rounded-full border border-border-default text-text-tertiary">
+#Discrete-Events </span><span class="text-xs px-3 py-1 rounded-full border border-border-default text-text-tertiary">
+#Multi-Methods </span><span class="text-xs px-3 py-1 rounded-full border border-border-default text-text-tertiary">
+#Simulations </span><span class="text-xs px-3 py-1 rounded-full border border-border-default text-text-tertiary">
+#System Dynamics </span> </div> </div> </div> </article>  </main> <footer class="dark-section border-t border-bg-dark-secondary mt-auto"> <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16"> <div class="grid grid-cols-1 md:grid-cols-3 gap-12"> <!-- Brand --> <div> <img src="/_astro/Noorjax-01.Dky3hJly_1hWLOT.webp" alt="Noorjax Consulting" loading="lazy" decoding="async" width="160" height="27" class="h-10 w-auto brightness-0 invert mb-3"> <p class="mt-3 text-sm text-text-on-dark-muted max-w-xs"> Servicios de Simulación </p> <div class="mt-5 flex gap-4"> <a href="https://www.linkedin.com/company/noorjax/" target="_blank" rel="noopener noreferrer" class="text-text-on-dark-muted hover:text-brand-teal transition-colors" aria-label="LinkedIn"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"> <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path> </svg> </a> <a href="https://www.youtube.com/@noorjaxconsulting" target="_blank" rel="noopener noreferrer" class="text-text-on-dark-muted hover:text-red-500 transition-colors" aria-label="YouTube"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"> <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path> </svg> </a> <a href="#" class="text-text-on-dark-muted hover:text-brand-teal transition-colors footer-email-icon" aria-label="Email"> <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path> </svg> </a> </div> </div> <!-- Navigation --> <div> <h4 class="text-sm font-semibold text-text-on-dark uppercase tracking-wider mb-4"> Navegación </h4> <ul class="space-y-2.5"> <li> <a href="/es/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> Inicio </a> </li><li> <a href="/es/simulation-services/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> Demo </a> </li><li> <a href="/es/business-cases/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> Casos </a> </li><li> <a href="/es/products/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> Productos </a> </li><li> <a href="/es/courses/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> Cursos </a> </li><li> <a href="/es/about-us/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> Nosotros </a> </li><li> <a href="/es/blog/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> Blog </a> </li><li> <a href="/es/contact/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> Contacto </a> </li> </ul> </div> <!-- Contact --> <div> <h4 class="text-sm font-semibold text-text-on-dark uppercase tracking-wider mb-4"> Contacto </h4> <ul class="space-y-2.5 text-sm text-text-on-dark-muted"> <li> <a href="#" class="hover:text-white transition-colors footer-email-link"></a> </li> <li> <a href="https://calendly.com/noorjax" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors"> Agenda una reunión </a> </li> <li class="text-text-on-dark-muted">Ahtri 12-512, 10151 Tallinn, Estonia</li> </ul> </div> </div> <!-- Bottom bar --> <div class="mt-12 pt-8 border-t border-bg-dark-secondary flex flex-col sm:flex-row items-center justify-between gap-4"> <p class="text-xs text-text-on-dark-muted">
+&copy; 2026 Noorjax Consulting. Todos los derechos reservados. </p> <p class="text-xs text-text-on-dark-muted"> Ahtri 12-512, 10151 Tallinn, Estonia </p> </div> </div> </footer> <script>
+  (function(){
+    var u='info',d='noorjax.com',e=u+'@'+d,m='mailto:'+e;
+    var icon=document.querySelector('.footer-email-icon');
+    if(icon) icon.href=m;
+    var link=document.querySelector('.footer-email-link');
+    if(link){link.href=m;link.textContent=e;}
+  })();
+</script> <style>
+    #nav-loader{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#0099b5,#6aab25);z-index:9999;width:0;opacity:0;pointer-events:none;transition:none;}
+    #nav-loader.loading{opacity:1;width:80%;transition:width 5s cubic-bezier(0.1,0.3,0.2,1);}
+    #nav-loader.done{width:100%;transition:width 0.15s ease-out;}
+    #nav-loader.fade{opacity:0;transition:opacity 0.3s ease;}
+  </style> <div id="nav-loader"></div> <script>
+    (function(){
+      function startLoader(){
+        var bar = document.getElementById('nav-loader');
+        if(!bar) return;
+        bar.className = '';
+        void bar.offsetWidth;
+        bar.classList.add('loading');
+      }
+      function endLoader(){
+        var bar = document.getElementById('nav-loader');
+        if(!bar) return;
+        bar.classList.remove('loading');
+        bar.classList.add('done');
+        setTimeout(function(){ bar.classList.add('fade'); }, 150);
+        setTimeout(function(){ bar.className = ''; }, 500);
+      }
+
+      // Listen for internal link clicks
+      document.addEventListener('click', function(e){
+        var link = e.target.closest('a');
+        if(!link) return;
+        var href = link.getAttribute('href');
+        if(!href) return;
+        if(link.target === '_blank') return;
+        if(href.startsWith('http') && href.indexOf(location.hostname) === -1) return;
+        if(href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:')) return;
+        startLoader();
+      });
+
+      // End loader when page finishes loading
+      document.addEventListener('astro:after-swap', endLoader);
+      window.addEventListener('load', endLoader);
+      document.addEventListener('astro:page-load', endLoader);
+    })();
+  </script>  </body></html>

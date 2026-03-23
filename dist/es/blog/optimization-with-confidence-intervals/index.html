@@ -1,0 +1,293 @@
+<!DOCTYPE html><html lang="es"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Astro v6.0.8"><!-- SEO --><title>Optimizacion con Intervalos de Confianza | Noorjax Consulting</title><meta name="description" content="Los modelos de simulacion son estocasticos por naturaleza, lo que significa que cada vez que ejecutas un modelo de simulacion obtendras resultados diferentes, si usas diferentes semillas. Para comunicar estos resultados variados a"><link rel="canonical" href="https://noorjax.com/es/blog/optimization-with-confidence-intervals/"><!-- i18n alternates (ar hidden for now) --><link rel="alternate" hreflang="en" href="https://noorjax.com/en/blog/optimization-with-confidence-intervals/"><link rel="alternate" hreflang="es" href="https://noorjax.com/es/blog/optimization-with-confidence-intervals/"><link rel="alternate" hreflang="x-default" href="https://noorjax.com/en/blog/optimization-with-confidence-intervals/"><!-- Open Graph --><meta property="og:type" content="website"><meta property="og:title" content="Optimizacion con Intervalos de Confianza | Noorjax Consulting"><meta property="og:description" content="Los modelos de simulacion son estocasticos por naturaleza, lo que significa que cada vez que ejecutas un modelo de simulacion obtendras resultados diferentes, si usas diferentes semillas. Para comunicar estos resultados variados a"><meta property="og:image" content="https://noorjax.com/images/og-default.jpg"><meta property="og:url" content="https://noorjax.com/es/blog/optimization-with-confidence-intervals/"><meta property="og:site_name" content="Noorjax Consulting"><meta property="og:locale" content="es_CL"><!-- Twitter --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Optimizacion con Intervalos de Confianza | Noorjax Consulting"><meta name="twitter:description" content="Los modelos de simulacion son estocasticos por naturaleza, lo que significa que cada vez que ejecutas un modelo de simulacion obtendras resultados diferentes, si usas diferentes semillas. Para comunicar estos resultados variados a"><meta name="twitter:image" content="https://noorjax.com/images/og-default.jpg"><!-- Favicon --><link rel="icon" type="image/png" href="/images/logo/Noorjax-icon-png1.png"><!-- Fonts: Self-hosted Inter --><link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/inter-latin.woff2"><!-- Client-side routing (View Transitions) --><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.DmQZLfuR.js"></script><!-- JSON-LD Structured Data --><script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Noorjax Consulting","description":"Los modelos de simulacion son estocasticos por naturaleza, lo que significa que cada vez que ejecutas un modelo de simulacion obtendras resultados diferentes, si usas diferentes semillas. Para comunicar estos resultados variados a","url":"https://noorjax.com","email":"info@noorjax.com","address":{"@type":"PostalAddress","streetAddress":"Ahtri 12-512","addressLocality":"Tallinn","postalCode":"10151","addressCountry":"EE"},"areaServed":"Worldwide","serviceType":["Simulation Consulting","AnyLogic Simulation","Manufacturing Simulation","System Dynamics Consulting","Vensim Consulting","Agent-Based Modeling","Discrete Event Simulation","Policy Advisory","Supply Chain Simulation","AnyLogic Training"],"knowsAbout":["AnyLogic","Vensim","System Dynamics","Discrete Event Simulation","Agent-Based Modeling","Monte Carlo Simulation","Optimization","Artificial Intelligence"],"sameAs":["https://www.linkedin.com/company/noorjax/","https://www.youtube.com/@noorjaxconsulting"],"founder":{"@type":"Person","name":"Felipe Haro"},"foundingDate":"2017"}</script><link rel="stylesheet" href="/_astro/BaseLayout.Dhci6ilB.css"></head> <body class="min-h-screen flex flex-col">  <header class="fixed top-0 left-0 right-0 z-50 bg-bg-primary border-b border-border-default shadow-sm" id="site-header"> <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"> <nav class="flex items-center justify-between h-16 lg:h-18" aria-label="Main navigation"> <!-- Logo --> <a href="/es/" class="flex items-center shrink-0" aria-label="Noorjax Consulting"> <img src="/_astro/Noorjax-01.Dky3hJly_1s27Mm.webp" alt="Noorjax Consulting" loading="eager" decoding="async" fetchpriority="high" width="384" height="64" class="h-10 lg:h-12 w-auto"> </a> <!-- Desktop Navigation --> <div class="hidden lg:flex items-center gap-6"> <a href="/es/" class="text-sm font-medium transition-colors text-text-secondary hover:text-text-primary"> Inicio </a><a href="/es/simulation-services/" class="text-sm font-medium transition-colors text-text-secondary hover:text-text-primary"> Demo </a><a href="/es/business-cases/" class="text-sm font-medium transition-colors text-text-secondary hover:text-text-primary"> Casos </a><a href="/es/products/" class="text-sm font-medium transition-colors text-text-secondary hover:text-text-primary"> Productos </a><a href="/es/courses/" class="text-sm font-medium transition-colors text-text-secondary hover:text-text-primary"> Cursos </a><a href="/es/about-us/" class="text-sm font-medium transition-colors text-text-secondary hover:text-text-primary"> Nosotros </a><a href="/es/blog/" class="text-sm font-medium transition-colors text-brand-teal font-semibold"> Blog </a><a href="/es/contact/" class="btn-primary text-xs px-4 py-2"> Contacto </a> <!-- Social icons --> <div class="flex items-center gap-3 ml-2 pl-4 border-l border-border-default"> <a href="https://www.linkedin.com/company/noorjax/" target="_blank" rel="noopener noreferrer" class="text-text-tertiary hover:text-brand-teal transition-colors" aria-label="LinkedIn"> <svg class="w-4.5 h-4.5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg> </a> <a href="https://www.youtube.com/@noorjaxconsulting" target="_blank" rel="noopener noreferrer" class="text-text-tertiary hover:text-red-600 transition-colors" aria-label="YouTube"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg> </a> </div> <!-- Language Dropdown --> <div class="relative" id="lang-dropdown-desktop"> <button class="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-border-default text-sm text-text-secondary hover:text-text-primary hover:border-border-hover transition-all cursor-pointer" id="lang-btn-desktop" aria-expanded="false" aria-haspopup="true"> <span class="leading-none rounded-sm overflow-hidden"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 500" width="24" height="16"><rect width="750" height="500" fill="#c60b1e"/><rect width="750" height="250" y="125" fill="#ffc400"/></svg></span> <svg class="w-3.5 h-3.5 transition-transform" id="lang-chevron-desktop" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg> </button> <div class="absolute right-0 top-full mt-1.5 w-auto bg-bg-primary border border-border-default rounded-xl shadow-lg overflow-hidden hidden z-50" id="lang-menu-desktop"> <a href="/en/blog/optimization-with-confidence-intervals/" class="flex items-center gap-3 px-4 py-2.5 text-sm text-text-secondary hover:bg-brand-teal/5 hover:text-brand-teal transition-colors"> <span class="leading-none rounded-sm overflow-hidden"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="24" height="12"><clipPath id="s"><path d="M0,0 v30 h60 v-30 z"/></clipPath><clipPath id="t"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath><g clip-path="url(#s)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg></span> </a> </div> </div> </div> <!-- Mobile Menu Toggle --> <button class="lg:hidden p-2 text-text-secondary hover:text-text-primary" id="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false"> <svg class="w-6 h-6" id="menu-icon-open" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg> <svg class="w-6 h-6 hidden" id="menu-icon-close" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg> </button> </nav> </div> <!-- Mobile Menu --> <div class="lg:hidden hidden" id="mobile-menu"> <div class="glass mx-4 mt-2 rounded-xl p-6 space-y-4 shadow-lg"> <a href="/es/" class="block text-base font-medium py-2 transition-colors text-text-secondary hover:text-text-primary"> Inicio </a><a href="/es/simulation-services/" class="block text-base font-medium py-2 transition-colors text-text-secondary hover:text-text-primary"> Demo </a><a href="/es/business-cases/" class="block text-base font-medium py-2 transition-colors text-text-secondary hover:text-text-primary"> Casos </a><a href="/es/products/" class="block text-base font-medium py-2 transition-colors text-text-secondary hover:text-text-primary"> Productos </a><a href="/es/courses/" class="block text-base font-medium py-2 transition-colors text-text-secondary hover:text-text-primary"> Cursos </a><a href="/es/about-us/" class="block text-base font-medium py-2 transition-colors text-text-secondary hover:text-text-primary"> Nosotros </a><a href="/es/blog/" class="block text-base font-medium py-2 transition-colors text-brand-teal"> Blog </a><a href="/es/contact/" class="block text-base font-medium py-2 transition-colors text-text-secondary hover:text-text-primary"> Contacto </a> <div class="pt-4 border-t border-border-default"> <div class="flex items-center gap-4 mb-4"> <a href="https://www.linkedin.com/company/noorjax/" target="_blank" rel="noopener noreferrer" class="text-text-tertiary hover:text-brand-teal" aria-label="LinkedIn"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg> </a> <a href="https://www.youtube.com/@noorjaxconsulting" target="_blank" rel="noopener noreferrer" class="text-text-tertiary hover:text-red-600" aria-label="YouTube"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg> </a> </div> <!-- Mobile Language Options --> <div class="flex flex-col gap-1"> <a href="/en/blog/optimization-with-confidence-intervals/" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-text-secondary hover:bg-brand-teal/5 hover:text-brand-teal transition-colors"> <span class="leading-none rounded-sm overflow-hidden"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="24" height="12"><clipPath id="s"><path d="M0,0 v30 h60 v-30 z"/></clipPath><clipPath id="t"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath><g clip-path="url(#s)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg></span> </a> </div> </div> </div> </div> </header> <script>
+  function initHeader() {
+    // Mobile menu
+    var toggle = document.getElementById('mobile-menu-toggle');
+    var menu = document.getElementById('mobile-menu');
+    if (toggle && menu) {
+      toggle.onclick = function() {
+        var isOpen = !menu.classList.contains('hidden');
+        menu.classList.toggle('hidden');
+        document.getElementById('menu-icon-open').classList.toggle('hidden');
+        document.getElementById('menu-icon-close').classList.toggle('hidden');
+        toggle.setAttribute('aria-expanded', String(!isOpen));
+      };
+      menu.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+          menu.classList.add('hidden');
+          document.getElementById('menu-icon-open').classList.remove('hidden');
+          document.getElementById('menu-icon-close').classList.add('hidden');
+        });
+      });
+    }
+
+    // Language dropdown
+    var btn = document.getElementById('lang-btn-desktop');
+    var langMenu = document.getElementById('lang-menu-desktop');
+    if (btn && langMenu) {
+      btn.onclick = function(e) {
+        e.stopPropagation();
+        var isOpen = !langMenu.classList.contains('hidden');
+        langMenu.classList.toggle('hidden');
+        var chev = document.getElementById('lang-chevron-desktop');
+        if (chev) chev.classList.toggle('rotate-180');
+        btn.setAttribute('aria-expanded', String(!isOpen));
+      };
+      document.addEventListener('click', function() {
+        langMenu.classList.add('hidden');
+        var chev = document.getElementById('lang-chevron-desktop');
+        if (chev) chev.classList.remove('rotate-180');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    }
+  }
+
+  initHeader();
+  document.addEventListener('astro:after-swap', initHeader);
+</script> <main class="flex-1 pt-18 lg:pt-20">  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Optimizacion con Intervalos de Confianza","datePublished":"2024-09-10T00:00:00.000Z","author":{"@type":"Person","name":"Felipe Haro"},"publisher":{"@type":"Organization","name":"Noorjax Consulting","url":"https://noorjax.com"},"description":"Los modelos de simulacion son estocasticos por naturaleza, lo que significa que cada vez que ejecutas un modelo de simulacion obtendras resultados diferentes, si usas diferentes semillas. Para comunicar estos resultados variados a"}</script> <article class="py-(--spacing-section)"> <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8"> <!-- Back link --> <a href="/es/blog/" class="inline-flex items-center gap-2 text-sm text-text-tertiary hover:text-brand-accent mb-8 transition-colors"> <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18"></path> </svg>
+Volver al Blog
+</a> <!-- Header --> <header class="mb-10"> <div class="flex flex-wrap gap-2 mb-4"> <span class="text-xs font-medium px-2.5 py-1 rounded-full bg-brand-secondary/10 text-brand-secondary"> Librerías Noorjax </span> </div> <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-4"> Optimizacion con Intervalos de Confianza </h1> <time class="text-text-tertiary" datetime="2024-09-10T00:00:00.000Z"> 10 de septiembre de 2024 </time> </header> <!-- Content --> <div class="prose prose-lg max-w-none
+        prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-text-primary
+        prose-p:text-text-secondary
+        prose-a:text-brand-teal prose-a:no-underline hover:prose-a:underline
+        prose-img:rounded-xl prose-img:border prose-img:border-border-default prose-img:mx-auto
+        prose-code:text-brand-secondary prose-code:bg-bg-secondary prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm
+        prose-pre:bg-bg-secondary prose-pre:border prose-pre:border-border-default prose-pre:rounded-xl
+        prose-blockquote:border-brand-teal prose-blockquote:text-text-secondary prose-blockquote:not-italic
+        prose-strong:text-text-primary
+        prose-li:text-text-secondary
+        prose-hr:border-border-default
+      "> <p>Los modelos de simulacion son estocasticos por naturaleza, lo que significa que cada vez que ejecutas un modelo de simulacion obtendras resultados diferentes, si usas diferentes semillas. Para comunicar estos resultados variados a las partes interesadas, necesitas usar una herramienta estadistica llamada intervalos de confianza. En terminos simples, esta herramienta te dira que tan seguro puedes estar de que tus resultados se encuentran en un intervalo particular. Para hacer esto necesitas ejecutar simulaciones Montecarlo, que consiste simplemente en ejecutar la simulacion tantas veces como sea necesario para que tu intervalo de confianza tenga el menor error que estes dispuesto a permitir o aceptar.</p>
+<p>Por favor agenda una reunion con nosotros o contactanos para solicitar una demostracion y ver si esta biblioteca funciona para tus necesidades.</p>
+<h2 id="como-descargar">Como Descargar</h2>
+<p>Puedes descargar la biblioteca en el siguiente enlace, junto con los archivos auxiliares:</p>
+<p><a href="https://github.com/noorjax/optimizationWithMontecarlo">https://github.com/noorjax/optimizationWithMontecarlo</a></p>
+<p>Necesitaras una licencia para usarla.</p>
+<h2 id="como-obtener-una-licencia">Como obtener una licencia</h2>
+<p>Para obtener una licencia, sigue las instrucciones en el siguiente enlace:</p>
+<p><a href="/es/blog/getting-a-license-for-a-library/">/es/blog/getting-a-license-for-a-library/</a></p>
+<p>El precio de esta biblioteca:</p>
+<ul>
+<li>
+<p>Uso academico – 3 meses: €200 (la compra debe realizarse con un correo universitario, y no puedes usarla con AnyLogic Pro)</p>
+</li>
+<li>
+<p>Uso comercial – 1 ano: €1500</p>
+</li>
+</ul>
+<p>Nuestros precios pueden cambiar en cualquier momento sin previo aviso</p>
+<h2 id="experimento-de-optimizacion">Experimento de Optimizacion</h2>
+<p>Esta biblioteca ha sido probada con AnyLogic 8.9.1. Versiones anteriores podrian no funcionar.</p>
+<h2 id="introduccion">Introduccion</h2>
+<p>Al realizar un experimento de optimizacion, cada conjunto de valores de parametros elegidos se llama una solucion. Cuando una solucion se usa para ejecutar el modelo, no es suficiente ejecutar el modelo solo una vez con esta solucion. Es importante replicarlo hasta que se alcance el nivel de confianza. Basandose en este concepto, esta biblioteca de optimizacion asegura confianza en el resultado de cada solucion al realizar un experimento Montecarlo para cada solucion.</p>
+<h2 id="instrucciones-de-instalacion">Instrucciones de Instalacion</h2>
+<p>Descarga la biblioteca (enlace al inicio de este documento) y guardala en un lugar seguro.</p>
+<p>Dentro de Anylogic, agrega la biblioteca a tu paleta usando el boton + en la pestana de paleta, y encuentra el archivo .jar que descargaste. Siempre manten ese archivo .jar en la misma ubicacion, o tendras problemas.
+<a href="/images/blog/optimization-with-confidence-intervals/Monosnap-Instructions-Word-2023-11-16-08.43.08.png"><img src="/images/blog/optimization-with-confidence-intervals/Monosnap-Instructions-Word-2023-11-16-08.43.08.png" alt=""></a></p>
+<p>En la carpeta del proyecto donde pretendes usar la biblioteca, debes agregar el archivo Excel llamado “input” que recibiras como parte del paquete de la biblioteca cuando la compres. No cambies el nombre del archivo ni los nombres de ninguna de las hojas o obtendras errores.</p>
+<h2 id="como-usar-la-biblioteca">Como Usar la Biblioteca</h2>
+<p>Primero necesitas agregar inputOptimization.xlsx que encuentras cuando descargas la biblioteca en la carpeta de archivos adicionales en la carpeta de tu proyecto AnyLogic ya que la biblioteca usara la informacion alli contenida para ejecutar la optimizacion.</p>
+<p>Puedes arrastrar y soltar el objeto “Optimization Experiment” disponible en la paleta de la biblioteca en cualquier agente de tu modelo.</p>
+<p>La siguiente configuracion para el experimento es obligatoria en tu modelo: Agrega un nuevo tipo de agente en tu modelo, llamalo como quieras, por ejemplo, MyOptimization. Luego crea un nuevo experimento de simulacion que tenga MyOptimization como agente de nivel superior. Arrastra y suelta el objeto “Optimization Experiment” disponible y el objeto “settingsOpt” desde la paleta de la biblioteca en el agente MyOptimization y configura los parametros para estos objetos como se describe aqui en la siguiente seccion.</p>
+<p>Ten en cuenta que la configuracion descrita anteriormente es preferida pero no obligatoria. Puedes usar el “Optimization Experiment” en cualquier agente, sin embargo, asegurate de que el agente de nivel superior del experimento de simulacion que ejecutes sea el agente que contiene el objeto “Optimization Experiment” o que sea un agente que contiene al agente que contiene el objeto.</p>
+<h2 id="configuracion-de-objetos">Configuracion de Objetos</h2>
+<p>Arrastra y suelta SettingsOpt y configura los parametros como se describe a continuacion:</p>
+<h3 id="licencia">Licencia:</h3>
+<ul>
+<li>
+<p><em>Token</em>: escribe el token que recibiras cuando compres esta herramienta.</p>
+</li>
+<li>
+<p><em>Check New Version</em>: marca esta casilla si quieres verificar si hay nuevas versiones de esta biblioteca con nuevas funciones. Si hay una nueva version, la informacion se imprimira en la consola una vez que ejecutes un modelo.</p>
+</li>
+</ul>
+<p>Arrastra y suelta el Optimization Experiment y configura los parametros como se describe a continuacion:</p>
+<h3 id="licencia-1">Licencia:</h3>
+<ul>
+<li><em>Settings</em>: elige el objeto settingsOpt que tiene el token.</li>
+</ul>
+<h3 id="agente-logico">Agente Logico:</h3>
+<ul>
+<li><em>Agent type</em>: el tipo de agente de nivel superior. Escribe el nombre del tipo de agente seguido de “.class”. Ejemplo: MyAgent.class.</li>
+</ul>
+<h3 id="tiempo-del-modelo">Tiempo del Modelo:</h3>
+<ul>
+<li>
+<p><em>Unidades de tiempo del modelo</em>: unidades de tiempo del modelo</p>
+</li>
+<li>
+<p><em>Stop</em>: la condicion de parada para el modelo. Elige la opcion necesaria de la lista desplegable. Puede ser un tiempo en unidades de tiempo del modelo (Stop at specified time) o una fecha (Stop at specified date). La tercera opcion es Never. Usa esta opcion cuando ya tienes una condicion de parada agregada en la logica de tu modelo, como un evento que termina la simulacion, por ejemplo.</p>
+</li>
+</ul>
+<p>Nota: Cuando agregas una condicion de parada en la logica de tu modelo, usa finishSimulation() en lugar de stopSimulation().</p>
+<ul>
+<li>
+<p><em>Start time</em>: El tiempo inicial en unidades de tiempo del modelo para el horizonte de tiempo de la simulacion.</p>
+</li>
+<li>
+<p><em>Start date</em>: La fecha inicial del calendario para el horizonte de tiempo de la simulacion.</p>
+</li>
+<li>
+<p><em>Stop time</em>: habilitado solo cuando se elige la opcion “Stop at specified time” para el parametro <em>Stop</em> y es el tiempo para detener la ejecucion del modelo en unidades de tiempo del modelo.</p>
+</li>
+<li>
+<p><em>Stop date</em>: habilitado solo cuando se elige la opcion “Stop at specified date” para el parametro <em>Stop</em> y es la fecha del calendario para detener la ejecucion del modelo.</p>
+</li>
+</ul>
+<p>Los parametros de tiempo anteriores se aplicaran a todas las ejecuciones de replicacion.</p>
+<h3 id="optimizacion">Optimizacion:</h3>
+<ul>
+<li>
+<p><em>Objetivo:</em> elige si el objetivo de la optimizacion es maximizar o minimizar la funcion objetivo.</p>
+</li>
+<li>
+<p><em>Expresion</em>: la funcion objetivo que necesita ser optimizada. Al definir esta expresion, para alcanzar el agente de nivel superior que especificaste en el <em>Agent type</em>, necesitas usar root pero tambien convertirlo a ese tipo de agente. Ejemplo: ((MyAgent)root).variable</p>
+</li>
+<li>
+<p><em>Numero de iteraciones</em>: el numero de iteraciones que se realizaran, cada iteracion constituye un conjunto de posibles soluciones.</p>
+</li>
+<li>
+<p><em>Parada automatica</em>: Si se selecciona, la optimizacion se detendra si el valor de la funcion objetivo deja de mejorar significativamente, incluso si no se ha alcanzado el numero de iteraciones especificado.</p>
+</li>
+</ul>
+<p>Para hacer esto, se calculara la diferencia (en porcentaje) entre el promedio de los resultados de todas las soluciones en una iteracion y la enesima iteracion despues de esa. Si esta diferencia es menor que una cierta proporcion x, el experimento se detendra. Necesitas especificar n y x (ver abajo) segun consideres apropiado.</p>
+<ul>
+<li>
+<p><em>Numero de iteraciones consecutivas</em>: habilitado solo cuando se elige <em>Parada automatica</em> y es el numero de iteraciones n como se describio anteriormente.</p>
+</li>
+<li>
+<p><em>Porcentaje de cambio</em>: habilitado solo cuando se elige <em>Parada automatica</em> y es la proporcion x como se describio anteriormente. Debe ser un valor entre 0 y 1.</p>
+</li>
+</ul>
+<h3 id="replicaciones">Replicaciones:</h3>
+<ul>
+<li>
+<p><em>Replicaciones minimas:</em> el numero minimo de ejecuciones de simulacion que se realizaran en el experimento Montecarlo.</p>
+</li>
+<li>
+<p><em>Replicaciones maximas:</em> el numero maximo de ejecuciones de simulacion que se realizaran en el experimento Montecarlo. El experimento seguira replicando ejecuciones hasta que los resultados converjan. Si no convergen, este es el numero maximo de ejecuciones que se realizaran.</p>
+</li>
+<li>
+<p><em>Nivel de confianza:</em> puedes elegir de las opciones especificadas el nivel de confianza que el experimento Montecarlo debe asegurar al encontrar el intervalo de confianza.</p>
+</li>
+<li>
+<p><em>Porcentaje de error:</em> porcentaje de variacion alrededor de la media de la <em>expresion</em> necesaria. Debe ser un valor entre 0 y 1.</p>
+</li>
+</ul>
+<h3 id="acciones-java">Acciones Java:</h3>
+<ul>
+<li>
+<p><em>Configuracion inicial:</em> El codigo que agregues aqui se ejecutara en la configuracion del experimento.</p>
+</li>
+<li>
+<p><em>Antes de la ejecucion de simulacion</em>: El codigo que agregues aqui se ejecutara antes de cada ejecucion de simulacion (solucion). En este momento el agente de nivel superior del modelo ya esta creado, pero el modelo aun no ha iniciado. Puedes realizar aqui algunas acciones con elementos del agente de nivel superior, usando ((MyAgent)root).</p>
+</li>
+<li>
+<p><em>Despues de la ejecucion de simulacion</em>: El codigo que agregues aqui se ejecutara despues de cada ejecucion de simulacion (solucion). Puedes realizar aqui algunas acciones con elementos del agente de nivel superior.</p>
+</li>
+<li>
+<p>*Antes de la replicacion: *El codigo que agregues aqui se ejecutara antes de cada ejecucion de replicacion (del Montecarlo) de una solucion. Puedes realizar aqui algunas acciones con elementos del agente de nivel superior.</p>
+</li>
+<li>
+<p>*Despues de la replicacion: *El codigo que agregues aqui se ejecutara despues de cada ejecucion de replicacion (del Montecarlo) de una solucion. Puedes realizar aqui algunas acciones con elementos del agente de nivel superior.</p>
+</li>
+<li>
+<p>*Despues del experimento: *El codigo que agregues aqui se ejecutara despues de que el experimento termine.</p>
+</li>
+</ul>
+<p>Ten en cuenta que puedes dejar estos vacios si no se necesita ninguna accion.</p>
+<h3 id="exportacion-de-resultados">Exportacion de Resultados:</h3>
+<ul>
+<li>*Mostrar boton de exportacion: *si se elige esta opcion, aparecera un boton al final del experimento que te permite exportar los resultados.</li>
+</ul>
+<h2 id="instrucciones-de-uso">Instrucciones de Uso</h2>
+<p>Cuando todos los elementos arrastrados esten correctamente configurados, ejecuta tu experimento de simulacion (en este punto el archivo inputOptimization.xlsx debe estar cerrado). Ve a la carpeta de tu modelo y abre el archivo inputOptimization.xlsx. En la hoja llamada “params_ranges”, notaras que ahora puedes ver los nombres de todos los parametros que se encuentran en el agente que definiste como tu agente de nivel superior listados en la columna llamada “parameter”. Para cada parametro, define las caracteristicas de la siguiente manera:</p>
+<ul>
+<li>
+<p><em>is an array:</em> a veces tus parametros pueden ser arreglos. Si el parametro es un arreglo, esto debe ser TRUE, si no debe ser FALSE.</p>
+</li>
+<li>
+<p><em>Array size:</em> si el parametro es un arreglo, necesitas especificar el tamano del arreglo aqui. Si el parametro no es un arreglo, simplemente escribe 0.</p>
+</li>
+<li>
+<p>*type: *el tipo puede ser una de cuatro opciones (CONTINUOUS, DISCRETE, FIXED, BOOLEAN). Elige el tipo apropiado de la lista desplegable. No escribas nada diferente a los valores indicados en la lista desplegable porque esto causara un error cuando ejecutes el experimento.</p>
+</li>
+<li>
+<p>*ranges: *para parametros CONTINUOUS, define el minimo y el maximo. Para parametros DISCRETE, define el minimo, maximo y paso. Para parametros FIXED, define el valor fijo. Para parametros BOOLEAN, no hay necesidad de definir nada. Para todas las celdas que no se necesitan, puedes escribir cualquier valor (cero por ejemplo) pero no las dejes vacias. Por ejemplo, para parametros CONTINUOUS, puedes escribir 0 para el paso ya que no se usara. Para el caso de arreglos que no son FIXED, los rangos indicados se aplicaran a todos los componentes del arreglo. No es posible definir diferentes rangos para cada componente de un arreglo. De nuevo, para arreglos BOOLEAN, no hay necesidad de definir nada. Finalmente, para el caso de arreglos FIXED, en la columna de valor fijo, necesitas definir los valores de los componentes del arreglo usando este formato: si el tamano del arreglo es 3 por ejemplo. Este es el unico formato aceptable, cualquier otro formato dara un error.</p>
+</li>
+</ul>
+<p>Como ejemplo, consulta la imagen a continuacion:</p>
+<p><a href="/images/blog/optimization-with-confidence-intervals/new-config-optimization.png"><img src="/images/blog/optimization-with-confidence-intervals/new-config-optimization.png" alt=""></a></p>
+<p>Cuando termines de llenar los rangos de parametros, guarda el archivo y vuelve a tu modelo que aun esta ejecutandose y presiona el boton “START” para iniciar el experimento. Si has cerrado la ejecucion del modelo, no te preocupes, puedes ejecutar el experimento de simulacion nuevamente y ahora puedes presionar “START” inmediatamente.
+Si agregas/eliminas parametros en cualquier momento durante el desarrollo de tu simulacion, si ejecutas el modelo, el archivo Excel se actualizara automaticamente con los parametros que existen ahora. Solo asegurate de agregar un numero al min, max, step y fixed value antes de presionar start para evitar errores.</p>
+<h2 id="resultados">Resultados</h2>
+<p>Cuando ejecutes el experimento, veras un grafico que progresa con las ejecuciones de simulacion realizadas. El grafico muestra los mejores resultados (de la expresion o funcion objetivo) con cada iteracion. Una linea muestra la mejor media de la solucion (del Montecarlo), la segunda linea muestra el mejor limite inferior de la solucion, y la tercera linea muestra el mejor limite superior de la solucion. Estas 2 ultimas lineas representan el intervalo de confianza de la mejor solucion en cada iteracion. Ademas, a medida que el experimento progresa, el mejor resultado tambien se muestra junto al grafico. Cuando el experimento termina, veras los valores de los parametros que constituyen la mejor solucion.</p>
+<p>Adicionalmente, cuando el experimento termina, aparecera un boton que te permite exportar estos valores de parametros a un archivo csv. Cuando presiones el boton, aparecera una nueva carpeta llamada “exports” en la carpeta de tu modelo, y dentro de esa carpeta encontraras la hoja de resultados exportados. La hoja que se llama “parameters values” muestra los nombres de los parametros en la primera columna y los valores para cada parametro en la segunda columna.</p>
+<h2 id="opciones-adicionales">Opciones Adicionales</h2>
+<p><em>Restricciones</em>: las restricciones son limitaciones o condiciones relacionadas con los valores de los parametros. Una restriccion es una expresion aritmetica bien formada que describe una relacion entre los parametros de optimizacion. Siempre define una limitacion especificando un limite inferior o superior, por ejemplo, p1+p2>10. Las restricciones se evaluan antes de la ejecucion del modelo y la instanciacion del agente de nivel superior, por lo que no pueden involucrar ninguno de los contenidos del agente de nivel superior. Para definir restricciones para tu experimento de optimizacion, necesitas usar la hoja “constraints_db” en el archivo inputOptimization.xlsx. Cada fila constituira una restriccion. En la primera columna, escribe cualquier numero como un id unico para la restriccion. Luego define si quieres habilitar la restriccion cuando ejecutes el experimento especificando TRUE para habilitada y FALSE para deshabilitada. Si la restriccion esta deshabilitada, no se tomara en consideracion en el experimento. Esta opcion se agrega en caso de que quieras probar diferentes combinaciones de las restricciones. Describiremos la columna “on array” en el siguiente parrafo. A continuacion, necesitas definir la expresion que debe estar compuesta por nombre/nombres de parametros y los simbolos matematicos para definir la relacion aritmetica. Despues de eso, necesitas definir el tipo de limitacion. Los simbolos permitidos aqui son: =, >=, &#x3C;=. Usar cualquier otro simbolo causara un error. Finalmente, defines el limite que es cualquier numero.</p>
+<p>Para arreglos, las restricciones son un caso especial. No es posible usar restricciones en mas de un arreglo en una expresion, o en un arreglo y un parametro normal en una expresion. <strong>Solo</strong> se permite usar restricciones en arreglos sobre los componentes del arreglo mismo. En la columna “on array”, si la restriccion que vas a agregar en esta fila esta relacionada con un arreglo, este valor debe ser TRUE, de lo contrario debe ser FALSE. El formato de la expresion seria el siguiente por ejemplo: 2*p1+p1/4, donde p1 y p1 representan componentes del arreglo en las posiciones relevantes basadas en los numeros indicados entre los corchetes. Por ejemplo, si este es el arreglo p1: , p1 seria 5.3, y p1 seria 9.5. Cualquier expresion de restriccion que contenga el nombre de mas de un arreglo o que contenga una mezcla del nombre de un arreglo y el nombre de un parametro normal dara un error durante la ejecucion.</p>
+<p><em>Requisitos</em>: los requisitos son restricciones adicionales impuestas a los resultados encontrados por el motor de optimizacion. Estas restricciones se prueban despues de una ejecucion de simulacion y pueden involucrar cualquiera de las variables de nivel superior. Para definir requisitos para tu experimento de optimizacion, necesitas usar la hoja “requirements_db” en el archivo inputOptimization.xlsx. Sigue las mismas reglas que las restricciones, sin embargo, en la expresion aqui usa variables en lugar de parametros.</p>
+<h2 id="preguntas-frecuentes">Preguntas Frecuentes</h2>
+<h2 id="no-funciona-aunque-tengo-una-licencia">No funciona aunque tengo una licencia</h2>
+<p>Esta biblioteca funciona solo con conexion a internet. Asegurate de que tu conectividad a internet este funcionando.</p>
+<h2 id="es-esto-mejor-que-optquest">Es esto mejor que optQuest?</h2>
+<p>Primero, puedes exportar este experimento a un archivo ejecutable, lo cual no es posible con OptQuest a menos que compres una licencia especial costosa para eso.
+Segundo, es significativamente mas facil trabajar con miles de variables. El experimento nativo optQuest en AnyLogic es muy dificil de usar si tienes tantas variables.</p>
+<p>Finalmente, agregamos un documento de comparacion que puedes encontrar en los archivos adicionales cuando descargues esta biblioteca. Usamos 3 modelos tipicos que puedes encontrar en los ejemplos de AnyLogic y concluimos que nuestro algoritmo de optimizacion es bastante similar y da, si no mejores resultados, muy similares a los nativos de AnyLogic.</p>
+<h2 id="que-son-los-intervalos-de-confianza">Que son los intervalos de confianza?</h2>
+<p>Para mas informacion sobre los fundamentos teoricos de los intervalos de confianza y las definiciones de los terminos tecnicos usados en la biblioteca, por favor consulta estos videos:</p>
+<p><a href="https://youtu.be/tWGnQxMgu8A?si=HbPHDZ4YbmrlPE1a.">https://youtu.be/tWGnQxMgu8A?si=HbPHDZ4YbmrlPE1a.</a></p>
+<p><a href="https://youtu.be/5UcKw-dZG7c?si=9HUuseB2H11DxiQp.">https://youtu.be/5UcKw-dZG7c?si=9HUuseB2H11DxiQp.</a></p>
+<h2 id="mi-computadora-esta-usando-100-de-cpu-durante-la-optimizacion-por-que">Mi computadora esta usando 100% de CPU durante la optimizacion, por que?</h2>
+<p>Esto depende probablemente del tipo de computadora que tienes, el numero de nucleos que tiene tu computadora y otras caracteristicas. Ejecutar una optimizacion es computacionalmente costoso y estamos tratando de usar todos tus nucleos. Podriamos cambiar esto en el futuro si causa problemas.</p>
+<h2 id="funciona-la-exportacion-en-la-nube">Funciona la exportacion en la nube?</h2>
+<p>Actualmente no funciona.</p> </div> <!-- Tags --> <div class="mt-12 pt-8 border-t border-border-default"> <div class="flex flex-wrap gap-2"> <span class="text-xs px-3 py-1 rounded-full border border-border-default text-text-tertiary">
+#Simulations </span> </div> </div> </div> </article>  </main> <footer class="dark-section border-t border-bg-dark-secondary mt-auto"> <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16"> <div class="grid grid-cols-1 md:grid-cols-3 gap-12"> <!-- Brand --> <div> <img src="/_astro/Noorjax-01.Dky3hJly_1hWLOT.webp" alt="Noorjax Consulting" loading="lazy" decoding="async" width="160" height="27" class="h-10 w-auto brightness-0 invert mb-3"> <p class="mt-3 text-sm text-text-on-dark-muted max-w-xs"> Servicios de Simulación </p> <div class="mt-5 flex gap-4"> <a href="https://www.linkedin.com/company/noorjax/" target="_blank" rel="noopener noreferrer" class="text-text-on-dark-muted hover:text-brand-teal transition-colors" aria-label="LinkedIn"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"> <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path> </svg> </a> <a href="https://www.youtube.com/@noorjaxconsulting" target="_blank" rel="noopener noreferrer" class="text-text-on-dark-muted hover:text-red-500 transition-colors" aria-label="YouTube"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"> <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path> </svg> </a> <a href="#" class="text-text-on-dark-muted hover:text-brand-teal transition-colors footer-email-icon" aria-label="Email"> <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path> </svg> </a> </div> </div> <!-- Navigation --> <div> <h4 class="text-sm font-semibold text-text-on-dark uppercase tracking-wider mb-4"> Navegación </h4> <ul class="space-y-2.5"> <li> <a href="/es/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> Inicio </a> </li><li> <a href="/es/simulation-services/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> Demo </a> </li><li> <a href="/es/business-cases/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> Casos </a> </li><li> <a href="/es/products/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> Productos </a> </li><li> <a href="/es/courses/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> Cursos </a> </li><li> <a href="/es/about-us/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> Nosotros </a> </li><li> <a href="/es/blog/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> Blog </a> </li><li> <a href="/es/contact/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> Contacto </a> </li> </ul> </div> <!-- Contact --> <div> <h4 class="text-sm font-semibold text-text-on-dark uppercase tracking-wider mb-4"> Contacto </h4> <ul class="space-y-2.5 text-sm text-text-on-dark-muted"> <li> <a href="#" class="hover:text-white transition-colors footer-email-link"></a> </li> <li> <a href="https://calendly.com/noorjax" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors"> Agenda una reunión </a> </li> <li class="text-text-on-dark-muted">Ahtri 12-512, 10151 Tallinn, Estonia</li> </ul> </div> </div> <!-- Bottom bar --> <div class="mt-12 pt-8 border-t border-bg-dark-secondary flex flex-col sm:flex-row items-center justify-between gap-4"> <p class="text-xs text-text-on-dark-muted">
+&copy; 2026 Noorjax Consulting. Todos los derechos reservados. </p> <p class="text-xs text-text-on-dark-muted"> Ahtri 12-512, 10151 Tallinn, Estonia </p> </div> </div> </footer> <script>
+  (function(){
+    var u='info',d='noorjax.com',e=u+'@'+d,m='mailto:'+e;
+    var icon=document.querySelector('.footer-email-icon');
+    if(icon) icon.href=m;
+    var link=document.querySelector('.footer-email-link');
+    if(link){link.href=m;link.textContent=e;}
+  })();
+</script> <style>
+    #nav-loader{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#0099b5,#6aab25);z-index:9999;width:0;opacity:0;pointer-events:none;transition:none;}
+    #nav-loader.loading{opacity:1;width:80%;transition:width 5s cubic-bezier(0.1,0.3,0.2,1);}
+    #nav-loader.done{width:100%;transition:width 0.15s ease-out;}
+    #nav-loader.fade{opacity:0;transition:opacity 0.3s ease;}
+  </style> <div id="nav-loader"></div> <script>
+    (function(){
+      function startLoader(){
+        var bar = document.getElementById('nav-loader');
+        if(!bar) return;
+        bar.className = '';
+        void bar.offsetWidth;
+        bar.classList.add('loading');
+      }
+      function endLoader(){
+        var bar = document.getElementById('nav-loader');
+        if(!bar) return;
+        bar.classList.remove('loading');
+        bar.classList.add('done');
+        setTimeout(function(){ bar.classList.add('fade'); }, 150);
+        setTimeout(function(){ bar.className = ''; }, 500);
+      }
+
+      // Listen for internal link clicks
+      document.addEventListener('click', function(e){
+        var link = e.target.closest('a');
+        if(!link) return;
+        var href = link.getAttribute('href');
+        if(!href) return;
+        if(link.target === '_blank') return;
+        if(href.startsWith('http') && href.indexOf(location.hostname) === -1) return;
+        if(href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:')) return;
+        startLoader();
+      });
+
+      // End loader when page finishes loading
+      document.addEventListener('astro:after-swap', endLoader);
+      window.addEventListener('load', endLoader);
+      document.addEventListener('astro:page-load', endLoader);
+    })();
+  </script>  </body></html>

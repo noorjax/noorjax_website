@@ -1,0 +1,293 @@
+<!DOCTYPE html><html lang="ar"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Astro v6.0.8"><!-- SEO --><title>التحسين مع فترات الثقة | Noorjax Consulting</title><meta name="description" content="نماذج المحاكاة عشوائية بطبيعتها، مما يعني أنه في كل مرة تقوم فيها بتشغيل نموذج محاكاة ستحصل على نتائج مختلفة، إذا استخدمت بذورًا مختلفة. من أجل إيصال هذه النتائج المتنوعة إلى أصحاب المصلحة"><link rel="canonical" href="https://noorjax.com/ar/blog/optimization-with-confidence-intervals/"><!-- i18n alternates (ar hidden for now) --><link rel="alternate" hreflang="en" href="https://noorjax.com/en/blog/optimization-with-confidence-intervals/"><link rel="alternate" hreflang="es" href="https://noorjax.com/es/blog/optimization-with-confidence-intervals/"><link rel="alternate" hreflang="x-default" href="https://noorjax.com/en/blog/optimization-with-confidence-intervals/"><!-- Open Graph --><meta property="og:type" content="website"><meta property="og:title" content="التحسين مع فترات الثقة | Noorjax Consulting"><meta property="og:description" content="نماذج المحاكاة عشوائية بطبيعتها، مما يعني أنه في كل مرة تقوم فيها بتشغيل نموذج محاكاة ستحصل على نتائج مختلفة، إذا استخدمت بذورًا مختلفة. من أجل إيصال هذه النتائج المتنوعة إلى أصحاب المصلحة"><meta property="og:image" content="https://noorjax.com/images/og-default.jpg"><meta property="og:url" content="https://noorjax.com/ar/blog/optimization-with-confidence-intervals/"><meta property="og:site_name" content="Noorjax Consulting"><meta property="og:locale" content="ar_SA"><!-- Twitter --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="التحسين مع فترات الثقة | Noorjax Consulting"><meta name="twitter:description" content="نماذج المحاكاة عشوائية بطبيعتها، مما يعني أنه في كل مرة تقوم فيها بتشغيل نموذج محاكاة ستحصل على نتائج مختلفة، إذا استخدمت بذورًا مختلفة. من أجل إيصال هذه النتائج المتنوعة إلى أصحاب المصلحة"><meta name="twitter:image" content="https://noorjax.com/images/og-default.jpg"><!-- Favicon --><link rel="icon" type="image/png" href="/images/logo/Noorjax-icon-png1.png"><!-- Fonts: Self-hosted Inter --><link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/inter-latin.woff2"><!-- Client-side routing (View Transitions) --><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.DmQZLfuR.js"></script><!-- JSON-LD Structured Data --><script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Noorjax Consulting","description":"نماذج المحاكاة عشوائية بطبيعتها، مما يعني أنه في كل مرة تقوم فيها بتشغيل نموذج محاكاة ستحصل على نتائج مختلفة، إذا استخدمت بذورًا مختلفة. من أجل إيصال هذه النتائج المتنوعة إلى أصحاب المصلحة","url":"https://noorjax.com","email":"info@noorjax.com","address":{"@type":"PostalAddress","streetAddress":"Ahtri 12-512","addressLocality":"Tallinn","postalCode":"10151","addressCountry":"EE"},"areaServed":"Worldwide","serviceType":["Simulation Consulting","AnyLogic Simulation","Manufacturing Simulation","System Dynamics Consulting","Vensim Consulting","Agent-Based Modeling","Discrete Event Simulation","Policy Advisory","Supply Chain Simulation","AnyLogic Training"],"knowsAbout":["AnyLogic","Vensim","System Dynamics","Discrete Event Simulation","Agent-Based Modeling","Monte Carlo Simulation","Optimization","Artificial Intelligence"],"sameAs":["https://www.linkedin.com/company/noorjax/","https://www.youtube.com/@noorjaxconsulting"],"founder":{"@type":"Person","name":"Felipe Haro"},"foundingDate":"2017"}</script><link rel="stylesheet" href="/_astro/BaseLayout.Dhci6ilB.css"></head> <body class="min-h-screen flex flex-col">  <header class="fixed top-0 left-0 right-0 z-50 bg-bg-primary border-b border-border-default shadow-sm" id="site-header"> <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"> <nav class="flex items-center justify-between h-16 lg:h-18" aria-label="Main navigation"> <!-- Logo --> <a href="/ar/" class="flex items-center shrink-0" aria-label="Noorjax Consulting"> <img src="/_astro/Noorjax-01.Dky3hJly_1s27Mm.webp" alt="Noorjax Consulting" loading="eager" decoding="async" fetchpriority="high" width="384" height="64" class="h-10 lg:h-12 w-auto"> </a> <!-- Desktop Navigation --> <div class="hidden lg:flex items-center gap-6"> <a href="/ar/" class="text-sm font-medium transition-colors text-text-secondary hover:text-text-primary"> الرئيسية </a><a href="/ar/simulation-services/" class="text-sm font-medium transition-colors text-text-secondary hover:text-text-primary"> ديمو </a><a href="/ar/business-cases/" class="text-sm font-medium transition-colors text-text-secondary hover:text-text-primary"> المشاريع </a><a href="/ar/products/" class="text-sm font-medium transition-colors text-text-secondary hover:text-text-primary"> المنتجات </a><a href="/ar/courses/" class="text-sm font-medium transition-colors text-text-secondary hover:text-text-primary"> الدورات </a><a href="/ar/about-us/" class="text-sm font-medium transition-colors text-text-secondary hover:text-text-primary"> من نحن </a><a href="/ar/blog/" class="text-sm font-medium transition-colors text-brand-teal font-semibold"> المدونة </a><a href="/ar/contact/" class="btn-primary text-xs px-4 py-2"> اتصل بنا </a> <!-- Social icons --> <div class="flex items-center gap-3 ml-2 pl-4 border-l border-border-default"> <a href="https://www.linkedin.com/company/noorjax/" target="_blank" rel="noopener noreferrer" class="text-text-tertiary hover:text-brand-teal transition-colors" aria-label="LinkedIn"> <svg class="w-4.5 h-4.5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg> </a> <a href="https://www.youtube.com/@noorjaxconsulting" target="_blank" rel="noopener noreferrer" class="text-text-tertiary hover:text-red-600 transition-colors" aria-label="YouTube"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg> </a> </div> <!-- Language Dropdown --> <div class="relative" id="lang-dropdown-desktop"> <button class="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-border-default text-sm text-text-secondary hover:text-text-primary hover:border-border-hover transition-all cursor-pointer" id="lang-btn-desktop" aria-expanded="false" aria-haspopup="true"> <span class="leading-none rounded-sm overflow-hidden"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 16" width="24" height="16"><rect fill="#006C35" width="24" height="16"/><path d="M6 10.5h12M8 8h2v3H8zM11 6h2v5h-2zM14 8h2v3h-2z" stroke="#fff" stroke-width="0.8" fill="none"/></svg></span> <svg class="w-3.5 h-3.5 transition-transform" id="lang-chevron-desktop" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg> </button> <div class="absolute right-0 top-full mt-1.5 w-auto bg-bg-primary border border-border-default rounded-xl shadow-lg overflow-hidden hidden z-50" id="lang-menu-desktop"> <a href="/en/blog/optimization-with-confidence-intervals/" class="flex items-center gap-3 px-4 py-2.5 text-sm text-text-secondary hover:bg-brand-teal/5 hover:text-brand-teal transition-colors"> <span class="leading-none rounded-sm overflow-hidden"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="24" height="12"><clipPath id="s"><path d="M0,0 v30 h60 v-30 z"/></clipPath><clipPath id="t"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath><g clip-path="url(#s)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg></span> </a><a href="/es/blog/optimization-with-confidence-intervals/" class="flex items-center gap-3 px-4 py-2.5 text-sm text-text-secondary hover:bg-brand-teal/5 hover:text-brand-teal transition-colors"> <span class="leading-none rounded-sm overflow-hidden"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 500" width="24" height="16"><rect width="750" height="500" fill="#c60b1e"/><rect width="750" height="250" y="125" fill="#ffc400"/></svg></span> </a> </div> </div> </div> <!-- Mobile Menu Toggle --> <button class="lg:hidden p-2 text-text-secondary hover:text-text-primary" id="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false"> <svg class="w-6 h-6" id="menu-icon-open" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg> <svg class="w-6 h-6 hidden" id="menu-icon-close" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg> </button> </nav> </div> <!-- Mobile Menu --> <div class="lg:hidden hidden" id="mobile-menu"> <div class="glass mx-4 mt-2 rounded-xl p-6 space-y-4 shadow-lg"> <a href="/ar/" class="block text-base font-medium py-2 transition-colors text-text-secondary hover:text-text-primary"> الرئيسية </a><a href="/ar/simulation-services/" class="block text-base font-medium py-2 transition-colors text-text-secondary hover:text-text-primary"> ديمو </a><a href="/ar/business-cases/" class="block text-base font-medium py-2 transition-colors text-text-secondary hover:text-text-primary"> المشاريع </a><a href="/ar/products/" class="block text-base font-medium py-2 transition-colors text-text-secondary hover:text-text-primary"> المنتجات </a><a href="/ar/courses/" class="block text-base font-medium py-2 transition-colors text-text-secondary hover:text-text-primary"> الدورات </a><a href="/ar/about-us/" class="block text-base font-medium py-2 transition-colors text-text-secondary hover:text-text-primary"> من نحن </a><a href="/ar/blog/" class="block text-base font-medium py-2 transition-colors text-brand-teal"> المدونة </a><a href="/ar/contact/" class="block text-base font-medium py-2 transition-colors text-text-secondary hover:text-text-primary"> اتصل بنا </a> <div class="pt-4 border-t border-border-default"> <div class="flex items-center gap-4 mb-4"> <a href="https://www.linkedin.com/company/noorjax/" target="_blank" rel="noopener noreferrer" class="text-text-tertiary hover:text-brand-teal" aria-label="LinkedIn"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg> </a> <a href="https://www.youtube.com/@noorjaxconsulting" target="_blank" rel="noopener noreferrer" class="text-text-tertiary hover:text-red-600" aria-label="YouTube"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg> </a> </div> <!-- Mobile Language Options --> <div class="flex flex-col gap-1"> <a href="/en/blog/optimization-with-confidence-intervals/" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-text-secondary hover:bg-brand-teal/5 hover:text-brand-teal transition-colors"> <span class="leading-none rounded-sm overflow-hidden"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="24" height="12"><clipPath id="s"><path d="M0,0 v30 h60 v-30 z"/></clipPath><clipPath id="t"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath><g clip-path="url(#s)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg></span> </a><a href="/es/blog/optimization-with-confidence-intervals/" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-text-secondary hover:bg-brand-teal/5 hover:text-brand-teal transition-colors"> <span class="leading-none rounded-sm overflow-hidden"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 500" width="24" height="16"><rect width="750" height="500" fill="#c60b1e"/><rect width="750" height="250" y="125" fill="#ffc400"/></svg></span> </a> </div> </div> </div> </div> </header> <script>
+  function initHeader() {
+    // Mobile menu
+    var toggle = document.getElementById('mobile-menu-toggle');
+    var menu = document.getElementById('mobile-menu');
+    if (toggle && menu) {
+      toggle.onclick = function() {
+        var isOpen = !menu.classList.contains('hidden');
+        menu.classList.toggle('hidden');
+        document.getElementById('menu-icon-open').classList.toggle('hidden');
+        document.getElementById('menu-icon-close').classList.toggle('hidden');
+        toggle.setAttribute('aria-expanded', String(!isOpen));
+      };
+      menu.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+          menu.classList.add('hidden');
+          document.getElementById('menu-icon-open').classList.remove('hidden');
+          document.getElementById('menu-icon-close').classList.add('hidden');
+        });
+      });
+    }
+
+    // Language dropdown
+    var btn = document.getElementById('lang-btn-desktop');
+    var langMenu = document.getElementById('lang-menu-desktop');
+    if (btn && langMenu) {
+      btn.onclick = function(e) {
+        e.stopPropagation();
+        var isOpen = !langMenu.classList.contains('hidden');
+        langMenu.classList.toggle('hidden');
+        var chev = document.getElementById('lang-chevron-desktop');
+        if (chev) chev.classList.toggle('rotate-180');
+        btn.setAttribute('aria-expanded', String(!isOpen));
+      };
+      document.addEventListener('click', function() {
+        langMenu.classList.add('hidden');
+        var chev = document.getElementById('lang-chevron-desktop');
+        if (chev) chev.classList.remove('rotate-180');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    }
+  }
+
+  initHeader();
+  document.addEventListener('astro:after-swap', initHeader);
+</script> <main class="flex-1 pt-18 lg:pt-20">  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"التحسين مع فترات الثقة","datePublished":"2024-09-10T00:00:00.000Z","author":{"@type":"Person","name":"Felipe Haro"},"publisher":{"@type":"Organization","name":"Noorjax Consulting","url":"https://noorjax.com"},"description":"نماذج المحاكاة عشوائية بطبيعتها، مما يعني أنه في كل مرة تقوم فيها بتشغيل نموذج محاكاة ستحصل على نتائج مختلفة، إذا استخدمت بذورًا مختلفة. من أجل إيصال هذه النتائج المتنوعة إلى أصحاب المصلحة"}</script> <article class="py-(--spacing-section)"> <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8"> <!-- Back link --> <a href="/ar/blog/" class="inline-flex items-center gap-2 text-sm text-text-tertiary hover:text-brand-accent mb-8 transition-colors"> <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18"></path> </svg>
+العودة إلى المدونة
+</a> <!-- Header --> <header class="mb-10"> <div class="flex flex-wrap gap-2 mb-4"> <span class="text-xs font-medium px-2.5 py-1 rounded-full bg-brand-secondary/10 text-brand-secondary"> مكتبات Noorjax </span> </div> <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-4"> التحسين مع فترات الثقة </h1> <time class="text-text-tertiary" datetime="2024-09-10T00:00:00.000Z"> ١٠ سبتمبر ٢٠٢٤ </time> </header> <!-- Content --> <div class="prose prose-lg max-w-none
+        prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-text-primary
+        prose-p:text-text-secondary
+        prose-a:text-brand-teal prose-a:no-underline hover:prose-a:underline
+        prose-img:rounded-xl prose-img:border prose-img:border-border-default prose-img:mx-auto
+        prose-code:text-brand-secondary prose-code:bg-bg-secondary prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm
+        prose-pre:bg-bg-secondary prose-pre:border prose-pre:border-border-default prose-pre:rounded-xl
+        prose-blockquote:border-brand-teal prose-blockquote:text-text-secondary prose-blockquote:not-italic
+        prose-strong:text-text-primary
+        prose-li:text-text-secondary
+        prose-hr:border-border-default
+      "> <p>نماذج المحاكاة عشوائية بطبيعتها، مما يعني أنه في كل مرة تقوم فيها بتشغيل نموذج محاكاة ستحصل على نتائج مختلفة، إذا استخدمت بذورًا مختلفة. من أجل إيصال هذه النتائج المتنوعة إلى أصحاب المصلحة، تحتاج إلى استخدام أداة إحصائية تُسمى فترات الثقة. ببساطة، ستخبرك هذه الأداة بمدى ثقتك في أن نتائجك تقع ضمن فترة معينة. للقيام بذلك، تحتاج إلى تشغيل محاكاة مونتي كارلو، وهي ببساطة تشغيل المحاكاة بعدد المرات اللازمة حتى تحصل فترة الثقة على أصغر خطأ ترغب في السماح به أو قبوله.</p>
+<p>يرجى حجز اجتماع معنا أو الاتصال بنا لطلب عرض توضيحي لمعرفة ما إذا كانت هذه المكتبة تناسب احتياجاتك.</p>
+<h2 id="كيفية-التحميل">كيفية التحميل</h2>
+<p>يمكنك تحميل المكتبة من الرابط التالي، مع الملفات المساعدة:</p>
+<p><a href="https://github.com/noorjax/optimizationWithMontecarlo">https://github.com/noorjax/optimizationWithMontecarlo</a></p>
+<p>ستحتاج إلى ترخيص لاستخدامها.</p>
+<h2 id="كيفية-الحصول-على-ترخيص">كيفية الحصول على ترخيص</h2>
+<p>للحصول على ترخيص، اتبع التعليمات في الرابط التالي:</p>
+<p><a href="/ar/blog/getting-a-license-for-a-library/">/ar/blog/getting-a-license-for-a-library/</a></p>
+<p>سعر هذه المكتبة:</p>
+<ul>
+<li>
+<p>الاستخدام الأكاديمي - 3 أشهر: 200 يورو (يجب إجراء الشراء ببريد إلكتروني جامعي، ولا يمكنك استخدامها مع AnyLogic Pro)</p>
+</li>
+<li>
+<p>الاستخدام التجاري - سنة واحدة: 1,500 يورو</p>
+</li>
+</ul>
+<p>أسعارنا قابلة للتغيير في أي وقت دون إشعار مسبق</p>
+<h2 id="تجربة-التحسين">تجربة التحسين</h2>
+<p>تم اختبار هذه المكتبة مع AnyLogic 8.9.1. قد لا تعمل الإصدارات السابقة.</p>
+<h2 id="المقدمة">المقدمة</h2>
+<p>عند إجراء تجربة تحسين، يُطلق على كل مجموعة من قيم المعلمات المختارة اسم حل. عندما يتم استخدام حل لتشغيل النموذج، لا يكفي تشغيل النموذج مرة واحدة فقط مع هذا الحل. من المهم تكراره حتى يتم الوصول إلى مستوى الثقة. بناءً على هذا المفهوم، تضمن مكتبة التحسين هذه الثقة في نتيجة كل حل من خلال إجراء تجربة مونتي كارلو لكل حل.</p>
+<h2 id="تعليمات-التثبيت">تعليمات التثبيت</h2>
+<p>قم بتحميل المكتبة (الرابط في بداية هذا المستند) وحفظها في مكان آمن.</p>
+<p>داخل AnyLogic، أضف المكتبة إلى لوحة الأدوات الخاصة بك باستخدام زر + في تبويب اللوحة، وابحث عن ملف .jar الذي قمت بتحميله. احتفظ دائمًا بملف .jar هذا في نفس الموقع، وإلا ستواجه مشاكل.
+<a href="/images/blog/optimization-with-confidence-intervals/Monosnap-Instructions-Word-2023-11-16-08.43.08.png"><img src="/images/blog/optimization-with-confidence-intervals/Monosnap-Instructions-Word-2023-11-16-08.43.08.png" alt=""></a></p>
+<p>في مجلد المشروع الذي تنوي استخدام المكتبة فيه، يجب إضافة ملف Excel المسمى “input” الذي ستتلقاه كجزء من حزمة المكتبة عند شرائها. لا تغير اسم الملف أو أسماء أي من الصفحات فيه وإلا ستحصل على أخطاء.</p>
+<h2 id="كيفية-استخدام-المكتبة">كيفية استخدام المكتبة</h2>
+<p>أولاً تحتاج إلى إضافة ملف inputOptimization.xlsx الذي تجده عند تحميل المكتبة في مجلد الملفات الإضافية في مجلد مشروع AnyLogic الخاص بك حيث ستستخدم المكتبة المعلومات الموجودة فيه لتنفيذ التحسين.</p>
+<p>يمكنك سحب وإسقاط كائن “Optimization Experiment” المتاح في لوحة أدوات المكتبة في أي وكيل في نموذجك.</p>
+<p>الإعداد التالي للتجربة إلزامي في نموذجك: أضف نوع وكيل جديد في نموذجك، سمّه كما تريد، مثلاً MyOptimization. ثم أنشئ تجربة محاكاة جديدة تحتوي على MyOptimization كوكيل المستوى الأعلى. اسحب وأسقط كائن “Optimization Experiment” المتاح وكائن “settingsOpt” من لوحة أدوات المكتبة إلى وكيل MyOptimization وقم بتهيئة المعلمات لهذه الكائنات كما هو موضح في القسم التالي.</p>
+<p>لاحظ أن الإعداد الموصوف أعلاه مُفضّل ولكنه ليس إلزاميًا. يمكنك استخدام “Optimization Experiment” في أي وكيل، ومع ذلك تأكد من أن وكيل المستوى الأعلى لتجربة المحاكاة التي تشغلها هو الوكيل الذي يحتوي على كائن “Optimization Experiment” أو أنه وكيل يحتوي على الوكيل الذي يحتوي على الكائن.</p>
+<h2 id="تهيئة-الكائنات">تهيئة الكائنات</h2>
+<p>اسحب وأسقط SettingsOpt وقم بتهيئة المعلمات كما هو موضح أدناه:</p>
+<h3 id="الترخيص">الترخيص:</h3>
+<ul>
+<li>
+<p><em>الرمز</em>: اكتب الرمز الذي ستتلقاه عند شراء هذه الأداة.</p>
+</li>
+<li>
+<p><em>التحقق من إصدار جديد</em>: ضع علامة على هذا المربع إذا كنت تريد التحقق من وجود إصدارات جديدة من هذه المكتبة بميزات جديدة. إذا كان هناك إصدار جديد، ستتم طباعة المعلومات في وحدة التحكم بمجرد تشغيل النموذج.</p>
+</li>
+</ul>
+<p>اسحب وأسقط تجربة التحسين وقم بتهيئة المعلمات كما هو موضح أدناه:</p>
+<h3 id="الترخيص-1">الترخيص:</h3>
+<ul>
+<li><em>الإعدادات</em>: اختر كائن settingsOpt الذي يحتوي على الرمز.</li>
+</ul>
+<h3 id="وكيل-المنطق">وكيل المنطق:</h3>
+<ul>
+<li><em>نوع الوكيل</em>: نوع الوكيل من المستوى الأعلى. اكتب اسم نوع الوكيل متبوعًا بـ “.class”. مثال: MyAgent.class.</li>
+</ul>
+<h3 id="وقت-النموذج">وقت النموذج:</h3>
+<ul>
+<li>
+<p><em>وحدات وقت النموذج</em>: وحدات وقت النموذج</p>
+</li>
+<li>
+<p><em>التوقف</em>: شرط التوقف للنموذج. اختر الخيار المطلوب من القائمة المنسدلة. يمكن أن يكون وقتًا بوحدات وقت النموذج (التوقف عند وقت محدد) أو تاريخًا (التوقف عند تاريخ محدد). الخيار الثالث هو أبدًا. استخدم هذا الخيار عندما يكون لديك شرط توقف مضاف بالفعل في منطق النموذج الخاص بك، مثل حدث ينهي المحاكاة على سبيل المثال.</p>
+</li>
+</ul>
+<p>ملاحظة: عندما تضيف شرط توقف في منطق النموذج الخاص بك، استخدم finishSimulation() بدلاً من stopSimulation().</p>
+<ul>
+<li>
+<p><em>وقت البدء</em>: الوقت الأولي بوحدات وقت النموذج لأفق زمن المحاكاة.</p>
+</li>
+<li>
+<p><em>تاريخ البدء</em>: التاريخ التقويمي الأولي لأفق زمن المحاكاة.</p>
+</li>
+<li>
+<p><em>وقت التوقف</em>: يُفعّل فقط عند اختيار خيار “التوقف عند وقت محدد” لمعلمة <em>التوقف</em> وهو الوقت لإيقاف تشغيل النموذج بوحدات وقت النموذج.</p>
+</li>
+<li>
+<p><em>تاريخ التوقف</em>: يُفعّل فقط عند اختيار خيار “التوقف عند تاريخ محدد” لمعلمة <em>التوقف</em> وهو التاريخ التقويمي لإيقاف تشغيل النموذج.</p>
+</li>
+</ul>
+<p>ستُطبّق معلمات الوقت أعلاه على جميع عمليات التكرار.</p>
+<h3 id="التحسين">التحسين:</h3>
+<ul>
+<li>
+<p><em>الهدف:</em> اختر ما إذا كان الهدف من التحسين هو تعظيم أو تصغير دالة الهدف.</p>
+</li>
+<li>
+<p><em>التعبير</em>: دالة الهدف التي تحتاج إلى تحسينها. عند تعريف هذا التعبير، للوصول إلى وكيل المستوى الأعلى الذي حددته في <em>نوع الوكيل</em>، تحتاج إلى استخدام root ولكن أيضًا تحويله إلى نوع ذلك الوكيل. مثال: ((MyAgent)root).variable</p>
+</li>
+<li>
+<p><em>عدد التكرارات</em>: عدد التكرارات التي ستُجرى، كل تكرار يشكل مجموعة من الحلول الممكنة.</p>
+</li>
+<li>
+<p><em>التوقف التلقائي</em>: إذا تم اختياره، سيتم إيقاف التحسين إذا توقفت قيمة دالة الهدف عن التحسن بشكل ملموس، حتى لو لم يتم الوصول إلى عدد التكرارات المحدد.</p>
+</li>
+</ul>
+<p>للقيام بذلك، سيتم حساب الفرق (كنسبة مئوية) بين متوسط نتائج جميع الحلول في تكرار والتكرار رقم n بعده. إذا كان هذا الفرق أقل من نسبة معينة x، سيتم إيقاف التجربة. تحتاج إلى تحديد n و x (انظر أدناه) كما تراه مناسبًا.</p>
+<ul>
+<li>
+<p><em>عدد التكرارات المتتالية</em>: يُفعّل فقط عند اختيار <em>التوقف التلقائي</em> وهو عدد التكرارات n كما هو موضح أعلاه.</p>
+</li>
+<li>
+<p><em>نسبة التغيير</em>: تُفعّل فقط عند اختيار <em>التوقف التلقائي</em> وهي النسبة x كما هو موضح أعلاه. يجب أن تكون قيمة بين 0 و 1.</p>
+</li>
+</ul>
+<h3 id="التكرارات">التكرارات:</h3>
+<ul>
+<li>
+<p><em>الحد الأدنى للتكرارات:</em> الحد الأدنى لعدد عمليات تشغيل المحاكاة التي ستُجرى في تجربة مونتي كارلو.</p>
+</li>
+<li>
+<p><em>الحد الأقصى للتكرارات:</em> الحد الأقصى لعدد عمليات تشغيل المحاكاة التي ستُجرى في تجربة مونتي كارلو. ستستمر التجربة في تكرار العمليات حتى تتقارب النتائج. إذا لم تتقارب، فهذا هو الحد الأقصى لعدد العمليات التي ستُجرى.</p>
+</li>
+<li>
+<p><em>مستوى الثقة:</em> يمكنك الاختيار من الخيارات المحددة لمستوى الثقة الذي يجب أن تضمنه تجربة مونتي كارلو عند إيجاد فترة الثقة.</p>
+</li>
+<li>
+<p><em>نسبة الخطأ:</em> نسبة التباين حول متوسط <em>التعبير</em> المطلوب. يجب أن تكون قيمة بين 0 و 1.</p>
+</li>
+</ul>
+<h3 id="إجراءات-java">إجراءات JAVA:</h3>
+<ul>
+<li>
+<p><em>الإعداد الأولي:</em> الكود الذي تضيفه هنا سيتم تنفيذه عند إعداد التجربة.</p>
+</li>
+<li>
+<p><em>قبل تشغيل المحاكاة</em>: الكود الذي تضيفه هنا سيتم تنفيذه قبل كل عملية تشغيل محاكاة (حل). في هذه اللحظة يكون وكيل المستوى الأعلى للنموذج قد تم إنشاؤه بالفعل، لكن النموذج لم يبدأ بعد. يمكنك تنفيذ بعض الإجراءات مع عناصر وكيل المستوى الأعلى، باستخدام ((MyAgent)root).</p>
+</li>
+<li>
+<p><em>بعد تشغيل المحاكاة</em>: الكود الذي تضيفه هنا سيتم تنفيذه بعد كل عملية تشغيل محاكاة (حل). يمكنك تنفيذ بعض الإجراءات مع عناصر وكيل المستوى الأعلى.</p>
+</li>
+<li>
+<p><em>قبل التكرار:</em> الكود الذي تضيفه هنا سيتم تنفيذه قبل كل عملية تكرار (من مونتي كارلو) لحل. يمكنك تنفيذ بعض الإجراءات مع عناصر وكيل المستوى الأعلى.</p>
+</li>
+<li>
+<p><em>بعد التكرار:</em> الكود الذي تضيفه هنا سيتم تنفيذه بعد كل عملية تكرار (من مونتي كارلو) لحل. يمكنك تنفيذ بعض الإجراءات مع عناصر وكيل المستوى الأعلى.</p>
+</li>
+<li>
+<p><em>بعد التجربة:</em> الكود الذي تضيفه هنا سيتم تنفيذه بعد انتهاء التجربة.</p>
+</li>
+</ul>
+<p>لاحظ أنه يمكنك ترك هذه فارغة إذا لم يكن هناك إجراء مطلوب.</p>
+<h3 id="تصدير-النتائج">تصدير النتائج:</h3>
+<ul>
+<li><em>إظهار زر التصدير:</em> إذا تم اختيار هذا الخيار، سيظهر زر في نهاية التجربة يتيح لك تصدير النتائج.</li>
+</ul>
+<h2 id="تعليمات-الاستخدام">تعليمات الاستخدام</h2>
+<p>عندما يتم تهيئة جميع العناصر المسحوبة بشكل صحيح، قم بتشغيل تجربة المحاكاة (في هذه المرحلة يجب أن يكون ملف inputOptimization.xlsx مغلقًا). اذهب إلى مجلد النموذج وافتح ملف inputOptimization.xlsx. في الصفحة المسماة “params_ranges”، ستلاحظ أنه يمكنك الآن رؤية أسماء جميع المعلمات الموجودة في الوكيل الذي عرّفته كوكيل المستوى الأعلى مدرجة في العمود المسمى “parameter”. لكل معلمة، حدد الخصائص كما يلي:</p>
+<ul>
+<li>
+<p><em>هل هي مصفوفة:</em> أحيانًا يمكن أن تكون معلماتك مصفوفات. إذا كانت المعلمة مصفوفة، يجب أن تكون القيمة TRUE، وإلا تكون FALSE.</p>
+</li>
+<li>
+<p><em>حجم المصفوفة:</em> إذا كانت المعلمة مصفوفة، تحتاج إلى تحديد حجم المصفوفة هنا. إذا لم تكن المعلمة مصفوفة، اكتب 0 فقط.</p>
+</li>
+<li>
+<p><em>النوع:</em> يمكن أن يكون النوع أحد أربعة خيارات (CONTINUOUS، DISCRETE، FIXED، BOOLEAN). اختر النوع المناسب من القائمة المنسدلة. لا تكتب أي شيء غير القيم المشار إليها في القائمة المنسدلة لأن ذلك سيسبب خطأ عند تشغيل التجربة.</p>
+</li>
+<li>
+<p><em>النطاقات:</em> للمعلمات CONTINUOUS، حدد الحد الأدنى والحد الأقصى. للمعلمات DISCRETE، حدد الحد الأدنى والحد الأقصى والخطوة. للمعلمات FIXED، حدد القيمة الثابتة. للمعلمات BOOLEAN، لا حاجة لتعريف أي شيء. لجميع الخلايا غير المطلوبة، يمكنك كتابة أي قيمة (صفر مثلاً) لكن لا تتركها فارغة. على سبيل المثال، للمعلمات CONTINUOUS، يمكنك كتابة 0 للخطوة لأنها لن تُستخدم. في حالة المصفوفات غير FIXED، سيتم تطبيق النطاقات المشار إليها على جميع مكونات المصفوفة. لا يمكن تعريف نطاقات مختلفة لكل مكون من مكونات المصفوفة. مرة أخرى، لمصفوفات BOOLEAN، لا حاجة لتعريف أي شيء. أخيرًا، في حالة مصفوفات FIXED، في عمود القيمة الثابتة، تحتاج إلى تعريف قيم مكونات المصفوفة باستخدام هذا التنسيق: إذا كان حجم المصفوفة 3 مثلاً. هذا هو التنسيق المقبول الوحيد، أي تنسيق آخر سيعطي خطأ.</p>
+</li>
+</ul>
+<p>كمثال، ارجع إلى الصورة أدناه:</p>
+<p><a href="/images/blog/optimization-with-confidence-intervals/new-config-optimization.png"><img src="/images/blog/optimization-with-confidence-intervals/new-config-optimization.png" alt=""></a></p>
+<p>عندما تنتهي من ملء نطاقات المعلمات، احفظ الملف وارجع إلى نموذجك الذي لا يزال قيد التشغيل واضغط على زر “START” لبدء التجربة. إذا أغلقت تشغيل النموذج، لا تقلق، يمكنك تشغيل تجربة المحاكاة مرة أخرى والآن يمكنك الضغط على “START” فورًا.
+إذا أضفت/أزلت معلمات في أي مرحلة أثناء تطوير المحاكاة، عند تشغيل النموذج، سيتم تحديث ملف Excel تلقائيًا بالمعلمات الموجودة الآن. فقط تأكد من إضافة رقم إلى الحد الأدنى والحد الأقصى والخطوة والقيمة الثابتة قبل الضغط على start لتجنب الأخطاء.</p>
+<h2 id="النتائج">النتائج</h2>
+<p>عند تشغيل التجربة، سترى رسمًا بيانيًا يتقدم مع عمليات تشغيل المحاكاة المُجراة. يُظهر الرسم البياني أفضل النتائج (للتعبير أو دالة الهدف) مع كل تكرار. يُظهر خط واحد أفضل متوسط حل (من مونتي كارلو)، ويُظهر الخط الثاني أفضل حد أدنى للحل، ويُظهر الخط الثالث أفضل حد أعلى للحل. هذان الخطان الأخيران يمثلان فترة الثقة لأفضل حل في كل تكرار. علاوة على ذلك، مع تقدم التجربة، يتم أيضًا عرض أفضل نتيجة بجانب الرسم البياني. عند انتهاء التجربة، سترى قيم المعلمات التي تشكل أفضل حل.</p>
+<p>بالإضافة إلى ذلك، عند انتهاء التجربة، سيظهر زر يتيح لك تصدير قيم هذه المعلمات إلى ملف csv. عند الضغط على الزر، سيظهر مجلد جديد باسم “exports” في مجلد النموذج الخاص بك، وداخل هذا المجلد ستجد صفحة النتائج المُصدّرة. الصفحة المسماة “parameters values” تُظهر أسماء المعلمات في العمود الأول والقيم لكل معلمة في العمود الثاني.</p>
+<h2 id="خيارات-إضافية">خيارات إضافية</h2>
+<p><em>القيود</em>: القيود هي تقييدات أو شروط متعلقة بقيم المعلمات. القيد هو تعبير حسابي مصاغ بشكل صحيح يصف علاقة بين معلمات التحسين. يحدد دائمًا حدًا عن طريق تحديد حد أدنى أو أعلى، مثلاً p1+p2>10. يتم تقييم القيود قبل تشغيل النموذج وإنشاء وكيل المستوى الأعلى، لذلك لا يمكن أن تتضمن أيًا من محتويات وكيل المستوى الأعلى. لتعريف قيود لتجربة التحسين، تحتاج إلى استخدام صفحة “constraints_db” في ملف inputOptimization.xlsx. كل صف سيشكل قيدًا واحدًا. في العمود الأول، اكتب أي رقم كمعرف فريد للقيد. ثم حدد ما إذا كنت تريد تفعيل القيد عند تشغيل التجربة بتحديد TRUE للمُفعّل و FALSE للمُعطّل. إذا كان القيد مُعطّلاً، فلن يتم أخذه في الاعتبار في التجربة. أُضيف هذا الخيار في حالة رغبتك في اختبار مجموعات مختلفة من القيود. سنصف عمود “on array” في الفقرة التالية. بعد ذلك، تحتاج إلى تعريف التعبير الذي يجب أن يتكون من اسم/أسماء المعلمات والرموز الرياضية لتعريف العلاقة الحسابية. بعد ذلك، تحتاج إلى تعريف نوع الحد. الرموز المسموح بها هنا هي: =، >=، &#x3C;=. استخدام أي رمز آخر سيسبب خطأ. أخيرًا، تحدد الحد وهو أي رقم.</p>
+<p>بالنسبة للمصفوفات، القيود هي حالة خاصة. لا يمكن استخدام القيود على أكثر من مصفوفة واحدة في تعبير واحد، أو على مصفوفة ومعلمة عادية في تعبير واحد. يُسمح لك <strong>فقط</strong> باستخدام القيود في المصفوفات على مكونات المصفوفة نفسها. في عمود “on array”، إذا كان القيد الذي ستضيفه في هذا الصف متعلقًا بمصفوفة، يجب أن تكون هذه القيمة TRUE، وإلا يجب أن تكون FALSE. تنسيق التعبير سيكون كما يلي على سبيل المثال: 2*p1+p1/4، حيث يمثل p1 و p1 مكونات المصفوفة في المواضع ذات الصلة بناءً على الأرقام المشار إليها بين الأقواس المربعة. على سبيل المثال، إذا كانت هذه المصفوفة p1: ، p1 ستكون 5.3، و p1 ستكون 9.5. أي تعبير قيد يحتوي على اسم أكثر من مصفوفة واحدة أو يحتوي على مزيج من اسم مصفوفة واسم معلمة عادية سيعطي خطأ أثناء التشغيل.</p>
+<p><em>المتطلبات</em>: المتطلبات هي قيود إضافية مفروضة على النتائج التي يجدها محرك التحسين. يتم اختبار هذه القيود بعد عملية تشغيل المحاكاة ويمكن أن تتضمن أيًا من متغيرات المستوى الأعلى. لتعريف متطلبات لتجربة التحسين، تحتاج إلى استخدام صفحة “requirements_db” في ملف inputOptimization.xlsx. اتبع نفس القواعد المتبعة مع القيود، ومع ذلك في التعبير هنا استخدم المتغيرات بدلاً من المعلمات.</p>
+<h2 id="الأسئلة-الشائعة">الأسئلة الشائعة</h2>
+<h2 id="لا-تعمل-رغم-أن-لدي-ترخيصًا">لا تعمل رغم أن لدي ترخيصًا</h2>
+<p>هذه المكتبة تعمل فقط مع اتصال بالإنترنت. تأكد من أن اتصالك بالإنترنت يعمل.</p>
+<h2 id="هل-هذا-أفضل-من-optquest">هل هذا أفضل من optQuest؟</h2>
+<p>أولاً، يمكنك تصدير هذه التجربة إلى ملف تنفيذي، وهو ما لا يمكن فعله مع OptQuest إلا إذا اشتريت ترخيصًا خاصًا مكلفًا لذلك.
+ثانيًا، العمل مع آلاف المتغيرات أسهل بكثير. تجربة optQuest الأصلية في AnyLogic صعبة الاستخدام للغاية إذا كان لديك الكثير من المتغيرات.</p>
+<p>أخيرًا، أضفنا مستند مقارنة يمكنك إيجاده في الملفات الإضافية عند تحميل هذه المكتبة. استخدمنا 3 نماذج نموذجية يمكنك إيجادها في أمثلة AnyLogic وخلصنا إلى أن خوارزمية التحسين الخاصة بنا متشابهة جدًا وتعطي نتائج مشابهة جدًا إن لم تكن أفضل من النتائج الأصلية لـ AnyLogic.</p>
+<h2 id="ما-هي-فترات-الثقة">ما هي فترات الثقة؟</h2>
+<p>لمزيد من المعلومات حول الخلفية النظرية لفترات الثقة وتعريفات المصطلحات التقنية المستخدمة في المكتبة، يرجى الرجوع إلى هذه الفيديوهات:</p>
+<p><a href="https://youtu.be/tWGnQxMgu8A?si=HbPHDZ4YbmrlPE1a.">https://youtu.be/tWGnQxMgu8A?si=HbPHDZ4YbmrlPE1a.</a></p>
+<p><a href="https://youtu.be/5UcKw-dZG7c?si=9HUuseB2H11DxiQp.">https://youtu.be/5UcKw-dZG7c?si=9HUuseB2H11DxiQp.</a></p>
+<h2 id="حاسوبي-يستخدم-100-من-المعالج-أثناء-التحسين-لماذا">حاسوبي يستخدم 100% من المعالج أثناء التحسين، لماذا؟</h2>
+<p>يعتمد ذلك على الأرجح على نوع الحاسوب الذي لديك وعدد الأنوية التي يمتلكها حاسوبك وخصائص أخرى. تشغيل عملية تحسين مكلف حسابيًا ونحن نحاول استخدام جميع أنويتك. قد نغير هذا في المستقبل إذا أدى إلى مشاكل.</p>
+<h2 id="هل-يعمل-التصدير-على-السحابة">هل يعمل التصدير على السحابة؟</h2>
+<p>حاليًا لا يعمل.</p> </div> <!-- Tags --> <div class="mt-12 pt-8 border-t border-border-default"> <div class="flex flex-wrap gap-2"> <span class="text-xs px-3 py-1 rounded-full border border-border-default text-text-tertiary">
+#Simulations </span> </div> </div> </div> </article>  </main> <footer class="dark-section border-t border-bg-dark-secondary mt-auto"> <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16"> <div class="grid grid-cols-1 md:grid-cols-3 gap-12"> <!-- Brand --> <div> <img src="/_astro/Noorjax-01.Dky3hJly_1hWLOT.webp" alt="Noorjax Consulting" loading="lazy" decoding="async" width="160" height="27" class="h-10 w-auto brightness-0 invert mb-3"> <p class="mt-3 text-sm text-text-on-dark-muted max-w-xs"> استشارات المحاكاة </p> <div class="mt-5 flex gap-4"> <a href="https://www.linkedin.com/company/noorjax/" target="_blank" rel="noopener noreferrer" class="text-text-on-dark-muted hover:text-brand-teal transition-colors" aria-label="LinkedIn"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"> <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path> </svg> </a> <a href="https://www.youtube.com/@noorjaxconsulting" target="_blank" rel="noopener noreferrer" class="text-text-on-dark-muted hover:text-red-500 transition-colors" aria-label="YouTube"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"> <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path> </svg> </a> <a href="#" class="text-text-on-dark-muted hover:text-brand-teal transition-colors footer-email-icon" aria-label="Email"> <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path> </svg> </a> </div> </div> <!-- Navigation --> <div> <h4 class="text-sm font-semibold text-text-on-dark uppercase tracking-wider mb-4"> التنقل </h4> <ul class="space-y-2.5"> <li> <a href="/ar/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> الرئيسية </a> </li><li> <a href="/ar/simulation-services/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> ديمو </a> </li><li> <a href="/ar/business-cases/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> المشاريع </a> </li><li> <a href="/ar/products/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> المنتجات </a> </li><li> <a href="/ar/courses/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> الدورات </a> </li><li> <a href="/ar/about-us/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> من نحن </a> </li><li> <a href="/ar/blog/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> المدونة </a> </li><li> <a href="/ar/contact/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> اتصل بنا </a> </li> </ul> </div> <!-- Contact --> <div> <h4 class="text-sm font-semibold text-text-on-dark uppercase tracking-wider mb-4"> اتصل بنا </h4> <ul class="space-y-2.5 text-sm text-text-on-dark-muted"> <li> <a href="#" class="hover:text-white transition-colors footer-email-link"></a> </li> <li> <a href="https://calendly.com/noorjax" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors"> احجز اجتماعاً </a> </li> <li class="text-text-on-dark-muted">Ahtri 12-512, 10151 Tallinn, Estonia</li> </ul> </div> </div> <!-- Bottom bar --> <div class="mt-12 pt-8 border-t border-bg-dark-secondary flex flex-col sm:flex-row items-center justify-between gap-4"> <p class="text-xs text-text-on-dark-muted">
+&copy; 2026 Noorjax Consulting. جميع الحقوق محفوظة. </p> <p class="text-xs text-text-on-dark-muted"> Ahtri 12-512, 10151 Tallinn, Estonia </p> </div> </div> </footer> <script>
+  (function(){
+    var u='info',d='noorjax.com',e=u+'@'+d,m='mailto:'+e;
+    var icon=document.querySelector('.footer-email-icon');
+    if(icon) icon.href=m;
+    var link=document.querySelector('.footer-email-link');
+    if(link){link.href=m;link.textContent=e;}
+  })();
+</script> <style>
+    #nav-loader{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#0099b5,#6aab25);z-index:9999;width:0;opacity:0;pointer-events:none;transition:none;}
+    #nav-loader.loading{opacity:1;width:80%;transition:width 5s cubic-bezier(0.1,0.3,0.2,1);}
+    #nav-loader.done{width:100%;transition:width 0.15s ease-out;}
+    #nav-loader.fade{opacity:0;transition:opacity 0.3s ease;}
+  </style> <div id="nav-loader"></div> <script>
+    (function(){
+      function startLoader(){
+        var bar = document.getElementById('nav-loader');
+        if(!bar) return;
+        bar.className = '';
+        void bar.offsetWidth;
+        bar.classList.add('loading');
+      }
+      function endLoader(){
+        var bar = document.getElementById('nav-loader');
+        if(!bar) return;
+        bar.classList.remove('loading');
+        bar.classList.add('done');
+        setTimeout(function(){ bar.classList.add('fade'); }, 150);
+        setTimeout(function(){ bar.className = ''; }, 500);
+      }
+
+      // Listen for internal link clicks
+      document.addEventListener('click', function(e){
+        var link = e.target.closest('a');
+        if(!link) return;
+        var href = link.getAttribute('href');
+        if(!href) return;
+        if(link.target === '_blank') return;
+        if(href.startsWith('http') && href.indexOf(location.hostname) === -1) return;
+        if(href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:')) return;
+        startLoader();
+      });
+
+      // End loader when page finishes loading
+      document.addEventListener('astro:after-swap', endLoader);
+      window.addEventListener('load', endLoader);
+      document.addEventListener('astro:page-load', endLoader);
+    })();
+  </script>  </body></html>

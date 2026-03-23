@@ -1,0 +1,282 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Astro v6.0.8"><!-- SEO --><title>Robotic Arm Library | Noorjax Consulting</title><meta name="description" content="This library ONLY works with AnyLogic 8.9.4 and up.  You can download the library here:   [DOWNLOAD](https://github.com/noorjax/robotic-arm)  If this library was useful to you, consider donating so we"><link rel="canonical" href="https://noorjax.com/en/blog/robotic-arm-library/"><!-- i18n alternates (ar hidden for now) --><link rel="alternate" hreflang="en" href="https://noorjax.com/en/blog/robotic-arm-library/"><link rel="alternate" hreflang="es" href="https://noorjax.com/es/blog/robotic-arm-library/"><link rel="alternate" hreflang="x-default" href="https://noorjax.com/en/blog/robotic-arm-library/"><!-- Open Graph --><meta property="og:type" content="website"><meta property="og:title" content="Robotic Arm Library | Noorjax Consulting"><meta property="og:description" content="This library ONLY works with AnyLogic 8.9.4 and up.  You can download the library here:   [DOWNLOAD](https://github.com/noorjax/robotic-arm)  If this library was useful to you, consider donating so we"><meta property="og:image" content="https://noorjax.com/images/og-default.jpg"><meta property="og:url" content="https://noorjax.com/en/blog/robotic-arm-library/"><meta property="og:site_name" content="Noorjax Consulting"><meta property="og:locale" content="en_US"><!-- Twitter --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Robotic Arm Library | Noorjax Consulting"><meta name="twitter:description" content="This library ONLY works with AnyLogic 8.9.4 and up.  You can download the library here:   [DOWNLOAD](https://github.com/noorjax/robotic-arm)  If this library was useful to you, consider donating so we"><meta name="twitter:image" content="https://noorjax.com/images/og-default.jpg"><!-- Favicon --><link rel="icon" type="image/png" href="/images/logo/Noorjax-icon-png1.png"><!-- Fonts: Self-hosted Inter --><link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/inter-latin.woff2"><!-- Client-side routing (View Transitions) --><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.DmQZLfuR.js"></script><!-- JSON-LD Structured Data --><script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Noorjax Consulting","description":"This library ONLY works with AnyLogic 8.9.4 and up.  You can download the library here:   [DOWNLOAD](https://github.com/noorjax/robotic-arm)  If this library was useful to you, consider donating so we","url":"https://noorjax.com","email":"info@noorjax.com","address":{"@type":"PostalAddress","streetAddress":"Ahtri 12-512","addressLocality":"Tallinn","postalCode":"10151","addressCountry":"EE"},"areaServed":"Worldwide","serviceType":["Simulation Consulting","AnyLogic Simulation","Manufacturing Simulation","System Dynamics Consulting","Vensim Consulting","Agent-Based Modeling","Discrete Event Simulation","Policy Advisory","Supply Chain Simulation","AnyLogic Training"],"knowsAbout":["AnyLogic","Vensim","System Dynamics","Discrete Event Simulation","Agent-Based Modeling","Monte Carlo Simulation","Optimization","Artificial Intelligence"],"sameAs":["https://www.linkedin.com/company/noorjax/","https://www.youtube.com/@noorjaxconsulting"],"founder":{"@type":"Person","name":"Felipe Haro"},"foundingDate":"2017"}</script><link rel="stylesheet" href="/_astro/BaseLayout.Dhci6ilB.css"></head> <body class="min-h-screen flex flex-col">  <header class="fixed top-0 left-0 right-0 z-50 bg-bg-primary border-b border-border-default shadow-sm" id="site-header"> <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"> <nav class="flex items-center justify-between h-16 lg:h-18" aria-label="Main navigation"> <!-- Logo --> <a href="/en/" class="flex items-center shrink-0" aria-label="Noorjax Consulting"> <img src="/_astro/Noorjax-01.Dky3hJly_1s27Mm.webp" alt="Noorjax Consulting" loading="eager" decoding="async" fetchpriority="high" width="384" height="64" class="h-10 lg:h-12 w-auto"> </a> <!-- Desktop Navigation --> <div class="hidden lg:flex items-center gap-6"> <a href="/en/" class="text-sm font-medium transition-colors text-text-secondary hover:text-text-primary"> Home </a><a href="/en/simulation-services/" class="text-sm font-medium transition-colors text-text-secondary hover:text-text-primary"> Demo </a><a href="/en/business-cases/" class="text-sm font-medium transition-colors text-text-secondary hover:text-text-primary"> Business Cases </a><a href="/en/products/" class="text-sm font-medium transition-colors text-text-secondary hover:text-text-primary"> Products </a><a href="/en/courses/" class="text-sm font-medium transition-colors text-text-secondary hover:text-text-primary"> Courses </a><a href="/en/about-us/" class="text-sm font-medium transition-colors text-text-secondary hover:text-text-primary"> About </a><a href="/en/blog/" class="text-sm font-medium transition-colors text-brand-teal font-semibold"> Blog </a><a href="/en/contact/" class="btn-primary text-xs px-4 py-2"> Contact </a> <!-- Social icons --> <div class="flex items-center gap-3 ml-2 pl-4 border-l border-border-default"> <a href="https://www.linkedin.com/company/noorjax/" target="_blank" rel="noopener noreferrer" class="text-text-tertiary hover:text-brand-teal transition-colors" aria-label="LinkedIn"> <svg class="w-4.5 h-4.5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg> </a> <a href="https://www.youtube.com/@noorjaxconsulting" target="_blank" rel="noopener noreferrer" class="text-text-tertiary hover:text-red-600 transition-colors" aria-label="YouTube"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg> </a> </div> <!-- Language Dropdown --> <div class="relative" id="lang-dropdown-desktop"> <button class="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-border-default text-sm text-text-secondary hover:text-text-primary hover:border-border-hover transition-all cursor-pointer" id="lang-btn-desktop" aria-expanded="false" aria-haspopup="true"> <span class="leading-none rounded-sm overflow-hidden"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="24" height="12"><clipPath id="s"><path d="M0,0 v30 h60 v-30 z"/></clipPath><clipPath id="t"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath><g clip-path="url(#s)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg></span> <svg class="w-3.5 h-3.5 transition-transform" id="lang-chevron-desktop" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg> </button> <div class="absolute right-0 top-full mt-1.5 w-auto bg-bg-primary border border-border-default rounded-xl shadow-lg overflow-hidden hidden z-50" id="lang-menu-desktop"> <a href="/es/blog/robotic-arm-library/" class="flex items-center gap-3 px-4 py-2.5 text-sm text-text-secondary hover:bg-brand-teal/5 hover:text-brand-teal transition-colors"> <span class="leading-none rounded-sm overflow-hidden"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 500" width="24" height="16"><rect width="750" height="500" fill="#c60b1e"/><rect width="750" height="250" y="125" fill="#ffc400"/></svg></span> </a> </div> </div> </div> <!-- Mobile Menu Toggle --> <button class="lg:hidden p-2 text-text-secondary hover:text-text-primary" id="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false"> <svg class="w-6 h-6" id="menu-icon-open" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg> <svg class="w-6 h-6 hidden" id="menu-icon-close" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg> </button> </nav> </div> <!-- Mobile Menu --> <div class="lg:hidden hidden" id="mobile-menu"> <div class="glass mx-4 mt-2 rounded-xl p-6 space-y-4 shadow-lg"> <a href="/en/" class="block text-base font-medium py-2 transition-colors text-text-secondary hover:text-text-primary"> Home </a><a href="/en/simulation-services/" class="block text-base font-medium py-2 transition-colors text-text-secondary hover:text-text-primary"> Demo </a><a href="/en/business-cases/" class="block text-base font-medium py-2 transition-colors text-text-secondary hover:text-text-primary"> Business Cases </a><a href="/en/products/" class="block text-base font-medium py-2 transition-colors text-text-secondary hover:text-text-primary"> Products </a><a href="/en/courses/" class="block text-base font-medium py-2 transition-colors text-text-secondary hover:text-text-primary"> Courses </a><a href="/en/about-us/" class="block text-base font-medium py-2 transition-colors text-text-secondary hover:text-text-primary"> About </a><a href="/en/blog/" class="block text-base font-medium py-2 transition-colors text-brand-teal"> Blog </a><a href="/en/contact/" class="block text-base font-medium py-2 transition-colors text-text-secondary hover:text-text-primary"> Contact </a> <div class="pt-4 border-t border-border-default"> <div class="flex items-center gap-4 mb-4"> <a href="https://www.linkedin.com/company/noorjax/" target="_blank" rel="noopener noreferrer" class="text-text-tertiary hover:text-brand-teal" aria-label="LinkedIn"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg> </a> <a href="https://www.youtube.com/@noorjaxconsulting" target="_blank" rel="noopener noreferrer" class="text-text-tertiary hover:text-red-600" aria-label="YouTube"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg> </a> </div> <!-- Mobile Language Options --> <div class="flex flex-col gap-1"> <a href="/es/blog/robotic-arm-library/" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-text-secondary hover:bg-brand-teal/5 hover:text-brand-teal transition-colors"> <span class="leading-none rounded-sm overflow-hidden"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 500" width="24" height="16"><rect width="750" height="500" fill="#c60b1e"/><rect width="750" height="250" y="125" fill="#ffc400"/></svg></span> </a> </div> </div> </div> </div> </header> <script>
+  function initHeader() {
+    // Mobile menu
+    var toggle = document.getElementById('mobile-menu-toggle');
+    var menu = document.getElementById('mobile-menu');
+    if (toggle && menu) {
+      toggle.onclick = function() {
+        var isOpen = !menu.classList.contains('hidden');
+        menu.classList.toggle('hidden');
+        document.getElementById('menu-icon-open').classList.toggle('hidden');
+        document.getElementById('menu-icon-close').classList.toggle('hidden');
+        toggle.setAttribute('aria-expanded', String(!isOpen));
+      };
+      menu.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+          menu.classList.add('hidden');
+          document.getElementById('menu-icon-open').classList.remove('hidden');
+          document.getElementById('menu-icon-close').classList.add('hidden');
+        });
+      });
+    }
+
+    // Language dropdown
+    var btn = document.getElementById('lang-btn-desktop');
+    var langMenu = document.getElementById('lang-menu-desktop');
+    if (btn && langMenu) {
+      btn.onclick = function(e) {
+        e.stopPropagation();
+        var isOpen = !langMenu.classList.contains('hidden');
+        langMenu.classList.toggle('hidden');
+        var chev = document.getElementById('lang-chevron-desktop');
+        if (chev) chev.classList.toggle('rotate-180');
+        btn.setAttribute('aria-expanded', String(!isOpen));
+      };
+      document.addEventListener('click', function() {
+        langMenu.classList.add('hidden');
+        var chev = document.getElementById('lang-chevron-desktop');
+        if (chev) chev.classList.remove('rotate-180');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    }
+  }
+
+  initHeader();
+  document.addEventListener('astro:after-swap', initHeader);
+</script> <main class="flex-1 pt-18 lg:pt-20">  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Robotic Arm Library","datePublished":"2023-11-21T00:00:00.000Z","author":{"@type":"Person","name":"Felipe Haro"},"publisher":{"@type":"Organization","name":"Noorjax Consulting","url":"https://noorjax.com"},"description":"This library ONLY works with AnyLogic 8.9.4 and up.  You can download the library here:   [DOWNLOAD](https://github.com/noorjax/robotic-arm)  If this library was useful to you, consider donating so we"}</script> <article class="py-(--spacing-section)"> <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8"> <!-- Back link --> <a href="/en/blog/" class="inline-flex items-center gap-2 text-sm text-text-tertiary hover:text-brand-accent mb-8 transition-colors"> <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18"></path> </svg>
+Back to Blog
+</a> <!-- Header --> <header class="mb-10"> <div class="flex flex-wrap gap-2 mb-4"> <span class="text-xs font-medium px-2.5 py-1 rounded-full bg-brand-secondary/10 text-brand-secondary"> Noorjax Libraries </span> </div> <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-4"> Robotic Arm Library </h1> <time class="text-text-tertiary" datetime="2023-11-21T00:00:00.000Z"> November 21, 2023 </time> </header> <!-- Content --> <div class="prose prose-lg max-w-none
+        prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-text-primary
+        prose-p:text-text-secondary
+        prose-a:text-brand-teal prose-a:no-underline hover:prose-a:underline
+        prose-img:rounded-xl prose-img:border prose-img:border-border-default prose-img:mx-auto
+        prose-code:text-brand-secondary prose-code:bg-bg-secondary prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm
+        prose-pre:bg-bg-secondary prose-pre:border prose-pre:border-border-default prose-pre:rounded-xl
+        prose-blockquote:border-brand-teal prose-blockquote:text-text-secondary prose-blockquote:not-italic
+        prose-strong:text-text-primary
+        prose-li:text-text-secondary
+        prose-hr:border-border-default
+      "> <p>This library ONLY works with AnyLogic 8.9.4 and up.</p>
+<p>You can download the library here:</p>
+<p><a href="https://github.com/noorjax/robotic-arm">DOWNLOAD</a></p>
+<p>If this library was useful to you, consider donating so we can keep developing this and more in the future, click the following link to donate.</p>
+<p><a href="https://www.paypal.com/donate/?hosted_button_id=GW77FD5WVVAR8">https://www.paypal.com/donate/?hosted_button_id=GW77FD5WVVAR8</a></p>
+<h1 id="robotic-arm-help-documentation">Robotic Arm Help Documentation</h1>
+<p>You can find a video version of this documentation, for version 1.0.0 in the following video:</p>
+<h2 id="important-disclaimer">Important Disclaimer</h2>
+<p><strong>This robotic arm can be used freely by anyone as long as it’s useful to their case. Nevertheless we DO NOT offer free support for bug correction or implementation of new features. This robotic arm was developed for our own purposes and if it works for you great, otherwise we don’t become suddenly responsible for your project. We also don’t offer free customer support on how to use it, but if you have a doubt that is not explained on this document, we will add it as soon as we can.</strong></p>
+<p><strong>If you want new features, we can develop that for a cost. Contact us for this.</strong></p>
+<p><strong>If you want personal AnyLogic training and personalized help implementing this for your application, this will also have a cost. Contact us for this, but this documentation should be enough.</strong></p>
+<h1 id="general-description">General description</h1>
+<p>The Robotic Arm library offers tools to model and simulate the dynamics and functionalities of robotic arms used in the manufacturing industry.</p>
+<p>It consists of two agents, plus a help agent, which is just a button that will lead you to this page:</p>
+<p><strong>Robot</strong>: represents the 3D animation of the robot. The robotic arm consists of</p>
+<ul>
+<li>
+<p>A base that rotates in the Z axis</p>
+</li>
+<li>
+<p>An upper arm that rotates with respect to the base</p>
+</li>
+<li>
+<p>A forearm that rotates with respect to the upper arm.</p>
+</li>
+<li>
+<p>A plug that rotates the picked agent to position it correctly on the destination.</p>
+</li>
+</ul>
+<p><img src="/en/wp-content/uploads/2023/11/Monosnap-Robotic-Arm-v1.0-_-Simulation-AnyLogic-.png" alt=""></p>
+<ul>
+<li><strong>Move By Robot</strong>: It’s the flowchart block to be used in conjunction with the Robot agent. It allows defining the logical movements and tasks that the robot will perform for the processed agent.</li>
+</ul>
+<p>Other objects that you will see in the library must not be used.</p>
+<p><a href="/en/wp-content/uploads/2023/11/Monosnap-AnyLogic-Professional-2023-11-16-08.54.35.png"><img src="/en/wp-content/uploads/2023/11/Monosnap-AnyLogic-Professional-2023-11-16-08.54.35.png" alt=""></a></p>
+<h1 id="how-to-install-the-library">How to Install the Library</h1>
+<p>First download the library (see head of this documentation) and save it somewhere safe:</p>
+<p>Inside Anylogic, add the library to your palette using the + button on the palette tab, and find the .jar file you downloaded… Always keep that .jar file in the same location, or you will run into issues.</p>
+<p><img src="/en/wp-content/uploads/2023/11/Monosnap-Instructions-Word-2023-11-16-08.43.08.png" alt=""></p>
+<h1 id="how-to-use-the-library-once-installed">How To Use The Library Once Installed</h1>
+<ul>
+<li>
+<p>To use the robot object, drag and drop the “Robot” object to your workspace (main or any other agent in which your robotic arm will live).</p>
+</li>
+<li>
+<p>To use the “Move By Robot” object, you can also drag and drop it, and connect this block with your process logic.</p>
+</li>
+</ul>
+<h1 id="the-robot-object">The Robot Object</h1>
+<p>We define the robot icon, as the agent that represents the physical robot:</p>
+<p><a href="/en/wp-content/uploads/2023/11/Monosnap-AnyLogic-Professional-2023-11-16-09.17.46.png"><img src="/en/wp-content/uploads/2023/11/Monosnap-AnyLogic-Professional-2023-11-16-09.17.46.png" alt=""></a></p>
+<p>We define the robot presentation, as the physical presentation of the robot</p>
+<p><a href="/en/wp-content/uploads/2023/11/Monosnap-AnyLogic-Professional-2023-11-16-09.18.33.png"><img src="/en/wp-content/uploads/2023/11/Monosnap-AnyLogic-Professional-2023-11-16-09.18.33.png" alt=""></a></p>
+<p>The robot presentation size is by default calculated automatically based on the scale of the agent in which the robot presentation is located. The following are the original measurements, but they can be changed as explained later.</p>
+<ul>
+<li>
+<p>base length: 3.3 meters, corresponding to the distance from the floor to the upper arm rotation point.</p>
+</li>
+<li>
+<p>upper arm length: 3.9 meters, corresponding to the distance between both rotation points</p>
+</li>
+<li>
+<p>forearm length: 3.8 meters, corresponding to the distance between the rotation point and the plug.</p>
+</li>
+</ul>
+<h2 id="the-robot-icon">The Robot Icon</h2>
+<p>To define the characteristics of the robot, click on the “Robot” icon on your workspace and configure the parameters according to the desired visualization of the robot (make sure that the robot presentation is shown, if not, click on “show the presentation” in the advanced section of the robot icon properties). Also this agent must always be used as a single agent and not as a population of agents (AnyLogic doesn’t allow us to remove this option).</p>
+<h3 id="initial-angles">Initial Angles</h3>
+<ul>
+<li>
+<p>Initial base angle (degrees). It’s the initial angle of the base in the Z axis</p>
+</li>
+<li>
+<p>Initial upperarm angle (degrees). Initial angle of the upper arm. Zero means no flexion of the joint.</p>
+</li>
+<li>
+<p>Initial forearm angle (degrees). This rotation is relative to the upper arm. Zero degrees means no flexion of the joint.</p>
+</li>
+</ul>
+<p>Recommended joint initial angles (make sure you work within these boundaries in order to avoid the robotic arm to move erratically such as moving into itself… we don’t have collision detection):</p>
+<ul>
+<li>
+<p>Base angle: any angle between -180 to 180 degrees.</p>
+</li>
+<li>
+<p>UpperArm: any angle between 0 to 90 degrees.</p>
+</li>
+<li>
+<p>Forearm: any angle between 0 to 90 degrees.</p>
+</li>
+</ul>
+<h3 id="stats">Stats</h3>
+<ul>
+<li>Time step (seconds): this defines how often the animation positions are updated. High time step makes the simulation run faster, at the cost of making the animation look weird.</li>
+</ul>
+<h3 id="speed">Speed</h3>
+<ul>
+<li>
+<p>Base rotation speed (degrees/second): speed rotation of base in the z axis.</p>
+</li>
+<li>
+<p>Forearm rotation speed (degrees/second): speed rotation of forearm relative to the upperarm</p>
+</li>
+<li>
+<p>Upperarm rotation speed (degrees/second): self explanatory</p>
+</li>
+</ul>
+<h3 id="scale">Scale</h3>
+<p>Additional Scale: this can be used if you want to change the dimensions of the robot. Unfortunately, AnyLogic makes this a bit complicated to calculate, but here is the explanation. The forearm original size is 3.8 meters, let’s call this “FOS”. What if you want the forearm to be only 1.5 meters long?</p>
+<ul>
+<li>
+<p>First check the scale of the agent in which the robot icon is located. We want to know how many pixels are equivalent to 1 meter. Let’s call this number “P”.</p>
+</li>
+<li>
+<p>Second define what length you want your forearm to have in meters, let’s call this “FNS”</p>
+</li>
+<li>
+<p>To calculate the additional scale “AS”, you need to use the following formula: AS=FNS<em>3.8</em>10/P. The 3.8 corresponds to the length of the forearm, and the 10 corresponds to the scale of the robot (which is not visible to you, just use 10 always).</p>
+</li>
+<li>
+<p>So if you want your forearm to be 1.5 meters long and your agent in which the robot is located has a scale of 1meter=20 pixels, then AS=1.5*38/20 = 2.85.</p>
+</li>
+</ul>
+<p>You will need to change the default formula</p>
+<p><a href="/en/wp-content/uploads/2023/11/default.png"><img src="/en/wp-content/uploads/2023/11/default.png" alt=""></a></p>
+<p>With the additional scale number</p>
+<p><a href="/en/wp-content/uploads/2023/11/new.png"><img src="/en/wp-content/uploads/2023/11/new.png" alt=""></a></p>
+<p>You also need to change the values in the robot presentation. For this, click on the robot presentation, select “scale is defined explicitly” in the “position and size” section of the properties and use the same scale you used in the additional scale value of the robot icon for all 3 scales: scale X, scale Y and scale Z.</p>
+<p><a href="/en/wp-content/uploads/2023/11/rototscale.png"><img src="/en/wp-content/uploads/2023/11/rototscale.png" alt=""></a></p>
+<h2 id="move-by-robot-process-block">Move By Robot Process Block</h2>
+<p>This is the block you use in order to make the robotic arm operational. You can connect it to any process flow to move normal agents or material items if you are using the material handling library.</p>
+<h3 id="agent-height">Agent Height</h3>
+<p>Here you can define the height of the agent in order for the robotic arm plug to position itself exactly on the top of the agent. Of course your agent height should be equal to your animation height, otherwise this will not show a correct 3D animation. This value can be fixed for all agents, or it can be dynamic using your agent height parameters if you have created one.</p>
+<p>If you have for instance an agent of type Box that has a parameter or variable called height, you would need to do the following:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="java"><code><span class="line"><span style="color:#E1E4E8">((Box)agent).height</span></span></code></pre>
+<p>From the move by robot block perspective, all agents are of type “Agent” so you need to make the transformation from agent to box in order to be able to use the agent’s properties.</p>
+<h3 id="queue-capacity">Queue Capacity</h3>
+<p>This block has an embedded queue. This works just as any other block such as a seize, a service, etc. This queue is used to determine what agents can be picked and taken into consideration for priorities.</p>
+<h3 id="has-loadingunloading-time">Has Loading/Unloading Time</h3>
+<p>You can define if you want the robotic arm to spend some time loading and unloading an object. This is associated to some actions such as “on loading started” and “on loading finished” that are shown if you want to use loading time.</p>
+<h3 id="robot-agent">Robot Agent</h3>
+<p>Here you define the robot object that will be used as a resource to move agents with this process block. You can only choose 1 robot.</p>
+<h3 id="task-priority">Task Priority</h3>
+<p>This defines from the robot perspective, the priority of the process block with respect to others. If you have 1 robot and 3 move by robot process blocks, the robot will choose to move first the objects in the move by robot process with the highest priority. If all the priorities are the same, it will use FIFO. Note that you cannot choose the priority of agents, the priorities are related only to the process blocks.</p>
+<h3 id="destination">Destination</h3>
+<p>The destination has to be defined by x,y,z coordinates (in pixels), and this is the only way you can define a destination for any object.</p>
+<h3 id="actions---on-enter">Actions - On Enter</h3>
+<p>You can use this as any other process block, with the difference that you have to specify your agent type, for instance if you have a box agent moving through this block, instead of <code>agent.counter++;</code> you would do:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="java"><code><span class="line"><span style="color:#E1E4E8">((Box)agent).counter</span><span style="color:#F97583">++</span><span style="color:#E1E4E8">;</span></span></code></pre>
+<h3 id="release">Release</h3>
+<p>In this section you can define if the robot stays where it is, or if it goes back to the initial angles.</p>
+<h1 id="faq">F.A.Q.</h1>
+<h2 id="i-dont-understand-the-initial-rotation-angles">I don’t understand the initial rotation angles?</h2>
+<p>For all initial rotation angles, zero means no flexion of the joint. So, if all joints are set to zero, the robotic arm will be pointing to the sky. Just try them out and discover by yourself how this works.</p>
+<h2 id="im-getting-weird-movements-with-the-robot">I’m getting weird movements with the robot</h2>
+<p>Make sure you are using the recommended initial angles ranges (see above). Also consider changing the time step when increasing the joints rotation speed in order to have the required precision.</p>
+<h2 id="i-need-help-i-cant-figure-out-how-to-use-this">I need help, I can’t figure out how to use this.</h2>
+<p>Read the documentation carefully. If you want help, we will charge you the hourly rate that you can see at <a href="/en/">/en/</a> when you scroll down, with a minimum of 1 hour paid in advance. Send us a message if you want help, but do not ask for free help.</p>
+<h2 id="can-i-use-this-commercially">Can I use this commercially?</h2>
+<p>Yes. If you make millions using this robotic arm, and you feel bad about it, send us a message and you can pay us what you feel is right or just use this link <a href="https://www.paypal.com/donate/?hosted_button_id=GW77FD5WVVAR8">https://www.paypal.com/donate/?hosted_button_id=GW77FD5WVVAR8.</a> Contact us before payment if you need an invoice. If you don’t want to pay, then don’t pay. But make sure you help other people in need in the future.</p>
+<h2 id="can-i-use-this-academically">Can I use this Academically?</h2>
+<p>Make sure to put somewhere in your study that you got our help (acknowledgements are nice). Send us your final research and we will post it somewhere. If you want, you can donate by just paypaling us using this link: <a href="https://www.paypal.com/donate/?hosted_button_id=GW77FD5WVVAR8">https://www.paypal.com/donate/?hosted_button_id=GW77FD5WVVAR8</a>.</p>
+<h2 id="the-robot-is-crushing-with-the-objects-around-it-how-can-i-solve-this">The robot is crushing with the objects around it. How can I solve this?</h2>
+<p>The robot doesn’t have collision detection so you can’t.</p>
+<h2 id="i-need-a-new-feature">I need a new feature</h2>
+<p>Contact us for a quote.</p>
+<h2 id="i-want-to-remove-the-noorjax-logo-from-the-robotic-arm">I want to remove the Noorjax logo from the robotic arm</h2>
+<p>This cannot be done for free. Contact us for a quote.</p>
+<h2 id="the-3d-quality-could-be-better">The 3D quality could be better</h2>
+<p>We can actually give you a version with really high quality graphics, but this come at a cost. It takes time for AnyLogic to render the 3D object, so the public version has a bit less quality in order to avoid people complaining about that. We think it’s less likely for people to complain about not perfect quality over rendering time.</p>
+<h2 id="when-i-drag-and-drop-the-robot-object-the-images-of-the-robot-dont-show-instead-i-see-weird-shapes">When I drag and drop the robot object, the images of the robot don’t show, instead I see weird shapes</h2>
+<p>You have to use AnyLogic 8.9.4 or later versions for this library to work. If this happens, it means you are using an older version of AnyLogic.</p>
+<h2 id="i-dont-like-your-robotic-arm">I don’t like your robotic arm</h2>
+<p>Make one yourself then… it’s not that hard :)</p> </div> <!-- Tags --> <div class="mt-12 pt-8 border-t border-border-default"> <div class="flex flex-wrap gap-2"> <span class="text-xs px-3 py-1 rounded-full border border-border-default text-text-tertiary">
+#Simulations </span> </div> </div> </div> </article>  </main> <footer class="dark-section border-t border-bg-dark-secondary mt-auto"> <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16"> <div class="grid grid-cols-1 md:grid-cols-3 gap-12"> <!-- Brand --> <div> <img src="/_astro/Noorjax-01.Dky3hJly_1hWLOT.webp" alt="Noorjax Consulting" loading="lazy" decoding="async" width="160" height="27" class="h-10 w-auto brightness-0 invert mb-3"> <p class="mt-3 text-sm text-text-on-dark-muted max-w-xs"> Simulation Consulting </p> <div class="mt-5 flex gap-4"> <a href="https://www.linkedin.com/company/noorjax/" target="_blank" rel="noopener noreferrer" class="text-text-on-dark-muted hover:text-brand-teal transition-colors" aria-label="LinkedIn"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"> <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path> </svg> </a> <a href="https://www.youtube.com/@noorjaxconsulting" target="_blank" rel="noopener noreferrer" class="text-text-on-dark-muted hover:text-red-500 transition-colors" aria-label="YouTube"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"> <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path> </svg> </a> <a href="#" class="text-text-on-dark-muted hover:text-brand-teal transition-colors footer-email-icon" aria-label="Email"> <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path> </svg> </a> </div> </div> <!-- Navigation --> <div> <h4 class="text-sm font-semibold text-text-on-dark uppercase tracking-wider mb-4"> Navigation </h4> <ul class="space-y-2.5"> <li> <a href="/en/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> Home </a> </li><li> <a href="/en/simulation-services/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> Demo </a> </li><li> <a href="/en/business-cases/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> Business Cases </a> </li><li> <a href="/en/products/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> Products </a> </li><li> <a href="/en/courses/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> Courses </a> </li><li> <a href="/en/about-us/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> About </a> </li><li> <a href="/en/blog/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> Blog </a> </li><li> <a href="/en/contact/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> Contact </a> </li> </ul> </div> <!-- Contact --> <div> <h4 class="text-sm font-semibold text-text-on-dark uppercase tracking-wider mb-4"> Contact </h4> <ul class="space-y-2.5 text-sm text-text-on-dark-muted"> <li> <a href="#" class="hover:text-white transition-colors footer-email-link"></a> </li> <li> <a href="https://calendly.com/noorjax" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors"> Book a meeting </a> </li> <li class="text-text-on-dark-muted">Ahtri 12-512, 10151 Tallinn, Estonia</li> </ul> </div> </div> <!-- Bottom bar --> <div class="mt-12 pt-8 border-t border-bg-dark-secondary flex flex-col sm:flex-row items-center justify-between gap-4"> <p class="text-xs text-text-on-dark-muted">
+&copy; 2026 Noorjax Consulting. All rights reserved. </p> <p class="text-xs text-text-on-dark-muted"> Ahtri 12-512, 10151 Tallinn, Estonia </p> </div> </div> </footer> <script>
+  (function(){
+    var u='info',d='noorjax.com',e=u+'@'+d,m='mailto:'+e;
+    var icon=document.querySelector('.footer-email-icon');
+    if(icon) icon.href=m;
+    var link=document.querySelector('.footer-email-link');
+    if(link){link.href=m;link.textContent=e;}
+  })();
+</script> <style>
+    #nav-loader{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#0099b5,#6aab25);z-index:9999;width:0;opacity:0;pointer-events:none;transition:none;}
+    #nav-loader.loading{opacity:1;width:80%;transition:width 5s cubic-bezier(0.1,0.3,0.2,1);}
+    #nav-loader.done{width:100%;transition:width 0.15s ease-out;}
+    #nav-loader.fade{opacity:0;transition:opacity 0.3s ease;}
+  </style> <div id="nav-loader"></div> <script>
+    (function(){
+      function startLoader(){
+        var bar = document.getElementById('nav-loader');
+        if(!bar) return;
+        bar.className = '';
+        void bar.offsetWidth;
+        bar.classList.add('loading');
+      }
+      function endLoader(){
+        var bar = document.getElementById('nav-loader');
+        if(!bar) return;
+        bar.classList.remove('loading');
+        bar.classList.add('done');
+        setTimeout(function(){ bar.classList.add('fade'); }, 150);
+        setTimeout(function(){ bar.className = ''; }, 500);
+      }
+
+      // Listen for internal link clicks
+      document.addEventListener('click', function(e){
+        var link = e.target.closest('a');
+        if(!link) return;
+        var href = link.getAttribute('href');
+        if(!href) return;
+        if(link.target === '_blank') return;
+        if(href.startsWith('http') && href.indexOf(location.hostname) === -1) return;
+        if(href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:')) return;
+        startLoader();
+      });
+
+      // End loader when page finishes loading
+      document.addEventListener('astro:after-swap', endLoader);
+      window.addEventListener('load', endLoader);
+      document.addEventListener('astro:page-load', endLoader);
+    })();
+  </script>  </body></html>

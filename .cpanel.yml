@@ -1,4 +1,4 @@
 ---
 deployment:
   tasks:
-    - /bin/bash -c "cd /home/noorjaxcom/repositories/noorjax_website && source /home/noorjaxcom/nodevenv/noorjax_website/20/bin/activate && npm ci --production=false && npm run build && cp -R dist/* /home/noorjaxcom/public_html/"
+    - /bin/cp -R /home/noorjaxcom/repositories/noorjax_website/dist/* /home/noorjaxcom/public_html/

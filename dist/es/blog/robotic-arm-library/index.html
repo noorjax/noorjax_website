@@ -1,0 +1,282 @@
+<!DOCTYPE html><html lang="es"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Astro v6.0.8"><!-- SEO --><title>Biblioteca de Brazo Robotico | Noorjax Consulting</title><meta name="description" content="Esta biblioteca SOLO funciona con AnyLogic 8.9.4 en adelante.  Puedes descargar la biblioteca aqui:   [DESCARGAR](https://github.com/noorjax/robotic-arm)  Si esta biblioteca te fue util, considera donar para que"><link rel="canonical" href="https://noorjax.com/es/blog/robotic-arm-library/"><!-- i18n alternates (ar hidden for now) --><link rel="alternate" hreflang="en" href="https://noorjax.com/en/blog/robotic-arm-library/"><link rel="alternate" hreflang="es" href="https://noorjax.com/es/blog/robotic-arm-library/"><link rel="alternate" hreflang="x-default" href="https://noorjax.com/en/blog/robotic-arm-library/"><!-- Open Graph --><meta property="og:type" content="website"><meta property="og:title" content="Biblioteca de Brazo Robotico | Noorjax Consulting"><meta property="og:description" content="Esta biblioteca SOLO funciona con AnyLogic 8.9.4 en adelante.  Puedes descargar la biblioteca aqui:   [DESCARGAR](https://github.com/noorjax/robotic-arm)  Si esta biblioteca te fue util, considera donar para que"><meta property="og:image" content="https://noorjax.com/images/og-default.jpg"><meta property="og:url" content="https://noorjax.com/es/blog/robotic-arm-library/"><meta property="og:site_name" content="Noorjax Consulting"><meta property="og:locale" content="es_CL"><!-- Twitter --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Biblioteca de Brazo Robotico | Noorjax Consulting"><meta name="twitter:description" content="Esta biblioteca SOLO funciona con AnyLogic 8.9.4 en adelante.  Puedes descargar la biblioteca aqui:   [DESCARGAR](https://github.com/noorjax/robotic-arm)  Si esta biblioteca te fue util, considera donar para que"><meta name="twitter:image" content="https://noorjax.com/images/og-default.jpg"><!-- Favicon --><link rel="icon" type="image/png" href="/images/logo/Noorjax-icon-png1.png"><!-- Fonts: Self-hosted Inter --><link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/inter-latin.woff2"><!-- Client-side routing (View Transitions) --><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.DmQZLfuR.js"></script><!-- JSON-LD Structured Data --><script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Noorjax Consulting","description":"Esta biblioteca SOLO funciona con AnyLogic 8.9.4 en adelante.  Puedes descargar la biblioteca aqui:   [DESCARGAR](https://github.com/noorjax/robotic-arm)  Si esta biblioteca te fue util, considera donar para que","url":"https://noorjax.com","email":"info@noorjax.com","address":{"@type":"PostalAddress","streetAddress":"Ahtri 12-512","addressLocality":"Tallinn","postalCode":"10151","addressCountry":"EE"},"areaServed":"Worldwide","serviceType":["Simulation Consulting","AnyLogic Simulation","Manufacturing Simulation","System Dynamics Consulting","Vensim Consulting","Agent-Based Modeling","Discrete Event Simulation","Policy Advisory","Supply Chain Simulation","AnyLogic Training"],"knowsAbout":["AnyLogic","Vensim","System Dynamics","Discrete Event Simulation","Agent-Based Modeling","Monte Carlo Simulation","Optimization","Artificial Intelligence"],"sameAs":["https://www.linkedin.com/company/noorjax/","https://www.youtube.com/@noorjaxconsulting"],"founder":{"@type":"Person","name":"Felipe Haro"},"foundingDate":"2017"}</script><link rel="stylesheet" href="/_astro/BaseLayout.Dhci6ilB.css"></head> <body class="min-h-screen flex flex-col">  <header class="fixed top-0 left-0 right-0 z-50 bg-bg-primary border-b border-border-default shadow-sm" id="site-header"> <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"> <nav class="flex items-center justify-between h-16 lg:h-18" aria-label="Main navigation"> <!-- Logo --> <a href="/es/" class="flex items-center shrink-0" aria-label="Noorjax Consulting"> <img src="/_astro/Noorjax-01.Dky3hJly_1s27Mm.webp" alt="Noorjax Consulting" loading="eager" decoding="async" fetchpriority="high" width="384" height="64" class="h-10 lg:h-12 w-auto"> </a> <!-- Desktop Navigation --> <div class="hidden lg:flex items-center gap-6"> <a href="/es/" class="text-sm font-medium transition-colors text-text-secondary hover:text-text-primary"> Inicio </a><a href="/es/simulation-services/" class="text-sm font-medium transition-colors text-text-secondary hover:text-text-primary"> Demo </a><a href="/es/business-cases/" class="text-sm font-medium transition-colors text-text-secondary hover:text-text-primary"> Casos </a><a href="/es/products/" class="text-sm font-medium transition-colors text-text-secondary hover:text-text-primary"> Productos </a><a href="/es/courses/" class="text-sm font-medium transition-colors text-text-secondary hover:text-text-primary"> Cursos </a><a href="/es/about-us/" class="text-sm font-medium transition-colors text-text-secondary hover:text-text-primary"> Nosotros </a><a href="/es/blog/" class="text-sm font-medium transition-colors text-brand-teal font-semibold"> Blog </a><a href="/es/contact/" class="btn-primary text-xs px-4 py-2"> Contacto </a> <!-- Social icons --> <div class="flex items-center gap-3 ml-2 pl-4 border-l border-border-default"> <a href="https://www.linkedin.com/company/noorjax/" target="_blank" rel="noopener noreferrer" class="text-text-tertiary hover:text-brand-teal transition-colors" aria-label="LinkedIn"> <svg class="w-4.5 h-4.5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg> </a> <a href="https://www.youtube.com/@noorjaxconsulting" target="_blank" rel="noopener noreferrer" class="text-text-tertiary hover:text-red-600 transition-colors" aria-label="YouTube"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg> </a> </div> <!-- Language Dropdown --> <div class="relative" id="lang-dropdown-desktop"> <button class="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-border-default text-sm text-text-secondary hover:text-text-primary hover:border-border-hover transition-all cursor-pointer" id="lang-btn-desktop" aria-expanded="false" aria-haspopup="true"> <span class="leading-none rounded-sm overflow-hidden"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 500" width="24" height="16"><rect width="750" height="500" fill="#c60b1e"/><rect width="750" height="250" y="125" fill="#ffc400"/></svg></span> <svg class="w-3.5 h-3.5 transition-transform" id="lang-chevron-desktop" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg> </button> <div class="absolute right-0 top-full mt-1.5 w-auto bg-bg-primary border border-border-default rounded-xl shadow-lg overflow-hidden hidden z-50" id="lang-menu-desktop"> <a href="/en/blog/robotic-arm-library/" class="flex items-center gap-3 px-4 py-2.5 text-sm text-text-secondary hover:bg-brand-teal/5 hover:text-brand-teal transition-colors"> <span class="leading-none rounded-sm overflow-hidden"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="24" height="12"><clipPath id="s"><path d="M0,0 v30 h60 v-30 z"/></clipPath><clipPath id="t"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath><g clip-path="url(#s)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg></span> </a> </div> </div> </div> <!-- Mobile Menu Toggle --> <button class="lg:hidden p-2 text-text-secondary hover:text-text-primary" id="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false"> <svg class="w-6 h-6" id="menu-icon-open" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg> <svg class="w-6 h-6 hidden" id="menu-icon-close" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg> </button> </nav> </div> <!-- Mobile Menu --> <div class="lg:hidden hidden" id="mobile-menu"> <div class="glass mx-4 mt-2 rounded-xl p-6 space-y-4 shadow-lg"> <a href="/es/" class="block text-base font-medium py-2 transition-colors text-text-secondary hover:text-text-primary"> Inicio </a><a href="/es/simulation-services/" class="block text-base font-medium py-2 transition-colors text-text-secondary hover:text-text-primary"> Demo </a><a href="/es/business-cases/" class="block text-base font-medium py-2 transition-colors text-text-secondary hover:text-text-primary"> Casos </a><a href="/es/products/" class="block text-base font-medium py-2 transition-colors text-text-secondary hover:text-text-primary"> Productos </a><a href="/es/courses/" class="block text-base font-medium py-2 transition-colors text-text-secondary hover:text-text-primary"> Cursos </a><a href="/es/about-us/" class="block text-base font-medium py-2 transition-colors text-text-secondary hover:text-text-primary"> Nosotros </a><a href="/es/blog/" class="block text-base font-medium py-2 transition-colors text-brand-teal"> Blog </a><a href="/es/contact/" class="block text-base font-medium py-2 transition-colors text-text-secondary hover:text-text-primary"> Contacto </a> <div class="pt-4 border-t border-border-default"> <div class="flex items-center gap-4 mb-4"> <a href="https://www.linkedin.com/company/noorjax/" target="_blank" rel="noopener noreferrer" class="text-text-tertiary hover:text-brand-teal" aria-label="LinkedIn"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg> </a> <a href="https://www.youtube.com/@noorjaxconsulting" target="_blank" rel="noopener noreferrer" class="text-text-tertiary hover:text-red-600" aria-label="YouTube"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg> </a> </div> <!-- Mobile Language Options --> <div class="flex flex-col gap-1"> <a href="/en/blog/robotic-arm-library/" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-text-secondary hover:bg-brand-teal/5 hover:text-brand-teal transition-colors"> <span class="leading-none rounded-sm overflow-hidden"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="24" height="12"><clipPath id="s"><path d="M0,0 v30 h60 v-30 z"/></clipPath><clipPath id="t"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath><g clip-path="url(#s)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg></span> </a> </div> </div> </div> </div> </header> <script>
+  function initHeader() {
+    // Mobile menu
+    var toggle = document.getElementById('mobile-menu-toggle');
+    var menu = document.getElementById('mobile-menu');
+    if (toggle && menu) {
+      toggle.onclick = function() {
+        var isOpen = !menu.classList.contains('hidden');
+        menu.classList.toggle('hidden');
+        document.getElementById('menu-icon-open').classList.toggle('hidden');
+        document.getElementById('menu-icon-close').classList.toggle('hidden');
+        toggle.setAttribute('aria-expanded', String(!isOpen));
+      };
+      menu.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+          menu.classList.add('hidden');
+          document.getElementById('menu-icon-open').classList.remove('hidden');
+          document.getElementById('menu-icon-close').classList.add('hidden');
+        });
+      });
+    }
+
+    // Language dropdown
+    var btn = document.getElementById('lang-btn-desktop');
+    var langMenu = document.getElementById('lang-menu-desktop');
+    if (btn && langMenu) {
+      btn.onclick = function(e) {
+        e.stopPropagation();
+        var isOpen = !langMenu.classList.contains('hidden');
+        langMenu.classList.toggle('hidden');
+        var chev = document.getElementById('lang-chevron-desktop');
+        if (chev) chev.classList.toggle('rotate-180');
+        btn.setAttribute('aria-expanded', String(!isOpen));
+      };
+      document.addEventListener('click', function() {
+        langMenu.classList.add('hidden');
+        var chev = document.getElementById('lang-chevron-desktop');
+        if (chev) chev.classList.remove('rotate-180');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    }
+  }
+
+  initHeader();
+  document.addEventListener('astro:after-swap', initHeader);
+</script> <main class="flex-1 pt-18 lg:pt-20">  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Biblioteca de Brazo Robotico","datePublished":"2023-11-21T00:00:00.000Z","author":{"@type":"Person","name":"Felipe Haro"},"publisher":{"@type":"Organization","name":"Noorjax Consulting","url":"https://noorjax.com"},"description":"Esta biblioteca SOLO funciona con AnyLogic 8.9.4 en adelante.  Puedes descargar la biblioteca aqui:   [DESCARGAR](https://github.com/noorjax/robotic-arm)  Si esta biblioteca te fue util, considera donar para que"}</script> <article class="py-(--spacing-section)"> <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8"> <!-- Back link --> <a href="/es/blog/" class="inline-flex items-center gap-2 text-sm text-text-tertiary hover:text-brand-accent mb-8 transition-colors"> <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18"></path> </svg>
+Volver al Blog
+</a> <!-- Header --> <header class="mb-10"> <div class="flex flex-wrap gap-2 mb-4"> <span class="text-xs font-medium px-2.5 py-1 rounded-full bg-brand-secondary/10 text-brand-secondary"> Librerías Noorjax </span> </div> <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-4"> Biblioteca de Brazo Robotico </h1> <time class="text-text-tertiary" datetime="2023-11-21T00:00:00.000Z"> 21 de noviembre de 2023 </time> </header> <!-- Content --> <div class="prose prose-lg max-w-none
+        prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-text-primary
+        prose-p:text-text-secondary
+        prose-a:text-brand-teal prose-a:no-underline hover:prose-a:underline
+        prose-img:rounded-xl prose-img:border prose-img:border-border-default prose-img:mx-auto
+        prose-code:text-brand-secondary prose-code:bg-bg-secondary prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm
+        prose-pre:bg-bg-secondary prose-pre:border prose-pre:border-border-default prose-pre:rounded-xl
+        prose-blockquote:border-brand-teal prose-blockquote:text-text-secondary prose-blockquote:not-italic
+        prose-strong:text-text-primary
+        prose-li:text-text-secondary
+        prose-hr:border-border-default
+      "> <p>Esta biblioteca SOLO funciona con AnyLogic 8.9.4 en adelante.</p>
+<p>Puedes descargar la biblioteca aqui:</p>
+<p><a href="https://github.com/noorjax/robotic-arm">DESCARGAR</a></p>
+<p>Si esta biblioteca te fue util, considera donar para que podamos seguir desarrollando esta y mas en el futuro, haz clic en el siguiente enlace para donar.</p>
+<p><a href="https://www.paypal.com/donate/?hosted_button_id=GW77FD5WVVAR8">https://www.paypal.com/donate/?hosted_button_id=GW77FD5WVVAR8</a></p>
+<h2 id="documentacion-de-ayuda-del-brazo-robotico">Documentacion de Ayuda del Brazo Robotico</h2>
+<p>Puedes encontrar una version en video de esta documentacion, para la version 1.0.0 en el siguiente video:</p>
+<h3 id="aviso-importante">Aviso Importante</h3>
+<p><strong>Este brazo robotico puede ser usado libremente por cualquier persona siempre que sea util para su caso. Sin embargo, NO ofrecemos soporte gratuito para correccion de errores o implementacion de nuevas funciones. Este brazo robotico fue desarrollado para nuestros propios propositos y si te funciona genial, de lo contrario no nos hacemos repentinamente responsables de tu proyecto. Tampoco ofrecemos soporte al cliente gratuito sobre como usarlo, pero si tienes una duda que no esta explicada en este documento, la agregaremos tan pronto como podamos.</strong></p>
+<p><strong>Si quieres nuevas funciones, podemos desarrollarlas por un costo. Contactanos para esto.</strong></p>
+<p><strong>Si quieres entrenamiento personalizado en AnyLogic y ayuda personalizada implementando esto para tu aplicacion, esto tambien tendra un costo. Contactanos para esto, pero esta documentacion deberia ser suficiente.</strong></p>
+<h2 id="descripcion-general">Descripcion general</h2>
+<p>La biblioteca de Brazo Robotico ofrece herramientas para modelar y simular la dinamica y funcionalidades de brazos roboticos usados en la industria manufacturera.</p>
+<p>Consiste en dos agentes, mas un agente de ayuda, que es solo un boton que te llevara a esta pagina:</p>
+<p><strong>Robot</strong>: representa la animacion 3D del robot. El brazo robotico consiste en</p>
+<ul>
+<li>
+<p>Una base que rota en el eje Z</p>
+</li>
+<li>
+<p>Un brazo superior que rota con respecto a la base</p>
+</li>
+<li>
+<p>Un antebrazo que rota con respecto al brazo superior.</p>
+</li>
+<li>
+<p>Un conector que rota el agente recogido para posicionarlo correctamente en el destino.</p>
+</li>
+</ul>
+<p><img src="/es/wp-content/uploads/2023/11/Monosnap-Robotic-Arm-v1.0-_-Simulation-AnyLogic-.png" alt=""></p>
+<ul>
+<li><strong>Move By Robot</strong>: Es el bloque de diagrama de flujo que se usa en conjunto con el agente Robot. Permite definir los movimientos logicos y tareas que el robot realizara para el agente procesado.</li>
+</ul>
+<p>Otros objetos que veras en la biblioteca no deben usarse.</p>
+<p><a href="/es/wp-content/uploads/2023/11/Monosnap-AnyLogic-Professional-2023-11-16-08.54.35.png"><img src="/es/wp-content/uploads/2023/11/Monosnap-AnyLogic-Professional-2023-11-16-08.54.35.png" alt=""></a></p>
+<h2 id="como-instalar-la-biblioteca">Como Instalar la Biblioteca</h2>
+<p>Primero descarga la biblioteca (ver encabezado de esta documentacion) y guardala en un lugar seguro:</p>
+<p>Dentro de Anylogic, agrega la biblioteca a tu paleta usando el boton + en la pestana de paleta, y encuentra el archivo .jar que descargaste… Siempre manten ese archivo .jar en la misma ubicacion, o tendras problemas.</p>
+<p><img src="/es/wp-content/uploads/2023/11/Monosnap-Instructions-Word-2023-11-16-08.43.08.png" alt=""></p>
+<h2 id="como-usar-la-biblioteca-una-vez-instalada">Como Usar la Biblioteca Una Vez Instalada</h2>
+<ul>
+<li>
+<p>Para usar el objeto robot, arrastra y suelta el objeto “Robot” a tu espacio de trabajo (main o cualquier otro agente en el que vivira tu brazo robotico).</p>
+</li>
+<li>
+<p>Para usar el objeto “Move By Robot”, tambien puedes arrastrarlo y soltarlo, y conectar este bloque con tu logica de proceso.</p>
+</li>
+</ul>
+<h2 id="el-objeto-robot">El Objeto Robot</h2>
+<p>Definimos el icono del robot, como el agente que representa el robot fisico:</p>
+<p><a href="/es/wp-content/uploads/2023/11/Monosnap-AnyLogic-Professional-2023-11-16-09.17.46.png"><img src="/es/wp-content/uploads/2023/11/Monosnap-AnyLogic-Professional-2023-11-16-09.17.46.png" alt=""></a></p>
+<p>Definimos la presentacion del robot, como la presentacion fisica del robot</p>
+<p><a href="/es/wp-content/uploads/2023/11/Monosnap-AnyLogic-Professional-2023-11-16-09.18.33.png"><img src="/es/wp-content/uploads/2023/11/Monosnap-AnyLogic-Professional-2023-11-16-09.18.33.png" alt=""></a></p>
+<p>El tamano de la presentacion del robot se calcula por defecto automaticamente basado en la escala del agente en el que se encuentra la presentacion del robot. Las siguientes son las medidas originales, pero pueden cambiarse como se explica mas adelante.</p>
+<ul>
+<li>
+<p>longitud de la base: 3.3 metros, correspondiente a la distancia del suelo al punto de rotacion del brazo superior.</p>
+</li>
+<li>
+<p>longitud del brazo superior: 3.9 metros, correspondiente a la distancia entre ambos puntos de rotacion</p>
+</li>
+<li>
+<p>longitud del antebrazo: 3.8 metros, correspondiente a la distancia entre el punto de rotacion y el conector.</p>
+</li>
+</ul>
+<h3 id="el-icono-del-robot">El Icono del Robot</h3>
+<p>Para definir las caracteristicas del robot, haz clic en el icono “Robot” en tu espacio de trabajo y configura los parametros segun la visualizacion deseada del robot (asegurate de que la presentacion del robot se muestre, si no, haz clic en “show the presentation” en la seccion avanzada de las propiedades del icono del robot). Ademas, este agente siempre debe usarse como un agente individual y no como una poblacion de agentes (AnyLogic no nos permite remover esta opcion).</p>
+<h4 id="angulos-iniciales">Angulos Iniciales</h4>
+<ul>
+<li>
+<p>Angulo inicial de la base (grados). Es el angulo inicial de la base en el eje Z</p>
+</li>
+<li>
+<p>Angulo inicial del brazo superior (grados). Angulo inicial del brazo superior. Cero significa sin flexion de la articulacion.</p>
+</li>
+<li>
+<p>Angulo inicial del antebrazo (grados). Esta rotacion es relativa al brazo superior. Cero grados significa sin flexion de la articulacion.</p>
+</li>
+</ul>
+<p>Angulos iniciales recomendados para las articulaciones (asegurate de trabajar dentro de estos limites para evitar que el brazo robotico se mueva erraticamente como moverse contra si mismo… no tenemos deteccion de colisiones):</p>
+<ul>
+<li>
+<p>Angulo de la base: cualquier angulo entre -180 a 180 grados.</p>
+</li>
+<li>
+<p>Brazo superior: cualquier angulo entre 0 a 90 grados.</p>
+</li>
+<li>
+<p>Antebrazo: cualquier angulo entre 0 a 90 grados.</p>
+</li>
+</ul>
+<h4 id="estadisticas">Estadisticas</h4>
+<ul>
+<li>Time step (segundos): esto define con que frecuencia se actualizan las posiciones de la animacion. Un time step alto hace que la simulacion corra mas rapido, a costa de hacer que la animacion se vea extrana.</li>
+</ul>
+<h4 id="velocidad">Velocidad</h4>
+<ul>
+<li>
+<p>Velocidad de rotacion de la base (grados/segundo): velocidad de rotacion de la base en el eje z.</p>
+</li>
+<li>
+<p>Velocidad de rotacion del antebrazo (grados/segundo): velocidad de rotacion del antebrazo relativa al brazo superior</p>
+</li>
+<li>
+<p>Velocidad de rotacion del brazo superior (grados/segundo): autoexplicativo</p>
+</li>
+</ul>
+<h4 id="escala">Escala</h4>
+<p>Additional Scale: esto puede usarse si quieres cambiar las dimensiones del robot. Desafortunadamente, AnyLogic hace esto un poco complicado de calcular, pero aqui esta la explicacion. El tamano original del antebrazo es 3.8 metros, llamemos esto “FOS”. Que pasa si quieres que el antebrazo sea solo de 1.5 metros?</p>
+<ul>
+<li>
+<p>Primero verifica la escala del agente en el que se encuentra el icono del robot. Queremos saber cuantos pixeles son equivalentes a 1 metro. Llamemos a este numero “P”.</p>
+</li>
+<li>
+<p>Segundo define que longitud quieres que tenga tu antebrazo en metros, llamemos esto “FNS”</p>
+</li>
+<li>
+<p>Para calcular la escala adicional “AS”, necesitas usar la siguiente formula: AS=FNS<em>3.8</em>10/P. El 3.8 corresponde a la longitud del antebrazo, y el 10 corresponde a la escala del robot (que no es visible para ti, solo usa 10 siempre).</p>
+</li>
+<li>
+<p>Entonces si quieres que tu antebrazo sea de 1.5 metros y tu agente en el que se encuentra el robot tiene una escala de 1metro=20 pixeles, entonces AS=1.5*38/20 = 2.85.</p>
+</li>
+</ul>
+<p>Necesitaras cambiar la formula predeterminada</p>
+<p><a href="/es/wp-content/uploads/2023/11/default.png"><img src="/es/wp-content/uploads/2023/11/default.png" alt=""></a></p>
+<p>Con el numero de escala adicional</p>
+<p><a href="/es/wp-content/uploads/2023/11/new.png"><img src="/es/wp-content/uploads/2023/11/new.png" alt=""></a></p>
+<p>Tambien necesitas cambiar los valores en la presentacion del robot. Para esto, haz clic en la presentacion del robot, selecciona “scale is defined explicitly” en la seccion “position and size” de las propiedades y usa la misma escala que usaste en el valor de escala adicional del icono del robot para las 3 escalas: scale X, scale Y y scale Z.</p>
+<p><a href="/es/wp-content/uploads/2023/11/rototscale.png"><img src="/es/wp-content/uploads/2023/11/rototscale.png" alt=""></a></p>
+<h3 id="bloque-de-proceso-move-by-robot">Bloque de Proceso Move By Robot</h3>
+<p>Este es el bloque que usas para hacer que el brazo robotico sea operacional. Puedes conectarlo a cualquier flujo de proceso para mover agentes normales o material items si estas usando la biblioteca de manejo de materiales.</p>
+<h4 id="altura-del-agente">Altura del Agente</h4>
+<p>Aqui puedes definir la altura del agente para que el conector del brazo robotico se posicione exactamente en la parte superior del agente. Por supuesto, la altura de tu agente debe ser igual a la altura de tu animacion, de lo contrario esto no mostrara una animacion 3D correcta. Este valor puede ser fijo para todos los agentes, o puede ser dinamico usando los parametros de altura de tu agente si has creado uno.</p>
+<p>Si tienes por ejemplo un agente de tipo Box que tiene un parametro o variable llamado height, necesitarias hacer lo siguiente:
+((Box)agent).height</p>
+<p>Desde la perspectiva del bloque move by robot, todos los agentes son de tipo “Agent” asi que necesitas hacer la transformacion de agent a box para poder usar las propiedades del agente.</p>
+<h4 id="capacidad-de-la-cola">Capacidad de la Cola</h4>
+<p>Este bloque tiene una cola incorporada. Funciona igual que cualquier otro bloque como un seize, un service, etc. Esta cola se usa para determinar que agentes pueden ser recogidos y tomados en consideracion para prioridades.</p>
+<h4 id="tiene-tiempo-de-cargadescarga">Tiene Tiempo de Carga/Descarga</h4>
+<p>Puedes definir si quieres que el brazo robotico pase algun tiempo cargando y descargando un objeto. Esto esta asociado a algunas acciones como “on loading started” y “on loading finished” que se muestran si quieres usar tiempo de carga.</p>
+<h4 id="agente-robot">Agente Robot</h4>
+<p>Aqui defines el objeto robot que se usara como recurso para mover agentes con este bloque de proceso. Solo puedes elegir 1 robot.</p>
+<h4 id="prioridad-de-tarea">Prioridad de Tarea</h4>
+<p>Esto define desde la perspectiva del robot, la prioridad del bloque de proceso con respecto a otros. Si tienes 1 robot y 3 bloques move by robot, el robot elegira mover primero los objetos en el bloque move by robot con la mayor prioridad. Si todas las prioridades son iguales, usara FIFO. Ten en cuenta que no puedes elegir la prioridad de los agentes, las prioridades estan relacionadas solo con los bloques de proceso.</p>
+<h4 id="destino">Destino</h4>
+<p>El destino debe definirse por coordenadas x,y,z (en pixeles), y esta es la unica forma en que puedes definir un destino para cualquier objeto.</p>
+<h4 id="acciones---al-entrar">Acciones - Al Entrar</h4>
+<p>Puedes usar esto como cualquier otro bloque de proceso, con la diferencia de que tienes que especificar tu tipo de agente, por ejemplo si tienes un agente box moviendose a traves de este bloque, en lugar de agent.counter++; harias:
+((Box)agent).counter++;</p>
+<h4 id="liberacion">Liberacion</h4>
+<p>En esta seccion puedes definir si el robot se queda donde esta, o si vuelve a los angulos iniciales.</p>
+<h2 id="preguntas-frecuentes">Preguntas Frecuentes</h2>
+<h3 id="no-entiendo-los-angulos-de-rotacion-iniciales">No entiendo los angulos de rotacion iniciales?</h3>
+<p>Para todos los angulos de rotacion iniciales, cero significa sin flexion de la articulacion. Entonces, si todas las articulaciones se establecen en cero, el brazo robotico apuntara al cielo. Solo pruebalos y descubre por ti mismo como funciona esto.</p>
+<h3 id="estoy-obteniendo-movimientos-extranos-con-el-robot">Estoy obteniendo movimientos extranos con el robot</h3>
+<p>Asegurate de que estas usando los rangos recomendados de angulos iniciales (ver arriba). Tambien considera cambiar el time step al aumentar la velocidad de rotacion de las articulaciones para tener la precision requerida.</p>
+<h3 id="necesito-ayuda-no-puedo-descifrar-como-usar-esto">Necesito ayuda, no puedo descifrar como usar esto.</h3>
+<p>Lee la documentacion cuidadosamente. Si quieres ayuda, te cobraremos la tarifa por hora que puedes ver en <a href="/es/">/es/</a> cuando te desplazas hacia abajo, con un minimo de 1 hora pagada por adelantado. Envianos un mensaje si quieres ayuda, pero no pidas ayuda gratuita.</p>
+<h3 id="puedo-usar-esto-comercialmente">Puedo usar esto comercialmente?</h3>
+<p>Si. Si ganas millones usando este brazo robotico, y te sientes mal al respecto, envianos un mensaje y puedes pagarnos lo que sientas que es justo o simplemente usa este enlace <a href="https://www.paypal.com/donate/?hosted_button_id=GW77FD5WVVAR8">https://www.paypal.com/donate/?hosted_button_id=GW77FD5WVVAR8.</a> Contactanos antes del pago si necesitas una factura. Si no quieres pagar, entonces no pagues. Pero asegurate de ayudar a otras personas necesitadas en el futuro.</p>
+<h3 id="puedo-usar-esto-academicamente">Puedo usar esto academicamente?</h3>
+<p>Asegurate de poner en algun lugar de tu estudio que obtuviste nuestra ayuda (los agradecimientos son agradables). Envianos tu investigacion final y la publicaremos en algun lugar. Si quieres, puedes donar simplemente haciendolo por PayPal usando este enlace: <a href="https://www.paypal.com/donate/?hosted_button_id=GW77FD5WVVAR8">https://www.paypal.com/donate/?hosted_button_id=GW77FD5WVVAR8</a>.</p>
+<h3 id="el-robot-esta-chocando-con-los-objetos-a-su-alrededor-como-puedo-resolverlo">El robot esta chocando con los objetos a su alrededor. Como puedo resolverlo?</h3>
+<p>El robot no tiene deteccion de colisiones asi que no puedes.</p>
+<h3 id="necesito-una-nueva-funcion">Necesito una nueva funcion</h3>
+<p>Contactanos para una cotizacion.</p>
+<h3 id="quiero-quitar-el-logo-de-noorjax-del-brazo-robotico">Quiero quitar el logo de Noorjax del brazo robotico</h3>
+<p>Esto no puede hacerse gratis. Contactanos para una cotizacion.</p>
+<h3 id="la-calidad-3d-podria-ser-mejor">La calidad 3D podria ser mejor</h3>
+<p>En realidad podemos darte una version con graficos de muy alta calidad, pero esto tiene un costo. AnyLogic toma tiempo para renderizar el objeto 3D, asi que la version publica tiene un poco menos de calidad para evitar que la gente se queje de eso. Creemos que es menos probable que la gente se queje de calidad no perfecta que del tiempo de renderizado.</p>
+<h3 id="cuando-arrastro-y-suelto-el-objeto-robot-las-imagenes-del-robot-no-se-muestran-en-su-lugar-veo-formas-extranas">Cuando arrastro y suelto el objeto robot, las imagenes del robot no se muestran, en su lugar veo formas extranas</h3>
+<p>Tienes que usar AnyLogic 8.9.4 o versiones posteriores para que esta biblioteca funcione. Si esto sucede, significa que estas usando una version mas antigua de AnyLogic.</p>
+<h3 id="no-me-gusta-tu-brazo-robotico">No me gusta tu brazo robotico</h3>
+<p>Hazte uno tu mismo entonces… no es tan dificil :)</p> </div> <!-- Tags --> <div class="mt-12 pt-8 border-t border-border-default"> <div class="flex flex-wrap gap-2"> <span class="text-xs px-3 py-1 rounded-full border border-border-default text-text-tertiary">
+#Simulations </span> </div> </div> </div> </article>  </main> <footer class="dark-section border-t border-bg-dark-secondary mt-auto"> <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16"> <div class="grid grid-cols-1 md:grid-cols-3 gap-12"> <!-- Brand --> <div> <img src="/_astro/Noorjax-01.Dky3hJly_1hWLOT.webp" alt="Noorjax Consulting" loading="lazy" decoding="async" width="160" height="27" class="h-10 w-auto brightness-0 invert mb-3"> <p class="mt-3 text-sm text-text-on-dark-muted max-w-xs"> Servicios de Simulación </p> <div class="mt-5 flex gap-4"> <a href="https://www.linkedin.com/company/noorjax/" target="_blank" rel="noopener noreferrer" class="text-text-on-dark-muted hover:text-brand-teal transition-colors" aria-label="LinkedIn"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"> <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path> </svg> </a> <a href="https://www.youtube.com/@noorjaxconsulting" target="_blank" rel="noopener noreferrer" class="text-text-on-dark-muted hover:text-red-500 transition-colors" aria-label="YouTube"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"> <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path> </svg> </a> <a href="#" class="text-text-on-dark-muted hover:text-brand-teal transition-colors footer-email-icon" aria-label="Email"> <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path> </svg> </a> </div> </div> <!-- Navigation --> <div> <h4 class="text-sm font-semibold text-text-on-dark uppercase tracking-wider mb-4"> Navegación </h4> <ul class="space-y-2.5"> <li> <a href="/es/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> Inicio </a> </li><li> <a href="/es/simulation-services/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> Demo </a> </li><li> <a href="/es/business-cases/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> Casos </a> </li><li> <a href="/es/products/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> Productos </a> </li><li> <a href="/es/courses/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> Cursos </a> </li><li> <a href="/es/about-us/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> Nosotros </a> </li><li> <a href="/es/blog/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> Blog </a> </li><li> <a href="/es/contact/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> Contacto </a> </li> </ul> </div> <!-- Contact --> <div> <h4 class="text-sm font-semibold text-text-on-dark uppercase tracking-wider mb-4"> Contacto </h4> <ul class="space-y-2.5 text-sm text-text-on-dark-muted"> <li> <a href="#" class="hover:text-white transition-colors footer-email-link"></a> </li> <li> <a href="https://calendly.com/noorjax" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors"> Agenda una reunión </a> </li> <li class="text-text-on-dark-muted">Ahtri 12-512, 10151 Tallinn, Estonia</li> </ul> </div> </div> <!-- Bottom bar --> <div class="mt-12 pt-8 border-t border-bg-dark-secondary flex flex-col sm:flex-row items-center justify-between gap-4"> <p class="text-xs text-text-on-dark-muted">
+&copy; 2026 Noorjax Consulting. Todos los derechos reservados. </p> <p class="text-xs text-text-on-dark-muted"> Ahtri 12-512, 10151 Tallinn, Estonia </p> </div> </div> </footer> <script>
+  (function(){
+    var u='info',d='noorjax.com',e=u+'@'+d,m='mailto:'+e;
+    var icon=document.querySelector('.footer-email-icon');
+    if(icon) icon.href=m;
+    var link=document.querySelector('.footer-email-link');
+    if(link){link.href=m;link.textContent=e;}
+  })();
+</script> <style>
+    #nav-loader{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#0099b5,#6aab25);z-index:9999;width:0;opacity:0;pointer-events:none;transition:none;}
+    #nav-loader.loading{opacity:1;width:80%;transition:width 5s cubic-bezier(0.1,0.3,0.2,1);}
+    #nav-loader.done{width:100%;transition:width 0.15s ease-out;}
+    #nav-loader.fade{opacity:0;transition:opacity 0.3s ease;}
+  </style> <div id="nav-loader"></div> <script>
+    (function(){
+      function startLoader(){
+        var bar = document.getElementById('nav-loader');
+        if(!bar) return;
+        bar.className = '';
+        void bar.offsetWidth;
+        bar.classList.add('loading');
+      }
+      function endLoader(){
+        var bar = document.getElementById('nav-loader');
+        if(!bar) return;
+        bar.classList.remove('loading');
+        bar.classList.add('done');
+        setTimeout(function(){ bar.classList.add('fade'); }, 150);
+        setTimeout(function(){ bar.className = ''; }, 500);
+      }
+
+      // Listen for internal link clicks
+      document.addEventListener('click', function(e){
+        var link = e.target.closest('a');
+        if(!link) return;
+        var href = link.getAttribute('href');
+        if(!href) return;
+        if(link.target === '_blank') return;
+        if(href.startsWith('http') && href.indexOf(location.hostname) === -1) return;
+        if(href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:')) return;
+        startLoader();
+      });
+
+      // End loader when page finishes loading
+      document.addEventListener('astro:after-swap', endLoader);
+      window.addEventListener('load', endLoader);
+      document.addEventListener('astro:page-load', endLoader);
+    })();
+  </script>  </body></html>

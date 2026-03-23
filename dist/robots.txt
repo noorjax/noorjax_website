@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://noorjax.com/sitemap-index.xml

@@ -1,0 +1,567 @@
+<!DOCTYPE html><html lang="ar"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Astro v6.0.8"><!-- SEO --><title>مكتبة ناقلات الفرز | Noorjax Consulting</title><meta name="description" content="تتيح هذه الأداة لمستخدم AnyLogic بناء مجموعة من شبكات ناقلات الفرز تلقائيًا باستخدام نقاط بيانات محددة في ملف تهيئة Excel. يوفر هذا النهج مرونة، مما يسمح بتعديلات وإضافات سهلة"><link rel="canonical" href="https://noorjax.com/ar/blog/sorting-conveyors-library/"><!-- i18n alternates (ar hidden for now) --><link rel="alternate" hreflang="en" href="https://noorjax.com/en/blog/sorting-conveyors-library/"><link rel="alternate" hreflang="es" href="https://noorjax.com/es/blog/sorting-conveyors-library/"><link rel="alternate" hreflang="x-default" href="https://noorjax.com/en/blog/sorting-conveyors-library/"><!-- Open Graph --><meta property="og:type" content="website"><meta property="og:title" content="مكتبة ناقلات الفرز | Noorjax Consulting"><meta property="og:description" content="تتيح هذه الأداة لمستخدم AnyLogic بناء مجموعة من شبكات ناقلات الفرز تلقائيًا باستخدام نقاط بيانات محددة في ملف تهيئة Excel. يوفر هذا النهج مرونة، مما يسمح بتعديلات وإضافات سهلة"><meta property="og:image" content="https://noorjax.com/images/og-default.jpg"><meta property="og:url" content="https://noorjax.com/ar/blog/sorting-conveyors-library/"><meta property="og:site_name" content="Noorjax Consulting"><meta property="og:locale" content="ar_SA"><!-- Twitter --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="مكتبة ناقلات الفرز | Noorjax Consulting"><meta name="twitter:description" content="تتيح هذه الأداة لمستخدم AnyLogic بناء مجموعة من شبكات ناقلات الفرز تلقائيًا باستخدام نقاط بيانات محددة في ملف تهيئة Excel. يوفر هذا النهج مرونة، مما يسمح بتعديلات وإضافات سهلة"><meta name="twitter:image" content="https://noorjax.com/images/og-default.jpg"><!-- Favicon --><link rel="icon" type="image/png" href="/images/logo/Noorjax-icon-png1.png"><!-- Fonts: Self-hosted Inter --><link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/inter-latin.woff2"><!-- Client-side routing (View Transitions) --><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.DmQZLfuR.js"></script><!-- JSON-LD Structured Data --><script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Noorjax Consulting","description":"تتيح هذه الأداة لمستخدم AnyLogic بناء مجموعة من شبكات ناقلات الفرز تلقائيًا باستخدام نقاط بيانات محددة في ملف تهيئة Excel. يوفر هذا النهج مرونة، مما يسمح بتعديلات وإضافات سهلة","url":"https://noorjax.com","email":"info@noorjax.com","address":{"@type":"PostalAddress","streetAddress":"Ahtri 12-512","addressLocality":"Tallinn","postalCode":"10151","addressCountry":"EE"},"areaServed":"Worldwide","serviceType":["Simulation Consulting","AnyLogic Simulation","Manufacturing Simulation","System Dynamics Consulting","Vensim Consulting","Agent-Based Modeling","Discrete Event Simulation","Policy Advisory","Supply Chain Simulation","AnyLogic Training"],"knowsAbout":["AnyLogic","Vensim","System Dynamics","Discrete Event Simulation","Agent-Based Modeling","Monte Carlo Simulation","Optimization","Artificial Intelligence"],"sameAs":["https://www.linkedin.com/company/noorjax/","https://www.youtube.com/@noorjaxconsulting"],"founder":{"@type":"Person","name":"Felipe Haro"},"foundingDate":"2017"}</script><link rel="stylesheet" href="/_astro/BaseLayout.Dhci6ilB.css"></head> <body class="min-h-screen flex flex-col">  <header class="fixed top-0 left-0 right-0 z-50 bg-bg-primary border-b border-border-default shadow-sm" id="site-header"> <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"> <nav class="flex items-center justify-between h-16 lg:h-18" aria-label="Main navigation"> <!-- Logo --> <a href="/ar/" class="flex items-center shrink-0" aria-label="Noorjax Consulting"> <img src="/_astro/Noorjax-01.Dky3hJly_1s27Mm.webp" alt="Noorjax Consulting" loading="eager" decoding="async" fetchpriority="high" width="384" height="64" class="h-10 lg:h-12 w-auto"> </a> <!-- Desktop Navigation --> <div class="hidden lg:flex items-center gap-6"> <a href="/ar/" class="text-sm font-medium transition-colors text-text-secondary hover:text-text-primary"> الرئيسية </a><a href="/ar/simulation-services/" class="text-sm font-medium transition-colors text-text-secondary hover:text-text-primary"> ديمو </a><a href="/ar/business-cases/" class="text-sm font-medium transition-colors text-text-secondary hover:text-text-primary"> المشاريع </a><a href="/ar/products/" class="text-sm font-medium transition-colors text-text-secondary hover:text-text-primary"> المنتجات </a><a href="/ar/courses/" class="text-sm font-medium transition-colors text-text-secondary hover:text-text-primary"> الدورات </a><a href="/ar/about-us/" class="text-sm font-medium transition-colors text-text-secondary hover:text-text-primary"> من نحن </a><a href="/ar/blog/" class="text-sm font-medium transition-colors text-brand-teal font-semibold"> المدونة </a><a href="/ar/contact/" class="btn-primary text-xs px-4 py-2"> اتصل بنا </a> <!-- Social icons --> <div class="flex items-center gap-3 ml-2 pl-4 border-l border-border-default"> <a href="https://www.linkedin.com/company/noorjax/" target="_blank" rel="noopener noreferrer" class="text-text-tertiary hover:text-brand-teal transition-colors" aria-label="LinkedIn"> <svg class="w-4.5 h-4.5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg> </a> <a href="https://www.youtube.com/@noorjaxconsulting" target="_blank" rel="noopener noreferrer" class="text-text-tertiary hover:text-red-600 transition-colors" aria-label="YouTube"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg> </a> </div> <!-- Language Dropdown --> <div class="relative" id="lang-dropdown-desktop"> <button class="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-border-default text-sm text-text-secondary hover:text-text-primary hover:border-border-hover transition-all cursor-pointer" id="lang-btn-desktop" aria-expanded="false" aria-haspopup="true"> <span class="leading-none rounded-sm overflow-hidden"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 16" width="24" height="16"><rect fill="#006C35" width="24" height="16"/><path d="M6 10.5h12M8 8h2v3H8zM11 6h2v5h-2zM14 8h2v3h-2z" stroke="#fff" stroke-width="0.8" fill="none"/></svg></span> <svg class="w-3.5 h-3.5 transition-transform" id="lang-chevron-desktop" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg> </button> <div class="absolute right-0 top-full mt-1.5 w-auto bg-bg-primary border border-border-default rounded-xl shadow-lg overflow-hidden hidden z-50" id="lang-menu-desktop"> <a href="/en/blog/sorting-conveyors-library/" class="flex items-center gap-3 px-4 py-2.5 text-sm text-text-secondary hover:bg-brand-teal/5 hover:text-brand-teal transition-colors"> <span class="leading-none rounded-sm overflow-hidden"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="24" height="12"><clipPath id="s"><path d="M0,0 v30 h60 v-30 z"/></clipPath><clipPath id="t"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath><g clip-path="url(#s)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg></span> </a><a href="/es/blog/sorting-conveyors-library/" class="flex items-center gap-3 px-4 py-2.5 text-sm text-text-secondary hover:bg-brand-teal/5 hover:text-brand-teal transition-colors"> <span class="leading-none rounded-sm overflow-hidden"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 500" width="24" height="16"><rect width="750" height="500" fill="#c60b1e"/><rect width="750" height="250" y="125" fill="#ffc400"/></svg></span> </a> </div> </div> </div> <!-- Mobile Menu Toggle --> <button class="lg:hidden p-2 text-text-secondary hover:text-text-primary" id="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false"> <svg class="w-6 h-6" id="menu-icon-open" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg> <svg class="w-6 h-6 hidden" id="menu-icon-close" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg> </button> </nav> </div> <!-- Mobile Menu --> <div class="lg:hidden hidden" id="mobile-menu"> <div class="glass mx-4 mt-2 rounded-xl p-6 space-y-4 shadow-lg"> <a href="/ar/" class="block text-base font-medium py-2 transition-colors text-text-secondary hover:text-text-primary"> الرئيسية </a><a href="/ar/simulation-services/" class="block text-base font-medium py-2 transition-colors text-text-secondary hover:text-text-primary"> ديمو </a><a href="/ar/business-cases/" class="block text-base font-medium py-2 transition-colors text-text-secondary hover:text-text-primary"> المشاريع </a><a href="/ar/products/" class="block text-base font-medium py-2 transition-colors text-text-secondary hover:text-text-primary"> المنتجات </a><a href="/ar/courses/" class="block text-base font-medium py-2 transition-colors text-text-secondary hover:text-text-primary"> الدورات </a><a href="/ar/about-us/" class="block text-base font-medium py-2 transition-colors text-text-secondary hover:text-text-primary"> من نحن </a><a href="/ar/blog/" class="block text-base font-medium py-2 transition-colors text-brand-teal"> المدونة </a><a href="/ar/contact/" class="block text-base font-medium py-2 transition-colors text-text-secondary hover:text-text-primary"> اتصل بنا </a> <div class="pt-4 border-t border-border-default"> <div class="flex items-center gap-4 mb-4"> <a href="https://www.linkedin.com/company/noorjax/" target="_blank" rel="noopener noreferrer" class="text-text-tertiary hover:text-brand-teal" aria-label="LinkedIn"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg> </a> <a href="https://www.youtube.com/@noorjaxconsulting" target="_blank" rel="noopener noreferrer" class="text-text-tertiary hover:text-red-600" aria-label="YouTube"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg> </a> </div> <!-- Mobile Language Options --> <div class="flex flex-col gap-1"> <a href="/en/blog/sorting-conveyors-library/" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-text-secondary hover:bg-brand-teal/5 hover:text-brand-teal transition-colors"> <span class="leading-none rounded-sm overflow-hidden"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="24" height="12"><clipPath id="s"><path d="M0,0 v30 h60 v-30 z"/></clipPath><clipPath id="t"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath><g clip-path="url(#s)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg></span> </a><a href="/es/blog/sorting-conveyors-library/" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-text-secondary hover:bg-brand-teal/5 hover:text-brand-teal transition-colors"> <span class="leading-none rounded-sm overflow-hidden"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 500" width="24" height="16"><rect width="750" height="500" fill="#c60b1e"/><rect width="750" height="250" y="125" fill="#ffc400"/></svg></span> </a> </div> </div> </div> </div> </header> <script>
+  function initHeader() {
+    // Mobile menu
+    var toggle = document.getElementById('mobile-menu-toggle');
+    var menu = document.getElementById('mobile-menu');
+    if (toggle && menu) {
+      toggle.onclick = function() {
+        var isOpen = !menu.classList.contains('hidden');
+        menu.classList.toggle('hidden');
+        document.getElementById('menu-icon-open').classList.toggle('hidden');
+        document.getElementById('menu-icon-close').classList.toggle('hidden');
+        toggle.setAttribute('aria-expanded', String(!isOpen));
+      };
+      menu.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+          menu.classList.add('hidden');
+          document.getElementById('menu-icon-open').classList.remove('hidden');
+          document.getElementById('menu-icon-close').classList.add('hidden');
+        });
+      });
+    }
+
+    // Language dropdown
+    var btn = document.getElementById('lang-btn-desktop');
+    var langMenu = document.getElementById('lang-menu-desktop');
+    if (btn && langMenu) {
+      btn.onclick = function(e) {
+        e.stopPropagation();
+        var isOpen = !langMenu.classList.contains('hidden');
+        langMenu.classList.toggle('hidden');
+        var chev = document.getElementById('lang-chevron-desktop');
+        if (chev) chev.classList.toggle('rotate-180');
+        btn.setAttribute('aria-expanded', String(!isOpen));
+      };
+      document.addEventListener('click', function() {
+        langMenu.classList.add('hidden');
+        var chev = document.getElementById('lang-chevron-desktop');
+        if (chev) chev.classList.remove('rotate-180');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    }
+  }
+
+  initHeader();
+  document.addEventListener('astro:after-swap', initHeader);
+</script> <main class="flex-1 pt-18 lg:pt-20">  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"مكتبة ناقلات الفرز","datePublished":"2024-06-28T00:00:00.000Z","author":{"@type":"Person","name":"Felipe Haro"},"publisher":{"@type":"Organization","name":"Noorjax Consulting","url":"https://noorjax.com"},"description":"تتيح هذه الأداة لمستخدم AnyLogic بناء مجموعة من شبكات ناقلات الفرز تلقائيًا باستخدام نقاط بيانات محددة في ملف تهيئة Excel. يوفر هذا النهج مرونة، مما يسمح بتعديلات وإضافات سهلة"}</script> <article class="py-(--spacing-section)"> <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8"> <!-- Back link --> <a href="/ar/blog/" class="inline-flex items-center gap-2 text-sm text-text-tertiary hover:text-brand-accent mb-8 transition-colors"> <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18"></path> </svg>
+العودة إلى المدونة
+</a> <!-- Header --> <header class="mb-10"> <div class="flex flex-wrap gap-2 mb-4"> <span class="text-xs font-medium px-2.5 py-1 rounded-full bg-brand-secondary/10 text-brand-secondary"> مكتبات Noorjax </span> </div> <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-4"> مكتبة ناقلات الفرز </h1> <time class="text-text-tertiary" datetime="2024-06-28T00:00:00.000Z"> ٢٨ يونيو ٢٠٢٤ </time> </header> <!-- Content --> <div class="prose prose-lg max-w-none
+        prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-text-primary
+        prose-p:text-text-secondary
+        prose-a:text-brand-teal prose-a:no-underline hover:prose-a:underline
+        prose-img:rounded-xl prose-img:border prose-img:border-border-default prose-img:mx-auto
+        prose-code:text-brand-secondary prose-code:bg-bg-secondary prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm
+        prose-pre:bg-bg-secondary prose-pre:border prose-pre:border-border-default prose-pre:rounded-xl
+        prose-blockquote:border-brand-teal prose-blockquote:text-text-secondary prose-blockquote:not-italic
+        prose-strong:text-text-primary
+        prose-li:text-text-secondary
+        prose-hr:border-border-default
+      "> <p>تتيح هذه الأداة لمستخدم AnyLogic بناء مجموعة من شبكات ناقلات الفرز تلقائيًا باستخدام نقاط بيانات محددة في ملف تهيئة Excel. يوفر هذا النهج مرونة، مما يسمح بتعديلات وإضافات سهلة لمكونات مختلفة مثل الناقلات الحلقية وطاولات النقل والفروع وغيرها. بالإضافة إلى ذلك، تتيح لك هذه الأداة الاتصال عبر بروتوكول TCP/IP مع أي أداة خارجية لقراءة البيانات المتعلقة بالموضع الحالي للوكلاء في شبكة الناقلات، وإرسال المعلومات مرة أخرى إلى هذه الأداة لإعادة التوجيه وإعادة تحديد الأولويات.</p>
+<p>شاهد هذه المكتبة أثناء العمل عبر الرابط التالي: <a href="https://cloud.anylogic.com/model/34810d29-661b-4d2c-95dd-46ecd95c221b">https://cloud.anylogic.com/model/34810d29-661b-4d2c-95dd-46ecd95c221b</a>
+يمكنك أيضًا مشاهدة العرض التوضيحي بالفيديو هنا:
+<a href="https://youtu.be/fQwLOUNW2s4">https://youtu.be/fQwLOUNW2s4</a></p>
+<h2 id="كيفية-التحميل">كيفية التحميل</h2>
+<p>يمكنك الحصول على النسخة المجانية مع قيود هنا، مع جميع الملفات المهمة التي ستحتاجها:</p>
+<p><a href="https://github.com/noorjax/sorting_conveyors">https://github.com/noorjax/sorting_conveyors</a></p>
+<p>ستحتاج إلى ترخيص للحصول على الوظائف الكاملة. النسخة المجانية محدودة بحد أقصى ساعة واحدة من وقت المحاكاة.</p>
+<h2 id="كيفية-الحصول-على-ترخيص">كيفية الحصول على ترخيص</h2>
+<p>للحصول على ترخيص، اتبع التعليمات في الرابط التالي:</p>
+<p><a href="/ar/blog/getting-a-license-for-a-library/">/ar/blog/getting-a-license-for-a-library/</a></p>
+<p>سعر هذه المكتبة:</p>
+<ul>
+<li>
+<p>الاستخدام التجاري - سنة واحدة: 3,000 يورو</p>
+</li>
+<li>
+<p>الدعم للتنفيذ: 1,000 يورو</p>
+</li>
+</ul>
+<p>أسعارنا قابلة للتغيير في أي وقت دون إشعار مسبق</p>
+<h2 id="التوثيق">التوثيق</h2>
+<p>تم اختبار هذه المكتبة مع AnyLogic 8.9.1. لن تعمل الإصدارات السابقة.</p>
+<p>أول شيء تريد فعله مع هذه المكتبة هو بناء شبكات الناقلات الخاصة بك، وللقيام بذلك ستحدد الموقع الفعلي للناقلات والفروع وطاولات النقل في Excel.</p>
+<h2 id="ملف-تهيئة-excel">ملف تهيئة Excel</h2>
+<p>يحتوي ملف تهيئة Excel على العديد من التبويبات. سنناقش ما يفعله كل واحد منها.</p>
+<h3 id="الترخيص">الترخيص</h3>
+<p>في هذا التبويب ستكتب الرمز الذي ستتلقاه عند الحصول على النسخة المدفوعة من هذه الأداة. إذا لم يكن لديك رمز، لا تقلق يمكنك الاستمرار في استخدام المكتبة في نسختها المحدودة.</p>
+<h3 id="عام">عام</h3>
+<ul>
+<li>
+<p><strong>وحدة الطول</strong>: يمكن أن تكون بالمتر أو القدم. ستكون هذه وحدة الطول لجميع المعلمات التي لها لاحقة “بوحدات الطول”. ستحكم هذه جميع المسافات والسرعات والتسارعات.</p>
+</li>
+<li>
+<p><strong>مسار Python (اختياري)</strong>: هنا ستضيف مسار موقع برنامج Python على حاسوبك، والذي سيُستخدم لعرض معاينة لشبكة الناقلات. إذا كان لديك هذا مُفعّلاً بشكل صحيح، ستتمكن من النقر على زر “show 3D plot” في تبويب Conveyors config لرؤية معاينة للشبكة التي تبنيها في Excel قبل استخدامها في AnyLogic. إذا كنت جديدًا مع Python، ننصحك بتحميل Anaconda Navigator (يمكنك إيجاده عبر الإنترنت) واستخدام مسار Python من Anaconda.</p>
+</li>
+</ul>
+<h4 id="ملف-python-للتصور-المسبق-لشبكة-الناقلات-زر-show-3d">ملف Python للتصور المسبق لشبكة الناقلات (زر Show 3D)</h4>
+<p>لمعرفة كيف تبدو شبكة الناقلات قبل تشغيلها في AnyLogic، يمكنك الضغط على زر “show 3D plot” في صفحة Conveyors config في ملف تهيئة Excel. لكن قبل الضغط على الزر يجب تهيئة بعض الأشياء:</p>
+<ul>
+<li>
+<p>ملف preVisualizationScript.py موجود في نفس المجلد مع ملف تهيئة Excel.</p>
+</li>
+<li>
+<p>لتشغيل “preVisualizationScript.py” بنجاح، من الضروري تثبيت مكتبات Python اللازمة. تُمكّن هذه المكتبات وظائف مختلفة مثل معالجة البيانات والرسم والتصور ثلاثي الأبعاد والتعبيرات النمطية والعمليات العددية والتكامل مع Excel. فيما يلي قائمة بالمكتبات المطلوبة:</p>
+</li>
+<li>
+<p>Pandas</p>
+</li>
+<li>
+<p>Matplotlib</p>
+</li>
+<li>
+<p>mplot3d</p>
+</li>
+<li>
+<p>re (Regular Expressions)</p>
+</li>
+<li>
+<p>numpy</p>
+</li>
+<li>
+<p>xlwings</p>
+</li>
+</ul>
+<p>لتثبيت جميع المكتبات المطلوبة، يمكنك استخدام أوامر pip التالية:</p>
+<p><em>pip install pandas matplotlib numpy xlwings</em></p>
+<p>وحدة re هي جزء من مكتبة Python القياسية، لذلك لا حاجة لتثبيت إضافي لها.</p>
+<h3 id="تهيئة-الناقلات">تهيئة الناقلات:</h3>
+<p>في هذه الصفحة يتم تعريف معلمات كائن الناقل. بالإضافة إلى ذلك لديك زر يُسمى “show 3D plot” يستخدم Python إذا كان مُهيّأً بشكل صحيح ليعرض لك معاينة لكيفية ظهور شبكات الناقلات حتى الآن أثناء تقدمك في إضافتها.</p>
+<ul>
+<li>
+<p><strong>A: المعرف</strong>: معرف فريد للناقل.</p>
+</li>
+<li>
+<p><strong>B: معرف الشبكة:</strong> هو المعرف الفريد للشبكة التي ينتمي إليها هذا الناقل.</p>
+</li>
+</ul>
+<p><strong>C: النقاط بوحدات الطول (انظر الصورة أدناه)</strong>: جميع نقاط الناقل، حيث الأولى هي نقطة الأصل، والأخيرة هي نهاية الناقل. يمكن أن تكون الإحداثيات بالمتر أو القدم، كما هو محدد في صفحة General.
+استخدم هذا التركيب: {{x0,y0,z0},{x1,y1,z1},{x2,y2,z2},…,{xn,yn,zn}}</p>
+<ul>
+<li>
+<p>لاحظ أن الترتيب الذي تُكتب به النقاط سيحدد اتجاه حركة الناقل وأن هذا الاتجاه لا يمكن تعديله أثناء وقت التشغيل.</p>
+</li>
+<li>
+<p>إذا كانت النقاط تحدد ناقلاً حلقيًا، تأكد من استخدام نفس نقطتي البداية والنهاية.</p>
+</li>
+<li>
+<p><strong>D: النوع</strong>: ثلاثة خيارات ممكنة: Cell و Belt و Roller.</p>
+</li>
+<li>
+<p><strong>E: الفجوة بوحدات الطول (انظر الصورة أدناه)</strong>: حجم الخلية حيث سيكون الوكيل إذا تم اختيار النوع “Cell”. وحدات الطول محددة في صفحة General.</p>
+</li>
+<li>
+<p><strong>F: حجم الخلية بوحدات الطول (انظر الصورة أدناه):</strong> حجم الخلية حيث سيكون الوكيل إذا تم اختيار النوع “Cell”. وحدات الطول محددة في صفحة General. إذا كنت تستخدم حلقة بخلايا، تأكد من أن الحلقة وحجم الخلايا وفجوات الخلايا (العمودان E و F) منطقية، بمعنى أنها تتناسب مع طول الناقل. إذا لم تتناسب، ستحسب خوارزميتنا حجم الفجوة بالتقريب إلى أقرب قيمة للعمود E التي تتناسب فيها الأحجام بشكل صحيح. عند تشغيل النموذج، ستحصل على إشعار في وحدة التحكم بحجم الفجوة المستخدم.</p>
+</li>
+<li>
+<p><strong>G: العرض بوحدات الطول (انظر الصورة أدناه)</strong>: عرض الناقل. وحدات الطول محددة في صفحة General.</p>
+</li>
+<li>
+<p><strong>H: السرعة الأولية بوحدات الطول في الثانية</strong>: السرعة الأولية للناقل بالمتر/ثانية أو القدم/ثانية.</p>
+</li>
+<li>
+<p><strong>I: السرعة القصوى بوحدات الطول في الثانية</strong>: السرعة القصوى للناقل بالمتر/ثانية أو القدم في الثانية.</p>
+</li>
+<li>
+<p><strong>J: التسارع بوحدات الطول في الثانية²</strong>: تسارع الناقل بالمتر/ثانية² أو القدم/ثانية².</p>
+</li>
+<li>
+<p><strong>K: اللون:</strong> لون الناقل. يساعد في التحقق والتصديق على النموذج.</p>
+</li>
+</ul>
+<h3 id="تهيئة-الفروع"><img src="/images/blog/sorting-conveyors-library/Slide2.png" alt="">تهيئة الفروع</h3>
+<p>تحدد هذه الصفحة الاتصال الموجود بين الناقلات المختلفة باستخدام الفروع.</p>
+<ul>
+<li>
+<p><strong>A: المعرف</strong>: معرف فريد للفرع.</p>
+</li>
+<li>
+<p><strong>B. معرف الشبكة</strong>: هو المعرف الفريد للشبكة التي ينتمي إليها هذا الفرع.</p>
+</li>
+<li>
+<p><strong>C. ناقل الفرع (انظر الصورة أدناه)</strong>: معرف الناقل المتصل مباشرة بهذا الفرع. معرف الناقل هو الموجود في العمود A من صفحة تهيئة الناقلات.</p>
+</li>
+<li>
+<p><strong>D. الناقل الرئيسي (انظر الصورة أدناه)</strong>: معرف الناقل المربوط به الفرع. معرف الناقل هو الموجود في العمود A من صفحة تهيئة الناقلات.</p>
+</li>
+<li>
+<p><strong>E. اللون:</strong> لون الفرع، يساعد في التحقق والتصديق على النموذج.</p>
+</li>
+</ul>
+<p><img src="/images/blog/sorting-conveyors-library/Slide3.png" alt=""></p>
+<h3 id="تهيئة-طاولات-النقل">تهيئة طاولات النقل</h3>
+<ul>
+<li>
+<p><strong>A. المعرف:</strong> معرف فريد لطاولة النقل.</p>
+</li>
+<li>
+<p><strong>B. معرف الشبكة</strong>: هو المعرف الفريد للشبكة التي تنتمي إليها طاولة النقل هذه.</p>
+</li>
+<li>
+<p><strong>C. المسارات</strong>: خريطة يتم فيها تعريف اتصال الناقلات. يلزم ناقلان على الأقل ويمكن تعريف أربعة كحد أقصى. مفاتيح الخريطة هي معرفات الناقلات، والقيمة هي نوع النقطة حيث تتصل هذه الناقلات بطاولة النقل. مثال: {conveyor1:end,conveyor2:end,conveyor3:begin}، هذا المثال يحدد طاولة نقل لها 3 ناقلات متصلة، تبدأ عند نهاية conveyor1 و conveyor2، ومتصلة ببداية conveyor3 (انظر الصورة أدناه)”</p>
+</li>
+<li>
+<p><strong>D. تأخير التبديل بالثانية:</strong> الوقت المطلوب للتبديل إلى ناقل آخر (بالثواني).</p>
+</li>
+<li>
+<p><strong>E. لون التعبئة:</strong> لون تعبئة الشكل.</p>
+</li>
+<li>
+<p><strong>F. لون الخط:</strong> لون خط الشكل.</p>
+</li>
+<li>
+<p><strong>G. عرض الخط بالنقاط</strong>: عرض خط المربع (بالبكسل).</p>
+</li>
+</ul>
+<p><img src="/images/blog/sorting-conveyors-library/Picture1-1.png" alt=""> <img src="/images/blog/sorting-conveyors-library/kkk.png" alt=""></p>
+<h3 id="تهيئة-أجهزة-الاستشعار">تهيئة أجهزة الاستشعار</h3>
+<p>الهدف من هذه الصفحة هو تعريف مواضع على الناقلات ستُستخدم كأجهزة استشعار في التقاطعات، من أجل إنشاء تسلسل إطلاق الوكلاء بناءً على أولوياتهم. تُستخدم أجهزة الاستشعار في الفرازات من أجل إعادة توجيه وتحديد أولوية العناصر وهذا هو المكان الذي يتم فيه تعريف أجهزة الاستشعار. (لمزيد من التفاصيل حول أجهزة الاستشعار وكيفية استخدامها في نموذج المحاكاة، ارجع إلى فقرة “الناقلات المتقاربة”)</p>
+<ul>
+<li>
+<p><strong>a. المعرف</strong>: معرف فريد لجهاز الاستشعار.</p>
+</li>
+<li>
+<p><strong>b. معرف الشبكة</strong>: هو المعرف الفريد للشبكة التي ينتمي إليها جهاز الاستشعار هذا</p>
+</li>
+<li>
+<p><strong>c. الناقل</strong>: الناقل الذي سيتواجد فيه الموضع.</p>
+</li>
+<li>
+<p><strong>d. الإزاحة بوحدات الطول</strong>: هذه المسافة من النقطة الأولى للناقل.</p>
+</li>
+<li>
+<p><strong>e. نوع الموضع</strong>: خياران ممكنان فقط: enter و exit. يحدد هذا ما إذا كان جهاز الاستشعار يُستخدم عند خروج ناقل أو عند مدخله. يمكن استخدام مدخل واحد فقط وعدة مخارج لتقاطع واحد.</p>
+</li>
+<li>
+<p><strong>f. معرف التقاطع</strong>: معرف فريد للتقاطع.</p>
+</li>
+</ul>
+<p><strong>g. نوع الاتحاد:</strong> ثلاثة خيارات ممكنة هنا:</p>
+<ul>
+<li>
+<p><strong>i. فجوة</strong>: إذا كان نوع الموضع خروج، فهذا يعني أن هناك مساحة بين ناقل هذا المستشعر وناقل الدخول.</p>
+</li>
+<li>
+<p><strong>ii. فرع</strong>: إذا كان نوع الموضع خروج، فهذا يعني أن ناقل هذا المستشعر متصل بناقل الدخول بفرع. لذلك يجب إنشاء فرع في صفحة تهيئة الفروع.</p>
+</li>
+<li>
+<p><strong>iii. بلا</strong>: إذا كان نوع الموضع “دخول”، فهذا هو الخيار الوحيد الممكن.</p>
+</li>
+</ul>
+<p><img src="/images/blog/sorting-conveyors-library/Slide9.png" alt=""></p>
+<h3 id="المسارات">المسارات</h3>
+<p>المسارات هي جميع التسلسلات المتوقعة للناقلات التي قد تتبعها المواد (الوكلاء)</p>
+<ul>
+<li>
+<p><strong>a. المعرف</strong>: معرف فريد للتسلسل.</p>
+</li>
+<li>
+<p><strong>b. التسلسل:</strong> قائمة الناقلات التي يمكن للوكيل المرور عبرها. استخدم هذا التركيب: {c1,c3,c5} مع تحديد معرفات الناقلات وتأكد من عدم إضافة أي مسافات بين معرفات الناقلات أو بجانب الأقواس لأن ذلك سيسبب خطأ.</p>
+</li>
+</ul>
+<p>ملاحظة: لجميع المعرفات الموصوفة أعلاه التي تحتاج إلى الإشارة إليها في ملف Excel، لا يمكن أن تحتوي الأسماء على أي حرف خاص غير الشرطة السفلية ”_”. هذا هو الحرف المقبول الوحيد الذي يمكن استخدامه كجزء من أسماء المعرفات.</p>
+<h2 id="specialconveyoritem">SpecialConveyorItem</h2>
+<p>لاستخدام جميع ميزات هذه المكتبة، ستحتاج إلى إنشاء وكيلك الخاص الذي سيتحرك عبر الناقلات، لكن وكيلك يجب أن يكون امتدادًا من SpecialConveyorItem الخاص بهذه المكتبة، وهو نوع Material Item. لهذا تحتاج إلى الذهاب إلى القسم المتقدم من خصائص نوع وكيلك وفعل ذلك هناك كما هو موضح في الصورة التالية:</p>
+<p><img src="/images/blog/sorting-conveyors-library/Picture3-1.png" alt=""></p>
+<p>من خلال الامتداد من نوع الوكيل الخاص هذا، يحصل الوكيل على الوصول إلى ما يلي:</p>
+<p><strong>set_id(String id)</strong>: يحدد المعرف الفريد للوكيل في حالة رغبتك في استخدام ميزات HTTP (القسم التالي).</p>
+<p><strong>priority</strong>: هو متغير من نوع double يمثل الأولوية الحالية للوكيل، كلما زاد الرقم زادت الأولوية.</p>
+<p><strong>setLength(double lengthInUnits, LengthUnits units)</strong>: افتراضيًا يكون طول الوكيل متر واحد، عند إنشاء الوكيل يمكنك تحديد طول جديد للوكيل.</p>
+<p><strong>setWidth(double lengthInUnits, LengthUnits units)</strong>: افتراضيًا يكون عرض الوكيل متر واحد، عند إنشاء الوكيل يمكنك تحديد عرض جديد للوكيل.</p>
+<p><strong>setHeight(double lengthInUnits, LengthUnits units)</strong>: افتراضيًا يكون ارتفاع الوكيل متر واحد، عند إنشاء الوكيل يمكنك تحديد ارتفاع جديد للوكيل.</p>
+<p>بالطبع يجب إنشاء رسوم متحركة خاصة بوكيلك، وإلا لن ترى شيئًا عند تشغيل المحاكاة.</p>
+<h2 id="conveyornetworksettings">ConveyorNetworkSettings</h2>
+<p>يخزن هذا الوكيل معلومات حول إعدادات شبكات الناقلات. يساعد في ربط النموذج بخوادم في حالة الحاجة لاستخدام اتصالات HTTP (القسم التالي).</p>
+<p>معلمات هذا الوكيل هي التالية:</p>
+<ul>
+<li>
+<p><strong>استخدام اتصال HTTP:</strong> يحدد ما إذا كان سيتم استخدام اتصال HTTP أم لا.</p>
+</li>
+<li>
+<p><strong>المضيف:</strong> هذا هو اسم النطاق أو عنوان IP للخادم حيث يوجد المورد. يحدد الخادم المحدد الذي سيتعامل مع طلب HTTP. مثلاً، في عنوان URL <a href="http://www.example.com:8080/index.html%D8%8C">http://www.example.com:8080/index.html،</a> <a href="http://www.example.com">www.example.com</a> هو المضيف.</p>
+</li>
+<li>
+<p><strong>المنفذ</strong>: هذا هو الرقم الذي يحدد نقطة نهاية الاتصال على المضيف. يحدد المنفذ كيفية نقل البيانات إلى الخادم. مثلاً، في عنوان URL <a href="http://www.example.com:8080/index.html%D8%8C">http://www.example.com:8080/index.html،</a> 8080 هو المنفذ.</p>
+</li>
+<li>
+<p><strong>طباعة حالة الاتصال</strong>: ضع علامة true إذا أردت رؤية حالة الاتصال في وحدة التحكم.</p>
+</li>
+</ul>
+<h2 id="اتصال-http-و-json">اتصال HTTP و JSON</h2>
+<p>هناك ثلاث دوال تعمل كعملاء في علاقة عميل-خادم: httpRequestAll و httpRequestCurrentSeq و httpRequestPriorities و httpRequestInject. ترسل هذه الدوال ملف JSON بمواضع الوكلاء المخزنة في مجموعة materialPositions ثم يعتمد العائد المتوقع على كل دالة محددة.</p>
+<p><strong>httpRequestCurrentSeq()</strong>:</p>
+<p>تعيد معلومات بالتسلسل الجديد للوكلاء وتغير الناقل المستهدف الحالي. مثال: {“Id”: “0”, “RouteId”: “5”, “Priority”: 10}، حيث Id يعني المعرف الفريد للوكيل، RouteId هو المسار التالي للوكيل و Priority هي الأولوية الجديدة للوكيل.</p>
+<p><strong>httpRequestPriorities()</strong>:</p>
+<ul>
+<li>تعيد الأولويات الجديدة للوكلاء المحددين. لذلك تغير الدالة أولوية الوكلاء ديناميكيًا. مثال: {“Id”: “100”, “Priority”: 25}، تحدد الأولوية الجديدة 25 للوكيل ذي المعرف “100”.</li>
+</ul>
+<p><strong>httpRequestInject(ConveyorNetworkLogic cnLogic, Object classInstance, String addPopulationMethodString, Object… agentArgs):</strong></p>
+<ul>
+<li>
+<p>تعيد معلومات متعلقة بإنشاء أو حقن وكلاء جدد في منطق شبكة الناقلات المحدد. مثلاً، رسالة JSON من الخادم {“Id”: 2, “RouteId”: “2”, “Priority”: 20}، حيث Id هو المعرف الفريد للوكيل الجديد المراد إضافته إلى شبكة الناقلات، RouteId هو المسار الذي سيتبعه هذا الوكيل الجديد، و priority هي الأولوية الأولية للوكيل.</p>
+</li>
+<li>
+<p>سيتم إنشاء الوكلاء بناءً على الوسيط addPopulationMethodString وهو الطريقة التي تنشئ وكلاء جدد في مجموعة. مثلاً، إذا كان لديك مجموعة تُسمى “pallets” بسبب نوع وكيل Pallet، فإن طريقة السلسلة ستكون “add_pallets”. اعتبر أن الوكيل Pallet يجب أن يكون امتدادًا لوكيل SpecialConveyorItem.</p>
+</li>
+<li>
+<p>إذا كان addPopulationMethodString يتطلب بعض الوسائط الأولية، يمكنك تعريفها في وسيط agentArgs مع جميع المعلمات المطلوبة للوكيل الذي تقوم بتهيئته مع addPopulationMethodString. اعتبر أنه إذا لم تكن هناك وسائط مطلوبة، يمكن حذف الوسائط المتعلقة بـ agentArgs للدالة. متابعة للمثال الأخير، إذا كان الوكيل Pallet له معلمتان: SKU و Material، فيجب إضافة هذه القيم لتلك المعلمات مفصولة بفواصل (يجب أن تكون بنفس الترتيب كما لو كنت تستخدم دالة add_pallets()).</p>
+</li>
+<li>
+<p>classInstance هو الوكيل حيث توجد طريقة إضافة المجموعة، أو بعبارة أخرى، حيث توجد مجموعة الوكلاء. مثلاً، إذا كانت مجموعة pallets في main، وكنت تنفذ دالة HTTP مباشرة من main، يجب وضع <strong>this</strong> كـ classInstance.</p>
+</li>
+</ul>
+<p>مثلاً وباستخدام الأمثلة الأخيرة، إذا كان منطق شبكة الناقلات حيث سيتم حقن الوكلاء يُسمى conveyorNetworkLogic، ستبدو الدالة كالتالي:
+<em>httpRequestInject(conveyorNetworkLogic, <strong>this</strong>, “add_pallets”, 123, “wood”);</em>
+إذا لم يكن للوكيل معلمات أو يجب تهيئة الوكيل الجديد بقيم المعلمات الافتراضية، ستبدو كالتالي:
+<em>httpRequestInject(conveyorNetworkLogic, <strong>this</strong>, “add_pallets”);</em></p>
+<ul>
+<li>إذا كان addPopulationMethodString أو classInstance فارغًا (null)، فسيكون الوكيل المحقون من نوع SpecialConveyorItem.</li>
+</ul>
+<p><strong>conveyorNetworkAnimation.httpRequestAll(ConveyorNetworkLogic cnLogic, Object classInstance, String addPopulationMethodString, Object… agentArgs):</strong></p>
+<p>تعيد معلومات من الدوال الثلاث المذكورة أعلاه. لذلك، ستكون استجابة الخادم خريطة بالتسلسلات الجديدة لوكلاء معينين والأولويات الجديدة وحقن آخرين في النظام. الاستجابة هي قائمة تحتوي على ثلاث قوائم من الخرائط: newSeq و priority و inject. يُستخدم الوسيط cnLogic و classInstance و addPopulationMethodString و agentArgs إذا كان مطلوبًا حقن جديد (اقرأ دالة httpRequestInject لفهم هذا).</p>
+<h3 id="خطوات-لجعل-هذا-يعمل">خطوات لجعل هذا يعمل</h3>
+<p>لجعل هذا يعمل، هذه هي الخطوات اللازمة:</p>
+<ul>
+<li>
+<p>تأكد من أن متغير “id” للوكلاء تم تهيئته. إذا لم يكن كذلك، قم بتهيئة معرفات الوكلاء باستخدام id=String id على الوكيل. هذا ضروري من أجل إرسال معرفات الوكلاء إلى الخادم.</p>
+</li>
+<li>
+<p>شغّل إحدى الدوال حسب ما تريد فعله:</p>
+</li>
+<li>
+<p>conveyorNetworkAnimation.httpRequestCurrentSeq</p>
+</li>
+<li>
+<p>conveyorNetworkAnimation.httpRequestInject</p>
+</li>
+<li>
+<p>conveyorNetworkAnimation.httpRequestPriorities</p>
+</li>
+<li>
+<p>conveyorNetworkAnimation.httpRequestAll</p>
+</li>
+</ul>
+<p>ملاحظات:</p>
+<p>عند استخدام httpRequestCurrentSeq، تأكد من أن التسلسل الجديد المقدم ممكن التنفيذ مع الأخذ في الاعتبار الناقل الحالي الذي يتواجد فيه الوكيل. إذا لم يكن كذلك، ستحصل على خطأ مثل:
+<em>lang.RuntimeException: root.conveyorNetworkAgent.convey:</em>
+<em>Path not found</em></p>
+<h2 id="خادم-http">خادم HTTP</h2>
+<p>لاستخدام دوال HTTP المدمجة في المكتبة، ستحتاج إلى إعداد خادم باستخدام بروتوكول HTTP. المكتبة تحتوي على العميل المدمج، لذلك من مسؤولية المستخدم إنشاء خادمه الخاص.</p>
+<p>عند استخدام دوال HTTP في هذه المكتبة، ستقوم بإرسال بيانات إلى الخادم، ومن مسؤولية الخادم تحديد ما يفعله بتلك البيانات وإعادة ملف JSON إلى AnyLogic (العميل).</p>
+<p>تحقق من ملف Python النموذجي المضمن في المكتبة الذي يعمل كخادم. (ملف Python main v4.py في مجلد helper)</p>
+<p>ستصف النقاط التالية الدالة الثانية للخادم، المتعلقة بدالة httpRequestCurrentSeq في AnyLogic:</p>
+<p>@app.route(“/update-current-conveyor”, methods=[“POST”])
+يحدد هذا السطر مسارًا في تطبيق Flask. لنفصله:</p>
+<ul>
+<li>
+<p>@app.route(…): هذا مُزخرف Flask يُستخدم لربط عنوان URL محدد بدالة Python. في هذه الحالة، العنوان هو “/update-current-conveyor”.</p>
+</li>
+<li>
+<p>methods=[“POST”]: يحدد هذا أن هذا المسار سيقبل فقط طلبات HTTP POST. طلبات POST تُستخدم عمومًا لإرسال بيانات إلى الخادم.</p>
+</li>
+<li>
+<p>def update_currentConveyor(): يحدد هذا السطر دالة اسمها update_currentConveyor. ستُنفذ هذه الدالة عند إجراء طلب POST إلى مسار “/update-current-conveyor”.</p>
+</li>
+</ul>
+<p>data = request.get_json()</p>
+<ul>
+<li>
+<p>request: هذا كائن Flask يحتوي على جميع بيانات طلب HTTP المُرسل إلى الخادم.</p>
+</li>
+<li>
+<p>get_json(): تُستخدم هذه الطريقة للحصول على بيانات JSON المُرسلة في طلب POST. في هذا السياق، ستحتفظ data بالبيانات التي أرسلها العميل إلى الخادم بتنسيق JSON.</p>
+</li>
+</ul>
+<p>التعليقات في الكود:</p>
+<ul>
+<li>
+<h1 id="create-a-random-route-تعليق-يشير-إلى-أنه-يجب-تعريف-معرف-مسار-هنا-لإعادته-لاحقًا-يقترح-أن-هذا-الجزء-من-الوظيفة-لم-ينفذه-المستخدم-بعد">create a random route: تعليق يشير إلى أنه يجب تعريف معرف مسار هنا لإعادته لاحقًا. يقترح أن هذا الجزء من الوظيفة لم ينفذه المستخدم بعد.</h1>
+</li>
+</ul>
+<p>response = [ … ]
+هنا يتم تعريف قائمة من القواميس، تمثل الاستجابة التي ستُرسل مرة أخرى إلى العميل. كل قاموس في القائمة يحتوي على:</p>
+<ul>
+<li>
+<p>“Id”: سلسلة تمثل المعرف الفريد للوكيل.</p>
+</li>
+<li>
+<p>“RouteId”: سلسلة تمثل معرف المسار.</p>
+</li>
+<li>
+<p>“Priority”: عدد صحيح يشير إلى أولوية المسار.</p>
+</li>
+</ul>
+<p>return jsonify(response), 201</p>
+<ul>
+<li>
+<p>jsonify(response): هي دالة Flask تحول قائمة response إلى استجابة HTTP بتنسيق JSON.</p>
+</li>
+<li>
+<p>201: هذا رمز حالة HTTP يشير إلى أن المورد تم إنشاؤه بنجاح. يُستخدم رمز الحالة 201 عادةً لاستجابات طلبات POST التي تؤدي إلى إنشاء مورد.</p>
+</li>
+</ul>
+<p>فهم هذا، الجزء الوحيد الذي يجب أن يكون بنفس التنسيق المذكور هو “response”. لأن هذا هو JSON الذي سيقوم AnyLogic بفك تشفيره لإجراء التغييرات المطلوبة.</p>
+<p>لاحظ أن الخادم يمكن كتابته بأي لغة برمجة، لكن يجب إرسال الاستجابة كـ JSON.</p>
+<h2 id="الناقل-الدائري">الناقل الدائري</h2>
+<p>هناك بعض القواعد لإنشاء ناقل دائري أو مغلق:</p>
+<ul>
+<li>
+<p>من المهم أن تكون النقطة الأولى والأخيرة للناقل متطابقتين. مثال: {<strong>{10, 10, 1}</strong>, {10, 15, 1}, {46, 15, 1}, {46, 10, 1}, <strong>{10, 10, 1}</strong>}.</p>
+</li>
+<li>
+<p>في الحالات التي يكون لديك فيها ناقل دائري مع ناقلين مستقيمين يتفرعان منه بحيث يكون لهذين الناقلين المستقيمين اتجاهات متعاكسة، من الضروري أن يتم اختيار رأس الناقل الدائري (نقطة البداية والنهاية) على طول الجزء من الناقل الدائري الذي يقع بين الناقلين المستقيمين المتفرعين. مثال: الدائرة الحمراء لـ conveyorLoop: begin &#x26; end.</p>
+</li>
+</ul>
+<p><img src="/images/blog/sorting-conveyors-library/Slide10.png" alt=""></p>
+<p>بهذه الطريقة يمكنك ببساطة تعريف تسلسل مثل: {conveyor1,conveyor2} وسيمر الوكيل عبر conveyor1، ثم يقوم بنصف لفة على الناقل الدائري (conveyorLoop) وسيأخذ الفرع الأزرق لإنهاء التسلسل في conveyor2. هذا ممكن فقط لأن نقطة بداية ونهاية الناقل الحلقي ليست في مسار الوكيل، وإلا إذا كانت النقطة في المسار، ستحتاج إلى تعريف الحلقة كجزء من التسلسل.
+إذا أردت أن يقوم الوكيل بلفة كاملة في الحلقة، تحتاج فقط إلى تعريف التسلسل هكذا: {conveyor1,conveyorLoop,conveyor2}. ستكون النتيجة conveyor1، ثم لفة كاملة زائد نصف لفة ثم conveyor2.
+ملاحظة: إذا كان آخر ناقل في تسلسل المسار هو ناقل حلقي، فسيكون الوكيل في الحلقة للأبد، ما لم يتم تنفيذ دالة httpRequestCurrentConv، التي تغير تسلسل الوكيل.</p>
+<h2 id="الناقلات-المتقاربة">الناقلات المتقاربة</h2>
+<p>إذا كان ناقلان أو أكثر يندمجان في ناقل واحد، سيكون من الضروري استخدام أولويات الوكلاء لتحديد ترتيب أو تسلسل الوكلاء. لذلك سيكون استخدام صفحة تهيئة أجهزة الاستشعار ضروريًا.
+المواضع على الناقل هي أجهزة الاستشعار التي ستساعد في تحديد تسلسل الوكلاء. إليك مثالاً سريعًا لكيفية تهيئة نقطة تقارب الناقلات:</p>
+<p><img src="/images/blog/sorting-conveyors-library/Picture4-1.png" alt=""><img src="/images/blog/sorting-conveyors-library/Slide11.png" alt=""></p>
+<ul>
+<li>
+<p>في صفحة تهيئة أجهزة الاستشعار، يتم تعريف أجهزة استشعار الناقلات، هناك ناقلان يندمجان في واحد. معرف التقاطع لتحديد أي أجهزة استشعار مرتبطة.</p>
+</li>
+<li>
+<p>الناقلان اللذان يتصلان عند النقطة هما conveyor1 و conveyor2، لذلك كلاهما لديه exit كنوع الموضع.</p>
+</li>
+<li>
+<p>لاستخدام الأولويات من الضروري تقسيم الناقل الرئيسي (في هذه الحالة conveyor2 و conveyor3) إلى جزأين، لأن هذه هي الطريقة لاستخدام أجهزة الاستشعار.</p>
+</li>
+<li>
+<p>conveyor2 لديه gap كنوع اتحاد لأن هناك مساحة بين conveyor2 و conveyor3. في الواقع، هذه الفجوة أو المساحة غير موجودة، في الحقيقة هذا مجرد ناقل مستقيم واحد. ومع ذلك، في التهيئة وبالتالي النموذج، من الضروري تقسيم الناقل إلى جزأين عند التقاطع حتى نتمكن من إضافة أجهزة الاستشعار وفقًا لذلك. عند تقسيم الناقل المستقيم إلى ناقلين، يجب أن تكون إحداثيات نهاية الناقل الأول هي نفس إحداثيات بداية الناقل الثاني. بهذه الطريقة سيعمل الناقلان كما لو كانا واحدًا.</p>
+</li>
+<li>
+<p>في المقابل، conveyor1 لديه اتصال مباشر بـ conveyor3 مع فرع (أزرق).</p>
+</li>
+<li>
+<p>في صورة المثال، الآن بعد أن مر الوكيل البنفسجي ذو الأولوية 6 عبر مستشعر “conveyor1 exit” للـ conveyor1، يجب على الوكيلين الأحمرين على conveyor2 الانتظار في نهاية الناقل، لأن أول وكيل لهذا الناقل لديه أولوية أقل (5). بعد أن يمر الوكيل الأول ذو الأولوية 6 عبر مستشعر “conveyor3 enter” في conveyor3، سيتم إرسال إشارة للسماح للوكلاء على conveyor2 بالبدء في التحرك، لكن لاحظ أن الوكلاء الحمر سيتحركون للأمام فقط إذا لم يكن الوكيل البنفسجي الثاني ذو الأولوية 6 قد وصل إلى مستشعر “conveyor1 exit” في conveyor1 بعد.</p>
+</li>
+</ul>
+<p>لاحظ أن إزاحات أجهزة الاستشعار يجب أن تكون متسقة مع التخطيط، إليك بعض الأشياء التي يجب مراعاتها:</p>
+<ul>
+<li>
+<p>لا يمكن أن يكون لمستشعر الدخول إزاحة تساوي صفر، لأنه لن يكون هناك مساحة لكشف الوكلاء الجدد القادمين، ولن تعمل الأولويات في التقاطع.</p>
+</li>
+<li>
+<p>لا يمكن أن يكون مستشعر الدخول في نفس خط الفرع الذي يوفر وكلاء من ناقل الفرع. يجب أن يكون المستشعر بعد شكل الفرع (انظر الصورة التالية)</p>
+</li>
+</ul>
+<p><img src="/images/blog/sorting-conveyors-library/Picture5-1.png" alt=""></p>
+<ul>
+<li>لا يمكن أن تكون إزاحة أجهزة الاستشعار أكبر من الطول الإجمالي للناقل.</li>
+</ul>
+<h2 id="كيفية-استخدام-النموذج">كيفية استخدام النموذج</h2>
+<ul>
+<li>
+<p>أولاً قم بتحميل المكتبة (انظر أعلى هذا التوثيق) مع مجلد lib واحفظها في مكان آمن.</p>
+</li>
+<li>
+<p>داخل AnyLogic، أضف مكتبة ناقلات الفرز إلى لوحة الأدوات الخاصة بك باستخدام زر + في تبويب اللوحة، وابحث عن ملف sortingConveyors.jar الذي قمت بتحميله… احتفظ دائمًا بملف .jar هذا في نفس الموقع، وإلا ستواجه مشاكل.</p>
+</li>
+</ul>
+<p><img src="/images/blog/sorting-conveyors-library/Monosnap-Instructions-Word-2023-11-16-08.43.08.png" alt=""></p>
+<p>الآن عند إنشاء نموذج أو إذا أردت استخدام نموذج موجود مع هذه المكتبة:</p>
+<ul>
+<li>
+<p>من مجلد helper، ضع ملف configMacroV Excel في مجلد نموذجك (لا تغير الاسم لأن هذا هو الاسم المستخدم في المكتبة. أيضًا لا تغير هيكل Excel، أو التبويبات أو أسماء التبويبات)</p>
+</li>
+<li>
+<p>إذا كان لديك Python مثبتًا، أضف preVisualizationScript.py من مجلد helper إلى مجلد نموذجك. سيُستخدم هذا من قبل ملف Excel كماكرو لعرض رسم ثلاثي الأبعاد لنظام الناقلات.</p>
+</li>
+<li>
+<p>اسحب وأسقط ConveyorNetworkSettings في نموذجك. قم بتهيئة المعلمات كما تحتاج.</p>
+</li>
+<li>
+<p>اسحب وأسقط ConveyorNetworkAnimation في نموذجك. اختر وكيل conveyorNetworkSettings.</p>
+</li>
+</ul>
+<p><img src="/images/blog/sorting-conveyors-library/Picture3.png" alt=""></p>
+<p>اسحب وأسقط ConveyorNetworkLogic في نموذجك واربطه بكتل منطق أخرى. يمكن أن يكون هناك عدة كتل من هذا النوع في النموذج.
+<img src="/images/blog/sorting-conveyors-library/Picture4.png" alt=""></p>
+<ul>
+<li>قم بتهيئة معلمات وكيل conveyorNetworkLogic، باختيار الرسوم المتحركة لشبكة الناقلات.</li>
+</ul>
+<p>تذكر شيئين مهمين:</p>
+<ul>
+<li>الوكيل الذي يستخدم منطق شبكة الناقلات يجب أن يمتد من SpecialConveyorItem كما شُرح سابقًا.</li>
+</ul>
+<p>قبل أن يدخل الوكيل الكتلة، يجب استخدام هذه الدالة: conveyorNetworkAnimation.updateCurrentSequence(SpecialConveyorItem agent, String sequenceId, double priority);
+هذا لتهيئة المعلمات الأساسية للوكيل ليتم توجيهه في شبكة الناقلات. مثلاً إذا كان source متصلاً بكتلة منطق شبكة الناقلات، يمكنك تنفيذ ذلك الكود في إجراء “on at exit”.</p>
+<ul>
+<li>شغّل النموذج واستمتع.</li>
+</ul>
+<h3 id="ملاحظاتتوصيات">ملاحظات/توصيات</h3>
+<ul>
+<li>
+<p>تذكر استخدام النقاط للأرقام العشرية، الفواصل غير مسموح بها لهذه الأرقام.</p>
+</li>
+<li>
+<p>للاتحادات، مثل الفروع أو طاولات النقل، من الضروري ترك مساحة بين الناقلات المعنية. هذا لتوفير المساحة الفعلية اللازمة لإنشاء الخطوط التي تمثل الفروع وطاولات النقل. في الصورة التالية ثلاثة ناقلات متصلة بطاولة نقل، ونقاط الاتصال ليست في نفس الإحداثيات لأن المساحة بينها مطلوبة، لأنه بهذه الطريقة يمكن إنشاء شكل الناقل.</p>
+</li>
+</ul>
+<p><img src="/images/blog/sorting-conveyors-library/Picture7-1.png" alt=""></p>
+<ul>
+<li>بالإضافة إلى ذلك، للفروع، يجب أن يكون لنقطة اتصال ناقل الفرع مساحة كافية بالنسبة للناقل الرئيسي، مع مراعاة عرض الناقل الرئيسي لذلك. ننصح بوضع نقطة اتصال ناقل الفرع على مسافة لا تقل عن نصف عرض الناقل الرئيسي بعيدًا عن الناقل الرئيسي. تحقق من الصورة التالية.</li>
+</ul>
+<p><img src="/images/blog/sorting-conveyors-library/Picture8-1.png" alt=""></p>
+<ul>
+<li>للفروع، يجب أن تشير نقطة اتصال ناقل الفرع إلى أي جزء من الناقل الرئيسي بين النقطة الأولى والأخيرة للناقل الرئيسي ولكن لا يمكن أن تشير مباشرة إلى النقطة الأولى أو الأخيرة لأن الفرع يحتاج إلى مساحة فعلية لإنشاء الشكل، لذلك لا يُسمح بوضع فرع في بداية أو نهاية ناقل رئيسي.</li>
+</ul>
+<h2 id="الأسئلة-الشائعة">الأسئلة الشائعة</h2>
+<h2 id="أرى-الصناديق-متداخلة-في-الأماكن-التي-لدي-فيها-أجهزة-استشعار">أرى الصناديق متداخلة في الأماكن التي لدي فيها أجهزة استشعار</h2>
+<p>أحيانًا يمكن أن يحدث، في نوع اتحاد الفجوة حيث تُستخدم أجهزة الاستشعار، أن وكيلاً واحدًا قد انتقل إلى الناقل التالي لكن لا يمكنه المضي قدمًا بسبب طابور كبير من الوكلاء في هذا الناقل، والوكيل الذي خلفه يذهب إلى نهاية الناقل الأول. مع حدوث ذلك، يبدو وكأن كلا الوكيلين أحدهما فوق الآخر. هذا مجرد شيء بصري ليس له تقريبًا أي تأثير تشغيلي. سنحسن هذا في المستقبل.</p>
+<p><img src="/images/blog/sorting-conveyors-library/Picture1-2.png" alt=""></p>
+<h2 id="النموذج-المُصدّر-لا-يعمل">النموذج المُصدّر لا يعمل</h2>
+<p>عند تصدير نموذج، لا يتطلب ترخيصًا، طالما قمت بتصديره مع ترخيص (سواء للسحابة أو تصدير JAVA). لتصديره، يجب أن تكون قد شغلت نموذج المحاكاة مرة واحدة على الأقل في AnyLogic مع تشغيل الإنترنت، مما سيولد ملف licenseKey.txt صالح (إذا اشتريت ترخيصًا). يجب دمج هذا الملف في أي إصدار مُصدّر، وللقيام بذلك تحتاج إلى الذهاب إلى خصائص resources/data/licenseKey.txt وتشغيل “Resource is referrenced from user code”. سيسمح هذا للنموذج بتصدير ملف licenseKey.txt، كما ترى في الصورة التالية:
+<img src="/images/blog/sorting-conveyors-library/usercodereference.png" alt=""></p> </div> <!-- Tags -->  </div> </article>  </main> <footer class="dark-section border-t border-bg-dark-secondary mt-auto"> <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16"> <div class="grid grid-cols-1 md:grid-cols-3 gap-12"> <!-- Brand --> <div> <img src="/_astro/Noorjax-01.Dky3hJly_1hWLOT.webp" alt="Noorjax Consulting" loading="lazy" decoding="async" width="160" height="27" class="h-10 w-auto brightness-0 invert mb-3"> <p class="mt-3 text-sm text-text-on-dark-muted max-w-xs"> استشارات المحاكاة </p> <div class="mt-5 flex gap-4"> <a href="https://www.linkedin.com/company/noorjax/" target="_blank" rel="noopener noreferrer" class="text-text-on-dark-muted hover:text-brand-teal transition-colors" aria-label="LinkedIn"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"> <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path> </svg> </a> <a href="https://www.youtube.com/@noorjaxconsulting" target="_blank" rel="noopener noreferrer" class="text-text-on-dark-muted hover:text-red-500 transition-colors" aria-label="YouTube"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"> <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path> </svg> </a> <a href="#" class="text-text-on-dark-muted hover:text-brand-teal transition-colors footer-email-icon" aria-label="Email"> <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path> </svg> </a> </div> </div> <!-- Navigation --> <div> <h4 class="text-sm font-semibold text-text-on-dark uppercase tracking-wider mb-4"> التنقل </h4> <ul class="space-y-2.5"> <li> <a href="/ar/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> الرئيسية </a> </li><li> <a href="/ar/simulation-services/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> ديمو </a> </li><li> <a href="/ar/business-cases/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> المشاريع </a> </li><li> <a href="/ar/products/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> المنتجات </a> </li><li> <a href="/ar/courses/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> الدورات </a> </li><li> <a href="/ar/about-us/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> من نحن </a> </li><li> <a href="/ar/blog/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> المدونة </a> </li><li> <a href="/ar/contact/" class="text-sm text-text-on-dark-muted hover:text-white transition-colors"> اتصل بنا </a> </li> </ul> </div> <!-- Contact --> <div> <h4 class="text-sm font-semibold text-text-on-dark uppercase tracking-wider mb-4"> اتصل بنا </h4> <ul class="space-y-2.5 text-sm text-text-on-dark-muted"> <li> <a href="#" class="hover:text-white transition-colors footer-email-link"></a> </li> <li> <a href="https://calendly.com/noorjax" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors"> احجز اجتماعاً </a> </li> <li class="text-text-on-dark-muted">Ahtri 12-512, 10151 Tallinn, Estonia</li> </ul> </div> </div> <!-- Bottom bar --> <div class="mt-12 pt-8 border-t border-bg-dark-secondary flex flex-col sm:flex-row items-center justify-between gap-4"> <p class="text-xs text-text-on-dark-muted">
+&copy; 2026 Noorjax Consulting. جميع الحقوق محفوظة. </p> <p class="text-xs text-text-on-dark-muted"> Ahtri 12-512, 10151 Tallinn, Estonia </p> </div> </div> </footer> <script>
+  (function(){
+    var u='info',d='noorjax.com',e=u+'@'+d,m='mailto:'+e;
+    var icon=document.querySelector('.footer-email-icon');
+    if(icon) icon.href=m;
+    var link=document.querySelector('.footer-email-link');
+    if(link){link.href=m;link.textContent=e;}
+  })();
+</script> <style>
+    #nav-loader{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#0099b5,#6aab25);z-index:9999;width:0;opacity:0;pointer-events:none;transition:none;}
+    #nav-loader.loading{opacity:1;width:80%;transition:width 5s cubic-bezier(0.1,0.3,0.2,1);}
+    #nav-loader.done{width:100%;transition:width 0.15s ease-out;}
+    #nav-loader.fade{opacity:0;transition:opacity 0.3s ease;}
+  </style> <div id="nav-loader"></div> <script>
+    (function(){
+      function startLoader(){
+        var bar = document.getElementById('nav-loader');
+        if(!bar) return;
+        bar.className = '';
+        void bar.offsetWidth;
+        bar.classList.add('loading');
+      }
+      function endLoader(){
+        var bar = document.getElementById('nav-loader');
+        if(!bar) return;
+        bar.classList.remove('loading');
+        bar.classList.add('done');
+        setTimeout(function(){ bar.classList.add('fade'); }, 150);
+        setTimeout(function(){ bar.className = ''; }, 500);
+      }
+
+      // Listen for internal link clicks
+      document.addEventListener('click', function(e){
+        var link = e.target.closest('a');
+        if(!link) return;
+        var href = link.getAttribute('href');
+        if(!href) return;
+        if(link.target === '_blank') return;
+        if(href.startsWith('http') && href.indexOf(location.hostname) === -1) return;
+        if(href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:')) return;
+        startLoader();
+      });
+
+      // End loader when page finishes loading
+      document.addEventListener('astro:after-swap', endLoader);
+      window.addEventListener('load', endLoader);
+      document.addEventListener('astro:page-load', endLoader);
+    })();
+  </script>  </body></html>
