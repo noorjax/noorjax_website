@@ -61,8 +61,8 @@ const i18n = t('ar');
           </div>
         </a>
 
-        <!-- Email -->
-        <a href={`mailto:${SITE.email}`} class="group bg-bg-secondary rounded-2xl p-8 border border-border-default hover:border-brand-secondary/40 hover:shadow-lg transition-all">
+        <!-- Email (JS-constructed to bypass Cloudflare email obfuscation) -->
+        <a href="#" id="email-link" class="group bg-bg-secondary rounded-2xl p-8 border border-border-default hover:border-brand-secondary/40 hover:shadow-lg transition-all">
           <div class="flex items-start gap-5">
             <div class="w-14 h-14 rounded-full bg-brand-accent/10 flex items-center justify-center shrink-0">
               <svg class="w-7 h-7 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -71,10 +71,19 @@ const i18n = t('ar');
             </div>
             <div>
               <h3 class="text-lg font-bold text-text-primary mb-2">Email</h3>
-              <p class="text-sm text-text-tertiary">{SITE.email}</p>
+              <p class="text-sm text-text-tertiary" id="email-text"></p>
             </div>
           </div>
         </a>
+        <script is:inline>
+          (function(){
+            var u='info',d='noorjax.com',e=u+'@'+d;
+            var link=document.getElementById('email-link');
+            var text=document.getElementById('email-text');
+            if(link) link.href='mailto:'+e;
+            if(text) text.textContent=e;
+          })();
+        </script>
       </div>
 
       <!-- E-Residency section -->

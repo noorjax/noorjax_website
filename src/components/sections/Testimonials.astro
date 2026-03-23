@@ -134,45 +134,33 @@ const stars = (count: number) => '★'.repeat(count) + '☆'.repeat(5 - count);
 
 <script is:inline>
   function initTestimonials() {
-    const track = document.getElementById('testimonial-track');
-    const prevBtn = document.getElementById('testimonial-prev');
-    const nextBtn = document.getElementById('testimonial-next');
-    const counter = document.getElementById('testimonial-counter');
+    var track = document.getElementById('testimonial-track');
+    var prevBtn = document.getElementById('testimonial-prev');
+    var nextBtn = document.getElementById('testimonial-next');
+    var counter = document.getElementById('testimonial-counter');
     if (!track || !prevBtn || !nextBtn || !counter) return;
 
-    const total = track.children.length;
-    let page = 0;
+    var total = track.children.length;
+    var page = 0;
 
     function getVisible() {
-      if (window.innerWidth >= 1024) return 3;
-      if (window.innerWidth >= 768) return 2;
-      return 1;
+      return window.innerWidth >= 1024 ? 3 : window.innerWidth >= 768 ? 2 : 1;
     }
 
     function update() {
-      const visible = getVisible();
-      const totalPages = Math.ceil(total / visible);
+      var visible = getVisible();
+      var totalPages = Math.ceil(total / visible);
       if (page >= totalPages) page = totalPages - 1;
       if (page < 0) page = 0;
-
-      track.style.width = (total / visible) * 100 + '%';
-
-      let startIndex = page * visible;
+      var startIndex = page * visible;
       if (startIndex + visible > total) startIndex = total - visible;
-      const offset = (startIndex / total) * 100;
-      track.style.transform = 'translateX(-' + offset + '%)';
-
+      var offset = (startIndex / total) * 100;
+      track.style.cssText = 'width:' + (total / visible) * 100 + '%;transform:translateX(-' + offset + '%)';
       counter.textContent = (page + 1) + ' / ' + totalPages;
     }
 
-    // Clone buttons to remove old listeners
-    const newPrev = prevBtn.cloneNode(true);
-    const newNext = nextBtn.cloneNode(true);
-    prevBtn.parentNode.replaceChild(newPrev, prevBtn);
-    nextBtn.parentNode.replaceChild(newNext, nextBtn);
-
-    newPrev.addEventListener('click', function() { page--; update(); });
-    newNext.addEventListener('click', function() { page++; update(); });
+    prevBtn.onclick = function() { page--; update(); };
+    nextBtn.onclick = function() { page++; update(); };
     window.addEventListener('resize', update);
     update();
   }

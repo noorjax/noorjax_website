@@ -137,48 +137,42 @@ const labels: Record<string, string> = { en: 'English', es: 'Español', ar: 'ا�
 <script is:inline>
   function initHeader() {
     // Mobile menu
-    const toggle = document.getElementById('mobile-menu-toggle');
-    const menu = document.getElementById('mobile-menu');
+    var toggle = document.getElementById('mobile-menu-toggle');
+    var menu = document.getElementById('mobile-menu');
     if (toggle && menu) {
-      const newToggle = toggle.cloneNode(true);
-      toggle.parentNode.replaceChild(newToggle, toggle);
-      newToggle.addEventListener('click', () => {
-        const isOpen = !menu.classList.contains('hidden');
+      toggle.onclick = function() {
+        var isOpen = !menu.classList.contains('hidden');
         menu.classList.toggle('hidden');
-        const openIcon = newToggle.querySelector('#menu-icon-open') || document.getElementById('menu-icon-open');
-        const closeIcon = newToggle.querySelector('#menu-icon-close') || document.getElementById('menu-icon-close');
-        openIcon?.classList.toggle('hidden');
-        closeIcon?.classList.toggle('hidden');
-        newToggle.setAttribute('aria-expanded', String(!isOpen));
-      });
-      menu.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
+        document.getElementById('menu-icon-open').classList.toggle('hidden');
+        document.getElementById('menu-icon-close').classList.toggle('hidden');
+        toggle.setAttribute('aria-expanded', String(!isOpen));
+      };
+      menu.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
           menu.classList.add('hidden');
-          document.getElementById('menu-icon-open')?.classList.remove('hidden');
-          document.getElementById('menu-icon-close')?.classList.add('hidden');
+          document.getElementById('menu-icon-open').classList.remove('hidden');
+          document.getElementById('menu-icon-close').classList.add('hidden');
         });
       });
     }
 
     // Language dropdown
-    const btn = document.getElementById('lang-btn-desktop');
-    const langMenu = document.getElementById('lang-menu-desktop');
-    const chevron = document.getElementById('lang-chevron-desktop');
+    var btn = document.getElementById('lang-btn-desktop');
+    var langMenu = document.getElementById('lang-menu-desktop');
     if (btn && langMenu) {
-      const newBtn = btn.cloneNode(true);
-      btn.parentNode.replaceChild(newBtn, btn);
-      const newChevron = newBtn.querySelector('#lang-chevron-desktop');
-      newBtn.addEventListener('click', (e) => {
+      btn.onclick = function(e) {
         e.stopPropagation();
-        const isOpen = !langMenu.classList.contains('hidden');
+        var isOpen = !langMenu.classList.contains('hidden');
         langMenu.classList.toggle('hidden');
-        newChevron?.classList.toggle('rotate-180');
-        newBtn.setAttribute('aria-expanded', String(!isOpen));
-      });
-      document.addEventListener('click', () => {
+        var chev = document.getElementById('lang-chevron-desktop');
+        if (chev) chev.classList.toggle('rotate-180');
+        btn.setAttribute('aria-expanded', String(!isOpen));
+      };
+      document.addEventListener('click', function() {
         langMenu.classList.add('hidden');
-        newChevron?.classList.remove('rotate-180');
-        newBtn.setAttribute('aria-expanded', 'false');
+        var chev = document.getElementById('lang-chevron-desktop');
+        if (chev) chev.classList.remove('rotate-180');
+        btn.setAttribute('aria-expanded', 'false');
       });
     }
   }
