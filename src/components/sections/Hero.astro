@@ -4,7 +4,10 @@ import { getLocaleFromUrl } from '../../i18n';
 const locale = getLocaleFromUrl(Astro.url);
 ---
 
-<section class="relative min-h-[85vh] flex items-center overflow-hidden bg-bg-secondary">
+<section class="relative min-h-[85vh] flex items-center overflow-hidden bg-bg-secondary" id="hero-section">
+  <!-- Particle network canvas (loads after page) -->
+  <canvas id="hero-canvas" class="absolute inset-0 w-full h-full" style="opacity:0;transition:opacity 1.5s ease;"></canvas>
+
   <!-- Decorative circles -->
   <div class="absolute top-1/4 right-0 w-96 h-96 bg-brand-teal/5 rounded-full blur-[100px]"></div>
   <div class="absolute bottom-0 left-0 w-80 h-80 bg-brand-green/5 rounded-full blur-[80px]"></div>
@@ -33,7 +36,7 @@ const locale = getLocaleFromUrl(Astro.url);
       <!-- CTA -->
       <div class="flex justify-center">
         <a href={`/${locale}/contact/`} class="btn-primary text-base px-8 py-4">
-          {locale === 'en' ? 'Become a Client' : locale === 'es' ? 'Conviértete en Cliente' : 'كن عميلاً'}
+          {locale === 'en' ? 'Book a Call' : locale === 'es' ? 'Agenda una Llamada' : 'احجز مكالمة'}
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
           </svg>
@@ -42,3 +45,182 @@ const locale = getLocaleFromUrl(Astro.url);
     </div>
   </div>
 </section>
+
+<script is:inline>
+(function(){
+  // Defer animation until after page load
+  function startAnimation() {
+    var canvas = document.getElementById('hero-canvas');
+    var section = document.getElementById('hero-section');
+    if (!canvas || !section) return;
+
+    var ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    var w, h, particles, animId;
+    var mouse = { x: -1000, y: -1000 };
+    var teal = { r: 0, g: 153, b: 181 };
+    var green = { r: 106, g: 171, b: 37 };
+    var connectDist = 150;
+    var particleCount = 80;
+    var paused = false;
+
+    function resize() {
+      var rect = section.getBoundingClientRect();
+      w = rect.width;
+      h = rect.height;
+      canvas.width = w * dpr;
+      canvas.height = h * dpr;
+      canvas.style.width = w + 'px';
+      canvas.style.height = h + 'px';
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      // Adjust particle count for mobile
+      particleCount = w < 768 ? 40 : 80;
+      connectDist = w < 768 ? 100 : 150;
+    }
+
+    function Particle() {
+      this.x = Math.random() * w;
+      this.y = Math.random() * h;
+      this.vx = (Math.random() - 0.5) * 0.4;
+      this.vy = (Math.random() - 0.5) * 0.4;
+      this.r = Math.random() * 2 + 1;
+      // Blend between teal and green
+      this.t = Math.random();
+      this.color = 'rgba(' +
+        Math.round(teal.r + (green.r - teal.r) * this.t) + ',' +
+        Math.round(teal.g + (green.g - teal.g) * this.t) + ',' +
+        Math.round(teal.b + (green.b - teal.b) * this.t) + ',';
+    }
+
+    function init() {
+      resize();
+      particles = [];
+      for (var i = 0; i < particleCount; i++) {
+        particles.push(new Particle());
+      }
+    }
+
+    function draw() {
+      if (paused) { animId = requestAnimationFrame(draw); return; }
+      ctx.clearRect(0, 0, w, h);
+
+      // Update and draw particles
+      for (var i = 0; i < particles.length; i++) {
+        var p = particles[i];
+        p.x += p.vx;
+        p.y += p.vy;
+
+        // Soft bounce at edges
+        if (p.x < 0) { p.x = 0; p.vx *= -1; }
+        if (p.x > w) { p.x = w; p.vx *= -1; }
+        if (p.y < 0) { p.y = 0; p.vy *= -1; }
+        if (p.y > h) { p.y = h; p.vy *= -1; }
+
+        // Subtle mouse interaction — particles drift away gently
+        var dx = p.x - mouse.x;
+        var dy = p.y - mouse.y;
+        var dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < 120) {
+          p.x += dx * 0.005;
+          p.y += dy * 0.005;
+        }
+
+        // Draw particle
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = p.color + '0.35)';
+        ctx.fill();
+      }
+
+      // Draw connections
+      ctx.lineWidth = 0.5;
+      for (var i = 0; i < particles.length; i++) {
+        for (var j = i + 1; j < particles.length; j++) {
+          var dx = particles[i].x - particles[j].x;
+          var dy = particles[i].y - particles[j].y;
+          var dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < connectDist) {
+            var alpha = (1 - dist / connectDist) * 0.15;
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.strokeStyle = particles[i].color + alpha + ')';
+            ctx.stroke();
+          }
+        }
+      }
+
+      // Occasional "pulse" — a random particle briefly grows (simulates an event firing)
+      if (Math.random() < 0.02) {
+        var rp = particles[Math.floor(Math.random() * particles.length)];
+        ctx.beginPath();
+        ctx.arc(rp.x, rp.y, rp.r + 6, 0, Math.PI * 2);
+        ctx.fillStyle = rp.color + '0.08)';
+        ctx.fill();
+      }
+
+      animId = requestAnimationFrame(draw);
+    }
+
+    // Mouse tracking
+    section.addEventListener('mousemove', function(e) {
+      var rect = section.getBoundingClientRect();
+      mouse.x = e.clientX - rect.left;
+      mouse.y = e.clientY - rect.top;
+    });
+    section.addEventListener('mouseleave', function() {
+      mouse.x = -1000;
+      mouse.y = -1000;
+    });
+
+    // Pause when not visible
+    var observer = new IntersectionObserver(function(entries) {
+      paused = !entries[0].isIntersecting;
+    }, { threshold: 0.1 });
+    observer.observe(section);
+
+    // Handle resize
+    var resizeTimer;
+    window.addEventListener('resize', function() {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(function() {
+        var oldParticles = particles;
+        resize();
+        // Keep existing particles, adjust count
+        if (oldParticles.length > particleCount) {
+          particles = oldParticles.slice(0, particleCount);
+        } else {
+          particles = oldParticles;
+          while (particles.length < particleCount) particles.push(new Particle());
+        }
+      }, 200);
+    });
+
+    init();
+    // Fade in
+    canvas.style.opacity = '1';
+    draw();
+
+    // Cleanup on page swap
+    document.addEventListener('astro:before-swap', function cleanup() {
+      cancelAnimationFrame(animId);
+      observer.disconnect();
+      document.removeEventListener('astro:before-swap', cleanup);
+    });
+  }
+
+  // Load after everything else
+  if (document.readyState === 'complete') {
+    setTimeout(startAnimation, 100);
+  } else {
+    window.addEventListener('load', function() {
+      setTimeout(startAnimation, 100);
+    });
+  }
+  document.addEventListener('astro:page-load', function() {
+    setTimeout(startAnimation, 100);
+  });
+})();
+</script>

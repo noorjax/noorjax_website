@@ -7,7 +7,10 @@ interface Props {
 const { title, subtitle } = Astro.props;
 ---
 
-<section class="relative py-10 sm:py-12 overflow-hidden bg-bg-secondary">
+<section class="relative py-10 sm:py-12 overflow-hidden bg-bg-secondary" id="page-hero-section">
+  <!-- Particle network canvas -->
+  <canvas id="page-hero-canvas" class="absolute inset-0 w-full h-full" style="opacity:0;transition:opacity 1.5s ease;"></canvas>
+
   <!-- Decorative circles -->
   <div class="absolute top-1/4 right-0 w-96 h-96 bg-brand-teal/5 rounded-full blur-[100px]"></div>
   <div class="absolute bottom-0 left-0 w-80 h-80 bg-brand-green/5 rounded-full blur-[80px]"></div>
@@ -23,3 +26,97 @@ const { title, subtitle } = Astro.props;
     )}
   </div>
 </section>
+
+<script is:inline>
+(function(){
+  function startPageHeroAnim() {
+    var canvas = document.getElementById('page-hero-canvas');
+    var section = document.getElementById('page-hero-section');
+    if (!canvas || !section) return;
+    // Avoid double-init
+    if (canvas.dataset.init) return;
+    canvas.dataset.init = '1';
+
+    var ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    var w, h, particles, animId;
+    var teal = { r: 0, g: 153, b: 181 };
+    var green = { r: 106, g: 171, b: 37 };
+    var connectDist = 120;
+    var count = 50;
+    var paused = false;
+
+    function resize() {
+      var rect = section.getBoundingClientRect();
+      w = rect.width; h = rect.height;
+      canvas.width = w * dpr; canvas.height = h * dpr;
+      canvas.style.width = w + 'px'; canvas.style.height = h + 'px';
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      count = w < 768 ? 25 : 50;
+      connectDist = w < 768 ? 80 : 120;
+    }
+
+    function P() {
+      this.x = Math.random() * w; this.y = Math.random() * h;
+      this.vx = (Math.random() - 0.5) * 0.3; this.vy = (Math.random() - 0.5) * 0.3;
+      this.r = Math.random() * 1.5 + 0.8;
+      var t = Math.random();
+      this.c = 'rgba(' + Math.round(teal.r + (green.r - teal.r) * t) + ',' + Math.round(teal.g + (green.g - teal.g) * t) + ',' + Math.round(teal.b + (green.b - teal.b) * t) + ',';
+    }
+
+    function init() {
+      resize();
+      particles = [];
+      for (var i = 0; i < count; i++) particles.push(new P());
+    }
+
+    function draw() {
+      if (paused) { animId = requestAnimationFrame(draw); return; }
+      ctx.clearRect(0, 0, w, h);
+      for (var i = 0; i < particles.length; i++) {
+        var p = particles[i];
+        p.x += p.vx; p.y += p.vy;
+        if (p.x < 0 || p.x > w) p.vx *= -1;
+        if (p.y < 0 || p.y > h) p.vy *= -1;
+        ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = p.c + '0.3)'; ctx.fill();
+      }
+      ctx.lineWidth = 0.5;
+      for (var i = 0; i < particles.length; i++) {
+        for (var j = i + 1; j < particles.length; j++) {
+          var dx = particles[i].x - particles[j].x, dy = particles[i].y - particles[j].y;
+          var d = Math.sqrt(dx * dx + dy * dy);
+          if (d < connectDist) {
+            ctx.beginPath(); ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.strokeStyle = particles[i].c + ((1 - d / connectDist) * 0.12) + ')'; ctx.stroke();
+          }
+        }
+      }
+      animId = requestAnimationFrame(draw);
+    }
+
+    var obs = new IntersectionObserver(function(e) { paused = !e[0].isIntersecting; }, { threshold: 0.1 });
+    obs.observe(section);
+
+    var rt;
+    window.addEventListener('resize', function() {
+      clearTimeout(rt);
+      rt = setTimeout(function() { var old = particles; resize(); particles = old.slice(0, count); while (particles.length < count) particles.push(new P()); }, 200);
+    });
+
+    init(); canvas.style.opacity = '1'; draw();
+
+    document.addEventListener('astro:before-swap', function cleanup() {
+      cancelAnimationFrame(animId); obs.disconnect();
+      document.removeEventListener('astro:before-swap', cleanup);
+    });
+  }
+
+  if (document.readyState === 'complete') setTimeout(startPageHeroAnim, 100);
+  else window.addEventListener('load', function() { setTimeout(startPageHeroAnim, 100); });
+  document.addEventListener('astro:page-load', function() { setTimeout(startPageHeroAnim, 100); });
+})();
+</script>
