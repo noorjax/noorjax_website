@@ -14,7 +14,7 @@ export default defineConfig({
   },
   i18n: {
     defaultLocale: 'en',
-    locales: ['en', 'es', 'ar'],
+    locales: ['en', 'es', 'ar'], // ar pages still build but hidden from nav/sitemap
     routing: {
       prefixDefaultLocale: true,
       redirectToDefaultLocale: false,

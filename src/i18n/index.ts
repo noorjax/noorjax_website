@@ -29,6 +29,9 @@ export function getAlternateUrl(url: URL, targetLocale: Locale): string {
   return url.pathname.replace(`/${currentLocale}/`, `/${targetLocale}/`);
 }
 
+// Locales shown in the language switcher (ar excluded for now but pages still exist)
+const visibleLocales: Locale[] = ['en', 'es'];
+
 export function getOtherLocales(currentLocale: Locale): Locale[] {
-  return locales.filter((l) => l !== currentLocale);
+  return visibleLocales.filter((l) => l !== currentLocale);
 }
