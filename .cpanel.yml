@@ -2,3 +2,4 @@
 deployment:
   tasks:
     - /bin/cp -R /home/noorjaxcom/repositories/noorjax_website/dist/* /home/noorjaxcom/public_html/
+    - /bin/cp /home/noorjaxcom/repositories/noorjax_website/dist/.htaccess /home/noorjaxcom/public_html/.htaccess
