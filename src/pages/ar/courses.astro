@@ -1,10 +1,13 @@
 ---
 import { Image } from 'astro:assets';
+import { getCollection } from 'astro:content';
 import PageLayout from '../../layouts/PageLayout.astro';
 import PageHero from '../../components/common/PageHero.astro';
 import learnAnylogicImg from '../../assets/images/courses/learn-anylogic.png';
 import otherCoursesImg from '../../assets/images/courses/other-courses.jpg';
 import indonesiaImg from '../../assets/images/courses/indonesia-training.png';
+
+const advancedCourses = (await getCollection('courses')).sort((a, b) => a.data.order - b.data.order);
 
 const courseImages = import.meta.glob<{ default: ImageMetadata }>(
   '../../assets/images/courses/*',
@@ -192,6 +195,50 @@ const courseTopics = [
               </div>
             </div>
           ))}
+        </div>
+      </div>
+
+      <div class="section-divider mb-20"></div>
+
+      <!-- Advanced Courses -->
+      <div class="mb-20" id="advanced-courses">
+        <h2 class="text-3xl font-bold text-center mb-4">دورات متقدمة</h2>
+        <p class="text-center text-text-secondary mb-12 max-w-3xl mx-auto">
+          ارتقِ بمهاراتك في AnyLogic إلى المستوى التالي مع هذه الجلسات المتخصصة — مصممة للمحترفين الذين يريدون تجاوز الأساسيات.
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {advancedCourses.map((course) => {
+            const img = getCourseImage(course.data.image || '');
+            return (
+              <a href={`/ar/courses/${course.data.slug}/`} class="bg-bg-secondary rounded-2xl border border-border-default hover:border-brand-teal/30 transition-all hover:shadow-md overflow-hidden group block">
+                {img && (
+                  <div class="aspect-[16/10] overflow-hidden">
+                    <img src={img.src} alt={course.data.title} width="480" height="300" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" />
+                  </div>
+                )}
+                <div class="p-6">
+                  <h3 class="text-lg font-bold mb-2 group-hover:text-brand-teal transition-colors">{course.data.title}</h3>
+                  {course.data.duration && (
+                    <span class="inline-flex items-center gap-1 text-xs font-medium px-2.5 py-1 rounded-full bg-brand-teal/10 text-brand-teal mb-3">
+                      <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                      {course.data.duration}
+                    </span>
+                  )}
+                  <p class="text-sm text-text-secondary line-clamp-2 mb-4">{course.data.description}</p>
+                  <ul class="space-y-1.5">
+                    {course.data.topics.map((topic) => (
+                      <li class="flex items-center gap-2 text-sm text-text-secondary">
+                        <svg class="w-4 h-4 text-brand-green shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        {topic}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </a>
+            );
+          })}
         </div>
       </div>
 

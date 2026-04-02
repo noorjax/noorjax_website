@@ -1,0 +1,81 @@
+---
+import PageLayout from '../../../layouts/PageLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const courses = await getCollection('courses-es');
+  return courses.map((course) => ({
+    params: { slug: course.data.slug },
+    props: { course },
+  }));
+}
+
+const { course } = Astro.props;
+const { Content } = await render(course);
+---
+
+<PageLayout title={course.data.title} description={course.data.description}>
+  <article class="py-(--spacing-section)">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+      <!-- Back link -->
+      <a href="/es/courses/#advanced-courses" class="inline-flex items-center gap-2 text-sm text-text-tertiary hover:text-brand-teal mb-8 transition-colors">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18" />
+        </svg>
+        Volver a Cursos
+      </a>
+
+      <!-- Header -->
+      <header class="mb-10">
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-4">
+          {course.data.title}
+        </h1>
+        <div class="flex flex-wrap items-center gap-3 mb-4">
+          {course.data.duration && (
+            <span class="inline-flex items-center gap-1.5 text-sm font-medium px-3 py-1.5 rounded-full bg-brand-teal/10 text-brand-teal">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              {course.data.duration}
+            </span>
+          )}
+        </div>
+        {course.data.topics.length > 0 && (
+          <div class="flex flex-wrap gap-2">
+            {course.data.topics.map((topic) => (
+              <span class="text-xs font-medium px-2.5 py-1 rounded-full bg-brand-green/10 text-brand-green">
+                {topic}
+              </span>
+            ))}
+          </div>
+        )}
+      </header>
+
+      <!-- Content -->
+      <div class="prose prose-lg max-w-none
+        prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-text-primary
+        prose-p:text-text-secondary
+        prose-a:text-brand-teal prose-a:no-underline hover:prose-a:underline
+        prose-code:text-brand-secondary prose-code:bg-bg-secondary prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm
+        prose-pre:bg-bg-secondary prose-pre:border prose-pre:border-border-default prose-pre:rounded-xl
+        prose-blockquote:border-brand-teal prose-blockquote:text-text-secondary prose-blockquote:not-italic
+        prose-strong:text-text-primary
+        prose-li:text-text-secondary
+        prose-hr:border-border-default
+      ">
+        <Content />
+      </div>
+
+      <!-- CTA -->
+      <div class="mt-16 pt-8 border-t border-border-default text-center">
+        <p class="text-lg text-text-secondary mb-4">¿Te interesa este curso?</p>
+        <a href="/es/contact/" class="btn-primary">
+          Contáctanos
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </article>
+</PageLayout>

@@ -25,7 +25,10 @@
       "Bash(py --version)",
       "Bash(curl -L -o /c/Repositories/noorjax_website/public/images/contact/e-residency.png \"https://noorjax.com/wp-content/uploads/2019/04/hIlGx40tpcDvZ2mMg6xaXw-e-res_help.png\")",
       "Bash(curl -L -o /c/Repositories/noorjax_website/public/images/contact/erhub-logo.png \"https://noorjax.com/wp-content/uploads/2019/04/erhub-logo-3-1.png\")",
-      "Bash(node scripts/download-portfolio-images.mjs)"
+      "Bash(node scripts/download-portfolio-images.mjs)",
+      "Bash(grep -E \"\\\\.\\(mdx|md\\)$\")",
+      "Read(//c/Repositories/simulation_school/**)",
+      "Bash(ls /c/Repositories/noorjax_website/src/assets/images/courses/advanced-*.svg)"
     ],
     "additionalDirectories": [
       "C:\\Repositories\\noorjax_website\\s|https:\\noorjax.com\\2022\\01\\25\\blog-camera-on-agent\\|\\en\\blog\\blog-camera-on-agent"

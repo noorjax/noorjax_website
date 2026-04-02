@@ -1,0 +1,90 @@
+---
+title: "Conectividad de Gemelos Digitales"
+slug: "digital-twin-connectivity"
+description: "Aprende a conectar modelos de simulacion de AnyLogic con servidores externos de Python mediante HTTP, habilitando arquitecturas de Gemelos Digitales en tiempo real para IoT industrial, manufactura inteligente y logistica."
+topics:
+  - "Comunicacion HTTP en AnyLogic"
+  - "Integracion con servidores Flask"
+  - "Intercambio de datos en tiempo real"
+duration: "Hasta 3 horas"
+image: "advanced-digital-twin.svg"
+order: 2
+---
+
+## Descripcion del Curso
+
+Esta sesion explora como utilizar la comunicacion HTTP para integrar modelos de simulacion de AnyLogic con sistemas back-end en Python. Los participantes implementaran solicitudes HTTP usando Java dentro de AnyLogic y manejaran el lado del servidor usando el framework Flask de Python — un patron fundamental para construir Gemelos Digitales responsivos.
+
+---
+
+## Objetivos
+
+- Comprender como usar la comunicacion HTTP para integrar datos en tiempo real entre un Gemelo Digital (AnyLogic) y un sistema back-end (Python)
+- Aprender a usar `HttpClient` de Java para enviar solicitudes HTTP desde AnyLogic
+- Configurar un servidor Flask en Python para manejar solicitudes entrantes
+- Ejecutar un flujo de trabajo completo desde la generacion de datos en AnyLogic hasta el procesamiento en Python y de vuelta
+
+---
+
+## Prerrequisitos
+
+- Conocimiento basico de programacion en Java (sintaxis, estructuras de datos, manejo de excepciones, colecciones)
+- Familiaridad con Python, incluyendo el trabajo con librerias y manejo de datos JSON
+- Funciones y eventos de AnyLogic; modelado basado en agentes es preferible aunque no obligatorio
+- Comprension de conceptos HTTP (GET, POST, solicitud/respuesta)
+
+---
+
+## Temas Cubiertos
+
+### 1. Introduccion a HTTP en AnyLogic
+
+- Vision general del protocolo HTTP
+- Como AnyLogic se comunica con servidores externos via HTTP
+- Configuracion de `HttpClient` de Java para solicitudes POST
+- Casos de uso: Gemelos Digitales para IoT industrial, manufactura inteligente y logistica
+
+### 2. Cliente HTTP en AnyLogic (Java)
+
+- Creacion de un objeto `HttpClient`
+- Construccion de una solicitud HTTP POST
+- Conversion de datos a formato JSON usando `ObjectMapper`
+- Manejo de respuestas del servidor y analisis de resultados JSON
+- Manejo de excepciones en Java para solicitudes HTTP
+
+### 3. Construccion de un Servidor Python con Flask
+
+- Introduccion a Flask y configuracion de un servidor basico
+- Creacion de endpoints para recibir y procesar datos desde AnyLogic
+- Retorno de datos procesados en formato JSON
+
+### 4. Conexion de AnyLogic con Flask
+
+- Configuracion del ciclo de comunicacion entre AnyLogic y el servidor Python
+- Pruebas de la conexion y manejo de escenarios de error
+
+### 5. Ejercicio Practico
+
+- Implementar el codigo Java en AnyLogic para enviar datos al servidor Python
+- Construir el servidor Flask para recibir, procesar y retornar datos
+- Probar la solucion de extremo a extremo
+- Sesion abierta de preguntas y respuestas con soporte del instructor durante la implementacion
+
+---
+
+## Conocimientos Adquiridos
+
+Al finalizar esta sesion, los participantes seran capaces de:
+
+- Disenar la arquitectura de un sistema de Gemelo Digital conectando AnyLogic y Python via HTTP
+- Construir y enviar solicitudes HTTP POST usando Java en AnyLogic
+- Configurar y desplegar un servidor basico Flask en Python
+- Manejar la conversion de datos JSON entre Java y Python
+- Aplicar mejores practicas de manejo de errores en comunicaciones HTTP
+
+---
+
+## Proximos Pasos
+
+- Integracion de HTTP con bases de datos
+- Uso de metodos PUT y DELETE para operaciones CRUD completas

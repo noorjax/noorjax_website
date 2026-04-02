@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <defs>
+    <linearGradient id="pr-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0099b5" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#6aab25" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="pr-good" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#6aab25"/>
+      <stop offset="100%" stop-color="#6aab25" stop-opacity="0.7"/>
+    </linearGradient>
+    <linearGradient id="pr-bad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0099b5"/>
+      <stop offset="100%" stop-color="#0099b5" stop-opacity="0.5"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="300" rx="12" fill="#f8fafc"/>
+  <rect x="20" y="20" width="440" height="260" rx="8" fill="url(#pr-bg)"/>
+  <!-- Balance beam / scale structure -->
+  <!-- Fulcrum -->
+  <polygon points="240,220 225,250 255,250" fill="#0099b5" opacity="0.15" stroke="#0099b5" stroke-width="1.5" stroke-linejoin="round"/>
+  <circle cx="240" cy="218" r="6" fill="#0099b5" opacity="0.3"/>
+  <circle cx="240" cy="218" r="3" fill="#0099b5"/>
+  <!-- Balance beam - slightly tilted toward good side (lower = heavier = better) -->
+  <line x1="100" y1="210" x2="380" y2="195" stroke="#0099b5" stroke-width="3" stroke-linecap="round"/>
+  <!-- Left side - Good practices (lower, heavier) -->
+  <!-- Hanging lines -->
+  <line x1="130" y1="212" x2="130" y2="235" stroke="#6aab25" stroke-width="1.5" opacity="0.5"/>
+  <line x1="170" y1="210" x2="170" y2="233" stroke="#6aab25" stroke-width="1.5" opacity="0.5"/>
+  <!-- Platform left -->
+  <rect x="110" y="235" width="80" height="4" rx="2" fill="#6aab25" opacity="0.4"/>
+  <!-- Good practice checkmarks -->
+  <circle cx="130" cy="105" r="22" fill="#6aab25" opacity="0.08"/>
+  <circle cx="130" cy="105" r="22" fill="none" stroke="#6aab25" stroke-width="2" opacity="0.4"/>
+  <path d="M118,105 L126,113 L143,96" fill="none" stroke="#6aab25" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="130" cy="165" r="16" fill="#6aab25" opacity="0.06"/>
+  <circle cx="130" cy="165" r="16" fill="none" stroke="#6aab25" stroke-width="1.5" opacity="0.3"/>
+  <path d="M121,165 L127,171 L140,158" fill="none" stroke="#6aab25" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="175" cy="135" r="14" fill="#6aab25" opacity="0.06"/>
+  <circle cx="175" cy="135" r="14" fill="none" stroke="#6aab25" stroke-width="1.5" opacity="0.3"/>
+  <path d="M167,135 L172,140 L183,129" fill="none" stroke="#6aab25" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Right side - Bad practices (higher, lighter) -->
+  <!-- Hanging lines -->
+  <line x1="310" y1="196" x2="310" y2="219" stroke="#0099b5" stroke-width="1.5" opacity="0.4"/>
+  <line x1="350" y1="194" x2="350" y2="217" stroke="#0099b5" stroke-width="1.5" opacity="0.4"/>
+  <!-- Platform right -->
+  <rect x="290" y="219" width="80" height="4" rx="2" fill="#0099b5" opacity="0.3"/>
+  <!-- Bad practice X marks -->
+  <circle cx="340" cy="95" r="20" fill="#0099b5" opacity="0.06"/>
+  <circle cx="340" cy="95" r="20" fill="none" stroke="#0099b5" stroke-width="1.5" opacity="0.3"/>
+  <line x1="330" y1="85" x2="350" y2="105" stroke="#0099b5" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>
+  <line x1="350" y1="85" x2="330" y2="105" stroke="#0099b5" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>
+  <circle cx="305" cy="140" r="14" fill="#0099b5" opacity="0.05"/>
+  <circle cx="305" cy="140" r="14" fill="none" stroke="#0099b5" stroke-width="1.5" opacity="0.25"/>
+  <line x1="298" y1="133" x2="312" y2="147" stroke="#0099b5" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+  <line x1="312" y1="133" x2="298" y2="147" stroke="#0099b5" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+  <circle cx="360" cy="150" r="12" fill="#0099b5" opacity="0.04"/>
+  <circle cx="360" cy="150" r="12" fill="none" stroke="#0099b5" stroke-width="1.5" opacity="0.2"/>
+  <line x1="354" y1="144" x2="366" y2="156" stroke="#0099b5" stroke-width="2" stroke-linecap="round" opacity="0.35"/>
+  <line x1="366" y1="144" x2="354" y2="156" stroke="#0099b5" stroke-width="2" stroke-linecap="round" opacity="0.35"/>
+  <!-- Dividing center line -->
+  <line x1="240" y1="55" x2="240" y2="195" stroke="#0099b5" stroke-width="1" opacity="0.1" stroke-dasharray="4,6"/>
+</svg>

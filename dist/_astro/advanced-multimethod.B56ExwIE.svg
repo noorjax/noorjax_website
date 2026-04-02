@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" fill="none">
+  <defs>
+    <clipPath id="circleA">
+      <circle cx="205" cy="140" r="80"/>
+    </clipPath>
+    <clipPath id="circleB">
+      <circle cx="275" cy="140" r="80"/>
+    </clipPath>
+    <clipPath id="circleC">
+      <circle cx="240" cy="200" r="80"/>
+    </clipPath>
+  </defs>
+  <rect width="480" height="300" rx="8" fill="#f8fafc"/>
+
+  <!-- Circle A (DES) — Teal, top-left -->
+  <circle cx="205" cy="140" r="80" fill="#0099b5" opacity="0.12" stroke="#0099b5" stroke-width="2" stroke-opacity="0.4"/>
+
+  <!-- Circle B (SD) — Green, top-right -->
+  <circle cx="275" cy="140" r="80" fill="#6aab25" opacity="0.12" stroke="#6aab25" stroke-width="2" stroke-opacity="0.4"/>
+
+  <!-- Circle C (ABM) — Blend, bottom-center -->
+  <circle cx="240" cy="200" r="80" fill="#0099b5" opacity="0.06" stroke="#0099b5" stroke-width="1.5" stroke-opacity="0.3"/>
+  <circle cx="240" cy="200" r="80" fill="#6aab25" opacity="0.06" stroke="#6aab25" stroke-width="1.5" stroke-opacity="0.3"/>
+
+  <!-- Pattern in Circle A: horizontal lines (representing discrete events) -->
+  <g clip-path="url(#circleA)" opacity="0.3">
+    <line x1="130" y1="110" x2="210" y2="110" stroke="#0099b5" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="140" y1="125" x2="200" y2="125" stroke="#0099b5" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="130" y1="140" x2="195" y2="140" stroke="#0099b5" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="140" y1="155" x2="205" y2="155" stroke="#0099b5" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="135" y1="170" x2="195" y2="170" stroke="#0099b5" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Pattern in Circle B: flowing curves (representing system dynamics) -->
+  <g clip-path="url(#circleB)" opacity="0.3">
+    <path d="M280,105 Q300,100 310,115 Q320,130 310,140" stroke="#6aab25" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <path d="M285,125 Q305,120 315,135 Q325,150 315,160" stroke="#6aab25" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <path d="M280,145 Q300,140 310,155 Q320,170 310,180" stroke="#6aab25" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <path d="M290,115 Q298,108 308,118" stroke="#6aab25" stroke-width="1" fill="none" stroke-linecap="round"/>
+    <path d="M290,155 Q298,148 308,158" stroke="#6aab25" stroke-width="1" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- Pattern in Circle C: scattered dots (representing agents) -->
+  <g clip-path="url(#circleC)" opacity="0.35">
+    <circle cx="215" cy="210" r="3" fill="#0099b5"/>
+    <circle cx="230" cy="225" r="2.5" fill="#6aab25"/>
+    <circle cx="250" cy="215" r="3" fill="#0099b5"/>
+    <circle cx="260" cy="230" r="2.5" fill="#6aab25"/>
+    <circle cx="240" cy="240" r="2" fill="#0099b5"/>
+    <circle cx="225" cy="245" r="3" fill="#6aab25"/>
+    <circle cx="255" cy="248" r="2.5" fill="#0099b5"/>
+    <circle cx="235" cy="258" r="2" fill="#6aab25"/>
+    <circle cx="248" cy="260" r="3" fill="#0099b5"/>
+    <circle cx="220" cy="232" r="2" fill="#6aab25"/>
+    <circle cx="262" cy="242" r="2" fill="#0099b5"/>
+  </g>
+
+  <!-- Overlap areas — brighter fills to show convergence -->
+  <!-- A ∩ B overlap -->
+  <path d="M240,82 A80,80 0 0,1 275,220 A80,80 0 0,1 205,220 A80,80 0 0,1 240,82 Z" fill="none"/>
+
+  <!-- Center convergence highlight (approximate triple overlap area) -->
+  <circle cx="240" cy="168" r="18" fill="#0099b5" opacity="0.08"/>
+  <circle cx="240" cy="168" r="18" fill="#6aab25" opacity="0.08"/>
+  <circle cx="240" cy="168" r="8" fill="#0099b5" opacity="0.15"/>
+  <circle cx="240" cy="168" r="8" fill="#6aab25" opacity="0.1"/>
+
+  <!-- Small connector nodes at intersection points -->
+  <circle cx="240" cy="95" r="4" fill="#0099b5" opacity="0.5"/>
+  <circle cx="240" cy="95" r="4" fill="#6aab25" opacity="0.3"/>
+  <circle cx="210" cy="210" r="4" fill="#0099b5" opacity="0.5"/>
+  <circle cx="270" cy="210" r="4" fill="#6aab25" opacity="0.5"/>
+</svg>

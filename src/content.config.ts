@@ -30,6 +30,20 @@ const courses = defineCollection({
   loader: glob({ pattern: '**/*.mdx', base: './src/content/courses' }),
   schema: z.object({
     title: z.string(),
+    slug: z.string(),
+    description: z.string(),
+    topics: z.array(z.string()).default([]),
+    duration: z.string().optional(),
+    image: z.string().optional(),
+    order: z.number().default(0),
+  }),
+});
+
+const coursesEs = defineCollection({
+  loader: glob({ pattern: '**/*.mdx', base: './src/content/courses-es' }),
+  schema: z.object({
+    title: z.string(),
+    slug: z.string(),
     description: z.string(),
     topics: z.array(z.string()).default([]),
     duration: z.string().optional(),
@@ -78,4 +92,4 @@ const blogAr = defineCollection({
   }),
 });
 
-export const collections = { blog, 'blog-es': blogEs, 'blog-ar': blogAr, services, courses, cases };
+export const collections = { blog, 'blog-es': blogEs, 'blog-ar': blogAr, services, courses, 'courses-es': coursesEs, cases };

@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" fill="none">
+  <rect width="480" height="300" rx="8" fill="#f8fafc"/>
+
+  <!-- Puzzle piece shapes — modular blocks that interlock -->
+
+  <!-- Block 1: Top-left, teal -->
+  <path d="M120,70 h50 v15 a12,12 0 0,1 0,24 v15 h-15 a12,12 0 0,0 -24,0 h-15 v-50 z" fill="#0099b5" opacity="0.55" rx="3"/>
+  <path d="M120,70 h50 v15 a12,12 0 0,1 0,24 v15 h-15 a12,12 0 0,0 -24,0 h-15 v-50 z" stroke="#0099b5" stroke-width="1.5" stroke-opacity="0.7" fill="none" rx="3"/>
+
+  <!-- Block 2: Top-center, green -->
+  <path d="M185,70 h15 a12,12 0 0,1 0,24 h-15 v-24 z M185,70 h50 v15 a12,12 0 0,1 0,24 v15 h-50 v-15 a12,12 0 0,0 0,-24 v-15 z" fill="#6aab25" opacity="0.5"/>
+  <path d="M185,70 h50 v15 a12,12 0 0,1 0,24 v15 h-50 v-15 a12,12 0 0,0 0,-24 v-15 z" stroke="#6aab25" stroke-width="1.5" stroke-opacity="0.65" fill="none"/>
+
+  <!-- Block 3: Top-right, teal lighter -->
+  <path d="M250,70 h50 v50 h-50 v-15 a12,12 0 0,0 0,-24 v-11 z" fill="#0099b5" opacity="0.4"/>
+  <path d="M250,70 h50 v50 h-50 v-15 a12,12 0 0,0 0,-24 v-11 z" stroke="#0099b5" stroke-width="1.5" stroke-opacity="0.55" fill="none"/>
+
+  <!-- Block 4: Middle-left, green -->
+  <path d="M120,135 h15 a12,12 0 0,1 0,24 h-15 v-24 z M120,128 h50 v15 a12,12 0 0,1 0,24 v15 h-15 a12,12 0 0,0 -24,0 h-15 v-50 z" fill="#6aab25" opacity="0.45"/>
+  <path d="M120,128 h50 v15 a12,12 0 0,1 0,24 v15 h-15 a12,12 0 0,0 -24,0 h-15 v-50 z" stroke="#6aab25" stroke-width="1.5" stroke-opacity="0.6" fill="none"/>
+
+  <!-- Block 5: Middle-center, teal (key connector piece) -->
+  <path d="M185,128 h50 v15 a12,12 0 0,1 0,24 v15 h-50 v-15 a12,12 0 0,0 0,-24 v-15 z" fill="#0099b5" opacity="0.6"/>
+  <path d="M185,128 h50 v15 a12,12 0 0,1 0,24 v15 h-50 v-15 a12,12 0 0,0 0,-24 v-15 z" stroke="#0099b5" stroke-width="1.5" stroke-opacity="0.75" fill="none"/>
+  <!-- Connector tab on top -->
+  <path d="M185,128 v-7 a12,12 0 0,1 0,-24 v-7" stroke="#0099b5" stroke-width="1" stroke-opacity="0.3" fill="none" stroke-dasharray="3,3"/>
+
+  <!-- Block 6: Middle-right, green -->
+  <path d="M250,128 h50 v50 h-15 a12,12 0 0,0 -24,0 h-15 v-15 a12,12 0 0,0 0,-24 v-11 z" fill="#6aab25" opacity="0.5"/>
+  <path d="M250,128 h50 v50 h-15 a12,12 0 0,0 -24,0 h-15 v-15 a12,12 0 0,0 0,-24 v-11 z" stroke="#6aab25" stroke-width="1.5" stroke-opacity="0.65" fill="none"/>
+
+  <!-- Block 7: Bottom-left, teal -->
+  <path d="M120,193 h15 a12,12 0 0,1 0,24 h-15 v-24 z M120,186 h50 v50 h-50 v-50 z" fill="#0099b5" opacity="0.45"/>
+  <path d="M120,186 h50 v50 h-50 v-50 z" stroke="#0099b5" stroke-width="1.5" stroke-opacity="0.6" fill="none"/>
+
+  <!-- Block 8: Bottom-center, green -->
+  <path d="M185,186 h50 v50 h-50 v-50 z" fill="#6aab25" opacity="0.4"/>
+  <path d="M185,186 h50 v50 h-50 v-50 z" stroke="#6aab25" stroke-width="1.5" stroke-opacity="0.55" fill="none"/>
+
+  <!-- Block 9: Bottom-right, teal -->
+  <path d="M250,186 h15 a12,12 0 0,1 0,24 h-15 v-24 z M250,186 h50 v50 h-50 v-50 z" fill="#0099b5" opacity="0.5"/>
+  <path d="M250,186 h50 v50 h-50 v-50 z" stroke="#0099b5" stroke-width="1.5" stroke-opacity="0.65" fill="none"/>
+
+  <!-- Floating detached piece (showing modularity) — offset to the right -->
+  <path d="M340,120 h50 v15 a12,12 0 0,1 0,24 v15 h-15 a12,12 0 0,0 -24,0 h-15 v-50 z" fill="#0099b5" opacity="0.35" stroke="#0099b5" stroke-width="1.5" stroke-opacity="0.5" stroke-dasharray="4,3"/>
+
+  <!-- Arrow suggesting the piece can connect -->
+  <line x1="320" y1="148" x2="335" y2="148" stroke="#6aab25" stroke-width="1.5" opacity="0.4" stroke-linecap="round"/>
+  <polyline points="332,143 338,148 332,153" stroke="#6aab25" stroke-width="1.5" opacity="0.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Subtle grid dots in background -->
+  <circle cx="80" cy="60" r="1.5" fill="#0099b5" opacity="0.1"/>
+  <circle cx="80" cy="150" r="1.5" fill="#0099b5" opacity="0.1"/>
+  <circle cx="80" cy="240" r="1.5" fill="#0099b5" opacity="0.1"/>
+  <circle cx="420" cy="60" r="1.5" fill="#0099b5" opacity="0.1"/>
+  <circle cx="420" cy="150" r="1.5" fill="#0099b5" opacity="0.1"/>
+  <circle cx="420" cy="240" r="1.5" fill="#0099b5" opacity="0.1"/>
+</svg>
